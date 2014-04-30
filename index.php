@@ -18,8 +18,8 @@
 		</div>
 		<a href="#forest" class="arrow arrow-down">my abilities</a>
 		<video class="window video-earth" autoplay loop>
-			<source src="videos/earth.mp4" type="video/mp4">
 			<source src="videos/earth.webm" type="video/webm">
+			<source src="videos/earth.mp4" type="video/mp4">
 		</video>
 	</section>
 
@@ -100,8 +100,8 @@
 		</div>
 		<a href="#earth" class="arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
-			<source src="videos/clouds.mp4" type="video/mp4">
 			<source src="videos/clouds.webm" type="video/webm">
+			<source src="videos/clouds.mp4" type="video/mp4">
 		</video>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
