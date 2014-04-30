@@ -26,11 +26,12 @@ if ( isset($_POST['submitted']) ) {
 
 	if( !isset($hasError) ) {
 		$email_from = 'danielbwaltz@gmail.com';
-		$email_subject = 'Contact Me - danielwaltz.me';
-		$email_body = "From: $form_fname $form_lname \n $form_mssge";
+		$email_subject = 'Contact - danielwaltz.me';
+		$email_body = "From: $form_fname $form_lname $form_email \n" .
+					  "Inquiry: $form_mssge";
 		$email_to = 'danielbwaltz@gmail.com';
-		$email_headers = "From: $form_fname $form_lname <$email_from> \r\n";
-		$email_headers .= "Reply-To: $form_email \r\n";
+		$email_headers = "From: $form_fname $form_lname <$email_from> \r\n" .
+						 "Reply-To: $form_fname $form_lname <$form_email> \r\n";
 
 		mail($email_to,$email_subject,$email_body,$email_headers);
 

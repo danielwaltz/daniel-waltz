@@ -69,7 +69,7 @@
 				<h2><em>fill out the form or <a href="mailto:danielbwaltz@gmail.com">email me</a></em></h2>
 			</header>
 			<?php include('forms/contact.php'); ?>
-			<form id="contact" action="#" method="post">
+			<form id="contact" action="#clouds" method="post">
 				<div class="field-wrap">
 					<label class="screen-reader-text">First Name</label>
 					<input type="text" name="fname" id="fname" value="<?php echo ( !isset($emailSent) ) ? $form_fname : '' ?>" placeholder="first name" class="required<?php echo ( isset($fnameError) ) ? ' error' : '' ?>">
