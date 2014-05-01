@@ -5,6 +5,14 @@
 	box-sizing: border-box;
 	outline-color: #fff;
 }
+@keyframes flash {
+	0% {
+		opacity: auto;
+	}
+	100% {
+		opacity: .5;
+	}
+}
 ::-moz-selection {
 	background: #fff;
 	color: #000;
@@ -115,6 +123,14 @@ input, textarea {
 	border-radius: 50%;
 }
 
+@keyframes arrow {
+	0% {
+		transform: rotate(15deg) scale(.4) translate(400px);
+	}
+	100% {
+		transform: none;
+	}
+}
 body > section {
 	position: relative;
 	z-index: 0;
@@ -195,6 +211,12 @@ body > section {
 		width: auto;
 		height: 100%;
 	}
+	&.visible {
+		.arrow {
+			animation: arrow 2.2s ease-in-out,
+					   flash 1s ease-in-out 5s infinite alternate;
+		}
+	}
 }
 @media (max-width: 900px), (max-height: 800px) {
 	#home > section .content {
@@ -211,6 +233,22 @@ body > section {
 	}
 }
 
+@keyframes title {
+	0% {
+		transform: rotate(15deg) scale(.4) translate(-900px);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes subtitle {
+	0% {
+		transform: rotate(-15deg) scale(.4) translate(-900px);
+	}
+	100% {
+		transform: none;
+	}
+}
 .earth {
 	background-image: url('../images/earth.jpg');
 	-webkit-font-smoothing: antialiased;
@@ -235,8 +273,32 @@ body > section {
 			}
 		}
 	}
+	&.visible .content {
+		h1 {
+			animation: title 1.5s ease-in-out;
+		}
+		h2 {
+			animation: subtitle 2s ease-in-out;
+		}
+	}
 }
 
+@keyframes slideinleft {
+	0% {
+		transform: scale(.8) translate(-800px);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes slideinright {
+	0% {
+		transform: scale(.8) translate(800px);
+	}
+	100% {
+		transform: none;
+	}
+}
 .forest {
 	background-image: url('../images/forest.jpg');
 	-webkit-font-smoothing: antialiased;
@@ -300,6 +362,16 @@ body > section {
 			}
 		}
 	}
+	@media (min-width: 900px) {
+		&.visible {
+			#abilities {
+				animation: slideinleft 1.5s ease-out;
+			}
+			#specialties {
+				animation: slideinright 1.5s ease-out;
+			}
+		}
+	}
 	@media (max-width: 900px) {
 		.content {
 			#abilities, #specialties {
@@ -313,6 +385,64 @@ body > section {
 	}
 }
 
+@keyframes inputslideinleft {
+	0% {
+		transform: rotate(2deg) scale(.6) translate(-50px);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes inputslideinright {
+	0% {
+		transform: rotate(-2deg) scale(.6) translate(50px);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes inputscalein {
+	0% {
+		transform: scale(.6);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes float {
+	0% {
+		transform: rotate(1deg) scale(.95);
+	}
+	25% {
+		transform: rotate(-1deg) scale(.9);
+	}
+	50% {
+		transform: rotate(1deg) scale(1);
+	}
+	75% {
+		transform: rotate(-1deg) scale(1.05);
+	}
+	100% {
+		transform: none;
+	}
+}
+@keyframes floatalt {
+	0% {
+		transform: rotate(-1deg) scale(1.05);
+	}
+	25% {
+		transform: rotate(1deg) scale(1);
+	}
+	50% {
+		transform: rotate(-1deg) scale(.9);
+	}
+	75% {
+		transform: rotate(1deg) scale(.95);
+	}
+	100% {
+		transform: none;
+	}
+}
 .clouds {
 	background-image: url('../images/clouds.jpg');
 	.content {
@@ -375,6 +505,20 @@ body > section {
 				padding: 3px 10px;
 				border-radius: 50px;
 			}
+		}
+	}
+	&.visible {
+		h1 {
+			animation: title 1.2s ease-in-out;
+		}
+		h2 {
+			animation: title 1.2s ease-in-out;
+		}
+		.fname, .email, .submit {
+			animation: float 20s ease-in-out infinite alternate;
+		}
+		.lname, .mssge {
+			animation: floatalt 20s ease-in-out infinite alternate;
 		}
 	}
 }

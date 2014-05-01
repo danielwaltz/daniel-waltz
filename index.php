@@ -77,22 +77,22 @@
 			<form id="contact" action="#clouds" method="post">
 				<div class="field-wrap">
 					<label class="screen-reader-text">First Name</label>
-					<input type="text" name="fname" id="fname" value="<?php echo ( !isset($emailSent) ) ? $form_fname : '' ?>" placeholder="first name" class="required<?php echo ( isset($fnameError) ) ? ' error' : '' ?>">
+					<input type="text" name="fname" id="fname" value="<?php echo ( !isset($emailSent) ) ? $form_fname : '' ?>" placeholder="first name" class="required fname<?php echo ( isset($fnameError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Last Name</label>
-					<input type="text" name="lname" id="lname" value="<?php echo ( !isset($emailSent) ) ? $form_lname : '' ?>" placeholder="last name" class="required<?php echo ( isset($lnameError) ) ? ' error' : '' ?>">
+					<input type="text" name="lname" id="lname" value="<?php echo ( !isset($emailSent) ) ? $form_lname : '' ?>" placeholder="last name" class="required lname<?php echo ( isset($lnameError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Email</label>
-					<input type="email" name="email" id="email" value="<?php echo ( !isset($emailSent) ) ? $form_email : '' ?>" placeholder="email" class="required<?php echo ( isset($emailError) ) ? ' error' : '' ?>">
+					<input type="email" name="email" id="email" value="<?php echo ( !isset($emailSent) ) ? $form_email : '' ?>" placeholder="email" class="required email<?php echo ( isset($emailError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Inquiry</label>
-					<textarea name="mssge" id="mssge" value="<?php echo $form_mssge; ?>" placeholder="inquiry"></textarea>
+					<textarea name="mssge" id="mssge" value="<?php echo $form_mssge; ?>" placeholder="inquiry" class="mssge"></textarea>
 				</div>
 				<div class="field-wrap">
-					<input type="submit" class="button" value="send">
+					<input type="submit" id="submit" class="button submit" value="send">
 					<input type="hidden" name="submitted" value="true">
 				</div>
 				<?php if( isset($hasError) || isset($captchaError) ) { ?>  
@@ -106,7 +106,7 @@
 
 		<span class="copyright">&copy; Copyright <?php echo date('Y'); ?> Daniel Waltz<br>
 		Video assets provided by <a href="http://www.dissolve.com/" target="_blank" title="Thank you!">Dissolve</a></span>
-		
+
 		<a href="#section1" class="arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
 			<source src="videos/clouds.mp4" type="video/mp4">

@@ -110,6 +110,31 @@ function dynamicVideo() {
 	}
 }
 
+// Dynamic animations for sections
+function updateHeights() {
+	$('body > section').each(function() {
+		var height = $(window).outerHeight();
+		$(this).outerHeight(height);
+	});
+}
+function updateSections() {
+	var viewport = $(window);
+	var padding = viewport.outerHeight() * 0.10;
+
+	$('body > section').each(function() {
+		var self = $(this);
+		var topVisible = ( self.offset().top + padding ) < viewport.scrollTop() + viewport.outerHeight();
+		var bottomVisible = ( self.offset().top + self.outerHeight() - padding ) > viewport.scrollTop();
+		var shown = bottomVisible && topVisible;
+
+		if ( shown ) {
+			self.addClass('visible');
+		} else {
+			self.removeClass('visible');
+		}
+	});
+}
+
 // Animated scrolling
 function goToByScroll(id) {
 	$('html, body').animate({scrollTop: $(id).offset().top}, 'slow');
@@ -180,6 +205,8 @@ function resize() {
 $(document).ready(function(){
 	resize();
 	dynamicVideo();
+	updateHeights();
+	updateSections();
 	
 	// Form validation
 	$('#contact').submit(function(e){
@@ -211,4 +238,9 @@ $(document).ready(function(){
 });
 $(window).resize(function(){
 	resize();
+});
+$(window).on('scroll', function() {
+	updateSections();
+}).on('resize', function() {
+	updateHeights();
 });
