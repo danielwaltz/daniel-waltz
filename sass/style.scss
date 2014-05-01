@@ -483,6 +483,12 @@ body > section {
 						opacity: 1;
 					}
 				}
+				.fname, .email, .submit {
+					animation: float 20s ease-in-out infinite alternate;
+				}
+				.lname, .mssge {
+					animation: floatalt 20s ease-in-out infinite alternate;
+				}
 				.error,
 				.good-to-go {
 					background: rgba(255,75,75,.75);
@@ -515,12 +521,6 @@ body > section {
 		}
 		h2 {
 			animation: title 1.2s ease-in-out;
-		}
-		.fname, .email, .submit {
-			animation: float 20s ease-in-out infinite alternate;
-		}
-		.lname, .mssge {
-			animation: floatalt 20s ease-in-out infinite alternate;
 		}
 	}
 }
