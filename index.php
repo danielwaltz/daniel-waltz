@@ -9,21 +9,21 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body id="home">
-	<a href="#" class="button playpause fa fa-pause"></a>
+	<a href="#" class="button playpause fa fa-pause" title="Play/Pause"></a>
 
-	<section id="earth" class="earth">
+	<section id="section1" class="earth">
 		<div class="content vert-center-mobile">
 			<h1>Daniel Waltz</h1>
 			<h2><em>front-end web developer</em></h2>
 		</div>
-		<a href="#forest" class="arrow arrow-down">my abilities</a>
+		<a href="#section2" class="arrow arrow-down">my abilities</a>
 		<video class="window video-earth" autoplay loop>
-			<source src="videos/earth.webm" type="video/webm">
 			<source src="videos/earth.mp4" type="video/mp4">
+			<source src="videos/earth.webm" type="video/webm">
 		</video>
 	</section>
 
-	<section id="forest" class="forest">
+	<section id="section2" class="forest">
 		<div class="content scroll vert-center-mobile">
 			<div class="scroll-inner">
 				<div id="abilities">
@@ -60,14 +60,14 @@
 				</div>
 			</div>
 		</div>
-		<a href="#clouds" class="arrow arrow-down">how to contact me</a>
+		<a href="#section3" class="arrow arrow-down">how to contact me</a>
 		<video class="window video-forest" autoplay loop>
-			<source src="videos/forest.webm" type="video/webm">
 			<source src="videos/forest.mp4" type="video/mp4">
+			<source src="videos/forest.webm" type="video/webm">
 		</video>
 	</section>
 
-	<section id="clouds" class="clouds">
+	<section id="section3" class="clouds">
 		<div class="content">
 			<header>
 				<h1>Contact</h1>
@@ -103,12 +103,17 @@
 				<?php } ?>
 			</form>
 		</div>
-		<a href="#earth" class="arrow arrow-up">top</a>
+
+		<span class="copyright">&copy; Copyright <?php echo date('Y'); ?> Daniel Waltz<br>
+		Video assets provided by <a href="http://www.dissolve.com/" target="_blank" title="Thank you!">Dissolve</a></span>
+		
+		<a href="#section1" class="arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
-			<source src="videos/clouds.webm" type="video/webm">
 			<source src="videos/clouds.mp4" type="video/mp4">
+			<source src="videos/clouds.webm" type="video/webm">
 		</video>
 	</section>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/script-min.js"></script>
 </body>

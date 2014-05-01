@@ -48,7 +48,7 @@ function updateSideScroll(swidth,scontent,active) {
 	}
 	
 	if ( active ) {
-		if ( $('.scroll').scrollLeft() === swidth ) {
+		if ( $('.scroll').scrollLeft() >= swidth / 2 ) {
 			$('.scroll').stop().animate({
 				scrollLeft: 0
 			}, scrollTime);
@@ -72,6 +72,12 @@ function dynamicVideo() {
 			$(this).get(0).pause();
 		});
 		$('.playpause').removeClass('fa-pause').addClass('fa-play');
+	} else {
+		videos.hide();
+		$(window).load(function(){
+			videos.show();
+			$(this).get(0).play();
+		});
 	}
 
 	$('.playpause').click(function(e){
@@ -161,6 +167,9 @@ function resize() {
 	if ( windowWidth <= 900 ) {
 		centerContent = true;
 		scrollContent = true;
+	}
+	if ( windowHeight <= 800 ) {
+		centerContent = true;
 	}
 
 	updateVideoSize(windowWidth,videoWidth,centerContent);

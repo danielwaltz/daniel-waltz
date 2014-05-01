@@ -1,10 +1,9 @@
-@import "normalize";
-@import "fontawesome/fontawesome";
+@import 'normalize';
+@import 'fontawesome/fontawesome';
 
 * {
 	box-sizing: border-box;
 	outline-color: #fff;
-	// -webkit-font-smoothing: antialiased;
 }
 ::-moz-selection {
 	background: #fff;
@@ -14,11 +13,15 @@
 	background: #fff;
 	color: #000;
 }
+html, body {
+	background-color: #000;
+	height: 100%;
+}
 html {
 	font-size: 62.5%;
 }
 body {
-	background: #000;
+	position: relative;
 	color: #fff;
 	font-size: 1.4rem;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -80,8 +83,8 @@ input, textarea {
 .button, input[type=submit] {
 	background: -webkit-radial-gradient(circle, #fff, #aaa);
 	background: radial-gradient(circle, #fff, #aaa);
-	border: 0;
 	padding: 15px 30px;
+	border: 0;
 	color: #333;
 	color: rgba(0,0,0,.75);
 	font-size: 2.4rem;
@@ -120,6 +123,7 @@ body > section {
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: auto 100%;
+	height: 100%;
 	.content {
 		position: absolute;
 		left: 10%;
@@ -192,12 +196,15 @@ body > section {
 		height: 100%;
 	}
 }
-@media (max-width: 900px) {
+@media (max-width: 900px), (max-height: 800px) {
 	#home > section .content {
 		top: 10%;
 		left: 10%;
 		right: 10%;
-		overflow-y: auto;
+		bottom: auto;
+		&.scroll {
+			overflow-y: auto;
+		}
 	}
 	#home > section .content.vert-center-mobile {
 		top: 50%;
@@ -355,7 +362,7 @@ body > section {
 				.good-to-go {
 					background: rgba(75,255,75,.75);
 				}
-				@media (max-width: 900px) {
+				@media (max-width: 900px), (max-height: 800px) {
 					input[type=text], input[type=email], textarea {
 						padding: 5px;
 						font-size: 1.8rem;
@@ -374,5 +381,19 @@ body > section {
 @media (max-width: 900px) {
 	#home > section .content {
 		top: 5%;
+	}
+}
+
+.copyright {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 50;
+	background: rgba(0,0,0,.5);
+	padding: 3px 10px;
+	font-size: 1.2rem;
+	border-radius: 0 50px 0 0;
+	a {
+		text-decoration: none;
 	}
 }
