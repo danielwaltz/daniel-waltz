@@ -29,7 +29,7 @@
 		"outputAbbreviatedPath": "\/images\/clouds.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/earth.jpg": {
 		"fileType": 16384,
@@ -40,7 +40,7 @@
 		"outputAbbreviatedPath": "\/images\/earth.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/forest.jpg": {
 		"fileType": 16384,
@@ -51,7 +51,7 @@
 		"outputAbbreviatedPath": "\/images\/forest.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/index.php": {
 		"fileType": 8192,
