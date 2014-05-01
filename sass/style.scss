@@ -197,7 +197,7 @@ body > section {
 		top: 10%;
 		left: 10%;
 		right: 10%;
-		overflow: auto;
+		overflow-y: auto;
 	}
 	#home > section .content.vert-center-mobile {
 		top: 50%;
@@ -238,6 +238,8 @@ body > section {
 		width: 80%;
 		text-align: center;
 		white-space: nowrap;
+		white-space-collapsing: discard;
+		font-size: 0;
 		h2 {
 			font-size: 3rem;
 		}
@@ -248,59 +250,57 @@ body > section {
 		header {
 			margin-bottom: 40px;
 		}
-		.abilities, .specialties {
+		#abilities, #specialties {
 			position: relative;
 			box-sizing: border-box;
 			display: inline-block;
 			background-color: rgba(0,0,0,.5);
 			padding: 20px;
 			width: 45%;
+			transition: all .2s ease-in-out;
 		}
-		.abilities,
-		.specialties {
+		#abilities {
+			margin-right: 10%;
+		}
+		.scroll-toggle {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			z-index: 75;
+			@extend .button;
+			margin: -30px 0 0 -30px;
+			padding: 0;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			text-indent: -9999px;
 			&:before, &:after {
 				content: '';
 				position: absolute;
+				top: 15px;
+				left: 15px;
 				z-index: 80;
-				display: none;
-			}
-		}
-		.abilities {
-			margin-right: 10%;
-			&:after {
-				@extend .button;
-				top: 44%;
-				right: -20px;
-				padding: 0;
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-			}
-		}
-		.specialties {
-			&:before, &:after {
-				top: 47.5%;
-				left: -10px;
 				width: 0;
 				height: 0;
-				border: 10px solid transparent;
+				border: 15px solid transparent;
 			}
 			&:before {
-				border-left: 10px solid rgba(0,0,0,.8);
+				border-left: 15px solid rgba(0,0,0,.8);
 			}
 			&:after {
-				border-right: 10px solid rgba(0,0,0,.8);
+				border-right: 15px solid rgba(0,0,0,.8);
 			}
 		}
 	}
 	@media (max-width: 900px) {
 		.content {
-			.abilities, .specialties {
+			#abilities, #specialties {
 				margin: 0;
 				width: 100%;
-				&:before, &:after {
-					display: block;
-				}
+			}
+			.scroll-toggle {
+				display: block;
 			}
 		}
 	}

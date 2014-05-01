@@ -24,41 +24,46 @@
 	</section>
 
 	<section id="forest" class="forest">
-		<div class="content vert-center-mobile">
-			<div class="abilities">
-				<header>
-					<h1>Abilities</h1>
-					<h2>what i <em>can do</em></h2>
-				</header>
-				<div class="col col-1-2">
-					<h3>JavaScript</h3>
-					<h3>Email Templating</h3>
-					<h3>Mobile</h3>
-				</div><div class="col col-1-2">
-					<h3>Photoshop</h3>
-					<h3>PHP</h3>
-					<h3>Git</h3>
+		<div class="content scroll vert-center-mobile">
+			<div class="scroll-inner">
+				<div id="abilities">
+					<header>
+						<h1>Abilities</h1>
+						<h2>what i <em>can do</em></h2>
+					</header>
+					<div class="col col-1-2">
+						<h3>JavaScript</h3>
+						<h3>Email Templating</h3>
+						<h3>Mobile</h3>
+					</div><div class="col col-1-2">
+						<h3>Photoshop</h3>
+						<h3>PHP</h3>
+						<h3>Git</h3>
+					</div>
+					
 				</div>
-			</div><div class="specialties">
-				<header>
-					<h1>Specialties</h1>
-					<h2>what i <em>do well</em></h2>
-				</header>
-				<div class="col col-1-2">
-					<h3>HTML5</h3>
-					<h3>CSS3</h3>
-					<h3>Responsive</h3>
-				</div><div class="col col-1-2">
-					<h3>jQuery</h3>
-					<h3>WordPress</h3>
-					<h3>MySQL</h3>
+				<a href="#" class="button scroll-toggle">Scroll</a>
+				<div id="specialties">
+					<header>
+						<h1>Specialties</h1>
+						<h2>what i <em>do well</em></h2>
+					</header>
+					<div class="col col-1-2">
+						<h3>HTML5</h3>
+						<h3>CSS3</h3>
+						<h3>Responsive</h3>
+					</div><div class="col col-1-2">
+						<h3>jQuery</h3>
+						<h3>WordPress</h3>
+						<h3>MySQL</h3>
+					</div>
 				</div>
 			</div>
 		</div>
 		<a href="#clouds" class="arrow arrow-down">how to contact me</a>
 		<video class="window video-forest" autoplay loop>
-			<source src="videos/forest.mp4" type="video/mp4">
 			<source src="videos/forest.webm" type="video/webm">
+			<source src="videos/forest.mp4" type="video/mp4">
 		</video>
 	</section>
 
