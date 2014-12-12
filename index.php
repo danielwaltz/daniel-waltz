@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
 	<title>Daniel Waltz</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&amp;Oswald:400,300,700" rel="stylesheet" type="text/css">
+	<style>
+	<?php include 'css/style.css'; ?>
+	</style>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<![endif]-->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,7 +28,9 @@
 			<h1>Daniel Waltz</h1>
 			<h2><em>front-end web developer</em></h2>
 		</div>
+
 		<a href="#section2" class="arrow arrow-down">my abilities</a>
+
 		<video class="window video-earth" autoplay loop>
 			<source src="videos/earth.mp4" type="video/mp4">
 			<source src="videos/earth.webm" type="video/webm">
@@ -48,7 +54,6 @@
 						<h3>PHP</h3>
 						<h3>Git</h3>
 					</div>
-					
 				</div>
 				<a href="#" class="button scroll-toggle">Scroll</a>
 				<div id="specialties">
@@ -68,7 +73,9 @@
 				</div>
 			</div>
 		</div>
+
 		<a href="#section3" class="arrow arrow-down">how to contact me</a>
+
 		<video class="window video-forest" autoplay loop>
 			<source src="videos/forest.mp4" type="video/mp4">
 			<source src="videos/forest.webm" type="video/webm">
@@ -112,8 +119,10 @@
 			</form>
 		</div>
 
-		<span class="copyright">&copy; Copyright <?php echo date('Y'); ?> Daniel Waltz<br>
-		Video assets provided by <a href="http://www.dissolve.com/" target="_blank" title="Thank you!">Dissolve</a></span>
+		<div class="bottom">
+			<span class="copyright">&copy; Copyright <?php echo date('Y'); ?> Daniel Waltz</span>
+			<span class="credit">Video assets provided by <a href="http://www.dissolve.com/" target="_blank" title="Thank you!">Dissolve</a></span>
+		</div>
 
 		<a href="#section1" class="arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
@@ -121,8 +130,7 @@
 			<source src="videos/clouds.webm" type="video/webm">
 		</video>
 	</section>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/script-min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.min.js"></script>
 </body>
 </html>

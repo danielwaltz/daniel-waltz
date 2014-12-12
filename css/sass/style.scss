@@ -33,6 +33,7 @@ body {
 	color: #fff;
 	font-size: 1.4rem;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 @media (max-width: 530px) {
 	html {
@@ -90,7 +91,6 @@ input, textarea {
 }
 .button, input[type=submit] {
 	background: #fff;
-	background: -webkit-radial-gradient(circle, #fff, #aaa);
 	background: radial-gradient(circle, #fff, #aaa);
 	padding: 15px 30px;
 	border: 0;
@@ -161,7 +161,6 @@ body > section {
 		line-height: 80px;
 		text-decoration: none;
 		font-style: italic;
-		-webkit-font-smoothing: antialiased;
 		&:before, &:after {
 			content: "";
 			position: absolute;
@@ -170,7 +169,6 @@ body > section {
 			top: 0;
 			right: 0;
 			background: #fff;
-			background: -webkit-radial-gradient(circle, #fff, #aaa);
 			background: radial-gradient(circle, #fff, #aaa);
 			width: 80px;
 			height: 80px;
@@ -253,7 +251,6 @@ body > section {
 }
 .earth {
 	background-image: url('../images/earth.jpg');
-	-webkit-font-smoothing: antialiased;
 	.content {
 		position: absolute;
 		left: 80px;
@@ -303,7 +300,6 @@ body > section {
 }
 .forest {
 	background-image: url('../images/forest.jpg');
-	-webkit-font-smoothing: antialiased;
 	.content {
 		top: 250px;
 		width: 80%;
@@ -530,15 +526,21 @@ body > section {
 	}
 }
 
-.copyright {
+.bottom {
 	position: absolute;
 	left: 0;
+	right: 0;
 	bottom: 0;
 	z-index: 50;
-	background: rgba(0,0,0,.5);
+	background: linear-gradient(0deg, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 75%);
 	padding: 3px 10px;
 	font-size: 1.2rem;
-	border-radius: 0 50px 0 0;
+	text-align: center;
+	span {
+		display: inline-block;
+		margin: 0 10px;
+		opacity: .8;
+	}
 	a {
 		text-decoration: none;
 	}
