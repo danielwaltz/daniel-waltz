@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
 	<title>Daniel Waltz</title>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&amp;Oswald:400,300,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="dist/css/style.css">
+	<link rel="stylesheet" href="dist/css/style.min.css">
 	<!--[if lt IE 9]>
 	<script src="src/js/standlone/html5shiv.min.js"></script>
 	<![endif]-->
