@@ -6,7 +6,7 @@
 	<title>Daniel Waltz</title>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&amp;Oswald:400,300,700" rel="stylesheet" type="text/css">
 	<style>
-	<?php include 'css/style.css'; ?>
+	<?php include 'dist/css/style.css'; ?>
 	</style>
 	<!--[if lt IE 9]>
 	<script src="js/html5shiv.min.js"></script>
@@ -20,7 +20,7 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-<body id="home">
+<body>
 	<a href="#" class="button playpause fa fa-pause" title="Play/Pause"></a>
 
 	<section id="section1" class="earth">
@@ -32,8 +32,8 @@
 		<a href="#section2" class="arrow arrow-down">my abilities</a>
 
 		<video class="window video-earth" autoplay loop>
-			<source src="videos/earth.mp4" type="video/mp4">
-			<source src="videos/earth.webm" type="video/webm">
+			<source src="src/videos/earth.mp4" type="video/mp4">
+			<source src="src/videos/earth.webm" type="video/webm">
 		</video>
 	</section>
 
@@ -77,8 +77,8 @@
 		<a href="#section3" class="arrow arrow-down">how to contact me</a>
 
 		<video class="window video-forest" autoplay loop>
-			<source src="videos/forest.mp4" type="video/mp4">
-			<source src="videos/forest.webm" type="video/webm">
+			<source src="src/videos/forest.mp4" type="video/mp4">
+			<source src="src/videos/forest.webm" type="video/webm">
 		</video>
 	</section>
 
@@ -126,11 +126,12 @@
 
 		<a href="#section1" class="arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
-			<source src="videos/clouds.mp4" type="video/mp4">
-			<source src="videos/clouds.webm" type="video/webm">
+			<source src="src/videos/clouds.mp4" type="video/mp4">
+			<source src="src/videos/clouds.webm" type="video/webm">
 		</video>
 	</section>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/script.min.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/script.min.js"></script>
 </body>
 </html>
