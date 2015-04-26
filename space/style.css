@@ -1,0 +1,283 @@
+* { margin: 0; padding: 0; }
+::-moz-selection {
+	background: #000000;
+	color: #ffffff;
+}
+::selection {
+	background: #000000;
+	color: #ffffff;
+}
+section, aside, article, nav, header, footer { display:	block; }
+
+html, body, .space { position: relative; height: 100%; }
+
+html {
+	
+}
+body {
+    color: #ffffff;
+	font-size: 13px;
+	font-family: Gotham, Arial, sans-serif;
+	
+	-webkit-animation: background-color 120s infinite linear;
+	-moz-animation: background-color 120s infinite linear;
+	-ms-animation: background-color 120s infinite linear;
+	-o-animation: background-color 120s infinite linear;
+	animation: background-color 120s infinite linear;
+}
+.flash {
+	position: absolute;
+	left: 20%;
+	background: #ffffff;
+	width: 0;
+	height: 100%;
+	
+	box-shadow: 0 0 150px 200px #ffffff;
+	
+	-webkit-animation: left-to-right 60s infinite ease-in-out;
+	-moz-animation: left-to-right 60s infinite ease-in-out;
+	-ms-animation: left-to-right 60s infinite ease-in-out;
+	-o-animation: left-to-right 60s infinite ease-in-out;
+	animation: left-to-right 60s infinite ease-in-out;
+}
+.space {
+	margin-top: -1px;
+	padding-top: 1px;
+    background-image: url(images/transparent-space.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.wrap {
+	background: rgba(0,0,0,.5);
+	margin: 5% auto 0;
+	width: 720px;
+	padding: 2em;
+}
+.stream {
+	display: block;
+}
+.credits {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.8);
+	padding: 5px;
+}
+
+@-webkit-keyframes background-color {
+	0% {
+		background-color: rgb(0,0,0);
+	}
+	10% {
+		background-color: rgb(51,51,51);
+	}
+	20% {
+		background-color: rgb(102,102,102);
+	}
+	30% {
+		background-color: rgb(153,153,153);
+	}
+	40% {
+		background-color: rgb(204,204,204);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	60% {
+		background-color: rgb(204,204,204);
+	}
+	70% {
+		background-color: rgb(153,153,153);
+	}
+	80% {
+		background-color: rgb(102,102,102);
+	}
+	90% {
+		background-color: rgb(51,51,51);
+	}
+	100% {
+		background-color: rgb(0,0,0);
+	}
+}
+@-moz-keyframes background-color {
+	0% {
+		background-color: rgb(0,0,0);
+	}
+	10% {
+		background-color: rgb(51,51,51);
+	}
+	20% {
+		background-color: rgb(102,102,102);
+	}
+	30% {
+		background-color: rgb(153,153,153);
+	}
+	40% {
+		background-color: rgb(204,204,204);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	60% {
+		background-color: rgb(204,204,204);
+	}
+	70% {
+		background-color: rgb(153,153,153);
+	}
+	80% {
+		background-color: rgb(102,102,102);
+	}
+	90% {
+		background-color: rgb(51,51,51);
+	}
+	100% {
+		background-color: rgb(0,0,0);
+	}
+}
+@-ms-keyframes background-color {
+	0% {
+		background-color: rgb(0,0,0);
+	}
+	10% {
+		background-color: rgb(51,51,51);
+	}
+	20% {
+		background-color: rgb(102,102,102);
+	}
+	30% {
+		background-color: rgb(153,153,153);
+	}
+	40% {
+		background-color: rgb(204,204,204);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	60% {
+		background-color: rgb(204,204,204);
+	}
+	70% {
+		background-color: rgb(153,153,153);
+	}
+	80% {
+		background-color: rgb(102,102,102);
+	}
+	90% {
+		background-color: rgb(51,51,51);
+	}
+	100% {
+		background-color: rgb(0,0,0);
+	}
+}
+@-o-keyframes background-color {
+	0% {
+		background-color: rgb(0,0,0);
+	}
+	10% {
+		background-color: rgb(51,51,51);
+	}
+	20% {
+		background-color: rgb(102,102,102);
+	}
+	30% {
+		background-color: rgb(153,153,153);
+	}
+	40% {
+		background-color: rgb(204,204,204);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	60% {
+		background-color: rgb(204,204,204);
+	}
+	70% {
+		background-color: rgb(153,153,153);
+	}
+	80% {
+		background-color: rgb(102,102,102);
+	}
+	90% {
+		background-color: rgb(51,51,51);
+	}
+	100% {
+		background-color: rgb(0,0,0);
+	}
+}
+@keyframes background-color {
+	0% {
+		background-color: rgb(0,0,0);
+	}
+	10% {
+		background-color: rgb(51,51,51);
+	}
+	20% {
+		background-color: rgb(102,102,102);
+	}
+	30% {
+		background-color: rgb(153,153,153);
+	}
+	40% {
+		background-color: rgb(204,204,204);
+	}
+	50% {
+		background-color: rgb(255,255,255);
+	}
+	60% {
+		background-color: rgb(204,204,204);
+	}
+	70% {
+		background-color: rgb(153,153,153);
+	}
+	80% {
+		background-color: rgb(102,102,102);
+	}
+	90% {
+		background-color: rgb(51,51,51);
+	}
+	100% {
+		background-color: rgb(0,0,0);
+	}
+}
+
+@-webkit-keyframes left-to-right {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
+@-moz-keyframes left-to-right {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
+@-ms-keyframes left-to-right {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
+@-o-keyframes left-to-right {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
+@keyframes left-to-right {
+	from {
+		left: -20%;
+	}
+	to {
+		left: 120%;
+	}
+}
