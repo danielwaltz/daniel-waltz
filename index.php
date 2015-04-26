@@ -5,11 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
 	<title>Daniel Waltz</title>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&amp;Oswald:400,300,700" rel="stylesheet" type="text/css">
-	<style>
-	<?php include 'dist/css/style.css'; ?>
-	</style>
+	<link rel="stylesheet" href="dist/css/style.css">
 	<!--[if lt IE 9]>
-	<script src="js/html5shiv.min.js"></script>
+	<script src="src/js/standlone/html5shiv.min.js"></script>
 	<![endif]-->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -110,10 +108,10 @@
 					<input type="submit" id="submit" class="button submit" value="send">
 					<input type="hidden" name="submitted" value="true">
 				</div>
-				<?php if( isset($hasError) || isset($captchaError) ) { ?>  
+				<?php if( isset($hasError) || isset($captchaError) ) { ?>
 				<p class="alert">There was an error submitting the form. Make sure required fields are filled.</p>  
 				<?php } ?>
-				<?php if( isset($emailSent) ) { ?>  
+				<?php if( isset($emailSent) ) { ?>
 				<p class="alert">Message sent successfully.</p>  
 				<?php } ?>
 			</form>
@@ -130,8 +128,6 @@
 			<source src="src/videos/clouds.webm" type="video/webm">
 		</video>
 	</section>
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-	<script src="dist/js/jquery.min.js"></script>
 	<script src="dist/js/script.min.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src('src/js/**/*.js')
+	return gulp.src(['src/js/libs/**/*.js', 'src/js/**/*.js'])
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(rename({suffix: '.min'}))
@@ -34,9 +34,15 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function() {
 	return gulp.src('src/images/**/*')
-		.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
 		.pipe(gulp.dest('dist/images'))
 		.pipe(notify({ message: 'Images task complete' }));
+});
+
+gulp.task('fonts', function() {
+	return gulp.src('src/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(notify({ message: 'Fonts task complete' }));
 });
 
 gulp.task('clean', function(cb) {
@@ -44,7 +50,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('default', ['clean'], function() {
-	gulp.start('styles', 'scripts', 'images');
+	gulp.start('styles', 'scripts', 'images', 'fonts');
 });
 
 gulp.task('watch', function() {
