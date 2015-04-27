@@ -1600,6 +1600,25 @@ td, th {
   background: #fff;
   color: #000; }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(200, 200, 200, 0.75); }
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 6px;
+  background: #fff;
+  background: -webkit-radial-gradient(circle, #aaa, #fff);
+  background: radial-gradient(circle, #aaa, #fff); }
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 6px;
+  background: #fff;
+  background: -webkit-radial-gradient(circle, #aaa, #fff);
+  background: radial-gradient(circle, #aaa, #fff); }
+
 html, body {
   background-color: #000;
   height: 100%; }
@@ -1789,14 +1808,14 @@ body > section {
             animation: arrow 2.2s ease-in-out, flash 1s ease-in-out 5s infinite alternate; }
 
 @media (max-width: 900px), (max-height: 800px) {
-  #home > section .content {
+  body > section .content {
     top: 10%;
     left: 10%;
     right: 10%;
     bottom: auto; }
-    #home > section .content.scroll {
+    body > section .content.scroll {
       overflow-y: auto; }
-  #home > section .content.vert-center-mobile {
+  body > section .content.vert-center {
     top: 50%; } }
 
 @-webkit-keyframes title {
@@ -2161,7 +2180,7 @@ body > section {
             animation: title 1.2s ease-in-out; }
 
 @media (max-width: 900px) {
-  #home > section .content {
+  body > section .content {
     top: 5%; } }
 
 .bottom {

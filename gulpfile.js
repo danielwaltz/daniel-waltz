@@ -13,8 +13,8 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function() {
 	return gulp.src('src/sass/style.scss')
-		.pipe(sass({ style: 'expanded' }))
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		.pipe(sass({ style: 'compact' }))
+		.pipe(autoprefixer('last 2 version'))
 		.pipe(gulp.dest('dist/css'))
 		.pipe(minifycss())
 		.pipe(rename({suffix: '.min'}))
@@ -54,10 +54,10 @@ gulp.task('default', ['clean'], function() {
 });
 
 gulp.task('watch', function() {
-	livereload.listen();
-	gulp.watch(['dist/**']).on('change', livereload.changed);
-
 	gulp.watch('src/sass/**/*.scss', ['styles']);
 	gulp.watch('src/js/**/*.js', ['scripts']);
 	gulp.watch('src/images/**/*', ['images']);
+
+	livereload.listen();
+	gulp.watch(['**/*.php', 'dist/**']).on('change', livereload.changed);
 });

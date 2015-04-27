@@ -16,7 +16,7 @@ function updateVideoSize(wwidth,vwidth,ccontent) {
 				'width': wwidth,
 				'height': 'auto'
 			});
-			$(this).css('background-size',wwidth);
+			$(this).css('background-size', wwidth);
 		});
 	} else {
 		$('body > section').each(function(){
@@ -24,18 +24,18 @@ function updateVideoSize(wwidth,vwidth,ccontent) {
 				'width': 'auto',
 				'height':'100%'
 			});
-			$(this).css('background-size','auto 100%');
+			$(this).css('background-size', 'auto 100%');
 		});
 	}
 
 	// Content
 	if ( ccontent ) {
-		$('.vert-center-mobile').each(function(){
+		$('.js-vert-center').each(function(){
 			var contentHeight = $(window).outerHeight() / 2 - $(this).outerHeight() / 2;
 			$(this).css('top', contentHeight);
 		});
 	} else {
-		$('.vert-center-mobile').each(function(){
+		$('.js-vert-center').each(function(){
 			$(this).attr('style','');
 		});
 	}
