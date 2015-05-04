@@ -22,7 +22,7 @@
 	<a href="#" class="button playpause fa fa-pause" title="Play/Pause"></a>
 
 	<section id="section1" class="earth">
-		<div class="content vert-center js-vert-center">
+		<div class="content js-vert-center">
 			<h1>Daniel Waltz</h1>
 			<h2><em>front-end web developer</em></h2>
 		</div>
@@ -36,7 +36,7 @@
 	</section>
 
 	<section id="section2" class="forest">
-		<div class="content scroll vert-center js-vert-center">
+		<div class="content scroll js-vert-center">
 			<div class="scroll-inner">
 				<div id="abilities">
 					<header>

@@ -1814,9 +1814,7 @@ body > section {
     right: 10%;
     bottom: auto; }
     body > section .content.scroll {
-      overflow-y: auto; }
-  body > section .content.vert-center {
-    top: 50%; } }
+      overflow-y: auto; } }
 
 @-webkit-keyframes title {
   0% {

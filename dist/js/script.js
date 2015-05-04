@@ -32,7 +32,10 @@ function updateVideoSize(wwidth,vwidth,ccontent) {
 	if ( ccontent ) {
 		$('.js-vert-center').each(function(){
 			var contentHeight = $(window).outerHeight() / 2 - $(this).outerHeight() / 2;
-			$(this).css('top', contentHeight);
+			$(this).css({
+				'position': 'relative',
+				'top': contentHeight
+			});
 		});
 	} else {
 		$('.js-vert-center').each(function(){
