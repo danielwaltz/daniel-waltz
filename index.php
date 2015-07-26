@@ -45,12 +45,14 @@
 					</header>
 					<div class="col col-1-2">
 						<h3>JavaScript</h3>
+						<h3>PHP</h3>
 						<h3>Email Templating</h3>
-						<h3>Mobile</h3>
+						<h3>Node.js</h3>
 					</div><div class="col col-1-2">
 						<h3>Photoshop</h3>
-						<h3>PHP</h3>
-						<h3>Git</h3>
+						<h3>Linux Server Management</h3>
+						<h3>MySQL/phpMyAdmin</h3>
+						<h3>Load Speed Optimizations</h3>
 					</div>
 				</div>
 				<a href="#" class="button scroll-toggle">Scroll</a>
@@ -63,10 +65,12 @@
 						<h3>HTML5</h3>
 						<h3>CSS3</h3>
 						<h3>Responsive</h3>
+						<h3>SASS</h3>
 					</div><div class="col col-1-2">
+						<h3>Git</h3>
+						<h3>Gulp</h3>
 						<h3>jQuery</h3>
 						<h3>WordPress</h3>
-						<h3>MySQL</h3>
 					</div>
 				</div>
 			</div>
@@ -109,10 +113,10 @@
 					<input type="hidden" name="submitted" value="true">
 				</div>
 				<?php if( isset($hasError) || isset($captchaError) ) { ?>
-				<p class="alert">There was an error submitting the form. Make sure required fields are filled.</p>  
+				<p class="alert">There was an error submitting the form. Make sure required fields are filled.</p>
 				<?php } ?>
 				<?php if( isset($emailSent) ) { ?>
-				<p class="alert">Message sent successfully.</p>  
+				<p class="alert">Message sent successfully.</p>
 				<?php } ?>
 			</form>
 		</div>
