@@ -1918,14 +1918,14 @@ body > section {
     top: 250px;
     width: 80%;
     text-align: center;
-    white-space: nowrap;
-    white-space-collapsing: discard;
     font-size: 0; }
     .forest .content h2 {
       font-size: 3rem; }
     .forest .content h3 {
       margin-bottom: 16px;
-      font-size: 2.2rem; }
+      font-size: 2rem;
+      white-space: nowrap;
+      white-space-collapsing: discard; }
     .forest .content header {
       margin-bottom: 40px; }
     .forest .content #abilities, .forest .content #specialties {
@@ -1934,11 +1934,11 @@ body > section {
       display: inline-block;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
-      width: 45%;
+      width: 47%;
       -webkit-transition: all .2s ease-in-out;
               transition: all .2s ease-in-out; }
     .forest .content #abilities {
-      margin-right: 10%; }
+      margin-right: 6%; }
     .forest .content .scroll-toggle {
       display: none;
       position: absolute;
@@ -1964,6 +1964,11 @@ body > section {
         border-left: 15px solid rgba(0, 0, 0, 0.8); }
       .forest .content .scroll-toggle:after {
         border-right: 15px solid rgba(0, 0, 0, 0.8); }
+  @media (max-width: 1200px) and (min-width: 900px) {
+    .forest .content {
+      top: 150px; }
+      .forest .content .col {
+        width: 100%; } }
   @media (min-width: 900px) {
     .forest.visible #abilities {
       -webkit-animation: slideinleft 1.5s ease-out;
@@ -1972,11 +1977,14 @@ body > section {
       -webkit-animation: slideinright 1.5s ease-out;
               animation: slideinright 1.5s ease-out; } }
   @media (max-width: 900px) {
-    .forest .content #abilities, .forest .content #specialties {
-      margin: 0;
-      width: 100%; }
-    .forest .content .scroll-toggle {
-      display: block; } }
+    .forest .content {
+      white-space: nowrap;
+      white-space-collapsing: discard; }
+      .forest .content #abilities, .forest .content #specialties {
+        margin: 0;
+        width: 100%; }
+      .forest .content .scroll-toggle {
+        display: block; } }
 
 @-webkit-keyframes inputslideinleft {
   0% {

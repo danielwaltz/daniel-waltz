@@ -318,15 +318,15 @@ body > section {
 		top: 250px;
 		width: 80%;
 		text-align: center;
-		white-space: nowrap;
-		white-space-collapsing: discard;
 		font-size: 0;
 		h2 {
 			font-size: 3rem;
 		}
 		h3 {
 			margin-bottom: 16px;
-			font-size: 2.2rem;
+			font-size: 2rem;
+			white-space: nowrap;
+			white-space-collapsing: discard;
 		}
 		header {
 			margin-bottom: 40px;
@@ -337,11 +337,11 @@ body > section {
 			display: inline-block;
 			background-color: rgba(0,0,0,.5);
 			padding: 20px;
-			width: 45%;
+			width: 47%;
 			transition: all .2s ease-in-out;
 		}
 		#abilities {
-			margin-right: 10%;
+			margin-right: 6%;
 		}
 		.scroll-toggle {
 			display: none;
@@ -374,6 +374,14 @@ body > section {
 			}
 		}
 	}
+	@media (max-width: 1200px) and (min-width: 900px) {
+		.content {
+			top: 150px;
+			.col {
+				width: 100%;
+			}
+		}
+	}
 	@media (min-width: 900px) {
 		&.visible {
 			#abilities {
@@ -386,6 +394,8 @@ body > section {
 	}
 	@media (max-width: 900px) {
 		.content {
+			white-space: nowrap;
+			white-space-collapsing: discard;
 			#abilities, #specialties {
 				margin: 0;
 				width: 100%;

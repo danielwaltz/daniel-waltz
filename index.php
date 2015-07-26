@@ -19,7 +19,7 @@
 	</script>
 </head>
 <body>
-	<a href="#" class="button playpause fa fa-pause" title="Play/Pause"></a>
+	<a href="#" class="button playpause js-playpause fa fa-pause" title="Play/Pause"></a>
 
 	<section id="section1" class="earth">
 		<div class="content js-vert-center">
@@ -27,7 +27,7 @@
 			<h2><em>front-end web developer</em></h2>
 		</div>
 
-		<a href="#section2" class="arrow arrow-down">my abilities</a>
+		<a href="#section2" class="arrow js-arrow arrow-down">my abilities</a>
 
 		<video class="window video-earth" autoplay loop>
 			<source src="src/videos/earth.mp4" type="video/mp4">
@@ -36,8 +36,8 @@
 	</section>
 
 	<section id="section2" class="forest">
-		<div class="content scroll js-vert-center">
-			<div class="scroll-inner">
+		<div class="content scroll js-scroll js-vert-center">
+			<div class="js-scroll-inner">
 				<div id="abilities">
 					<header>
 						<h1>Abilities</h1>
@@ -50,12 +50,12 @@
 						<h3>Node.js</h3>
 					</div><div class="col col-1-2">
 						<h3>Photoshop</h3>
-						<h3>Linux Server Management</h3>
+						<h3>Server Management</h3>
 						<h3>MySQL/phpMyAdmin</h3>
-						<h3>Load Speed Optimizations</h3>
+						<h3>Load Speed</h3>
 					</div>
 				</div>
-				<a href="#" class="button scroll-toggle">Scroll</a>
+				<a href="#" class="button scroll-toggle js-scroll-toggle">Scroll</a>
 				<div id="specialties">
 					<header>
 						<h1>Specialties</h1>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 
-		<a href="#section3" class="arrow arrow-down">how to contact me</a>
+		<a href="#section3" class="arrow js-arrow arrow-down">how to contact me</a>
 
 		<video class="window video-forest" autoplay loop>
 			<source src="src/videos/forest.mp4" type="video/mp4">
@@ -94,15 +94,15 @@
 			<form id="contact" action="#clouds" method="post">
 				<div class="field-wrap">
 					<label class="screen-reader-text">First Name</label>
-					<input type="text" name="fname" id="fname" value="<?php echo ( !isset($emailSent) ) ? $form_fname : '' ?>" placeholder="first name" class="required fname<?php echo ( isset($fnameError) ) ? ' error' : '' ?>">
+					<input type="text" name="fname" id="fname" value="<?php echo ( !isset($emailSent) ) ? $form_fname : '' ?>" placeholder="first name" class="required js-required fname<?php echo ( isset($fnameError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Last Name</label>
-					<input type="text" name="lname" id="lname" value="<?php echo ( !isset($emailSent) ) ? $form_lname : '' ?>" placeholder="last name" class="required lname<?php echo ( isset($lnameError) ) ? ' error' : '' ?>">
+					<input type="text" name="lname" id="lname" value="<?php echo ( !isset($emailSent) ) ? $form_lname : '' ?>" placeholder="last name" class="required js-required lname<?php echo ( isset($lnameError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Email</label>
-					<input type="email" name="email" id="email" value="<?php echo ( !isset($emailSent) ) ? $form_email : '' ?>" placeholder="email" class="required email<?php echo ( isset($emailError) ) ? ' error' : '' ?>">
+					<input type="email" name="email" id="email" value="<?php echo ( !isset($emailSent) ) ? $form_email : '' ?>" placeholder="email" class="required js-required email<?php echo ( isset($emailError) ) ? ' error' : '' ?>">
 				</div>
 				<div class="field-wrap">
 					<label class="screen-reader-text">Inquiry</label>
@@ -126,7 +126,7 @@
 			<span class="credit">Video assets provided by <a href="http://www.dissolve.com/" target="_blank" title="Thank you!">Dissolve</a></span>
 		</div>
 
-		<a href="#section1" class="arrow arrow-up">top</a>
+		<a href="#section1" class="arrow js-arrow arrow-up">top</a>
 		<video class="window video-clouds" autoplay loop>
 			<source src="src/videos/clouds.mp4" type="video/mp4">
 			<source src="src/videos/clouds.webm" type="video/webm">
