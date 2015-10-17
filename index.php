@@ -17,6 +17,7 @@
 		ga('create', 'UA-36719192-1', 'danielwaltz.me');
 		ga('send', 'pageview');
 	</script>
+	<!-- Git hooks ago! -->
 </head>
 <body>
 	<a href="#" class="button playpause js-playpause fa fa-pause" title="Play/Pause"></a>
