@@ -1,63 +1,106 @@
-var gulp         = require('gulp'),
-	sass         = require('gulp-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minifycss    = require('gulp-minify-css'),
-	uglify       = require('gulp-uglify'),
-	imagemin     = require('gulp-imagemin'),
-	rename       = require('gulp-rename'),
-	concat       = require('gulp-concat'),
-	notify       = require('gulp-notify'),
-	cache        = require('gulp-cache'),
-	livereload   = require('gulp-livereload'),
-	del          = require('del');
+(function(){
+	'use strict';
 
-gulp.task('styles', function() {
-	return gulp.src('src/sass/style.scss')
-		.pipe(sass({ style: 'compact' }))
-		.pipe(autoprefixer('last 2 version'))
-		.pipe(gulp.dest('dist/css'))
-		.pipe(minifycss())
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist/css'))
-		.pipe(notify({ message: 'Styles task complete' }));
-});
+	var del          = require('del'),
+		gulp         = require('gulp'),
+		autoprefixer = require('gulp-autoprefixer'),
+		cache        = require('gulp-cache'),
+		concat       = require('gulp-concat'),
+		imagemin     = require('gulp-imagemin'),
+		livereload   = require('gulp-livereload'),
+		minifycss    = require('gulp-minify-css'),
+		notify       = require('gulp-notify'),
+		rename       = require('gulp-rename'),
+		sass         = require('gulp-sass'),
+		uglify       = require('gulp-uglify'),
+		merge        = require('merge-stream');
 
-gulp.task('scripts', function() {
-	return gulp.src(['src/js/libs/**/*.js', 'src/js/**/*.js'])
-		.pipe(concat('script.js'))
-		.pipe(gulp.dest('dist/js'))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'))
-		.pipe(notify({ message: 'Scripts task complete' }));
-});
+	gulp.task('styles', function() {
+		var styles = gulp.src([
+			'node_modules/font-awesome/scss/font-awesome.scss',
+			'src/scss/style.scss'
+		]);
 
-gulp.task('images', function() {
-	return gulp.src('src/images/**/*')
-		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-		.pipe(gulp.dest('dist/images'))
-		.pipe(notify({ message: 'Images task complete' }));
-});
+		return styles
+			.pipe(sass())
+			.pipe(autoprefixer('last 2 version'))
+			
+			// Generate non minified version
+			.pipe(concat('style.css'))
+			.pipe(gulp.dest('dist/css'))
 
-gulp.task('fonts', function() {
-	return gulp.src('src/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'))
-		.pipe(notify({ message: 'Fonts task complete' }));
-});
+			// Generate minified version
+			.pipe(minifycss())
+			.pipe(rename({suffix: '.min'}))
+			.pipe(gulp.dest('dist/css'))
 
-gulp.task('clean', function(cb) {
-	del(['dist/css', 'dist/js', 'dist/images'], cb)
-});
+			.pipe(notify({ message: 'Styles Processed' }));
+	});
 
-gulp.task('default', ['clean'], function() {
-	gulp.start('styles', 'scripts', 'images', 'fonts');
-});
+	gulp.task('scripts', function() {
+		var scripts = gulp.src([
+			'src/js/lib/**/*.js',
+			'src/js/**/*.js'
+		]);
 
-gulp.task('watch', function() {
-	gulp.watch('src/sass/**/*.scss', ['styles']);
-	gulp.watch('src/js/**/*.js', ['scripts']);
-	gulp.watch('src/images/**/*', ['images']);
+		return scripts
+			// Generate non minified version
+			.pipe(concat('script.js'))
+			.pipe(gulp.dest('dist/js'))
 
-	livereload.listen();
-	gulp.watch(['**/*.php', 'dist/**']).on('change', livereload.changed);
-});
+			// Generate minified version
+			.pipe(rename({suffix: '.min'}))
+			.pipe(uglify())
+			.pipe(gulp.dest('dist/js'))
+
+			.pipe(notify({ message: 'Scripts Processed' }));
+	});
+
+	gulp.task('assets', function() {
+		// Font awesome fonts
+		var fontawesome = gulp.src('node_modules/font-awesome/fonts/**/*.{ttf,otf,eot,eof,woff,woff2,svg}')
+			.pipe(gulp.dest('dist/fonts'));
+
+		// HTML5shiv
+		var html5shiv = gulp.src('node_modules/html5shiv/dist/html5shiv.min.js')
+			.pipe(gulp.dest('dist/js/lib'));
+
+		return merge(fontawesome, html5shiv);
+	});
+
+	gulp.task('images', function() {
+		return gulp.src('src/images/**/*')
+			.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+			.pipe(gulp.dest('dist/images'))
+			.pipe(notify({ message: 'Image Processed' }));
+	});
+
+	gulp.task('svgs', function() {
+		return gulp.src('src/svgs/**/*.svg')
+			.pipe(imagemin({
+				progressive: true,
+				multipass: true,
+				svgoPlugins: [{removeViewBox: false}]
+			}))
+			.pipe(gulp.dest('dist/svgs'))
+			.pipe(notify({ message: 'SVG Processed' }));
+	});
+
+	gulp.task('clean', function() {
+		del.sync(['dist/**/*']);
+	});
+
+	gulp.task('watch', function() {
+		livereload.listen();
+
+		gulp.watch('src/scss/**/*.scss', ['styles']);
+		gulp.watch('src/js/**/*.js', ['scripts']);
+		gulp.watch('src/images/**/*', ['images']);
+		gulp.watch('src/svgs/**/*', ['svgs']);
+		gulp.watch(['**/*.php', 'dist/**']).on('change', livereload.changed);
+	});
+
+	gulp.task('default', ['clean'], function() {
+		gulp.start('styles', 'scripts', 'assets', 'images', 'svgs');
+	});
+}());

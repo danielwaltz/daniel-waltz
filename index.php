@@ -8,7 +8,7 @@
 	<link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="dist/css/style.min.css">
 	<!--[if lt IE 9]>
-	<script src="src/js/standlone/html5shiv.min.js"></script>
+	<script src="dist/js/lib/html5shiv.min.js"></script>
 	<![endif]-->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,7 +18,6 @@
 		ga('create', 'UA-36719192-1', 'danielwaltz.me');
 		ga('send', 'pageview');
 	</script>
-	<!-- Git hooks ago! -->
 </head>
 <body>
 	<a href="#" class="button playpause js-playpause fa fa-pause" title="Play/Pause"></a>
