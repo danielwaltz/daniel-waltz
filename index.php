@@ -77,15 +77,54 @@
 			</div>
 		</div>
 
-		<a href="#section3" class="arrow js-arrow arrow-down">how to contact me</a>
+		<a href="#section3" class="arrow js-arrow arrow-down">my portfolio</a>
 
-		<video class="window video-forest" autoplay loop>
+		<video class="window video-fan" autoplay loop>
 			<source src="src/videos/forest.mp4" type="video/mp4">
 			<source src="src/videos/forest.webm" type="video/webm">
 		</video>
 	</section>
 
-	<section id="section3" class="clouds">
+	<section id="section3" class="fan">
+		<div class="content">
+			<header>
+				<h1>Portfolio</h1>
+				<h2>what you <em>actually came here for</em></h2>
+			</header>
+
+			<ul class="portfolio">
+				<li>
+					<a href="https://www.indianalimestonecompany.com/" target="_blank">
+						<img src="src/images/portfolio/ilco.png" alt="Indiana Limestone Company">
+					</a>
+				</li>
+				<li>
+					<a href="https://grippinc.com/" target="_blank">
+						<img src="src/images/portfolio/gripp.png" alt="Gripp Inc">
+					</a>
+				</li>
+				<li>
+					<a href="https://raystrash.com/" target="_blank">
+						<img src="src/images/portfolio/rays.png" alt="Ray's Trash">
+					</a>
+				</li>
+				<li>
+					<a href="http://greenwaltcpas.com/" target="_blank">
+						<img src="src/images/portfolio/greenwalt.png" alt="Greenwalt CPAs">
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<a href="#section4" class="arrow js-arrow arrow-down">how to contact me</a>
+
+		<video class="window video-forest" autoplay loop>
+			<source src="src/videos/fan.mp4" type="video/mp4">
+			<source src="src/videos/fan.webm" type="video/webm">
+		</video>
+	</section>
+
+	<section id="section4" class="clouds">
 		<div class="content">
 			<header>
 				<h1>Contact</h1>
@@ -133,9 +172,7 @@
 			<source src="src/videos/clouds.webm" type="video/webm">
 		</video>
 	</section>
-	<?php if ( strpos( $_SERVER['HTTP_HOST'], '.dev' ) !== false )  : ?>
-	<script src="http://localhost:35729/livereload.js?snipver=1"></script>
-	<?php endif; ?>
-	<script src="dist/js/script.min.js"></script>
+
+	<script src="dist/js/script.js"></script>
 </body>
 </html>

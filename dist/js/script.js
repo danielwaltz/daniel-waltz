@@ -70,8 +70,8 @@ function updateSideScroll(swidth,scontent,active) {
 
 // Dynamically load video + play/pause button
 function dynamicVideo() {
-	var load = localStorage.getItem('load');
-	var videos = $('video');
+	var load    = localStorage.getItem('load');
+	var videos  = $('video');
 	var playing = true;
 
 	if ( load === 'false' ) {
@@ -84,24 +84,22 @@ function dynamicVideo() {
 		videos.hide();
 		$(window).load(function(){
 			videos.show();
-			$(this).get(0).play();
 		});
 	}
 
 	$('.js-playpause').click(function(e){
 		e.preventDefault();
 		if ( videos.get(0).paused ) {
-			playing = true;
+			playingUpdate(true);
 		} else {
-			playing = false;
+			playingUpdate(false);
 		}
+	});
+
+	function playingUpdate(playing) {
 		if ( load === 'false' ) {
 			videos.show();
 		}
-		playingUpdate();
-	});
-
-	function playingUpdate() {
 		if ( playing ) {
 			videos.each(function(){
 				$(this).get(0).play();
