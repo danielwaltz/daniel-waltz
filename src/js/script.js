@@ -1,5 +1,5 @@
 // Update size of videos and backgrounds based on window size + center content
-function updateVideoSize(wwidth,vwidth,ccontent) {
+function updateVideoSize(wwidth, vwidth, ccontent) {
 	// Videos and backgrounds
 	if ( wwidth >= vwidth ) {
 		$('body > section').each(function(){
@@ -32,34 +32,6 @@ function updateVideoSize(wwidth,vwidth,ccontent) {
 		$('.js-vert-center').each(function(){
 			$(this).attr('style','');
 		});
-	}
-}
-
-// Update size of scroll area
-function updateSideScroll(swidth,scontent,active) {
-	var scrollCount = $('.js-scroll-inner > div').size();
-	var scrollTime = 800;
-
-	if ( scontent ) {
-		$('.js-scroll-inner').css('width', swidth * scrollCount);
-		$('.js-scroll-inner > div').css('width', swidth);
-	} else {
-		$('.js-scroll-inner').attr('style','');
-		$('.js-scroll-inner > div').each(function(){
-			$(this).attr('style','');
-		});
-	}
-
-	if ( active ) {
-		if ( $('.js-scroll').scrollLeft() >= swidth / 2 ) {
-			$('.js-scroll').stop().animate({
-				scrollLeft: 0
-			}, scrollTime);
-		} else {
-			$('.js-scroll').stop().animate({
-				scrollLeft: swidth
-			}, scrollTime);
-		}
 	}
 }
 
@@ -112,21 +84,15 @@ function dynamicVideo() {
 }
 
 // Dynamic animations for sections
-function updateHeights() {
-	$('body > section').each(function() {
-		var height = $(window).outerHeight();
-		$(this).outerHeight(height);
-	});
-}
 function updateSections() {
-	var viewport = $(window);
-	var padding = viewport.outerHeight() * 0.10;
+	var viewport = $(window),
+		padding  = viewport.outerHeight() * 0.05;
 
 	$('body > section').each(function() {
-		var self = $(this);
-		var topVisible = ( self.offset().top + padding ) < viewport.scrollTop() + viewport.outerHeight();
-		var bottomVisible = ( self.offset().top + self.outerHeight() - padding ) > viewport.scrollTop();
-		var shown = bottomVisible && topVisible;
+		var self          = $(this),
+			topVisible    = ( self.offset().top + padding ) < viewport.scrollTop() + viewport.outerHeight(),
+			bottomVisible = ( self.offset().top + self.outerHeight() - padding ) > viewport.scrollTop(),
+			shown         = bottomVisible && topVisible;
 
 		if ( shown ) {
 			self.addClass('visible');
@@ -138,7 +104,7 @@ function updateSections() {
 
 // Animated scrolling
 function goToByScroll(id) {
-	$('html, body').animate({scrollTop: $(id).offset().top}, 'slow');
+	$('html, body').animate({scrollTop: $(id).offset().top}, 1000);
 }
 
 // Form validation
@@ -165,6 +131,7 @@ function validateField(type, field) {
 	}
 	return valid;
 }
+
 function validateForm() {
 	var hasError = false;
 
@@ -180,33 +147,32 @@ function validateForm() {
 
 // For responsive aspects
 function resize() {
-	var windowHeight = $(window).outerHeight();
-	$('body > section').css('height', windowHeight);
+	var windowWidth   = $(window).outerWidth(),
+		windowHeight  = $(window).outerHeight(),
+		videoWidth    = $('video').outerWidth(),
+		centerContent = false;
 
-	var windowWidth = $(window).outerWidth();
-	var videoWidth = $('video').outerWidth();
-	var centerContent = false;
-
-	var scrollWidth = $('.js-scroll').outerWidth();
-	var scrollContent = false;
-
-	if ( windowWidth <= 900 ) {
-		scrollContent = true;
-	}
 	if ( windowWidth <= 900 || windowHeight <= 800 ) {
 		centerContent = true;
 	}
 
-	updateVideoSize(windowWidth,videoWidth,centerContent);
-	updateSideScroll(scrollWidth,scrollContent);
+	updateVideoSize(windowWidth, videoWidth, centerContent);
 }
 
 // Run setup function on load and on window resize
-$(document).ready(function(){
+jQuery(function($){
 	resize();
 	dynamicVideo();
-	updateHeights();
 	updateSections();
+
+	// Smooth scrolling
+	$('body').smoothWheel();
+
+	// Animated scrolling
+	$('.js-arrow').click(function(){
+		goToByScroll($(this).attr('href'));
+		return false;
+	});
 
 	// Form validation
 	$('#contact').submit(function(e){
@@ -222,25 +188,10 @@ $(document).ready(function(){
 		var type = $(this).attr('type');
 		validateField(type, this);
 	});
-
-	// Animated scrolling
-	$('nav a, .js-arrow').click(function(){
-		goToByScroll($(this).attr('href'));
-		return false;
-	});
-
-	// Toggle scroll state
-	$('.js-scroll-toggle').click(function(e){
-		var scrollWidth = $('.scroll').outerWidth();
-		e.preventDefault();
-		updateSideScroll(scrollWidth,true,true);
-	});
 });
 $(window).resize(function(){
 	resize();
 });
 $(window).on('scroll', function() {
 	updateSections();
-}).on('resize', function() {
-	updateHeights();
 });

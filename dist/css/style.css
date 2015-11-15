@@ -2639,7 +2639,7 @@ input, textarea {
   outline: 0;
   color: #333; }
 
-.button, .forest .content .scroll-toggle, input[type=submit] {
+.button, input[type=submit] {
   background: #fff;
   background: -webkit-radial-gradient(circle, #fff, #aaa);
   background: radial-gradient(circle, #fff, #aaa);
@@ -2652,9 +2652,9 @@ input, textarea {
   cursor: pointer;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out; }
-  .button:hover, .forest .content .scroll-toggle:hover, input[type=submit]:hover {
+  .button:hover, input[type=submit]:hover {
     opacity: .8; }
-  .button:active, .forest .content .scroll-toggle:active, input[type=submit]:active {
+  .button:active, input[type=submit]:active {
     -webkit-transform: scale(.9);
         -ms-transform: scale(.9);
             transform: scale(.9); }
@@ -2682,12 +2682,22 @@ body > section {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto 100%;
-  height: 100%; }
+  height: 100vh;
+  min-height: 100%; }
+  body > section .view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden; }
   body > section .content {
     position: absolute;
+    top: 10%;
     left: 10%;
     z-index: 100;
-    opacity: .9; }
+    width: 80%; }
     body > section .content h1, body > section .content h2, body > section .content h3, body > section .content h4, body > section .content h5, body > section .content h6, body > section .content ul {
       margin: 0; }
   body > section .arrow {
@@ -2696,9 +2706,9 @@ body > section {
     bottom: 30px;
     z-index: 150;
     display: inline-block;
-    padding-right: 95px;
+    padding-right: 75px;
     font-size: 2.2rem;
-    line-height: 80px;
+    line-height: 60px;
     text-decoration: none;
     font-style: italic; }
     body > section .arrow:before, body > section .arrow:after {
@@ -2710,14 +2720,15 @@ body > section {
       background: #fff;
       background: -webkit-radial-gradient(circle, #fff, #aaa);
       background: radial-gradient(circle, #fff, #aaa);
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.75); }
     body > section .arrow:after {
+      right: 15px;
       width: 0;
       height: 0;
-      border: 20px solid transparent; }
+      border: 15px solid transparent; }
     body > section .arrow:hover {
       opacity: .8; }
     body > section .arrow:active, body > section .arrow:focus {
@@ -2725,13 +2736,11 @@ body > section {
           -ms-transform: scale(.9);
               transform: scale(.9); }
     body > section .arrow.arrow-up:after {
-      top: 8px;
-      right: 20px;
-      border-bottom: 20px solid rgba(0, 0, 0, 0.8); }
+      top: 5px;
+      border-bottom: 15px solid rgba(0, 0, 0, 0.8); }
     body > section .arrow.arrow-down:after {
-      top: 33px;
-      right: 20px;
-      border-top: 20px solid rgba(0, 0, 0, 0.8); }
+      top: 25px;
+      border-top: 15px solid rgba(0, 0, 0, 0.8); }
   body > section > .arrow {
     opacity: .9; }
   body > section video {
@@ -2744,23 +2753,14 @@ body > section {
     -webkit-animation: arrow 2.2s ease-in-out, flash 1s ease-in-out 5s infinite alternate;
             animation: arrow 2.2s ease-in-out, flash 1s ease-in-out 5s infinite alternate; }
 
-@media (max-width: 900px), (max-height: 800px) {
-  body > section .content {
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: auto; }
-    body > section .content.scroll {
-      overflow-y: auto; } }
-
 .earth {
   background-image: url('../images/earth.jpg'); }
   .earth .content {
-    position: absolute;
-    left: 80px;
+    top: auto;
+    right: auto;
     bottom: 100px;
-    z-index: 100;
-    margin-left: 0; }
+    margin-left: 0;
+    opacity: .9; }
     .earth .content h1 {
       font-size: 9rem; }
     .earth .content h2 {
@@ -2780,82 +2780,51 @@ body > section {
 .forest {
   background-image: url('../images/forest.jpg'); }
   .forest .content {
-    top: 250px;
-    width: 80%;
     text-align: center;
-    font-size: 0; }
+    font-size: 0;
+    opacity: .9; }
     .forest .content h2 {
       font-size: 3rem; }
     .forest .content h3 {
       margin-bottom: 16px;
-      font-size: 2rem;
-      white-space: nowrap;
-      white-space-collapsing: discard; }
+      font-size: 2rem; }
     .forest .content header {
       margin-bottom: 40px; }
-    .forest .content #abilities, .forest .content #specialties {
-      position: relative;
-      box-sizing: border-box;
+    .forest .content > div {
       display: inline-block;
+      vertical-align: top;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       width: 47%;
       -webkit-transition: all .2s ease-in-out;
               transition: all .2s ease-in-out; }
-    .forest .content #abilities {
+    .forest .content .abilities {
       margin-right: 6%; }
-    .forest .content .scroll-toggle {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      z-index: 75;
-      margin: -30px 0 0 -30px;
-      padding: 0;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      text-indent: -9999px; }
-      .forest .content .scroll-toggle:before, .forest .content .scroll-toggle:after {
-        content: '';
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        z-index: 80;
-        width: 0;
-        height: 0;
-        border: 15px solid transparent; }
-      .forest .content .scroll-toggle:before {
-        border-left: 15px solid rgba(0, 0, 0, 0.8); }
-      .forest .content .scroll-toggle:after {
-        border-right: 15px solid rgba(0, 0, 0, 0.8); }
-  @media (max-width: 1200px) and (min-width: 900px) {
-    .forest .content {
-      top: 150px; }
-      .forest .content .col {
-        width: 100%; } }
   @media (min-width: 900px) {
-    .forest.visible #abilities {
+    .forest.visible .abilities {
       -webkit-animation: slideinleft 1.5s ease-out;
               animation: slideinleft 1.5s ease-out; }
-    .forest.visible #specialties {
+    .forest.visible .specialties {
       -webkit-animation: slideinright 1.5s ease-out;
               animation: slideinright 1.5s ease-out; } }
+  @media (min-height: 900px) {
+    .forest .content .col {
+      width: 100%; } }
   @media (max-width: 900px) {
-    .forest .content {
-      white-space: nowrap;
-      white-space-collapsing: discard; }
-      .forest .content #abilities, .forest .content #specialties {
-        margin: 0;
-        width: 100%; }
-      .forest .content .scroll-toggle {
-        display: block; } }
+    .forest .content > div {
+      display: block;
+      width: auto; }
+      .forest .content > div.abilities {
+        margin-right: 0; }
+    .forest .content .col {
+      width: 50%; } }
+  @media (max-width: 600px) {
+    .forest .content .abilities {
+      display: none; } }
 
 .fan {
   background-image: url('../images/fan.jpg'); }
   .fan .content {
-    top: 100px;
-    width: 80%;
     text-align: center; }
     .fan .content h2 {
       font-size: 3rem; }
@@ -2871,20 +2840,21 @@ body > section {
       .fan .content .portfolio li {
         display: inline-block;
         vertical-align: top;
-        width: 300px;
-        padding: 10px; }
+        width: 40%;
+        max-width: 500px;
+        padding: 20px; }
       .fan .content .portfolio a {
-        display: block; }
+        display: block;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+        opacity: .9; }
+        .fan .content .portfolio a:hover {
+          opacity: 1; }
       .fan .content .portfolio img {
         display: block; }
-  @media (max-width: 800px), (max-height: 750px) {
-    .fan .content .portfolio li {
-      width: 25%; } }
   @media (max-width: 800px) {
-    .fan .content {
-      top: 10%; }
     .fan .content .portfolio li {
-      width: 50%; } }
+      width: 50%;
+      padding: 10px; } }
   .fan.visible header {
     -webkit-animation: titletop 1.5s ease-in-out;
             animation: titletop 1.5s ease-in-out; }
@@ -2900,7 +2870,9 @@ body > section {
   .clouds .content {
     top: 100px;
     left: 20%;
-    right: 20%; }
+    width: 60%;
+    overflow: visible;
+    opacity: .9; }
     .clouds .content h2 {
       font-size: 2rem; }
     .clouds .content form {
@@ -2934,12 +2906,12 @@ body > section {
           -webkit-animation: floatalt 20s ease-in-out infinite alternate;
                   animation: floatalt 20s ease-in-out infinite alternate; }
         .clouds .content form .field-wrap .error, .clouds .content form .field-wrap .good-to-go {
-          background: rgba(255, 75, 75, 0.75);
+          background: rgba(204, 51, 51, 0.75);
           color: #fff; }
           .clouds .content form .field-wrap .error::-webkit-input-placeholder, .clouds .content form .field-wrap .good-to-go::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.6); }
         .clouds .content form .field-wrap .good-to-go {
-          background: rgba(75, 255, 75, 0.75); }
+          background: rgba(51, 204, 51, 0.75); }
         @media (max-width: 900px), (max-height: 800px) {
           .clouds .content form .field-wrap input[type=text], .clouds .content form .field-wrap input[type=email], .clouds .content form .field-wrap textarea {
             padding: 5px;
@@ -2965,7 +2937,7 @@ body > section {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 50;
+  z-index: 150;
   background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, transparent 75%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 75%);
   padding: 3px 10px;

@@ -5,11 +5,11 @@
 .earth {
 	background-image: url('../images/earth.jpg');
 	.content {
-		position: absolute;
-		left: 80px;
+		top: auto;
+		right: auto;
 		bottom: 100px;
-		z-index: 100;
 		margin-left: 0;
+		opacity: .9;
 		h1 {
 			font-size: 9rem;
 		}
@@ -38,94 +38,61 @@
 .forest {
 	background-image: url('../images/forest.jpg');
 	.content {
-		top: 250px;
-		width: 80%;
 		text-align: center;
 		font-size: 0;
+		opacity: .9;
 		h2 {
 			font-size: 3rem;
 		}
 		h3 {
 			margin-bottom: 16px;
 			font-size: 2rem;
-			white-space: nowrap;
-			white-space-collapsing: discard;
 		}
 		header {
 			margin-bottom: 40px;
 		}
-		#abilities, #specialties {
-			position: relative;
-			box-sizing: border-box;
+		> div {
 			display: inline-block;
+			vertical-align: top;
 			background-color: rgba(0,0,0,.5);
 			padding: 20px;
 			width: 47%;
 			transition: all .2s ease-in-out;
 		}
-		#abilities {
+		.abilities {
 			margin-right: 6%;
-		}
-		.scroll-toggle {
-			display: none;
-			position: absolute;
-			top: 50%;
-			left: 100%;
-			z-index: 75;
-			@extend .button;
-			margin: -30px 0 0 -30px;
-			padding: 0;
-			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			text-indent: -9999px;
-			&:before, &:after {
-				content: '';
-				position: absolute;
-				top: 15px;
-				left: 15px;
-				z-index: 80;
-				width: 0;
-				height: 0;
-				border: 15px solid transparent;
-			}
-			&:before {
-				border-left: 15px solid rgba(0,0,0,.8);
-			}
-			&:after {
-				border-right: 15px solid rgba(0,0,0,.8);
-			}
-		}
-	}
-	@media (max-width: 1200px) and (min-width: 900px) {
-		.content {
-			top: 150px;
-			.col {
-				width: 100%;
-			}
 		}
 	}
 	@media (min-width: 900px) {
 		&.visible {
-			#abilities {
+			.abilities {
 				animation: slideinleft 1.5s ease-out;
 			}
-			#specialties {
+			.specialties {
 				animation: slideinright 1.5s ease-out;
 			}
 		}
 	}
+	@media (min-height: 900px) {
+		.content .col {
+			width: 100%;
+		}
+	}
 	@media (max-width: 900px) {
-		.content {
-			white-space: nowrap;
-			white-space-collapsing: discard;
-			#abilities, #specialties {
-				margin: 0;
-				width: 100%;
+		.content > div {
+			display: block;
+			width: auto;
+			&.abilities {
+				margin-right: 0;
 			}
-			.scroll-toggle {
-				display: block;
-			}
+		}
+		.content .col {
+			width: 50%;
+		}
+	}
+	@media (max-width: 600px) {
+		.content .abilities {
+			display: none;
 		}
 	}
 }
@@ -133,8 +100,6 @@
 .fan {
 	background-image: url('../images/fan.jpg');
 	.content {
-		top: 100px;
-		width: 80%;
 		text-align: center;
 		h2 {
 			font-size: 3rem;
@@ -154,32 +119,27 @@
 			li {
 				display: inline-block;
 				vertical-align: top;
-				width: 300px;
-				padding: 10px;
+				width: 40%;
+				max-width: 500px;
+				padding: 20px;
 			}
 			a {
 				display: block;
+				box-shadow: 0 0 3px rgba(0, 0, 0, .75);
+				opacity: .9;
+				&:hover {
+					opacity: 1;
+				}
 			}
 			img {
 				display: block;
 			}
 		}
 	}
-	@media (max-width: 800px), (max-height: 750px) {
-		.content .portfolio {
-			li {
-				width: 25%;
-			}
-		}
-	}
 	@media (max-width: 800px) {
-		.content {
-			top: 10%;
-		}
-		.content .portfolio {
-			li {
-				width: 50%;
-			}
+		.content .portfolio li {
+			width: 50%;
+			padding: 10px;
 		}
 	}
 	&.visible {
@@ -200,7 +160,9 @@
 	.content {
 		top: 100px;
 		left: 20%;
-		right: 20%;
+		width: 60%;
+		overflow: visible;
+		opacity: .9;
 		h2 {
 			font-size: 2rem;
 		}
@@ -241,14 +203,14 @@
 				}
 				.error,
 				.good-to-go {
-					background: rgba(255,75,75,.75);
+					background: rgba(#cc3333,.75);
 					color: #fff;
 					&::-webkit-input-placeholder {
 						color: rgba(255,255,255,.6);
 					}
 				}
 				.good-to-go {
-					background: rgba(75,255,75,.75);
+					background: rgba(#33cc33,.75);
 				}
 				@media (max-width: 900px), (max-height: 800px) {
 					input[type=text], input[type=email], textarea {
@@ -285,7 +247,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 50;
+	z-index: 150;
 	background: linear-gradient(0deg, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 75%);
 	padding: 3px 10px;
 	font-size: 1.2rem;

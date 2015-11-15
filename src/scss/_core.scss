@@ -27,13 +27,16 @@
 	background: #fff;
 	background: radial-gradient(circle, #aaa, #fff);
 }
+
 html, body {
 	background-color: #000;
 	height: 100%;
 }
+
 html {
 	font-size: 62.5%;
 }
+
 body {
 	position: relative;
 	color: #fff;
@@ -51,10 +54,12 @@ body {
 		font-size: 50%;
 	}
 }
+
 img {
 	max-width: 100%;
 	height: auto;
 }
+
 a {
 	color: #fff;
 	transition: all .2s ease-in-out;
@@ -62,6 +67,7 @@ a {
 		text-decoration: none;
 	}
 }
+
 h1, h2, h3, h4, h5, h6, .arrow {
 	font-weight: normal;
 	text-shadow: 1px 1px 5px rgba(0,0,0,.75);
@@ -80,12 +86,15 @@ h2 {
 h3 {
 	font-size: 2.8rem;
 }
+
 i, em {
 	font-style: italic;
 }
+
 b, strong {
 	font-weight: bold;
 }
+
 .col {
 	display: inline-block;
 	box-sizing: border-box;
@@ -99,6 +108,7 @@ input, textarea {
 	outline: 0;
 	color: #333;
 }
+
 .button, input[type=submit] {
 	background: #fff;
 	background: radial-gradient(circle, #fff, #aaa);
@@ -142,25 +152,41 @@ body > section {
 	background-repeat: no-repeat;
 	background-position: top left;
 	background-size: auto 100%;
-	height: 100%;
+	height: 100vh;
+	min-height: 100%;
+
+	.view {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		overflow: hidden;
+	}
+
 	.content {
 		position: absolute;
+		top: 10%;
 		left: 10%;
 		z-index: 100;
-		opacity: .9;
+		width: 80%;
 		h1, h2, h3, h4, h5, h6, ul {
 			margin: 0;
 		}
 	}
+
+	$arrowsize: 60px;
+	$arrowoffset: 10px;
 	.arrow {
 		position: absolute;
-		right: 30px;
-		bottom: 30px;
+		right: $arrowsize / 2;
+		bottom: $arrowsize / 2;
 		z-index: 150;
 		display: inline-block;
-		padding-right: 95px;
+		padding-right: $arrowsize + 15px;
 		font-size: 2.2rem;
-		line-height: 80px;
+		line-height: $arrowsize;
 		text-decoration: none;
 		font-style: italic;
 		&:before, &:after {
@@ -172,15 +198,16 @@ body > section {
 			right: 0;
 			background: #fff;
 			background: radial-gradient(circle, #fff, #aaa);
-			width: 80px;
-			height: 80px;
+			width: $arrowsize;
+			height: $arrowsize;
 			border-radius: 50%;
-			box-shadow: 0 0 3px rgba(0,0,0,.75);
+			box-shadow: 0 0 3px rgba(0, 0, 0, .75);
 		}
 		&:after {
+			right: $arrowsize / 4;
 			width: 0;
 			height: 0;
-			border: 20px solid transparent;
+			border: $arrowsize / 4 solid transparent;
 		}
 		&:hover {
 			opacity: .8;
@@ -190,22 +217,21 @@ body > section {
 		}
 		&.arrow-up {
 			&:after {
-				top: 8px;
-				right: 20px;
-				border-bottom: 20px solid rgba(0,0,0,.8);
+				top: ($arrowsize / 4) - $arrowoffset;
+				border-bottom: $arrowsize / 4 solid rgba(0, 0, 0, .8);
 			}
 		}
 		&.arrow-down {
 			&:after {
-				top: 33px;
-				right: 20px;
-				border-top: 20px solid rgba(0,0,0,.8);
+				top: ($arrowsize / 4) + $arrowoffset;
+				border-top: $arrowsize / 4 solid rgba(0, 0, 0, .8);
 			}
 		}
 	}
 	> .arrow {
 		opacity: .9;
 	}
+
 	video {
 		position: absolute;
 		top: 0;
@@ -213,21 +239,11 @@ body > section {
 		width: auto;
 		height: 100%;
 	}
+
 	&.visible {
 		.arrow {
 			animation: arrow 2.2s ease-in-out,
 					   flash 1s ease-in-out 5s infinite alternate;
-		}
-	}
-}
-@media (max-width: 900px), (max-height: 800px) {
-	body > section .content {
-		top: 10%;
-		left: 10%;
-		right: 10%;
-		bottom: auto;
-		&.scroll {
-			overflow-y: auto;
 		}
 	}
 }
