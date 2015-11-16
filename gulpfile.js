@@ -5,7 +5,6 @@
 		del          = require('del'),
 		gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
-		cache        = require('gulp-cache'),
 		concat       = require('gulp-concat'),
 		imagemin     = require('gulp-imagemin'),
 		livereload   = require('gulp-livereload'),
@@ -71,15 +70,12 @@
 
 	gulp.task('images', function() {
 		return gulp.src('src/images/**/*.{jpg,png,gif}')
-			// Optimize images
 			.pipe(concurrent(
-				cache(
-					imagemin({
-						optimizationLevel: 3,
-						progressive: true,
-						interlaced: true
-					})
-				)
+				imagemin({
+					optimizationLevel: 3,
+					progressive: true,
+					interlaced: true
+				})
 			))
 			.pipe(gulp.dest('dist/images'))
 			.pipe(notify({ message: 'Image Processed' }));
@@ -88,20 +84,18 @@
 	gulp.task('svgs', function() {
 		return gulp.src('src/svgs/**/*.svg')
 			.pipe(concurrent(
-				cache(
-					imagemin({
-						progressive: true,
-						multipass: true,
-						svgoPlugins: [{removeViewBox: false}]
-					})
-				)
+				imagemin({
+					progressive: true,
+					multipass: true,
+					svgoPlugins: [{removeViewBox: false}]
+				})
 			))
 			.pipe(gulp.dest('dist/svgs'))
 			.pipe(notify({ message: 'SVG Processed' }));
 	});
 
 	gulp.task('clean', function() {
-		del.sync(['dist/**/*']);
+		return del.sync(['dist/**/*']);
 	});
 
 	gulp.task('watch', function() {
