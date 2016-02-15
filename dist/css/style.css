@@ -2599,7 +2599,7 @@ th {
     -webkit-transform: none;
             transform: none; } }
 
-@-webkit-keyframes inputscalein {
+@-webkit-keyframes scalein {
   0% {
     -webkit-transform: scale(0.6);
             transform: scale(0.6); }
@@ -2607,7 +2607,7 @@ th {
     -webkit-transform: none;
             transform: none; } }
 
-@keyframes inputscalein {
+@keyframes scalein {
   0% {
     -webkit-transform: scale(0.6);
             transform: scale(0.6); }
@@ -2983,9 +2983,9 @@ body > section {
       .fan .content .portfolio li {
         display: inline-block;
         vertical-align: top;
-        width: 40%;
-        max-width: 500px;
-        padding: 20px; }
+        width: 35%;
+        max-width: 400px;
+        padding: 2%; }
       .fan .content .portfolio a {
         display: block;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
@@ -3002,11 +3002,8 @@ body > section {
     -webkit-animation: titletop 1.5s ease-in-out;
             animation: titletop 1.5s ease-in-out; }
   .fan.visible .portfolio li {
-    -webkit-animation: rotatein 1.5s ease-in-out;
-            animation: rotatein 1.5s ease-in-out; }
-    .fan.visible .portfolio li:nth-child(even) {
-      -webkit-animation: rotateinalt 1.5s ease-in-out;
-              animation: rotateinalt 1.5s ease-in-out; }
+    -webkit-animation: scalein 1.5s ease-in-out;
+            animation: scalein 1.5s ease-in-out; }
 
 .clouds {
   background-image: url("../images/clouds.jpg"); }
