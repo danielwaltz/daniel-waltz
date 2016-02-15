@@ -1,7 +1,6 @@
 {
   "name": "danielwaltz.me",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "concurrent-transform": "^1.0.0",
@@ -22,8 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://danielwaltz@bitbucket.org/DanielWaltz/daniel-waltz.git"
+    "url": "git+https://danielwaltz@bitbucket.org/DanielWaltz/daniel-waltz.git"
   },
   "author": "Daniel Waltz",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/DanielWaltz/daniel-waltz#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
 }
