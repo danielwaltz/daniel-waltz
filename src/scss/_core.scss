@@ -19,6 +19,11 @@ html {
 	background-color: $secondary_color;
 	font-size: 1vw;
 }
+@media (max-width: 768px) {
+	html {
+		font-size: 2vw;
+	}
+}
 
 body {
 	position: relative;
@@ -27,11 +32,6 @@ body {
 	font-size: 1.4rem;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
-}
-@media (max-width: 768px) {
-	html {
-		font-size: 2vw;
-	}
 }
 
 img {
@@ -47,10 +47,9 @@ a {
 	}
 }
 
-h1, h2, h3, h4, h5, h6, .arrow {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	line-height: 1.1;
-	text-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
 }
 h1 {
 	font-size: 6.5rem;
@@ -66,28 +65,19 @@ h3 {
 	font-size: 2.8rem;
 }
 
-i, em {
-	font-style: italic;
-}
-
-b, strong {
-	font-weight: bold;
-}
-
 input, textarea {
 	outline: 0;
 	color: #333;
 }
 
 .button, input[type=submit] {
-	background: #fff;
-	background: radial-gradient(circle, #fff, #aaa);
+	background: $secondary_color;
 	padding: 15px 30px;
 	border: 0;
-	color: #333;
+	color: $primary_color;
 	color: rgba(0,0,0,.75);
 	font-size: 2.4rem;
-	box-shadow: 0 0 3px rgba(0,0,0,.75);
+	box-shadow: $shadow;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 	&:hover {

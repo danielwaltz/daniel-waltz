@@ -2216,6 +2216,10 @@ html {
   background-color: #ff007f;
   font-size: 1vw; }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 2vw; } }
+
 body {
   position: relative;
   margin: 0;
@@ -2223,10 +2227,6 @@ body {
   font-size: 1.4rem;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased; }
-
-@media (max-width: 768px) {
-  html {
-    font-size: 2vw; } }
 
 img {
   max-width: 100%;
@@ -2239,10 +2239,9 @@ a {
   a:hover {
     text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6, .arrow {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  line-height: 1.1;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); }
+  line-height: 1.1; }
 
 h1 {
   font-size: 6.5rem;
@@ -2257,26 +2256,18 @@ h2 {
 h3 {
   font-size: 2.8rem; }
 
-i, em {
-  font-style: italic; }
-
-b, strong {
-  font-weight: bold; }
-
 input, textarea {
   outline: 0;
   color: #333; }
 
 .button, input[type=submit] {
-  background: #fff;
-  background: -webkit-radial-gradient(circle, #fff, #aaa);
-  background: radial-gradient(circle, #fff, #aaa);
+  background: #ff007f;
   padding: 15px 30px;
   border: 0;
-  color: #333;
+  color: #00e2e5;
   color: rgba(0, 0, 0, 0.75);
   font-size: 2.4rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out; }
@@ -2292,38 +2283,40 @@ input, textarea {
     position: relative;
     color: #ff007f;
     text-align: center; }
-  .kimmy h1, .kimmy h2, .kimmy .social {
-    margin: 1% 0; }
+  .kimmy h1, .kimmy h2 {
+    margin: 1% 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); }
   .kimmy h1 {
     margin-top: 0;
-    font-size: 9rem; }
+    font-size: 8.8rem; }
   .kimmy h2 {
-    font-size: 3.5rem; }
+    font-size: 3.2rem; }
   .kimmy .social {
     margin-top: 2%;
-    margin-bottom: 0;
     font-size: 0; }
     .kimmy .social a {
       display: inline-block;
+      vertical-align: top;
       background-color: #ff007f;
       margin-left: 20px;
-      width: 60px;
-      height: 60px;
+      width: 5rem;
+      height: 5rem;
       color: #00e2e5;
-      font-size: 40px;
+      font-size: 3rem;
       text-decoration: none;
-      line-height: 60px;
+      line-height: 5rem;
       text-align: center;
-      border-radius: 50%; }
+      border-radius: 50%;
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); }
       .kimmy .social a:first-child {
         margin-left: 0; }
       .kimmy .social a:hover {
         opacity: .9; }
       .kimmy .social a:active {
         -webkit-transform: scale(0.95);
-                transform: scale(0.95);
-        -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d; }
+                transform: scale(0.95); }
+      .kimmy .social a.github {
+        font-size: 3.5rem; }
 
 .flippers {
   position: fixed;
