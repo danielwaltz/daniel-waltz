@@ -17,14 +17,13 @@
 
 	gulp.task('styles', function() {
 		var styles = gulp.src([
-			'node_modules/font-awesome/scss/font-awesome.scss',
 			'src/scss/style.scss'
 		]);
 
 		return styles
 			.pipe(sass())
 			.pipe(autoprefixer('last 2 version'))
-			
+
 			// Generate non minified version
 			.pipe(concat('style.css'))
 			.pipe(gulp.dest('dist/css'))
@@ -39,7 +38,6 @@
 
 	gulp.task('scripts', function() {
 		var scripts = gulp.src([
-			'src/js/lib/**/*.js',
 			'src/js/**/*.js'
 		]);
 
