@@ -10,23 +10,6 @@
 	background: #fff;
 	color: #000;
 }
-::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-::-webkit-scrollbar-track-piece {
-	background-color: rgba(200,200,200,.75);
-}
-::-webkit-scrollbar-thumb:vertical {
-	height: 6px;
-	background: #fff;
-	background: radial-gradient(circle, #aaa, #fff);
-}
-::-webkit-scrollbar-thumb:horizontal {
-	width: 6px;
-	background: #fff;
-	background: radial-gradient(circle, #aaa, #fff);
-}
 
 html, body {
 	min-height: 100vh;
@@ -39,6 +22,7 @@ html {
 
 body {
 	position: relative;
+	margin: 0;
 	color: $primary_color;
 	font-size: 1.4rem;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -66,6 +50,7 @@ a {
 h1, h2, h3, h4, h5, h6, .arrow {
 	font-weight: normal;
 	line-height: 1.1;
+	text-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
 }
 h1 {
 	font-size: 6.5rem;

@@ -17,6 +17,7 @@
 
 	gulp.task('styles', function() {
 		var styles = gulp.src([
+			'node_modules/font-awesome/scss/font-awesome.scss',
 			'src/scss/style.scss'
 		]);
 
