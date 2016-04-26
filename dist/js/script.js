@@ -1,14 +1,17 @@
+'use strict';
+
 function flippers(type) {
 	// Define view target and total elements to add
-	var view   = document.getElementsByClassName('js-flippers')[0],
-		total  = 100;
+	var view = document.body.querySelector('.js-flippers'),
+	    total = 100;
 
-	for (var i = 0; i < total; i++) {
+	var _loop = function _loop() {
 		// Create element
-		var flip  = document.createElement('div'),
-			delay = '';
+		flip = document.createElement('div');
+		delay = '';
 
 		// Add class name to element
+
 		flip.classList.add('flip');
 
 		// Adds animation delay as inline style to element
@@ -17,14 +20,14 @@ function flippers(type) {
 		}
 
 		// Sweeping animation
-		if ( type == 'sweep' ) {
+		if (type === 'sweep') {
 			// Setup delay timing
 			delay = '.' + i + 's';
 			if (i <= 10) {
 				delay = '.0' + i + 's';
 			}
 
-			// Execute
+			// Execute style update
 			addAnimationDelay(flip, delay);
 
 			// Add class to view
@@ -32,12 +35,12 @@ function flippers(type) {
 		}
 
 		// Random animation
-		if ( type == 'rand' ) {
+		if (type === 'rand') {
 			// Setup delay timing
-			rand  = Math.floor(Math.random() * (0 - 10)) + 10;
+			rand = Math.floor(Math.random() * (0 - 10)) + 10;
 			delay = '.' + rand + 's';
 
-			// Execute
+			// Execute style update
 			addAnimationDelay(flip, delay);
 
 			// Add class to view
@@ -46,10 +49,16 @@ function flippers(type) {
 
 		// Add element to view
 		view.appendChild(flip);
+	};
+
+	for (var i = 0; i < total; i++) {
+		var flip, delay, rand;
+
+		_loop();
 	}
 
 	// Add finished class after initial animation
-	var timer = window.setTimeout(function(){
+	var timer = window.setTimeout(function () {
 		view.classList.add('finished');
 	}, 3000);
 }

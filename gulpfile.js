@@ -5,10 +5,11 @@
 		del          = require('del'),
 		gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
+		babel        = require('gulp-babel'),
 		concat       = require('gulp-concat'),
 		imagemin     = require('gulp-imagemin'),
 		livereload   = require('gulp-livereload'),
-		minifycss    = require('gulp-minify-css'),
+		cleancss     = require('gulp-clean-css'),
 		notify       = require('gulp-notify'),
 		rename       = require('gulp-rename'),
 		sass         = require('gulp-sass'),
@@ -17,7 +18,6 @@
 
 	gulp.task('styles', function() {
 		var styles = gulp.src([
-			'node_modules/font-awesome/scss/font-awesome.scss',
 			'src/scss/style.scss'
 		]);
 
@@ -30,7 +30,7 @@
 			.pipe(gulp.dest('dist/css'))
 
 			// Generate minified version
-			.pipe(minifycss())
+			.pipe(cleancss())
 			.pipe(rename({suffix: '.min'}))
 			.pipe(gulp.dest('dist/css'))
 
@@ -43,6 +43,10 @@
 		]);
 
 		return scripts
+			.pipe(babel({
+				presets: ['es2015']
+			}))
+
 			// Generate non minified version
 			.pipe(concat('script.js'))
 			.pipe(gulp.dest('dist/js'))
@@ -53,18 +57,6 @@
 			.pipe(gulp.dest('dist/js'))
 
 			.pipe(notify({ message: 'Scripts Processed' }));
-	});
-
-	gulp.task('assets', function() {
-		// Font awesome fonts
-		var fontawesome = gulp.src('node_modules/font-awesome/fonts/**/*.{ttf,otf,eot,eof,woff,woff2,svg}')
-			.pipe(gulp.dest('dist/fonts'));
-
-		// HTML5shiv
-		var html5shiv = gulp.src('node_modules/html5shiv/dist/html5shiv.min.js')
-			.pipe(gulp.dest('dist/js/lib'));
-
-		return merge(fontawesome, html5shiv);
 	});
 
 	gulp.task('images', function() {
@@ -108,6 +100,6 @@
 	});
 
 	gulp.task('default', ['clean'], function() {
-		gulp.start('styles', 'scripts', 'assets', 'images', 'svgs');
+		gulp.start('styles', 'scripts', 'images', 'svgs');
 	});
 }());

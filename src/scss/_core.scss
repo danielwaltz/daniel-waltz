@@ -19,6 +19,11 @@ html {
 	background-color: $secondary_color;
 	font-size: 1vw;
 }
+@media (max-width: 1280px) {
+	html {
+		font-size: 1.5vw;
+	}
+}
 @media (max-width: 768px) {
 	html {
 		font-size: 2vw;
@@ -32,6 +37,13 @@ body {
 	font-size: 1.4rem;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		min-height: 100vh;
+	}
 }
 
 img {

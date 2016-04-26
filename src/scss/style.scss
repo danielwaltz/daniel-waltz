@@ -3,6 +3,8 @@
 @import 'core';
 
 .kimmy {
+	display: inline-block;
+	vertical-align: middle;
 	padding: 5%;
 	.content {
 		position: relative;
@@ -15,7 +17,7 @@
 	}
 	h1 {
 		margin-top: 0;
-		font-size: 8.8rem;
+		font-size: 8.5rem;
 	}
 	h2 {
 		font-size: 3.2rem;
@@ -31,7 +33,6 @@
 			width: 5rem;
 			height: 5rem;
 			color: $primary_color;
-			font-size: 3rem;
 			text-decoration: none;
 			line-height: 5rem;
 			text-align: center;
@@ -46,8 +47,19 @@
 			&:active {
 				transform: scale(.95);
 			}
-			&.github {
-				font-size: 3.5rem;
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				min-height: 5rem;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				width: 60%;
+			}
+			&.github img {
+				width: 70%;
 			}
 		}
 	}
