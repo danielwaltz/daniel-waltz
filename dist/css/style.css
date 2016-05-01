@@ -14,6 +14,22 @@
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
+@-webkit-keyframes scaleinsubtle {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes scaleinsubtle {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
 @-webkit-keyframes scale {
   0% {
     -webkit-transform: scale(1);
@@ -191,7 +207,7 @@ html {
 
 @media (max-height: 768px) {
   html {
-    font-size: 2vh; } }
+    font-size: 2.5vh; } }
 
 @media (max-width: 768px) {
   html {
@@ -282,10 +298,16 @@ section {
   background-color: #ff007f;
   width: 100vw;
   height: 100vh;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
   text-align: left;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-transition: top .5s ease-in-out, right .5s ease-in-out, bottom .5s ease-in-out, left .5s ease-in-out;
+          transition: top .5s ease-in-out, right .5s ease-in-out, bottom .5s ease-in-out, left .5s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: center;
+          transform-origin: center; }
   .window.window-top, .window.window-bottom {
     left: 0;
     right: 0; }
@@ -308,6 +330,19 @@ section {
     left: 100%; }
     .window.window-right.active {
       left: 0; }
+  .window.active {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-animation-name: scaleinsubtle;
+            animation-name: scaleinsubtle;
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
   .window .close {
     position: absolute;
     top: 1rem;

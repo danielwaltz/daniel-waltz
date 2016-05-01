@@ -26,7 +26,7 @@ html {
 }
 @media (max-height: 768px) {
 	html {
-		font-size: 2vh;
+		font-size: 2.5vh;
 	}
 }
 @media (max-width: 768px) {
@@ -132,9 +132,19 @@ section {
 	background-color: $secondary_color;
 	width: 100vw;
 	height: 100vh;
-	transition: $snappy_trans;
 	text-align: left;
 	overflow: auto;
+
+	// Transition
+	transition: top .5s ease-in-out,
+	            right .5s ease-in-out,
+				bottom .5s ease-in-out,
+	            left .5s ease-in-out;
+
+	// Transform
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transform-origin: center;
 	&.window-top,
 	&.window-bottom {
 		left: 0;
@@ -168,6 +178,18 @@ section {
 		&.active {
 			left: 0;
 		}
+	}
+
+	&.active {
+		// Transform
+		transform: scale(.9);
+
+		// Animation
+		animation-name: scaleinsubtle;
+		animation-duration: .5s;
+		animation-delay: .5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
 	}
 
 	.close {
