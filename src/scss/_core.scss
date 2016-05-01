@@ -34,14 +34,20 @@ html {
 		font-size: 2vw;
 	}
 }
+@media (max-width: 480px) {
+	html {
+		font-size: 2.5vw;
+	}
+}
 
 body {
 	position: relative;
 	margin: 0;
 	color: $primary_color;
 	font-size: 1.4rem;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: $primary_font;
 	text-align: center;
+	overflow: hidden;
 	&:after {
 		content: '';
 		display: inline-block;
@@ -65,7 +71,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin: 1.5rem;
+	margin: 1.5rem 0;
 	&:first-child {
 		margin-top: 0;
 	}
@@ -78,18 +84,20 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	line-height: 1.1;
 }
-h1 {
-	font-size: 6.5rem;
-	font-family: 'Oswald', Helvetica, Arial, sans-serif;
+h1, h2 {
+	font-family: $secondary_font;
 	font-weight: 300;
 	text-transform: uppercase;
+}
+h1 {
+	font-size: 6.5rem;
 }
 h2 {
 	font-size: 4rem;
 	font-weight: 300;
 }
 h3 {
-	font-size: 2.8rem;
+	font-size: 2.4rem;
 }
 
 input, textarea {
@@ -126,7 +134,7 @@ section {
 	height: 100vh;
 	transition: $snappy_trans;
 	text-align: left;
-	overflow: hidden;
+	overflow: auto;
 	&.window-top,
 	&.window-bottom {
 		left: 0;

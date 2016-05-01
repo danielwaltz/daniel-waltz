@@ -1,6 +1,6 @@
+@import 'vars';
 @import 'animations';
 @import 'grid';
-@import 'vars';
 @import 'core';
 
 .kimmy {
@@ -29,66 +29,77 @@
 	h1 {
 		margin-top: 0;
 		font-size: 8.5rem;
+		@media (max-width: 480px) {
+			font-size: 6.6rem;
+		}
 	}
 	h2 {
 		font-size: 3.2rem;
+		font-family: $primary_font;
+		text-transform: none;
 	}
-}
 
-.nav-social {
-	margin: 1.25rem 0;
-	font-size: 0;
-	a {
-		display: inline-block;
-		vertical-align: top;
-		background-color: $secondary_color;
-		margin-left: 1.2rem;
-		width: 5rem;
-		height: 5rem;
-		color: $primary_color;
-		text-decoration: none;
-		line-height: 5rem;
+	nav {
+		font-size: 0;
+		a {
+			display: inline-block;
+			vertical-align: top;
+			background-color: $secondary_color;
+			color: $primary_color;
+			font-size: 1.4rem;
+		}
+	}
+
+	.nav-social {
+		margin-top: 1.2rem;
+		a {
+			margin-left: 1.2rem;
+			width: 5rem;
+			height: 5rem;
+			font-size: 0;
+			line-height: 5rem;
+			text-align: center;
+			border-radius: 50%;
+			transform: scale(1);
+			&:first-child {
+				margin-left: 0;
+			}
+			&:hover {
+				opacity: .9;
+			}
+			&:active {
+				transform: scale(.95);
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				min-height: 5rem;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				width: 60%;
+			}
+			&.social-github img {
+				width: 70%;
+			}
+		}
+	}
+
+	.nav-main {
+		margin-top: 1.6rem;
 		text-align: center;
-		border-radius: 50%;
-		transform: scale(1);
-		&:first-child {
-			margin-left: 0;
-		}
-		&:hover {
-			opacity: .9;
-		}
-		&:active {
-			transform: scale(.95);
-		}
-		&:after {
-			content: '';
-			display: inline-block;
-			vertical-align: middle;
-			min-height: 5rem;
-		}
-		img {
-			display: inline-block;
-			vertical-align: middle;
-			width: 60%;
-		}
-		&.social-github img {
-			width: 70%;
-		}
-	}
-}
-
-.nav-main {
-	text-align: center;
-	font-size: 0;
-	a {
-		display: inline-block;
-		margin-left: 1rem;
-		padding: .5rem 1rem;
-		background-color: $secondary_color;
-		color: $primary_color;
-		font-size: 1.4rem;
-		&:first-child {
-			margin-left: 0;
+		a {
+			margin-left: 1.5rem;
+			padding: .5rem 1rem;
+			font-size: 1.4rem;
+			font-family: $secondary_font;
+			text-transform: uppercase;
+			font-weight: 700;
+			&:first-child {
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -99,6 +110,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 0;
 	font-size: 0;
 }
 .box {

@@ -7,13 +7,11 @@
 		display: inline-block;
 		width: 100%;
 	}
-	* {
-		font-size: 1.4rem;
-	}
 	> div[class*='span-'] {
 		display: inline-block;
 		vertical-align: top;
 		text-align: left;
+		font-size: 1.4rem;
 	}
 }
 .span-1 {
@@ -121,12 +119,5 @@
 @media (max-width: 768px) {
 	.grid > div[class*='span-'] {
 		width: 100%;
-		margin: 1.5rem 0;
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 }
