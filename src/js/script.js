@@ -9,11 +9,15 @@ let nav = function() {
 			target = item.className.split('-')[1];
 
 		// When a nav item is clicked
-		item.addEventListener('click', function(){
-			// Apply a class to the related window
+		item.addEventListener('click', openWindow, false);
+
+		// Apply a class to the related window
+		function openWindow(evt) {
+			evt.preventDefault();
+
 			let overlay = document.body.querySelector('.' + target);
 			overlay.classList.toggle('active');
-		});
+		}
 	}
 
 	// Target close buttons
@@ -24,18 +28,22 @@ let nav = function() {
 		let button = close[i];
 
 		// When a close button is clicked
-		button.addEventListener('click', function(){
-			// Loop through all the windows
+		button.addEventListener('click', closeWindow, false);
+
+		// Loop through all the windows
+		function closeWindow(evt) {
+			evt.preventDefault();
+
 			let overlays = document.body.querySelectorAll('.window');
 			for (let i = 0; i < overlays.length; i++) {
 				// And remove the active class
 				overlays[i].classList.remove('active');
 			}
-		});
+		}
 	}
 }
 
-let kimmy = function(type) {
+let boxes = function(type) {
 	// Define view target and total elements to add
 	let view  = document.body.querySelector('.js-boxes'),
 		total = 100,
@@ -95,4 +103,4 @@ let kimmy = function(type) {
 
 // Execute onload
 window.onload = nav();
-window.onload = kimmy('rand');
+window.onload = boxes('rand');

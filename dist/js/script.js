@@ -12,11 +12,15 @@ var nav = function nav() {
 		    target = item.className.split('-')[1];
 
 		// When a nav item is clicked
-		item.addEventListener('click', function () {
-			// Apply a class to the related window
+		item.addEventListener('click', openWindow, false);
+
+		// Apply a class to the related window
+		function openWindow(evt) {
+			evt.preventDefault();
+
 			var overlay = document.body.querySelector('.' + target);
 			overlay.classList.toggle('active');
-		});
+		}
 	};
 
 	for (var i = 0; i < navItems.length; i++) {
@@ -27,28 +31,37 @@ var nav = function nav() {
 	var close = document.body.querySelectorAll('.js-close');
 
 	// Loop through close buttons
-	for (var _i = 0; _i < close.length; _i++) {
+
+	var _loop2 = function _loop2(_i) {
 		var button = close[_i];
 
 		// When a close button is clicked
-		button.addEventListener('click', function () {
-			// Loop through all the windows
+		button.addEventListener('click', closeWindow, false);
+
+		// Loop through all the windows
+		function closeWindow(evt) {
+			evt.preventDefault();
+
 			var overlays = document.body.querySelectorAll('.window');
 			for (var _i2 = 0; _i2 < overlays.length; _i2++) {
 				// And remove the active class
 				overlays[_i2].classList.remove('active');
 			}
-		});
+		}
+	};
+
+	for (var _i = 0; _i < close.length; _i++) {
+		_loop2(_i);
 	}
 };
 
-var kimmy = function kimmy(type) {
+var boxes = function boxes(type) {
 	// Define view target and total elements to add
 	var view = document.body.querySelector('.js-boxes'),
 	    total = 100,
 	    time = 3000;
 
-	var _loop2 = function _loop2(i) {
+	var _loop3 = function _loop3(i) {
 		// Create element
 		var box = document.createElement('div'),
 		    delay = '',
@@ -95,7 +108,7 @@ var kimmy = function kimmy(type) {
 	};
 
 	for (var i = 0; i < total; i++) {
-		_loop2(i);
+		_loop3(i);
 	}
 
 	// Add finished class after initial animation
@@ -106,4 +119,4 @@ var kimmy = function kimmy(type) {
 
 // Execute onload
 window.onload = nav();
-window.onload = kimmy('rand');
+window.onload = boxes('rand');
