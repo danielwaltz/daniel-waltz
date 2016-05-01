@@ -1,0 +1,132 @@
+.grid {
+	text-align: justify;
+	font-size: 0;
+	text-justify: distribute-all-lines;
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+	* {
+		font-size: 1.4rem;
+	}
+	> div[class*='span-'] {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+	}
+}
+.span-1 {
+	width: 8.33333%;
+}
+.span-2 {
+	width: 16.66667%;
+}
+.span-3 {
+	width: 25%;
+}
+.span-4 {
+	width: 33.33333%;
+}
+.span-5 {
+	width: 41.66667%;
+}
+.span-6 {
+	width: 50%;
+}
+.span-7 {
+	width: 58.33333%;
+}
+.span-8 {
+	width: 66.66667%;
+}
+.span-9 {
+	width: 75%;
+}
+.span-10 {
+	width: 83.33333%;
+}
+.span-11 {
+	width: 91.66667%;
+}
+.span-12 {
+	width: 100%;
+}
+.prepend-1 {
+	margin-left: 8.33333%;
+}
+.prepend-2 {
+	margin-left: 16.66667%;
+}
+.prepend-3 {
+	margin-left: 25%;
+}
+.prepend-4 {
+	margin-left: 33.33333%;
+}
+.prepend-5 {
+	margin-left: 41.66667%;
+}
+.prepend-6 {
+	margin-left: 50%;
+}
+.prepend-7 {
+	margin-left: 58.33333%;
+}
+.prepend-8 {
+	margin-left: 66.66667%;
+}
+.prepend-9 {
+	margin-left: 75%;
+}
+.prepend-10 {
+	margin-left: 83.33333%;
+}
+.prepend-11 {
+	margin-left: 91.66667%;
+}
+.append-1 {
+	margin-right: 8.33333%;
+}
+.append-2 {
+	margin-right: 16.66667%;
+}
+.append-3 {
+	margin-right: 25%;
+}
+.append-4 {
+	margin-right: 33.33333%;
+}
+.append-5 {
+	margin-right: 41.66667%;
+}
+.append-6 {
+	margin-right: 50%;
+}
+.append-7 {
+	margin-right: 58.33333%;
+}
+.append-8 {
+	margin-right: 66.66667%;
+}
+.append-9 {
+	margin-right: 75%;
+}
+.append-10 {
+	margin-right: 83.33333%;
+}
+.append-11 {
+	margin-right: 91.66667%;
+}
+@media (max-width: 768px) {
+	.grid > div[class*='span-'] {
+		width: 100%;
+		margin: 1.5rem 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

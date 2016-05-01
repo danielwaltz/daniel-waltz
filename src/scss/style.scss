@@ -1,23 +1,7 @@
 @import 'animations';
+@import 'grid';
 @import 'vars';
 @import 'core';
-
-.nav-main {
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-	color: $secondary_color;
-	text-align: center;
-	font-size: 0;
-	a {
-		display: inline-block;
-		margin-left: 1rem;
-		font-size: 1.4rem;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-}
 
 .kimmy {
 	display: inline-block;
@@ -49,45 +33,62 @@
 	h2 {
 		font-size: 3.2rem;
 	}
-	.nav-social {
-		margin-top: 1.25rem;
-		font-size: 0;
-		a {
+}
+
+.nav-social {
+	margin: 1.25rem 0;
+	font-size: 0;
+	a {
+		display: inline-block;
+		vertical-align: top;
+		background-color: $secondary_color;
+		margin-left: 1.2rem;
+		width: 5rem;
+		height: 5rem;
+		color: $primary_color;
+		text-decoration: none;
+		line-height: 5rem;
+		text-align: center;
+		border-radius: 50%;
+		transform: scale(1);
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			opacity: .9;
+		}
+		&:active {
+			transform: scale(.95);
+		}
+		&:after {
+			content: '';
 			display: inline-block;
-			vertical-align: top;
-			background-color: $secondary_color;
-			margin-left: 1.2rem;
-			width: 5rem;
-			height: 5rem;
-			color: $primary_color;
-			text-decoration: none;
-			line-height: 5rem;
-			text-align: center;
-			border-radius: 50%;
-			transform: scale(1);
-			&:first-child {
-				margin-left: 0;
-			}
-			&:hover {
-				opacity: .9;
-			}
-			&:active {
-				transform: scale(.95);
-			}
-			&:after {
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				min-height: 5rem;
-			}
-			img {
-				display: inline-block;
-				vertical-align: middle;
-				width: 60%;
-			}
-			&.social-github img {
-				width: 70%;
-			}
+			vertical-align: middle;
+			min-height: 5rem;
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			width: 60%;
+		}
+		&.social-github img {
+			width: 70%;
+		}
+	}
+}
+
+.nav-main {
+	text-align: center;
+	font-size: 0;
+	a {
+		display: inline-block;
+		margin-left: 1rem;
+		padding: .5rem 1rem;
+		background-color: $secondary_color;
+		color: $primary_color;
+		font-size: 1.4rem;
+		&:first-child {
+			margin-left: 0;
 		}
 	}
 }
