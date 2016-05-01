@@ -1,18 +1,61 @@
 'use strict';
 
-function flippers(type) {
-	// Define view target and total elements to add
-	var view = document.body.querySelector('.js-flippers'),
-	    total = 100;
+var nav = function nav() {
+	// Define nav target
+	var navItems = document.body.querySelectorAll('.js-nav-main a');
 
-	var _loop = function _loop() {
+	// Loop through nav items
+
+	var _loop = function _loop(i) {
+		// Define target based on nav item class name
+		var item = navItems[i],
+		    target = item.className.split('-')[1];
+
+		// When a nav item is clicked
+		item.addEventListener('click', function () {
+			// Apply a class to the related window
+			var overlay = document.body.querySelector('.' + target);
+			overlay.classList.toggle('active');
+		});
+	};
+
+	for (var i = 0; i < navItems.length; i++) {
+		_loop(i);
+	}
+
+	// Target close buttons
+	var close = document.body.querySelectorAll('.js-close');
+
+	// Loop through close buttons
+	for (var _i = 0; _i < close.length; _i++) {
+		var button = close[_i];
+
+		// When a close button is clicked
+		button.addEventListener('click', function () {
+			// Loop through all the windows
+			var overlays = document.body.querySelectorAll('.window');
+			for (var _i2 = 0; _i2 < overlays.length; _i2++) {
+				// And remove the active class
+				overlays[_i2].classList.remove('active');
+			}
+		});
+	}
+};
+
+var kimmy = function kimmy(type) {
+	// Define view target and total elements to add
+	var view = document.body.querySelector('.js-boxes'),
+	    total = 100,
+	    time = 3000;
+
+	var _loop2 = function _loop2(i) {
 		// Create element
-		flip = document.createElement('div');
-		delay = '';
+		var box = document.createElement('div'),
+		    delay = '',
+		    rand = void 0;
 
 		// Add class name to element
-
-		flip.classList.add('flip');
+		box.classList.add('box');
 
 		// Adds animation delay as inline style to element
 		function addAnimationDelay(target, delay) {
@@ -28,7 +71,7 @@ function flippers(type) {
 			}
 
 			// Execute style update
-			addAnimationDelay(flip, delay);
+			addAnimationDelay(box, delay);
 
 			// Add class to view
 			view.classList.add('sweep');
@@ -41,27 +84,26 @@ function flippers(type) {
 			delay = '.' + rand + 's';
 
 			// Execute style update
-			addAnimationDelay(flip, delay);
+			addAnimationDelay(box, delay);
 
 			// Add class to view
 			view.classList.add('rand');
 		}
 
 		// Add element to view
-		view.appendChild(flip);
+		view.appendChild(box);
 	};
 
 	for (var i = 0; i < total; i++) {
-		var flip, delay, rand;
-
-		_loop();
+		_loop2(i);
 	}
 
 	// Add finished class after initial animation
 	var timer = window.setTimeout(function () {
 		view.classList.add('finished');
-	}, 3000);
-}
+	}, time);
+};
 
 // Execute onload
-window.onload = flippers('rand');
+window.onload = nav();
+window.onload = kimmy('rand');

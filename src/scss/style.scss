@@ -2,18 +2,45 @@
 @import 'vars';
 @import 'core';
 
+.nav-main {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	color: $secondary_color;
+	text-align: center;
+	font-size: 0;
+	a {
+		display: inline-block;
+		margin-left: 1rem;
+		font-size: 1.4rem;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
 .kimmy {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 5%;
+
+	// Animation
+	animation-name: fadein;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
 	.content {
 		position: relative;
 		color: $secondary_color;
 		text-align: center;
+
+		// Animation
+		animation-name: scalein;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
 	}
 	h1, h2 {
-		margin: 1% 0;
-		text-shadow: $shadow;
+		margin: .5rem 0;
 	}
 	h1 {
 		margin-top: 0;
@@ -22,14 +49,14 @@
 	h2 {
 		font-size: 3.2rem;
 	}
-	.social {
-		margin-top: 2%;
+	.nav-social {
+		margin-top: 1.25rem;
 		font-size: 0;
 		a {
 			display: inline-block;
 			vertical-align: top;
 			background-color: $secondary_color;
-			margin-left: 20px;
+			margin-left: 1.2rem;
 			width: 5rem;
 			height: 5rem;
 			color: $primary_color;
@@ -37,7 +64,7 @@
 			line-height: 5rem;
 			text-align: center;
 			border-radius: 50%;
-			box-shadow: $shadow;
+			transform: scale(1);
 			&:first-child {
 				margin-left: 0;
 			}
@@ -58,14 +85,14 @@
 				vertical-align: middle;
 				width: 60%;
 			}
-			&.github img {
+			&.social-github img {
 				width: 70%;
 			}
 		}
 	}
 }
 
-.flippers {
+.boxes {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -73,13 +100,13 @@
 	left: 0;
 	font-size: 0;
 }
-.flip {
+.box {
 	position: relative;
 	display: inline-block;
 	background-color: $primary_color;
 	width: 10%;
 	height: 10.05vh;
-	transition: all .2s ease-out;
+	transition: $snappy_trans;
 
 	// Transform
 	transform: scale(0);
@@ -92,16 +119,10 @@
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-out;
 }
-.finished .flip {
+.finished .box {
 	// Transform
 	transform: scale(1);
 
 	// Animation
-	animation-name: scale;
-	animation-duration: .5s;
-	animation-timing-function: ease-in-out;
-
-	// Repeat animation
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+	animation-name: none;
 }

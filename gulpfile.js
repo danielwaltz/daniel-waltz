@@ -96,7 +96,7 @@
 		gulp.watch('src/js/**/*.js', ['scripts']);
 		gulp.watch('src/images/**/*', ['images']);
 		gulp.watch('src/svgs/**/*', ['svgs']);
-		gulp.watch(['**/*.php', 'dist/**']).on('change', livereload.changed);
+		gulp.watch(['**/*.html', 'dist/**']).on('change', livereload.changed);
 	});
 
 	gulp.task('default', ['clean'], function() {
