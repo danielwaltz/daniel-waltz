@@ -116,7 +116,7 @@
 .append-11 {
 	margin-right: 91.66667%;
 }
-@media (max-width: 768px) {
+@media (max-width: $break_mid) {
 	.grid > div[class*='span-'] {
 		width: 100%;
 	}

@@ -19,7 +19,7 @@ html {
 	background-color: $secondary_color;
 	font-size: 1vw;
 }
-@media (max-width: 1280px) {
+@media (max-width: $break_max) {
 	html {
 		font-size: 1.5vw;
 	}
@@ -29,14 +29,14 @@ html {
 		font-size: 2.5vh;
 	}
 }
-@media (max-width: 768px) {
-	html {
-		font-size: 2vw;
-	}
-}
-@media (max-width: 480px) {
+@media (max-width: $break_mid) {
 	html {
 		font-size: 2.5vw;
+	}
+}
+@media (max-width: $break_min) {
+	html {
+		font-size: 3vw;
 	}
 }
 
@@ -120,10 +120,6 @@ input, textarea {
 	&:active {
 		transform: scale(.9);
 	}
-}
-
-section {
-	padding: 5%;
 }
 
 .window {

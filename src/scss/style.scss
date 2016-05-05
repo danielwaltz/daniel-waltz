@@ -1,6 +1,6 @@
 @import 'vars';
 @import 'fonts';
-@import 'animations';
+@import 'anim';
 @import 'grid';
 @import 'core';
 
@@ -30,14 +30,27 @@ main {
 	h1 {
 		margin-top: 0;
 		font-size: 8.5rem;
-		@media (max-width: 480px) {
-			font-size: 6.6rem;
-		}
 	}
 	h2 {
 		font-size: 3.2rem;
 		font-family: $primary_font;
 		text-transform: none;
+	}
+	@media (max-width: $break_mid) {
+		h1 {
+			font-size: 6.6rem;
+		}
+		h2 {
+			font-size: 2.8rem;
+		}
+	}
+	@media (max-width: $break_min) {
+		h1 {
+			font-size: 5.5rem;
+		}
+		h2 {
+			font-size: 2.4rem;
+		}
 	}
 
 	nav {
@@ -86,6 +99,16 @@ main {
 				width: 70%;
 			}
 		}
+		@media (max-width: $break_min) {
+			a {
+				width: 4rem;
+				height: 4rem;
+				line-height: 4rem;
+				&:after {
+					min-height: 4rem;
+				}
+			}
+		}
 	}
 
 	.nav-main {
@@ -102,6 +125,19 @@ main {
 				margin-left: 0;
 			}
 		}
+	}
+}
+
+section {
+	padding: 5rem;
+	ul li {
+		margin: .5rem 0;
+	}
+	@media (min-width: $break_max) {
+		padding: 5rem 15%;
+	}
+	@media (max-width: $break_min) {
+		padding: 3rem;
 	}
 }
 
