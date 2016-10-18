@@ -83,6 +83,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	line-height: 1.1;
+	span {
+		display: inline-block;
+		font-size: 60%;
+		font-style: italic;
+		font-family: $primary_font;
+		text-transform: lowercase;
+		@media (max-width: $break_min) {
+			display: block;
+		}
+	}
 }
 h1, h2 {
 	font-family: $secondary_font;
@@ -100,25 +110,28 @@ h3 {
 	font-size: 2.4rem;
 }
 
-input, textarea {
-	outline: 0;
-	color: #333;
-}
-
 .button, input[type=submit] {
-	background: $secondary_color;
-	padding: 15px 30px;
+	display: inline-block;
+	background-color: $secondary_color;
+	padding: .8rem 1.2rem;
 	border: 0;
 	color: $primary_color;
-	font-size: 2.4rem;
+	font-size: 1.6rem;
+	font-family: $secondary_font;
+	font-weight: 700;
 	text-decoration: none;
 	cursor: pointer;
+	text-transform: uppercase;
 	transition: all .2s ease-in-out;
 	&:hover {
 		opacity: .8;
 	}
 	&:active {
-		transform: scale(.9);
+		transform: scale(.95);
+	}
+	&.button-alt {
+		background-color: $primary_color;
+		color: $secondary_color;
 	}
 }
 
@@ -189,7 +202,6 @@ input, textarea {
 	}
 
 	.close {
-		@extend .button;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
@@ -198,6 +210,12 @@ input, textarea {
 		height: 5rem;
 		border-radius: 50%;
 		text-indent: -9999px;
+		&:hover {
+			opacity: .8;
+		}
+		&:active {
+			transform: scale(.95);
+		}
 		&:before,
 		&:after {
 			content: '';

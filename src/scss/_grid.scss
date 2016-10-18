@@ -1,13 +1,12 @@
 .grid {
 	text-align: justify;
 	font-size: 0;
-	text-justify: distribute-all-lines;
 	&:after {
 		content: '';
 		display: inline-block;
 		width: 100%;
 	}
-	> div[class*='span-'] {
+	> [class*='span-'] {
 		display: inline-block;
 		vertical-align: top;
 		text-align: left;
@@ -117,7 +116,7 @@
 	margin-right: 91.66667%;
 }
 @media (max-width: $break_mid) {
-	.grid > div[class*='span-'] {
+	.grid > [class*='span-'] {
 		width: 100%;
 	}
 }
