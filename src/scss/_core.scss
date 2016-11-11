@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 	outline-color: #fff;
 }
-::-moz-selection {
-	background: #fff;
-	color: #000;
-}
 ::selection {
 	background: #fff;
 	color: #000;
@@ -105,34 +101,6 @@ h1 {
 h2 {
 	font-size: 4rem;
 	font-weight: 300;
-}
-h3 {
-	font-size: 2.4rem;
-}
-
-.button, input[type=submit] {
-	display: inline-block;
-	background-color: $secondary_color;
-	padding: .8rem 1.2rem;
-	border: 0;
-	color: $primary_color;
-	font-size: 1.6rem;
-	font-family: $secondary_font;
-	font-weight: 700;
-	text-decoration: none;
-	cursor: pointer;
-	text-transform: uppercase;
-	transition: all .2s ease-in-out;
-	&:hover {
-		opacity: .8;
-	}
-	&:active {
-		transform: scale(.95);
-	}
-	&.button-alt {
-		background-color: $primary_color;
-		color: $secondary_color;
-	}
 }
 
 .window {
