@@ -6,22 +6,6 @@
 		transform: scale(1);
 	}
 }
-@keyframes scaleinsubtle {
-	0% {
-		transform: scale(.8);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-@keyframes scale {
-	0% {
-		transform: scale(1);
-	}
-	100% {
-		transform: scale(.98);
-	}
-}
 @keyframes fadein {
 	0% {
 		opacity: 0;

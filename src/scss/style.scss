@@ -80,15 +80,11 @@ nav {
 		font-size: 0;
 		line-height: 5rem;
 		border-radius: 50%;
-		transform: scale(1);
 		&:first-child {
 			margin-left: 0;
 		}
 		&:hover {
 			opacity: .9;
-		}
-		&:active {
-			transform: scale(.95);
 		}
 		&:after {
 			content: '';
@@ -163,12 +159,10 @@ section {
 	font-size: 0;
 }
 .box {
-	position: relative;
 	display: inline-block;
 	background-color: $primary_color;
 	width: 10%;
 	height: 10.05vh;
-	transition: $snappy_trans;
 
 	// Transform
 	transform: scale(0);
@@ -180,11 +174,4 @@ section {
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-out;
-}
-.finished .box {
-	// Transform
-	transform: scale(1);
-
-	// Animation
-	animation-name: none;
 }

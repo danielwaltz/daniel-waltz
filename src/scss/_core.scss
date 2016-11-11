@@ -60,9 +60,19 @@ img {
 a {
 	color: inherit;
 	text-decoration: none;
-	transition: all .2s ease-in-out;
+
+	// Transition
+	transition: $snappy_trans;
+
+	// Transform
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transform-origin: center;
 	&:hover {
 		opacity: .8;
+	}
+	&:active {
+		transform: scale(.95);
 	}
 }
 
@@ -119,6 +129,7 @@ h2 {
 	transition: transform .5s ease-in-out;
 
 	// Transform
+	transform: translateY(-100%);
 	transform-style: preserve-3d;
 	transform-origin: center;
 
@@ -153,9 +164,6 @@ h2 {
 		text-indent: -9999px;
 		&:hover {
 			opacity: .8;
-		}
-		&:active {
-			transform: scale(.95);
 		}
 		&:before,
 		&:after {
