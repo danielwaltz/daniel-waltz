@@ -105,68 +105,41 @@ h2 {
 
 .window {
 	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	z-index: 500;
 	background-color: $secondary_color;
-	width: 100vw;
-	height: 100vh;
 	text-align: left;
 	overflow: auto;
+	pointer-events: none;
 
 	// Transition
-	transition: top .5s ease-in-out,
-	            right .5s ease-in-out,
-				bottom .5s ease-in-out,
-	            left .5s ease-in-out;
+	transition: transform .5s ease-in-out;
 
 	// Transform
-	transform: scale(1);
 	transform-style: preserve-3d;
 	transform-origin: center;
-	&.window-top,
-	&.window-bottom {
-		left: 0;
-		right: 0;
+
+	&.window-left {
+		transform: translateX(-100%);
+	}
+	&.window-right {
+		transform: translateX(100%);
 	}
 	&.window-top {
-		bottom: 100%;
-		&.active {
-			bottom: 0;
-		}
+		transform: translateY(-100%);
 	}
 	&.window-bottom {
-		top: 100%;
-		&.active {
-			top: 0;
-		}
-	}
-	&.window-left,
-	&.window-right {
-		top: 0;
-		bottom: 0;
-	}
-	&.window-left {
-		right: 100%;
-		&.active {
-			right: 0;
-		}
-	}
-	&.window-right {
-		left: 100%;
-		&.active {
-			left: 0;
-		}
+		transform: translateY(100%);
 	}
 
 	&.active {
-		// Transform
-		transform: scale(.9);
+		pointer-events: all;
 
-		// Animation
-		animation-name: scaleinsubtle;
-		animation-duration: .5s;
-		animation-delay: .5s;
-		animation-fill-mode: forwards;
-		animation-timing-function: ease-in-out;
+		// Transform
+		transform: translateX(0) translateY(0);
 	}
 
 	.close {

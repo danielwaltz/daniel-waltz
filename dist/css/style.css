@@ -79,16 +79,16 @@
 
 @-webkit-keyframes scaleinsubtle {
   0% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 
 @keyframes scaleinsubtle {
   0% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -273,55 +273,37 @@ h2 {
 
 .window {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 500;
   background-color: #ff007f;
-  width: 100vw;
-  height: 100vh;
   text-align: left;
   overflow: auto;
-  -webkit-transition: top .5s ease-in-out, right .5s ease-in-out, bottom .5s ease-in-out, left .5s ease-in-out;
-          transition: top .5s ease-in-out, right .5s ease-in-out, bottom .5s ease-in-out, left .5s ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition: transform .5s ease-in-out;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform-origin: center;
           transform-origin: center; }
-  .window.window-top, .window.window-bottom {
-    left: 0;
-    right: 0; }
-  .window.window-top {
-    bottom: 100%; }
-    .window.window-top.active {
-      bottom: 0; }
-  .window.window-bottom {
-    top: 100%; }
-    .window.window-bottom.active {
-      top: 0; }
-  .window.window-left, .window.window-right {
-    top: 0;
-    bottom: 0; }
   .window.window-left {
-    right: 100%; }
-    .window.window-left.active {
-      right: 0; }
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%); }
   .window.window-right {
-    left: 100%; }
-    .window.window-right.active {
-      left: 0; }
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  .window.window-top {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  .window.window-bottom {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%); }
   .window.active {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-    -webkit-animation-name: scaleinsubtle;
-            animation-name: scaleinsubtle;
-    -webkit-animation-duration: .5s;
-            animation-duration: .5s;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; }
+    pointer-events: all;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0); }
   .window .close {
     position: absolute;
     top: 1rem;
