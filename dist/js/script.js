@@ -31,27 +31,23 @@ var nav = function nav() {
 	var close = document.body.querySelectorAll('.js-close');
 
 	// Loop through close buttons
-
-	var _loop2 = function _loop2(_i) {
-		var button = close[_i];
-
-		// When a close button is clicked
-		button.addEventListener('click', closeWindow, false);
+	for (var i = 0; i < close.length; i++) {
 
 		// Loop through all the windows
-		function closeWindow(evt) {
+		var closeWindow = function closeWindow(evt) {
 			evt.preventDefault();
 
 			var overlays = document.body.querySelectorAll('.window');
-			for (var _i2 = 0; _i2 < overlays.length; _i2++) {
+			for (var _i = 0; _i < overlays.length; _i++) {
 				// And remove the active class
-				overlays[_i2].classList.remove('active');
+				overlays[_i].classList.remove('active');
 			}
-		}
-	};
+		};
 
-	for (var _i = 0; _i < close.length; _i++) {
-		_loop2(_i);
+		var button = close[i];
+
+		// When a close button is clicked
+		button.addEventListener('click', closeWindow, false);
 	}
 };
 
@@ -61,22 +57,23 @@ var boxes = function boxes(type) {
 	    total = 100,
 	    time = 3000;
 
-	var _loop3 = function _loop3(i) {
+	for (var i = 0; i < total; i++) {
+
+		// Adds animation delay as inline style to element
+		var addAnimationDelay = function addAnimationDelay(target, delay) {
+			target.setAttribute('style', 'animation-delay: ' + delay + ';');
+		};
+
+		// Sweeping animation
+
+
 		// Create element
 		var box = document.createElement('div'),
 		    delay = '',
 		    rand = void 0;
 
 		// Add class name to element
-		box.classList.add('box');
-
-		// Adds animation delay as inline style to element
-		function addAnimationDelay(target, delay) {
-			target.setAttribute('style', 'animation-delay: ' + delay + ';');
-		}
-
-		// Sweeping animation
-		if (type === 'sweep') {
+		box.classList.add('box');if (type === 'sweep') {
 			// Setup delay timing
 			delay = '.' + i + 's';
 			if (i <= 10) {
@@ -105,10 +102,6 @@ var boxes = function boxes(type) {
 
 		// Add element to view
 		view.appendChild(box);
-	};
-
-	for (var i = 0; i < total; i++) {
-		_loop3(i);
 	}
 
 	// Add finished class after initial animation

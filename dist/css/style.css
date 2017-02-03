@@ -386,12 +386,14 @@ nav {
       display: inline-block;
       vertical-align: middle;
       min-height: 5rem; }
-    .nav-social a img {
+    .nav-social a svg {
       display: inline-block;
       vertical-align: middle;
-      width: 60%; }
-    .nav-social a.social-github img {
-      width: 70%; }
+      max-width: 60%;
+      max-height: 60%; }
+      .nav-social a svg path {
+        fill: #00e2e5;
+        stroke: #00e2e5; }
   @media (max-width: 480px) {
     .nav-social a {
       width: 4rem;

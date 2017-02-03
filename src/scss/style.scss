@@ -92,13 +92,15 @@ nav {
 			vertical-align: middle;
 			min-height: 5rem;
 		}
-		img {
+		svg {
 			display: inline-block;
 			vertical-align: middle;
-			width: 60%;
-		}
-		&.social-github img {
-			width: 70%;
+			max-width: 60%;
+			max-height: 60%;
+			path {
+				fill: $primary_color;
+				stroke: $primary_color;
+			}
 		}
 	}
 	@media (max-width: $break_min) {
