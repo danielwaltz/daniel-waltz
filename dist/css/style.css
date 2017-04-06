@@ -61,29 +61,11 @@
   src: local("Oswald Bold"), local("Oswald-Bold"), url(https://fonts.gstatic.com/s/oswald/v10/bH7276GfdCjMjApa_dkG6VtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 
-@-webkit-keyframes scalein {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
 @keyframes scalein {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
+    transform: scale(0); }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-    visibility: hidden; }
-  100% {
-    opacity: 1;
-    visibility: visible; } }
+    transform: scale(1); } }
 
 @keyframes fadein {
   0% {
@@ -202,19 +184,14 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: center;
-          transform-origin: center; }
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transform-origin: center; }
   a:hover {
     opacity: .8; }
   a:active {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95); }
+    transform: scale(0.95); }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 1.5rem 0; }
@@ -259,30 +236,21 @@ h2 {
   text-align: left;
   overflow: auto;
   pointer-events: none;
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-          transition: transform .5s ease-in-out;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: center;
-          transform-origin: center; }
+  transition: transform .5s ease-in-out;
+  transform: translateY(-100%);
+  transform-style: preserve-3d;
+  transform-origin: center; }
   .window.window-left {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%); }
+    transform: translateX(-100%); }
   .window.window-right {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%); }
+    transform: translateX(100%); }
   .window.window-top {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%); }
+    transform: translateY(-100%); }
   .window.window-bottom {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%); }
+    transform: translateY(100%); }
   .window.active {
     pointer-events: all;
-    -webkit-transform: translateX(0) translateY(0);
-            transform: translateX(0) translateY(0); }
+    transform: translateX(0) translateY(0); }
   .window .close {
     position: absolute;
     top: 1rem;
@@ -304,35 +272,25 @@ h2 {
       width: .8rem;
       background-color: #ff007f; }
     .window .close:before {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg); }
+      transform: rotate(45deg); }
     .window .close:after {
-      -webkit-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
+      transform: rotate(-45deg); }
 
 main {
   display: inline-block;
   vertical-align: middle;
-  -webkit-animation-name: fadein;
-          animation-name: fadein;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out; }
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; }
   main .content {
     position: relative;
     color: #ff007f;
     text-align: center;
-    -webkit-animation-name: scalein;
-            animation-name: scalein;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; }
+    animation-name: scalein;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
   main h1, main h2 {
     margin: .5rem 0; }
   main h1 {
@@ -444,17 +402,10 @@ section {
   background-color: #00e2e5;
   width: 10%;
   height: 10.05vh;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation-name: scalein;
-          animation-name: scalein;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
+  transform: scale(0);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation-name: scalein;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
