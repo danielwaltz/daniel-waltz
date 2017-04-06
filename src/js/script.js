@@ -1,4 +1,4 @@
-let nav = function() {
+const nav = function() {
 	// Define nav target
 	let navItems = document.body.querySelectorAll('.js-nav-main a');
 
@@ -43,7 +43,7 @@ let nav = function() {
 	}
 }
 
-let boxes = function(type) {
+const boxes = function(type) {
 	// Define view target and total elements to add
 	let view  = document.body.querySelector('.js-boxes'),
 		total = 100,

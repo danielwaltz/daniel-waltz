@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	outline-color: #fff;
 }
+
 ::selection {
 	background: #fff;
 	color: #000;
@@ -43,6 +44,7 @@ body {
 	font-size: 1.4rem;
 	font-family: $primary_font;
 	text-align: center;
+	line-height: 1.4;
 	overflow: hidden;
 	&:after {
 		content: '';
@@ -86,9 +88,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 	}
 }
 
+h1, h2, h3, h4, h5, h6, li {
+	line-height: 1.1;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
-	line-height: 1.1;
 	span {
 		display: inline-block;
 		font-size: 60%;
@@ -111,6 +116,10 @@ h1 {
 h2 {
 	font-size: 4rem;
 	font-weight: 300;
+}
+
+li:not(:first-child) {
+	margin-top: 1rem;
 }
 
 .window {

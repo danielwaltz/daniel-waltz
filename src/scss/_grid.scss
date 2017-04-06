@@ -1,56 +1,17 @@
 .grid {
-	text-align: justify;
-	font-size: 0;
-	&:after {
-		content: '';
-		display: inline-block;
-		width: 100%;
-	}
-	> [class*='span-'] {
-		display: inline-block;
-		vertical-align: top;
-		text-align: left;
-		font-size: 1.4rem;
+	display: flex;
+	> div {
+		flex-grow: 1;
 	}
 }
-.span-1 {
-	width: 8.33333%;
-}
-.span-2 {
-	width: 16.66667%;
-}
-.span-3 {
-	width: 25%;
-}
-.span-4 {
-	width: 33.33333%;
-}
-.span-5 {
-	width: 41.66667%;
-}
-.span-6 {
-	width: 50%;
-}
-.span-7 {
-	width: 58.33333%;
-}
-.span-8 {
-	width: 66.66667%;
-}
-.span-9 {
-	width: 75%;
-}
-.span-10 {
-	width: 83.33333%;
-}
-.span-11 {
-	width: 91.66667%;
-}
-.span-12 {
-	width: 100%;
+.grid-padded {
+	> div {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 @media (max-width: $break_mid) {
-	.grid > [class*='span-'] {
-		width: 100%;
+	.grid {
+		display: block;
 	}
 }
