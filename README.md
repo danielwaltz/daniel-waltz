@@ -1,4 +1,4 @@
 ### Production ###
 
 production
-theserver@serverforgamesandstuff.com:/home/theserver/Sites/danielwaltz.me/git
+theserver@serverforgamesandstuff.com:Sites/danielwaltz.me/daniel-waltz.git
