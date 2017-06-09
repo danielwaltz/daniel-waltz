@@ -92,21 +92,21 @@
 
 * {
   box-sizing: border-box;
-  outline-color: #fff; }
+  outline-color: #c0c0c0; }
 
 ::-moz-selection {
-  background: #fff;
-  color: #000; }
+  background: #c0c0c0;
+  color: #151515; }
 
 ::selection {
-  background: #fff;
-  color: #000; }
+  background: #c0c0c0;
+  color: #151515; }
 
 html, body {
   min-height: 100vh; }
 
 html {
-  background-color: #ff007f;
+  background-color: #c0c0c0;
   font-size: 1vw; }
 
 @media (max-width: 1280px) {
@@ -128,7 +128,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  color: #00e2e5;
+  color: #151515;
   font-size: 1.4rem;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   text-align: center;
@@ -200,7 +200,7 @@ li:not(:first-child) {
   bottom: 0;
   left: 0;
   z-index: 500;
-  background-color: #ff007f;
+  background-color: #c0c0c0;
   text-align: left;
   overflow: auto;
   pointer-events: none;
@@ -223,7 +223,7 @@ li:not(:first-child) {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: #00e2e5;
+    background-color: #151515;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -238,7 +238,7 @@ li:not(:first-child) {
       left: 50%;
       margin-left: -.4rem;
       width: .8rem;
-      background-color: #ff007f; }
+      background-color: #c0c0c0; }
     .window .close:before {
       transform: rotate(45deg); }
     .window .close:after {
@@ -253,7 +253,7 @@ main {
   animation-timing-function: ease-in-out; }
   main .content {
     position: relative;
-    color: #ff007f;
+    color: #c0c0c0;
     text-align: center;
     animation-name: scalein;
     animation-duration: 3s;
@@ -284,9 +284,9 @@ nav {
   nav a {
     display: inline-block;
     vertical-align: top;
-    background-color: #ff007f;
+    background-color: #c0c0c0;
     padding: .5rem 1rem;
-    color: #00e2e5;
+    color: #151515;
     font-size: 1.6rem;
     font-family: "Oswald", Impact, Arial, sans-serif;
     font-weight: 700;
@@ -318,8 +318,8 @@ nav {
       max-width: 60%;
       max-height: 60%; }
       .nav-social a svg path {
-        fill: #00e2e5;
-        stroke: #00e2e5; }
+        fill: #151515;
+        stroke: #151515; }
   @media (max-width: 480px) {
     .nav-social a {
       width: 4rem;
@@ -339,9 +339,9 @@ nav {
 .nav-work {
   margin: 0 -.75rem; }
   .nav-work a {
-    background-color: #00e2e5;
+    background-color: #151515;
     margin: .75rem;
-    color: #ff007f; }
+    color: #c0c0c0; }
 
 section {
   padding: 5rem; }
@@ -367,7 +367,7 @@ section {
 
 .box {
   display: inline-block;
-  background-color: #00e2e5;
+  background-color: #151515;
   width: 10%;
   height: 10.05vh;
   transform: scale(0);

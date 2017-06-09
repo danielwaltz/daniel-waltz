@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  outline-color: #fff;
+  outline-color: $secondary_color;
 }
 
 ::selection {
-  background: #fff;
-  color: #000;
+  background: $secondary_color;
+  color: $primary_color;
 }
 
 html, body {
