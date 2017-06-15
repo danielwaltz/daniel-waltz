@@ -8,8 +8,8 @@ var nav = function nav() {
 
   var _loop = function _loop(i) {
     // Define target based on nav item class name
-    var item = navItems[i],
-        target = item.className.split('-')[1];
+    var item = navItems[i];
+    var target = item.className.split('-')[1];
 
     // When a nav item is clicked
     item.addEventListener('click', openWindow, false);
@@ -53,9 +53,9 @@ var nav = function nav() {
 
 var boxes = function boxes(type) {
   // Define view target and total elements to add
-  var view = document.body.querySelector('.js-boxes'),
-      total = 100,
-      time = 3000;
+  var view = document.body.querySelector('.js-boxes');
+  var total = 100;
+  var time = 3000;
 
   for (var i = 0; i < total; i++) {
 
@@ -68,9 +68,9 @@ var boxes = function boxes(type) {
 
 
     // Create element
-    var box = document.createElement('div'),
-        delay = '',
-        rand = void 0;
+    var box = document.createElement('div');
+    var delay = '';
+    var rand = 0;
 
     // Add class name to element
     box.classList.add('box');if (type === 'sweep') {

@@ -1,12 +1,12 @@
 const nav = function() {
   // Define nav target
-  let navItems = document.body.querySelectorAll('.js-nav-main a');
+  const navItems = document.body.querySelectorAll('.js-nav-main a');
 
   // Loop through nav items
   for (let i = 0; i < navItems.length; i++) {
     // Define target based on nav item class name
-    let item   = navItems[i],
-      target = item.className.split('-')[1];
+    const item = navItems[i];
+    const target = item.className.split('-')[1];
 
     // When a nav item is clicked
     item.addEventListener('click', openWindow, false);
@@ -15,17 +15,17 @@ const nav = function() {
     function openWindow(evt) {
       evt.preventDefault();
 
-      let overlay = document.body.querySelector('.' + target);
+      const overlay = document.body.querySelector('.' + target);
       overlay.classList.toggle('active');
     }
   }
 
   // Target close buttons
-  let close = document.body.querySelectorAll('.js-close');
+  const close = document.body.querySelectorAll('.js-close');
 
   // Loop through close buttons
   for (let i = 0; i < close.length; i++) {
-    let button = close[i];
+    const button = close[i];
 
     // When a close button is clicked
     button.addEventListener('click', closeWindow, false);
@@ -34,26 +34,26 @@ const nav = function() {
     function closeWindow(evt) {
       evt.preventDefault();
 
-      let overlays = document.body.querySelectorAll('.window');
+      const overlays = document.body.querySelectorAll('.window');
       for (let i = 0; i < overlays.length; i++) {
         // And remove the active class
         overlays[i].classList.remove('active');
       }
     }
   }
-}
+};
 
 const boxes = function(type) {
   // Define view target and total elements to add
-  let view  = document.body.querySelector('.js-boxes'),
-    total = 100,
-    time  = 3000;
+  const view = document.body.querySelector('.js-boxes');
+  const total = 100;
+  const time = 3000;
 
   for (let i = 0; i < total; i++) {
     // Create element
-    let box  = document.createElement('div'),
-      delay = '',
-      rand;
+    const box = document.createElement('div');
+    let delay = '';
+    let rand = 0;
 
     // Add class name to element
     box.classList.add('box');
@@ -64,7 +64,7 @@ const boxes = function(type) {
     }
 
     // Sweeping animation
-    if ( type === 'sweep' ) {
+    if (type === 'sweep') {
       // Setup delay timing
       delay = '.' + i + 's';
       if (i <= 10) {
@@ -79,9 +79,9 @@ const boxes = function(type) {
     }
 
     // Random animation
-    if ( type === 'rand' ) {
+    if (type === 'rand') {
       // Setup delay timing
-      rand  = Math.floor(Math.random() * (0 - 10)) + 10;
+      rand = Math.floor(Math.random() * (0 - 10)) + 10;
       delay = '.' + rand + 's';
 
       // Execute style update
@@ -96,10 +96,10 @@ const boxes = function(type) {
   }
 
   // Add finished class after initial animation
-  let timer = window.setTimeout(function(){
+  const timer = window.setTimeout(function() {
     view.classList.add('finished');
   }, time);
-}
+};
 
 // Execute onload
 window.onload = nav();
