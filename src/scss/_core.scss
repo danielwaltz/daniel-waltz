@@ -174,8 +174,7 @@ li:not(:first-child) {
     &:hover {
       opacity: .8;
     }
-    &:before,
-    &:after {
+    &:before, &:after {
       content: '';
       position: absolute;
       top: .8rem;
