@@ -201,6 +201,8 @@ li:not(:first-child) {
   left: 0;
   z-index: 500;
   background-color: #c0c0c0;
+  width: 100vw;
+  height: 100vh;
   text-align: left;
   overflow: auto;
   pointer-events: none;
