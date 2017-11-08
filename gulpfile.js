@@ -38,7 +38,7 @@
         .pipe(
           babel({
             presets: ['es2015'],
-          }),
+          })
         )
         // Generate non minified version
         .pipe(concat('script.js'))
@@ -59,8 +59,8 @@
             optimizationLevel: 3,
             progressive: true,
             interlaced: true,
-          }),
-        ),
+          })
+        )
       )
       .pipe(gulp.dest('dist/images'))
       .pipe(notify({ message: 'Image Processed' }));
@@ -75,8 +75,8 @@
             progressive: true,
             multipass: true,
             svgoPlugins: [{ removeViewBox: false }],
-          }),
-        ),
+          })
+        )
       )
       .pipe(gulp.dest('dist/svgs'))
       .pipe(notify({ message: 'SVG Processed' }));
