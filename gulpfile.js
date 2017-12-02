@@ -30,12 +30,15 @@
   });
 
   gulp.task('scripts', function() {
-    var scripts = gulp.src(['src/js/**/*.js']);
+    var scripts = gulp.src([
+      'node_modules/particlesjs/dist/particles.min.js',
+      'src/js/**/*.js',
+    ]);
 
     return (scripts
         .pipe(
           babel({
-            presets: ['es2015'],
+            presets: ['env'],
           })
         )
         // Generate non minified version

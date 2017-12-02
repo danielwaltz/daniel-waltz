@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  outline-color: $secondary_color;
+  outline: 0;
 }
 
 ::selection {
@@ -14,7 +14,7 @@ body {
 }
 
 html {
-  background-color: $secondary_color;
+  background-color: $primary_color;
   font-size: 1vw;
 }
 @media (max-width: $break_max) {
@@ -41,7 +41,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  color: $primary_color;
+  color: $secondary_color;
   font-size: 1.4rem;
   font-family: $primary_font;
   text-align: center;
@@ -150,7 +150,7 @@ li:not(:first-child) {
   bottom: 0;
   left: 0;
   z-index: 500;
-  background-color: $secondary_color;
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
   text-align: left;
@@ -189,7 +189,7 @@ li:not(:first-child) {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: $primary_color;
+    background-color: $secondary_color;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -206,7 +206,7 @@ li:not(:first-child) {
       left: 50%;
       margin-left: -0.4rem;
       width: 0.8rem;
-      background-color: $secondary_color;
+      background-color: $primary_color;
     }
     &:before {
       transform: rotate(45deg);
@@ -215,4 +215,8 @@ li:not(:first-child) {
       transform: rotate(-45deg);
     }
   }
+}
+
+.window-open main .content {
+  animation-name: scaleout;
 }
