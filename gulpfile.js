@@ -9,7 +9,6 @@
     imagemin = require('gulp-imagemin'),
     livereload = require('gulp-livereload'),
     cleancss = require('gulp-clean-css'),
-    notify = require('gulp-notify'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
@@ -27,8 +26,7 @@
         // Generate minified version
         .pipe(cleancss())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(notify({ message: 'Styles Processed' })) );
+        .pipe(gulp.dest('dist/css')) );
   });
 
   gulp.task('scripts', function() {
@@ -46,8 +44,7 @@
         // Generate minified version
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(notify({ message: 'Scripts Processed' })) );
+        .pipe(gulp.dest('dist/js')) );
   });
 
   gulp.task('images', function() {
@@ -62,8 +59,7 @@
           })
         )
       )
-      .pipe(gulp.dest('dist/images'))
-      .pipe(notify({ message: 'Image Processed' }));
+      .pipe(gulp.dest('dist/images'));
   });
 
   gulp.task('svgs', function() {
@@ -78,8 +74,7 @@
           })
         )
       )
-      .pipe(gulp.dest('dist/svgs'))
-      .pipe(notify({ message: 'SVG Processed' }));
+      .pipe(gulp.dest('dist/svgs'));
   });
 
   gulp.task('clean', function() {
