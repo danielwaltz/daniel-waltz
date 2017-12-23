@@ -38,5 +38,9 @@
   },
   "dependencies": {
     "particlesjs": "^2.1.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }
