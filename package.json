@@ -12,7 +12,8 @@
   "scripts": {
     "start-server": "serve",
     "start-watcher": "gulp watch",
-    "start": "run-p start-server start-watcher"
+    "start": "run-p start-server start-watcher",
+    "deploy": "gulp && firebase deploy"
   },
   "description": "",
   "devDependencies": {
