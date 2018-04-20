@@ -1,18 +1,19 @@
 (function() {
   'use strict';
-  var concurrent = require('concurrent-transform'),
-    del = require('del'),
-    gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
-    imagemin = require('gulp-imagemin'),
-    livereload = require('gulp-livereload'),
-    cleancss = require('gulp-clean-css'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
-    merge = require('merge-stream');
+
+  var concurrent = require('concurrent-transform');
+  var del = require('del');
+  var gulp = require('gulp');
+  var autoprefixer = require('gulp-autoprefixer');
+  var babel = require('gulp-babel');
+  var concat = require('gulp-concat');
+  var imagemin = require('gulp-imagemin');
+  var livereload = require('gulp-livereload');
+  var cleancss = require('gulp-clean-css');
+  var rename = require('gulp-rename');
+  var sass = require('gulp-sass');
+  var uglify = require('gulp-uglify');
+  var merge = require('merge-stream');
 
   gulp.task('styles', function() {
     var styles = gulp.src(['src/scss/style.scss']);
@@ -25,7 +26,11 @@
         .pipe(gulp.dest('dist/css'))
         // Generate minified version
         .pipe(cleancss())
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(
+          rename({
+            suffix: '.min',
+          })
+        )
         .pipe(gulp.dest('dist/css')) );
   });
 
@@ -45,7 +50,11 @@
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
         // Generate minified version
-        .pipe(rename({ suffix: '.min' }))
+        .pipe(
+          rename({
+            suffix: '.min',
+          })
+        )
         .pipe(uglify())
         .pipe(gulp.dest('dist/js')) );
   });
@@ -73,7 +82,11 @@
           imagemin({
             progressive: true,
             multipass: true,
-            svgoPlugins: [{ removeViewBox: false }],
+            svgoPlugins: [
+              {
+                removeViewBox: false,
+              },
+            ],
           })
         )
       )
