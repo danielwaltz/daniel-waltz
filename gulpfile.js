@@ -1,70 +1,45 @@
 (function() {
   'use strict';
 
-  var concurrent = require('concurrent-transform');
-  var del = require('del');
-  var gulp = require('gulp');
-  var autoprefixer = require('gulp-autoprefixer');
-  var babel = require('gulp-babel');
-  var concat = require('gulp-concat');
-  var imagemin = require('gulp-imagemin');
-  var livereload = require('gulp-livereload');
-  var cleancss = require('gulp-clean-css');
-  var rename = require('gulp-rename');
-  var sass = require('gulp-sass');
-  var uglify = require('gulp-uglify');
-  var merge = require('merge-stream');
+  const concurrent = require('concurrent-transform');
+  const del = require('del');
+  const gulp = require('gulp');
+  const autoprefixer = require('gulp-autoprefixer');
+  const babel = require('gulp-babel');
+  const concat = require('gulp-concat');
+  const imagemin = require('gulp-imagemin');
+  const livereload = require('gulp-livereload');
+  const cleancss = require('gulp-clean-css');
+  const rename = require('gulp-rename');
+  const sass = require('gulp-sass');
+  const uglify = require('gulp-uglify');
+  const merge = require('merge-stream');
 
-  gulp.task('styles', function() {
-    var styles = gulp.src(['src/scss/style.scss']);
+  gulp.task('styles', () =>
+    gulp
+      .src(['src/scss/style.scss'])
+      .pipe(sass())
+      .pipe(autoprefixer('last 2 version'))
+      .pipe(concat('style.css'))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(cleancss())
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(gulp.dest('dist/css'))
+  );
 
-    return (
-      styles
-        .pipe(sass())
-        .pipe(autoprefixer('last 2 version'))
-        // Generate non minified version
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest('dist/css'))
-        // Generate minified version
-        .pipe(cleancss())
-        .pipe(
-          rename({
-            suffix: '.min',
-          })
-        )
-        .pipe(gulp.dest('dist/css'))
-    );
-  });
+  gulp.task('scripts', () =>
+    gulp
+      .src(['node_modules/particlesjs/dist/particles.min.js', 'src/js/**/*.js'])
+      .pipe(babel({ presets: ['env'] }))
+      .pipe(concat('script.js'))
+      .pipe(gulp.dest('dist/js'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/js'))
+  );
 
-  gulp.task('scripts', function() {
-    var scripts = gulp.src([
-      'node_modules/particlesjs/dist/particles.min.js',
-      'src/js/**/*.js',
-    ]);
-
-    return (
-      scripts
-        .pipe(
-          babel({
-            presets: ['env'],
-          })
-        )
-        // Generate non minified version
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest('dist/js'))
-        // Generate minified version
-        .pipe(
-          rename({
-            suffix: '.min',
-          })
-        )
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-    );
-  });
-
-  gulp.task('images', function() {
-    return gulp
+  gulp.task('images', () =>
+    gulp
       .src('src/images/**/*.{jpg,png,gif}')
       .pipe(
         concurrent(
@@ -75,33 +50,27 @@
           })
         )
       )
-      .pipe(gulp.dest('dist/images'));
-  });
+      .pipe(gulp.dest('dist/images'))
+  );
 
-  gulp.task('svgs', function() {
-    return gulp
+  gulp.task('svgs', () =>
+    gulp
       .src('src/svgs/**/*.svg')
       .pipe(
         concurrent(
           imagemin({
             progressive: true,
             multipass: true,
-            svgoPlugins: [
-              {
-                removeViewBox: false,
-              },
-            ],
+            svgoPlugins: [{ removeViewBox: false }],
           })
         )
       )
-      .pipe(gulp.dest('dist/svgs'));
-  });
+      .pipe(gulp.dest('dist/svgs'))
+  );
 
-  gulp.task('clean', function() {
-    return del.sync(['dist/**/*']);
-  });
+  gulp.task('clean', () => del.sync(['dist/**/*']));
 
-  gulp.task('watch', function() {
+  gulp.task('watch', () => {
     livereload.listen();
 
     gulp.watch('src/scss/**/*.scss', ['styles']);
@@ -111,7 +80,7 @@
     gulp.watch(['**/*.html', 'dist/**']).on('change', livereload.changed);
   });
 
-  gulp.task('default', ['clean'], function() {
+  gulp.task('default', ['clean'], () => {
     gulp.start('styles', 'scripts', 'images', 'svgs');
   });
 })();
