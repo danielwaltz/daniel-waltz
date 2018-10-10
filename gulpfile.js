@@ -18,7 +18,8 @@
   gulp.task('styles', function() {
     var styles = gulp.src(['src/scss/style.scss']);
 
-    return (styles
+    return (
+      styles
         .pipe(sass())
         .pipe(autoprefixer('last 2 version'))
         // Generate non minified version
@@ -31,7 +32,8 @@
             suffix: '.min',
           })
         )
-        .pipe(gulp.dest('dist/css')) );
+        .pipe(gulp.dest('dist/css'))
+    );
   });
 
   gulp.task('scripts', function() {
@@ -40,7 +42,8 @@
       'src/js/**/*.js',
     ]);
 
-    return (scripts
+    return (
+      scripts
         .pipe(
           babel({
             presets: ['env'],
@@ -56,7 +59,8 @@
           })
         )
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js')) );
+        .pipe(gulp.dest('dist/js'))
+    );
   });
 
   gulp.task('images', function() {
