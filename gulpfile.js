@@ -73,14 +73,13 @@
     done();
   });
 
-  gulp.task('watch', function(done) {
+  gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('src/scss/**/*.scss', ['styles']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
-    gulp.watch('src/images/**/*', ['images']);
-    gulp.watch('src/svgs/**/*', ['svgs']);
+    gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
+    gulp.watch('src/js/**/*.js', gulp.series('scripts'));
+    gulp.watch('src/images/**/*', gulp.series('images'));
+    gulp.watch('src/svgs/**/*', gulp.series('svgs'));
     gulp.watch(['**/*.html', 'dist/**']).on('change', livereload.changed);
-    done();
   });
 
   gulp.task(
