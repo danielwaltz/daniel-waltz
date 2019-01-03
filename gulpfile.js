@@ -15,8 +15,8 @@
   const uglify = require('gulp-uglify');
   const merge = require('merge-stream');
 
-  gulp.task('styles', () =>
-    gulp
+  gulp.task('styles', function() {
+    return gulp
       .src(['src/scss/style.scss'])
       .pipe(sass())
       .pipe(autoprefixer('last 2 version'))
@@ -24,22 +24,22 @@
       .pipe(gulp.dest('dist/css'))
       .pipe(cleancss())
       .pipe(rename({ suffix: '.min' }))
-      .pipe(gulp.dest('dist/css'))
-  );
+      .pipe(gulp.dest('dist/css'));
+  });
 
-  gulp.task('scripts', () =>
-    gulp
+  gulp.task('scripts', function() {
+    return gulp
       .src(['node_modules/particlesjs/dist/particles.min.js', 'src/js/**/*.js'])
-      .pipe(babel({ presets: ['env'] }))
+      .pipe(babel({ presets: ['@babel/env'] }))
       .pipe(concat('script.js'))
       .pipe(gulp.dest('dist/js'))
       .pipe(rename({ suffix: '.min' }))
       .pipe(uglify())
-      .pipe(gulp.dest('dist/js'))
-  );
+      .pipe(gulp.dest('dist/js'));
+  });
 
-  gulp.task('images', () =>
-    gulp
+  gulp.task('images', function() {
+    return gulp
       .src('src/images/**/*.{jpg,png,gif}')
       .pipe(
         concurrent(
@@ -50,11 +50,11 @@
           })
         )
       )
-      .pipe(gulp.dest('dist/images'))
-  );
+      .pipe(gulp.dest('dist/images'));
+  });
 
-  gulp.task('svgs', () =>
-    gulp
+  gulp.task('svgs', function() {
+    return gulp
       .src('src/svgs/**/*.svg')
       .pipe(
         concurrent(
@@ -65,22 +65,26 @@
           })
         )
       )
-      .pipe(gulp.dest('dist/svgs'))
-  );
+      .pipe(gulp.dest('dist/svgs'));
+  });
 
-  gulp.task('clean', () => del.sync(['dist/**/*']));
+  gulp.task('clean', function(done) {
+    del.sync(['dist/**/*']);
+    done();
+  });
 
-  gulp.task('watch', () => {
+  gulp.task('watch', function(done) {
     livereload.listen();
-
     gulp.watch('src/scss/**/*.scss', ['styles']);
     gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('src/images/**/*', ['images']);
     gulp.watch('src/svgs/**/*', ['svgs']);
     gulp.watch(['**/*.html', 'dist/**']).on('change', livereload.changed);
+    done();
   });
 
-  gulp.task('default', ['clean'], () => {
-    gulp.start('styles', 'scripts', 'images', 'svgs');
-  });
+  gulp.task(
+    'default',
+    gulp.series('clean', gulp.parallel('styles', 'scripts', 'images', 'svgs'))
+  );
 })();

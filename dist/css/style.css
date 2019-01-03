@@ -121,10 +121,6 @@
           box-sizing: border-box;
   outline: 0; }
 
-::-moz-selection {
-  background: #fff;
-  color: #000; }
-
 ::selection {
   background: #fff;
   color: #000; }
