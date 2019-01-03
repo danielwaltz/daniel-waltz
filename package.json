@@ -11,6 +11,7 @@
   "homepage": "https://bitbucket.org/DanielWaltz/daniel-waltz#readme",
   "scripts": {
     "gulp": "gulp",
+    "firebase": "firebase",
     "start-server": "serve",
     "start-watcher": "gulp watch",
     "start": "run-p start-server start-watcher",
@@ -22,6 +23,7 @@
     "@babel/preset-env": "~7.2.3",
     "concurrent-transform": "~1.0.0",
     "del": "~3.0.0",
+    "firebase-tools": "~6.2.2",
     "gulp": "~4.0.0",
     "gulp-autoprefixer": "~6.0.0",
     "gulp-babel": "~8.0.0",
