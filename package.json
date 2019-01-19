@@ -10,12 +10,13 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/DanielWaltz/daniel-waltz#readme",
   "scripts": {
-    "gulp": "gulp",
+    "serve": "run-p start-server start-watcher",
+    "build": "gulp",
+    "deploy": "run-s build firebase:deploy",
     "firebase": "firebase",
+    "firebase:deploy": "firebase deploy",
     "start-server": "serve",
-    "start-watcher": "gulp watch",
-    "start": "run-p start-server start-watcher",
-    "deploy": "gulp && firebase deploy"
+    "start-watcher": "gulp watch"
   },
   "description": "",
   "devDependencies": {
