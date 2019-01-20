@@ -8,9 +8,10 @@
   "homepage": "https://danielwaltz.me",
   "author": "Daniel Waltz",
   "scripts": {
-    "serve": "parcel public/index.html --open",
-    "build": "parcel build public/index.html",
+    "serve": "parcel public/**/*.html --open",
+    "build": "parcel build public/**/*.html",
     "deploy": "run-s build firebase:deploy",
+    "prebuild": "rm -rf dist",
     "firebase": "firebase",
     "firebase:deploy": "firebase deploy"
   },
