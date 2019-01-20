@@ -1,4 +1,3 @@
-import '../scss/style.scss';
 import Particles from 'particlesjs';
 
 const nav = () => {
