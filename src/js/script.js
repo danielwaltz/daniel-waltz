@@ -1,3 +1,6 @@
+import '../scss/style.scss';
+import Particles from 'particlesjs';
+
 const nav = () => {
   const navItems = document.body.querySelectorAll('.js-nav-main a');
 

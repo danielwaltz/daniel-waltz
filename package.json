@@ -1,45 +1,25 @@
 {
   "name": "danielwaltz.me",
   "version": "1.0.0",
-  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git+https://danielwaltz@bitbucket.org/DanielWaltz/daniel-waltz.git"
   },
+  "homepage": "https://danielwaltz.me",
   "author": "Daniel Waltz",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/DanielWaltz/daniel-waltz#readme",
   "scripts": {
-    "serve": "run-p start-server start-watcher",
-    "build": "gulp",
+    "serve": "parcel public/index.html --open",
+    "build": "parcel build public/index.html",
     "deploy": "run-s build firebase:deploy",
     "firebase": "firebase",
-    "firebase:deploy": "firebase deploy",
-    "start-server": "serve",
-    "start-watcher": "gulp watch"
+    "firebase:deploy": "firebase deploy"
   },
-  "description": "",
   "devDependencies": {
-    "@babel/core": "~7.2.2",
-    "@babel/preset-env": "~7.2.3",
-    "concurrent-transform": "~1.0.0",
-    "del": "~3.0.0",
     "firebase-tools": "~6.2.2",
-    "gulp": "~4.0.0",
-    "gulp-autoprefixer": "~6.0.0",
-    "gulp-babel": "~8.0.0",
-    "gulp-clean-css": "~4.0.0",
-    "gulp-concat": "~2.6.1",
-    "gulp-imagemin": "~5.0.3",
-    "gulp-livereload": "~4.0.1",
-    "gulp-notify": "~3.2.0",
-    "gulp-rename": "~1.4.0",
-    "gulp-sass": "~4.0.2",
-    "gulp-uglify": "~3.0.0",
-    "merge-stream": "~1.0.0",
     "npm-run-all": "~4.1.5",
+    "parcel-bundler": "~1.11.0",
     "prettier": "~1.15.3",
-    "serve": "~10.1.1"
+    "sass": "~1.16.1"
   },
   "dependencies": {
     "particlesjs": "~2.2.2"
@@ -47,5 +27,6 @@
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5"
-  }
+  },
+  "license": "ISC"
 }
