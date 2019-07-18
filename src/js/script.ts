@@ -1,4 +1,4 @@
-import Particles from 'particlesjs';
+import JParticles from 'jparticles';
 
 const nav = () => {
   const navItems = document.body.querySelectorAll('.js-nav-main a');
@@ -24,7 +24,7 @@ const nav = () => {
 
   closeButtons.forEach(button => {
     // Loop through all the windows
-    const closeWindow = event => {
+    const closeWindow = (event: Event) => {
       event.preventDefault();
 
       const overlays = document.body.querySelectorAll('.window');
@@ -43,5 +43,11 @@ const nav = () => {
 // Execute onload
 window.onload = () => {
   nav();
-  Particles.init({ selector: '.js-background', color: '#ffffff' });
+  new JParticles.particle('#particles', {
+    color: '#ffffff',
+    num: 0.05,
+    proximity: 0,
+    maxSpeed: 0.5,
+    parallax: true,
+  });
 };
