@@ -80,8 +80,10 @@ a {
   }
   &:focus,
   &:active {
+    box-shadow: 0 0 2.5rem rgba($secondary_color, 0.2);
+  }
+  &:active {
     transform: scale(0.95);
-    box-shadow: 0 0 3rem rgba($secondary_color, 0.87);
   }
 }
 
