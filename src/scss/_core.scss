@@ -170,9 +170,11 @@ li:not(:first-child) {
   text-align: left;
   overflow: auto;
   pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 
   // Transition
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   // Transform
   transform: translateY(-100%);
@@ -194,6 +196,8 @@ li:not(:first-child) {
 
   &.active {
     pointer-events: all;
+    opacity: 1;
+    visibility: visible;
 
     // Transform
     transform: translateX(0) translateY(0);

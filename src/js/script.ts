@@ -1,6 +1,6 @@
 import JParticles from 'jparticles';
 
-const nav = () => {
+const initNav = () => {
   const navItems = document.body.querySelectorAll('.js-nav-main a');
 
   navItems.forEach(item => {
@@ -40,14 +40,12 @@ const nav = () => {
   });
 };
 
-// Execute onload
-window.onload = () => {
-  nav();
-  new JParticles.particle('#particles', {
-    color: '#ffffff',
-    num: 0.05,
-    proximity: 0,
-    maxSpeed: 0.5,
-    parallax: true,
-  });
-};
+initNav();
+
+new JParticles.particle('#particles', {
+  color: '#ffffff',
+  num: 0.05,
+  proximity: 0,
+  maxSpeed: 0.5,
+  parallax: true,
+});
