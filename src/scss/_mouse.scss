@@ -1,0 +1,17 @@
+@import 'vars';
+
+.mouse-follower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 5vmax;
+  height: 5vmax;
+  pointer-events: none;
+  transition: $snappy_trans;
+  transform: translate(var(--x), var(--y));
+  color: rgba($primary_color, 1);
+  background-color: currentColor;
+  box-shadow: 0 0 25vmax 40vmax currentColor;
+  border-radius: 50%;
+}

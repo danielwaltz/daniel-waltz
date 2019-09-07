@@ -8,4 +8,4 @@ $break_max: 1280px;
 $break_mid: 768px;
 $break_min: 480px;
 
-$snappy_trans: all 0.2s ease-in-out;
+$snappy_trans: all 0.2s cubic-bezier(0.25, 0.8, 0.5, 1);
