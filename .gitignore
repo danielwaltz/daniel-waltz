@@ -22,3 +22,4 @@ yarn-error.log*
 
 # Custom
 .cache
+.parcel-cache
