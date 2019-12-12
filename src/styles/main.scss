@@ -1,0 +1,141 @@
+:root {
+  --color-primary: #91c1c0;
+  --color-secondary: #08090c;
+  --font-primary: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-accent: 'Oswald', Impact, Arial, sans-serif;
+  --transition-timing: cubic-bezier(0.25, 0.8, 0.5, 1);
+  --transition-default: all 0.2s var(--transition-timing);
+}
+
+@keyframes scale-fade-above {
+  0% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-fade-below {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: 16px;
+  font-family: var(--font-primary);
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5vmin;
+  color: var(--color-primary);
+  font-size: calc(1rem + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('../images/firewatch.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: scale-fade-above 2s var(--transition-timing);
+  }
+}
+
+.info {
+  animation: scale-fade-below 1.5s var(--transition-timing);
+
+  h1,
+  h2 {
+    margin: 0;
+    font-family: var(--font-accent);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    font-family: var(--font-primary);
+    text-transform: lowercase;
+  }
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, max-content);
+  grid-gap: 0.5em;
+  animation: scale-fade-below 1.5s var(--transition-timing);
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    background-color: var(--color-secondary);
+    width: 3em;
+    height: 3em;
+    padding: 0.6em;
+    border-radius: 50%;
+    transition: var(--transition-default);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transform-origin: center;
+
+    svg {
+      width: 100%;
+
+      path {
+        fill: currentColor;
+        stroke: currentColor;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
