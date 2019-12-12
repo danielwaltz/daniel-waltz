@@ -6,7 +6,7 @@
     "build": "parcel build public/index.html"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-alpha.3.2",
+    "parcel": "^1.12.4",
     "prettier": "^1.19.1",
     "sass": "^1.23.7",
     "typescript": "^3.7.3"
