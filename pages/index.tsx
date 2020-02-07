@@ -1,8 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import React from 'react';
+import Head from 'next/head';
+import Nav from '../components/nav';
+import { NextPage } from 'next';
 
-const Home = () => (
+const Home: NextPage = () => (
   <div>
     <Head>
       <title>Home</title>
@@ -83,6 +84,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;

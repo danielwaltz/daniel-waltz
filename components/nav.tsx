@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { FC } from 'react';
+import Link from 'next/link';
 
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT' },
@@ -7,9 +7,9 @@ const links = [
 ].map(link => ({
   ...link,
   key: `nav-link-${link.href}-${link.label}`,
-}))
+}));
 
-const Nav = () => (
+const Nav: FC = () => (
   <nav>
     <ul>
       <li>
@@ -51,6 +51,6 @@ const Nav = () => (
       }
     `}</style>
   </nav>
-)
+);
 
-export default Nav
+export default Nav;
