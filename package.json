@@ -1,19 +1,15 @@
 {
   "name": "daniel-waltz",
-  "version": "1.0.0",
-  "scripts": {
-    "serve": "parcel public/index.html --open",
-    "build": "parcel build public/index.html"
-  },
-  "devDependencies": {
-    "parcel": "^1.12.4",
-    "prettier": "^1.19.1",
-    "sass": "^1.23.7",
-    "typescript": "^3.7.3"
-  },
+  "version": "0.1.0",
   "private": true,
-  "repository": "git@github.com:danielwaltz/daniel-waltz.git",
-  "homepage": "https://danielwaltz.me",
-  "author": "Daniel Waltz",
-  "license": "ISC"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  }
 }
