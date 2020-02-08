@@ -3,6 +3,7 @@
   --color-background: #111;
   --font-primary: 'Open Sans', Helvetica, Arial, sans-serif;
   --font-accent: 'Oswald', Impact, Arial, sans-serif;
+  --font-script: 'Neucha', cursive;
   --transition-timing: cubic-bezier(0.25, 0.8, 0.5, 1);
   --transition-default: all 0.2s var(--transition-timing);
 }
@@ -23,7 +24,6 @@ body {
   font-size: 16px;
   font-family: var(--font-primary);
   line-height: 1.4;
-  overflow: hidden;
 }
 
 #__next {
@@ -43,44 +43,91 @@ main {
   animation: scale-fade 2s var(--transition-timing);
 }
 
-main h1,
-main h2,
-main p {
-  margin: 0;
+h1,
+h2,
+p {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 0;
 }
 
-main h1,
-main h2 {
+h1,
+h2 {
   line-height: 1.1;
 }
 
-main h1 {
+p {
+  max-width: 34ch;
+  font-size: 1.15em;
+  letter-spacing: 0.125rem;
+}
+
+.script {
+  font-family: var(--font-script);
+  text-transform: uppercase;
+}
+
+.script--float {
+  white-space: nowrap;
+}
+
+h1 {
+  margin-top: 0;
   font-size: 3.5em;
   font-weight: 400;
   font-family: var(--font-accent);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-main h2 {
-  margin-top: 1.25rem;
+h1 .script--float {
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+  font-size: 0.4em;
+  transform: translate(40%, 40%) rotate(-25deg);
+}
+
+h2 {
   font-size: 2.5em;
   font-weight: 300;
   font-family: var(--font-primary);
   letter-spacing: 0.25rem;
 }
 
-main p {
-  margin-top: 1.25rem;
-  max-width: 34ch;
-  font-size: 1.15em;
-  letter-spacing: 0.125rem;
+h2 .script--float {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  font-size: 0.4em;
+  transform: translate(-50%, 80%) rotate(20deg);
+}
+
+.intro .script--float {
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+  font-size: 0.8em;
+  transform: translate(80%, 40%) rotate(-20deg);
+}
+
+.together {
+  max-width: 26ch;
+}
+
+.together .script--float {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  font-size: 0.9em;
+  transform: translate(-60%, 60%) rotate(20deg);
 }
 
 nav {
   display: grid;
   grid-template-columns: repeat(5, min-content);
   grid-gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   font-size: 1em;
 }
 

@@ -11,17 +11,25 @@ const Home: NextPage = () => {
         <title>Daniel Waltz - UI Engineer</title>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans:300|Oswald:400&display=swap"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,700|Oswald:400|Neucha&display=swap"
         />
       </Head>
 
       <main>
-        <h1>Daniel Waltz</h1>
-        <h2>UI Engineer</h2>
-        <p>
-          I work to deliver the most usable, accessible, and beautiful
-          interfaces imaginable. Let's work together to make the web a better
-          place for everyone!
+        <h1>
+          <span className="script script--float">Hi, I'm</span> Daniel Waltz
+        </h1>
+        <h2>
+          <span className="script script--float">and I'm a</span> UI Engineer
+        </h2>
+        <p className="intro">
+          <span className="script script--float">With a</span>
+          <strong>passion</strong> for delivering the most usable, accessible,
+          and beautiful interfaces <em className="script">imaginable</em>.
+        </p>
+        <p className="together">
+          <em className="script script--float">Together</em> we can make the web
+          a better place for <strong>everyone</strong>!
         </p>
         <nav>
           <a href="https://twitter.com/danielbwaltz" title="Twitter">
