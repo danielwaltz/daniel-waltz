@@ -1,0 +1,131 @@
+:root {
+  --color-foreground: #eee;
+  --color-background: #111;
+  --font-primary: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-accent: 'Oswald', Impact, Arial, sans-serif;
+  --transition-timing: cubic-bezier(0.25, 0.8, 0.5, 1);
+  --transition-default: all 0.2s var(--transition-timing);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 16px;
+  font-family: var(--font-primary);
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+#__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: calc(1rem + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  animation: scale-fade 2s var(--transition-timing);
+}
+
+main h1,
+main h2,
+main p {
+  margin: 0;
+}
+
+main h1,
+main h2 {
+  line-height: 1.1;
+}
+
+main h1 {
+  font-size: 3.5em;
+  font-weight: 400;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+}
+
+main h2 {
+  margin-top: 1.25rem;
+  font-size: 2.5em;
+  font-weight: 300;
+  font-family: var(--font-primary);
+  letter-spacing: 0.25rem;
+}
+
+main p {
+  margin-top: 1.25rem;
+  max-width: 34ch;
+  font-size: 1.15em;
+  letter-spacing: 0.125rem;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  grid-gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1em;
+}
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  width: 2.75em;
+  height: 2.75em;
+  padding: 0.6em;
+  border-radius: 50%;
+  transition: var(--transition-default);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  transform: scale(1.05);
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+nav svg {
+  width: 100%;
+}
+
+nav path {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+@keyframes scale-fade {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
