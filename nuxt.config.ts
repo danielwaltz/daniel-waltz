@@ -1,8 +1,10 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
-  experimental: {
-    crossOriginPrefetch: true,
+  modules: ['@unocss/nuxt'],
+  css: ['@unocss/reset/tailwind.css'],
+  typescript: {
+    shim: false,
   },
 });
