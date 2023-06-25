@@ -1,22 +1,14 @@
-import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
+import { defineConfig, presetWind, presetIcons } from 'unocss';
+import { theme } from '@unocss/preset-wind';
 
 // https://unocss.dev/config/
 export default defineConfig({
   presets: [
-    presetWind({
-      dark: 'media',
-    }),
+    presetWind(),
     presetIcons({
       extraProperties: {
         display: 'inline-block',
         verticalAlign: 'middle',
-      },
-    }),
-    presetWebFonts({
-      fonts: {
-        sans: 'Open Sans:300,700',
-        heading: 'Oswald:400',
-        script: 'Neucha',
       },
     }),
   ],
@@ -27,6 +19,11 @@ export default defineConfig({
     colors: {
       primary: 'oklch(70% .4 222)',
       secondary: 'oklch(70% .4 185)',
+    },
+    fontFamily: {
+      sans: ['Roboto', 'Helvetica', theme.fontFamily!.sans],
+      heading: ['Impact', theme.fontFamily!.sans],
+      script: ['Bradley Hand', theme.fontFamily!.serif],
     },
   },
   shortcuts: [

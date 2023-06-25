@@ -17,7 +17,8 @@
             class="translate-y-2 rotate--3deg text-2xl font-script md:text-3xl"
             >Hi, I'm</span
           >
-          <span class="text-gradient-primary font-400 font-heading uppercase"
+          <span
+            class="text-gradient-primary tracking-wide font-heading uppercase"
             >Daniel Waltz</span
           >
         </h1>
