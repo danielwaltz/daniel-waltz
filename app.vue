@@ -16,10 +16,10 @@
       <main class="max-w-2xl flex flex-col gap-8 p-8">
         <h1 class="flex flex-col items-start text-6xl md:text-8xl sm:text-7xl">
           <span
-            class="translate-y-2 rotate--3deg font-script text-2xl md:text-3xl"
+            class="translate-y-2 rotate--3deg text-2xl font-script md:text-3xl"
             >Hi, I'm</span
           >
-          <span class="text-gradient-primary font-heading font-400 uppercase"
+          <span class="text-gradient-primary font-400 font-heading uppercase"
             >Daniel Waltz</span
           >
         </h1>

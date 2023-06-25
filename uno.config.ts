@@ -20,6 +20,9 @@ export default defineConfig({
       },
     }),
   ],
+  content: {
+    filesystem: ['nuxt.config.*'],
+  },
   theme: {
     colors: {
       primary: 'oklch(70% .4 222)',
