@@ -29,6 +29,7 @@ export default defineConfig({
   },
   shortcuts: [
     {
+      'h-viewport': 'min-h-full min-h-100dvh',
       'bg-gradient-primary': 'bg-gradient-to-r from-primary to-secondary',
       'text-gradient-primary':
         'bg-gradient-primary bg-clip-text text-transparent',

@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   experimental: {
     noScripts: true,
   },
+  devtools: {
+    enabled: true,
+  },
   typescript: {
     shim: false,
   },

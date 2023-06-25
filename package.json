@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.52",
+    "@nuxt/devtools": "^0.6.3",
     "@nuxt/eslint-config": "^0.1.1",
     "@rushstack/eslint-patch": "^1.3.2",
     "@types/node": "^18.16.18",
