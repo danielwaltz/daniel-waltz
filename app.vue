@@ -9,7 +9,7 @@
     </Head>
 
     <Body
-      class="grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-zinc-100"
+      class="grid h-100dvh min-h-full place-items-center bg-[#191919] bg-gradient-[circle_at_top_right,#222222_0%,#191919,#121212_100%] bg-gradient-radial font-sans text-[#f1f1f1]"
     >
       <main class="max-w-2xl flex flex-col gap-8 p-8">
         <h1 class="flex flex-col items-start text-6xl sm:text-8xl">
