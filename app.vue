@@ -3,7 +3,7 @@ useHead({
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
     class:
-      'grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-zinc-100',
+      'grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-zinc-100 selection-primary',
   },
   title: 'Daniel Waltz - UI Engineer',
 });
@@ -11,16 +11,18 @@ useHead({
 
 <template>
   <main class="max-w-2xl flex flex-col gap-8 p-8">
-    <h1 class="font-heading text-6xl font-400 md:text-8xl sm:text-7xl">
-      <span class="inline-block translate-y-2 rotate--3deg font-script text-3xl"
+    <h1 class="flex flex-col items-start text-6xl md:text-8xl sm:text-7xl">
+      <span class="translate-y-2 rotate--3deg font-script text-2xl md:text-3xl"
         >Hi, I'm</span
       >
-      <span class="block text-primary-gradient uppercase">Daniel Waltz</span>
+      <span class="text-gradient-primary font-heading font-400 uppercase"
+        >Daniel Waltz</span
+      >
     </h1>
 
-    <p class="text-xl md:text-2xl">
+    <p class="text-xl lh-8 md:text-2xl md:lh-10">
       I'm a
-      <span class="text-primary-gradient font-700 uppercase">UI Engineer</span>
+      <span class="text-gradient-primary font-700 uppercase">UI Engineer</span>
       with a <strong>passion</strong> for delivering the most usable,
       accessible, and beautiful interfaces <em>imaginable</em>. Together we can
       make the web a better place for <strong>everyone</strong>!

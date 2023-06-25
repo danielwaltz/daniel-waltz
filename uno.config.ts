@@ -22,16 +22,15 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: 'oklch(80% .4 222)',
-      secondary: 'oklch(55% .5 313)',
+      primary: 'oklch(70% .4 222)',
+      secondary: 'oklch(70% .4 185)',
     },
   },
   shortcuts: [
     {
-      'bg-gradient-base': 'bg-gradient-to-r',
-      'bg-primary-gradient': 'bg-gradient-base from-primary to-secondary',
-      'text-gradient-base': 'bg-clip-text text-transparent',
-      'text-primary-gradient': 'text-gradient-base bg-primary-gradient',
+      'bg-gradient-primary': 'bg-gradient-to-r from-primary to-secondary',
+      'text-gradient-primary':
+        'bg-clip-text text-transparent bg-gradient-primary',
     },
   ],
 });
