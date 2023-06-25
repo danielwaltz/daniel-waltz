@@ -12,25 +12,24 @@ useHead({
 <template>
   <main class="m-auto max-w-2xl flex flex-col gap-8 p-8">
     <h1 class="m-0 font-heading text-8xl font-400">
-      <span class="block text-4xl">Hi, I'm</span>
-      <span class="block uppercase">Daniel Waltz</span>
+      <span class="inline-block translate-y-2 rotate--3deg font-script text-3xl"
+        >Hi, I'm</span
+      >
+      <span class="block text-primary-gradient uppercase">Daniel Waltz</span>
     </h1>
 
-    <h2 class="text-6xl font-thin">
-      <span class="block text-2xl">and I'm a</span>
-      <span class="block uppercase">UI Engineer</span>
-    </h2>
-
     <p>
-      with <strong>passion</strong> for delivering the most usable, accessible,
-      and beautiful interfaces <em class="script">imaginable</em>. Together we
-      can make the web a better place for <strong>everyone</strong>!
+      I'm a
+      <span class="text-primary-gradient font-700 uppercase">UI Engineer</span>
+      with a <strong>passion</strong> for delivering the most usable,
+      accessible, and beautiful interfaces <em>imaginable</em>. Together we can
+      make the web a better place for <strong>everyone</strong>!
     </p>
 
-    <nav class="flex flex-wrap gap-6 text-4xl">
+    <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
       <NuxtLink
         href="https://twitter.com/danielbwaltz"
-        class="transition hover:text-pink"
+        class="transition hover:text-primary"
       >
         <i class="i-mdi-twitter" />
         <span class="sr-only">Twitter</span>
@@ -38,7 +37,7 @@ useHead({
 
       <NuxtLink
         href="https://www.linkedin.com/in/danielbwaltz"
-        class="transition hover:text-pink"
+        class="transition hover:text-primary"
       >
         <i class="i-mdi-linkedin" />
         <span class="sr-only">LinkedIn</span>
@@ -46,7 +45,7 @@ useHead({
 
       <NuxtLink
         href="https://github.com/danielwaltz"
-        class="transition hover:text-pink"
+        class="transition hover:text-primary"
       >
         <i class="i-mdi-github" />
         <span class="sr-only">GitHub</span>
@@ -54,7 +53,7 @@ useHead({
 
       <NuxtLink
         href="https://gitlab.com/danielwaltz"
-        class="transition hover:text-pink"
+        class="transition hover:text-primary"
       >
         <i class="i-mdi-gitlab" />
         <span class="sr-only">GitLab</span>
@@ -62,7 +61,7 @@ useHead({
 
       <NuxtLink
         href="https://bitbucket.org/danielwaltz"
-        class="transition hover:text-pink"
+        class="transition hover:text-primary"
       >
         <i class="i-mdi-bitbucket" />
         <span class="sr-only">BitBucket</span>

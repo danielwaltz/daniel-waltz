@@ -5,7 +5,6 @@ export default defineConfig({
   presets: [
     presetWind({
       dark: 'media',
-      preflight: false,
     }),
     presetIcons({
       extraProperties: {
@@ -20,5 +19,19 @@ export default defineConfig({
         script: 'Neucha',
       },
     }),
+  ],
+  theme: {
+    colors: {
+      primary: 'oklch(80% .4 222)',
+      secondary: 'oklch(55% .5 313)',
+    },
+  },
+  shortcuts: [
+    {
+      'bg-gradient-base': 'bg-gradient-to-r',
+      'bg-primary-gradient': 'bg-gradient-base from-primary to-secondary',
+      'text-gradient-base': 'bg-clip-text text-transparent',
+      'text-primary-gradient': 'text-gradient-base bg-primary-gradient',
+    },
   ],
 });
