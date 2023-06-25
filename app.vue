@@ -56,10 +56,14 @@ const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
 
       <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
         <DefineSocialLinkTemplate v-slot="{ link, name, icon }">
-          <NuxtLink :href="link" class="transition-200 hover:text-primary">
+          <a
+            :href="link"
+            rel="noopener noreferrer"
+            class="transition-200 hover:text-primary"
+          >
             <i :class="icon" />
             <span class="sr-only">{{ name }}</span>
-          </NuxtLink>
+          </a>
         </DefineSocialLinkTemplate>
 
         <ReuseSocialLinkTemplate
@@ -94,4 +98,13 @@ const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
       </nav>
     </main>
   </div>
+
+  <a
+    href="https://github.com/danielwaltz/daniel-waltz"
+    rel="noopener noreferrer"
+    class="fixed right-3 top-3 text-xl text-foreground/60 transition-200 hover:text-foreground"
+    title="View Source Code"
+  >
+    <i class="i-mdi-github" />
+  </a>
 </template>
