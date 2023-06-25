@@ -1,5 +1,4 @@
-import { defineConfig, presetWind, presetIcons } from 'unocss';
-import { theme } from '@unocss/preset-wind';
+import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
 
 // https://unocss.dev/config/
 export default defineConfig({
@@ -11,6 +10,13 @@ export default defineConfig({
         verticalAlign: 'middle',
       },
     }),
+    presetWebFonts({
+      fonts: {
+        sans: 'Open Sans:300,700',
+        display: 'Big Shoulders Display:700',
+        script: 'Caveat',
+      },
+    }),
   ],
   content: {
     filesystem: ['nuxt.config.*'],
@@ -20,17 +26,12 @@ export default defineConfig({
       primary: 'oklch(70% .4 222)',
       secondary: 'oklch(70% .4 185)',
     },
-    fontFamily: {
-      sans: ['Roboto', 'Helvetica', theme.fontFamily!.sans],
-      heading: ['Impact', theme.fontFamily!.sans],
-      script: ['Bradley Hand', theme.fontFamily!.serif],
-    },
   },
   shortcuts: [
     {
       'bg-gradient-primary': 'bg-gradient-to-r from-primary to-secondary',
       'text-gradient-primary':
-        'bg-clip-text text-transparent bg-gradient-primary',
+        'bg-gradient-primary bg-clip-text text-transparent',
     },
   ],
 });

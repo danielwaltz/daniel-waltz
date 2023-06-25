@@ -12,18 +12,17 @@
       class="grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-zinc-100"
     >
       <main class="max-w-2xl flex flex-col gap-8 p-8">
-        <h1 class="flex flex-col items-start text-6xl md:text-8xl sm:text-7xl">
+        <h1 class="flex flex-col items-start text-6xl sm:text-8xl">
           <span
-            class="translate-y-2 rotate--3deg text-2xl font-script md:text-3xl"
+            class="translate-y-2 rotate--3deg text-2xl font-script sm:text-3xl"
             >Hi, I'm</span
           >
-          <span
-            class="text-gradient-primary tracking-wide font-heading uppercase"
+          <span class="text-gradient-primary font-display uppercase"
             >Daniel Waltz</span
           >
         </h1>
 
-        <p class="text-xl lh-8 md:text-2xl md:lh-10">
+        <p class="text-lg lh-8 sm:text-2xl sm:lh-10">
           I'm a
           <span class="text-gradient-primary font-700 uppercase"
             >UI Engineer</span
@@ -36,7 +35,7 @@
         <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
           <NuxtLink
             href="https://twitter.com/danielbwaltz"
-            class="transition hover:text-primary"
+            class="transition-200 hover:text-primary"
           >
             <i class="i-mdi-twitter" />
             <span class="sr-only">Twitter</span>
@@ -44,7 +43,7 @@
 
           <NuxtLink
             href="https://www.linkedin.com/in/danielbwaltz"
-            class="transition hover:text-primary"
+            class="transition-200 hover:text-primary"
           >
             <i class="i-mdi-linkedin" />
             <span class="sr-only">LinkedIn</span>
@@ -52,7 +51,7 @@
 
           <NuxtLink
             href="https://github.com/danielwaltz"
-            class="transition hover:text-primary"
+            class="transition-200 hover:text-primary"
           >
             <i class="i-mdi-github" />
             <span class="sr-only">GitHub</span>
@@ -60,7 +59,7 @@
 
           <NuxtLink
             href="https://gitlab.com/danielwaltz"
-            class="transition hover:text-primary"
+            class="transition-200 hover:text-primary"
           >
             <i class="i-mdi-gitlab" />
             <span class="sr-only">GitLab</span>
@@ -68,7 +67,7 @@
 
           <NuxtLink
             href="https://bitbucket.org/danielwaltz"
-            class="transition hover:text-primary"
+            class="transition-200 hover:text-primary"
           >
             <i class="i-mdi-bitbucket" />
             <span class="sr-only">BitBucket</span>
