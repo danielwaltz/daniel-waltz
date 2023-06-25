@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --no-fix --ignore-path .gitignore --max-warnings=0",
     "type-check": "vue-tsc --noEmit",
     "test": "run-p lint type-check",
-    "deploy": "run-s test generate"
+    "deploy": "run-s build test generate"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "10.0.0",
