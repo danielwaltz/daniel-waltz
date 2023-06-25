@@ -12,10 +12,7 @@ useHead({
   link: [{ rel: 'icon', type: 'image/svg+xml', href: meta.icon }],
   meta: [{ name: 'description', content: meta.description }],
   htmlAttrs: { lang: 'en', class: 'h-viewport' },
-  bodyAttrs: {
-    class:
-      'h-viewport bg-background bg-gradient-background-radial font-sans text-foreground',
-  },
+  bodyAttrs: { class: 'h-viewport bg-viewport font-sans text-foreground' },
 });
 
 useSeoMeta({
@@ -35,13 +32,14 @@ const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
 
 <template>
   <div class="grid h-viewport place-items-center">
-    <main class="max-w-2xl flex flex-col gap-8 p-8">
-      <h1 class="flex flex-col items-start text-6xl sm:text-8xl">
+    <main class="max-w-2xl w-full flex flex-col gap-8 p-8">
+      <h1 class="flex flex-col items-start">
         <span
           class="translate-y-2 rotate--3deg text-2xl font-script sm:text-3xl"
           >Hi, I'm</span
         >
-        <span class="text-gradient-primary font-display uppercase"
+        <span
+          class="text-gradient-primary text-6xl font-display uppercase sm:text-8xl"
           >Daniel Waltz</span
         >
       </h1>
