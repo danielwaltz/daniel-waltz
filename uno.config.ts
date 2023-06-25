@@ -32,9 +32,9 @@ export default defineConfig({
   shortcuts: [
     {
       'h-viewport': 'min-h-full min-h-100dvh',
-      'bg-gradient-background':
-        'bg-gradient-radial bg-gradient-[circle_at_top_right,#222222_0%,#191919,#121212_100%]',
-      'bg-viewport': 'bg-background bg-gradient-background',
+      'bg-gradient-background-radial':
+        'bg-gradient-radial bg-gradient-[circle_at_bottom_right,#181818_0%,#121212,#121212_100%]',
+      'bg-viewport': 'bg-background bg-gradient-background-radial',
       'bg-gradient-primary': 'bg-gradient-to-r from-primary to-secondary',
       'text-gradient-primary':
         'bg-gradient-primary bg-clip-text text-transparent',

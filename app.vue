@@ -10,7 +10,10 @@ const meta = {
 useServerHead({
   title: meta.title,
   link: [{ rel: 'icon', type: 'image/svg+xml', href: meta.icon }],
-  meta: [{ name: 'description', content: meta.description }],
+  meta: [
+    { name: 'description', content: meta.description },
+    { name: 'theme-color', content: '#121212' },
+  ],
   htmlAttrs: { lang: 'en' },
   bodyAttrs: { class: 'h-viewport bg-viewport font-sans text-foreground' },
 });
