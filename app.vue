@@ -7,15 +7,15 @@ const meta = {
     'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
 
-useHead({
+useServerHead({
   title: meta.title,
   link: [{ rel: 'icon', type: 'image/svg+xml', href: meta.icon }],
   meta: [{ name: 'description', content: meta.description }],
-  htmlAttrs: { lang: 'en', class: 'h-viewport' },
+  htmlAttrs: { lang: 'en' },
   bodyAttrs: { class: 'h-viewport bg-viewport font-sans text-foreground' },
 });
 
-useSeoMeta({
+useServerSeoMeta({
   ogTitle: meta.title,
   ogDescription: meta.description,
   ogImage: meta.icon,
