@@ -1,4 +1,7 @@
 import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
+import { theme } from 'unocss/preset-mini';
+
+const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
 
 // https://unocss.dev/config/
 export default defineConfig({
@@ -11,6 +14,7 @@ export default defineConfig({
       },
     }),
     presetWebFonts({
+      extendTheme: false,
       fonts: {
         sans: 'Open Sans:300,700',
         display: 'Big Shoulders Display:700',
@@ -27,6 +31,11 @@ export default defineConfig({
       secondary: 'oklch(70% .4 185)', // #00b7a8
       background: '#121212', // oklch(18.22% 0 0)
       foreground: '#f1f1f1', // oklch(95.81% 0 0)
+    },
+    fontFamily: {
+      sans: ['Open Sans', 'Arial', defaultSans].join(','),
+      display: ['Big Shoulders Display', 'Impact', defaultSans].join(','),
+      script: ['Caveat', 'Bradley Hand', defaultSerif].join(','),
     },
   },
   shortcuts: [

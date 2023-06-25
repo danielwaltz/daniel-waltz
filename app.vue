@@ -53,7 +53,9 @@ useServerSeoMeta({
         can make the web a better place for <strong>everyone</strong>!
       </p>
 
-      <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
+      <nav
+        class="flex flex-wrap items-center self-start gap-6 text-3xl sm:text-4xl"
+      >
         <AppIconLink
           href="https://twitter.com/danielbwaltz"
           title="Twitter"
