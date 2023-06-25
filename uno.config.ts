@@ -23,10 +23,10 @@ export default defineConfig({
   },
   theme: {
     colors: {
-      primary: 'oklch(70% .4 222)',
-      secondary: 'oklch(70% .4 185)',
-      background: '#121212',
-      foreground: '#f1f1f1',
+      primary: 'oklch(70% .4 222)', // #00afd8
+      secondary: 'oklch(70% .4 185)', // #00b7a8
+      background: '#121212', // oklch(18.22% 0 0)
+      foreground: '#f1f1f1', // oklch(95.81% 0 0)
     },
   },
   shortcuts: [
