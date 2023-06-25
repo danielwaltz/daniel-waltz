@@ -100,6 +100,7 @@ body,
 }
 
 body {
+  margin: 0;
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-size: 16px;
