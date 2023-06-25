@@ -3,22 +3,22 @@ useHead({
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
     class:
-      'grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-6 text-zinc-100',
+      'grid h-100dvh min-h-100% place-items-center bg-zinc-900 font-sans text-zinc-100',
   },
   title: 'Daniel Waltz - UI Engineer',
 });
 </script>
 
 <template>
-  <main class="m-auto max-w-2xl flex flex-col gap-8 p-8">
-    <h1 class="m-0 font-heading text-8xl font-400">
+  <main class="max-w-2xl flex flex-col gap-8 p-8">
+    <h1 class="font-heading text-6xl font-400 md:text-8xl sm:text-7xl">
       <span class="inline-block translate-y-2 rotate--3deg font-script text-3xl"
         >Hi, I'm</span
       >
       <span class="block text-primary-gradient uppercase">Daniel Waltz</span>
     </h1>
 
-    <p>
+    <p class="text-xl md:text-2xl">
       I'm a
       <span class="text-primary-gradient font-700 uppercase">UI Engineer</span>
       with a <strong>passion</strong> for delivering the most usable,
