@@ -2,11 +2,9 @@
   <Html lang="en">
     <Head>
       <Title>Daniel Waltz - UI Engineer</Title>
-
       <Meta
         name="description"
-        content="UI Engineer with a passion for delivering the most usable,
-          accessible, and beautiful interfaces imaginable!"
+        content="UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!"
       />
     </Head>
 
