@@ -25,17 +25,13 @@ useServerSeoMeta({
   twitterImage: meta.icon,
   twitterCard: 'summary',
 });
-
-const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
-  createReusableTemplate<{ link: string; name: string; icon: string }>();
 </script>
 
 <template>
   <div class="grid h-viewport place-items-center">
     <main class="max-w-2xl w-full flex flex-col gap-8 p-8">
       <h1 class="flex flex-col items-start">
-        <span
-          class="translate-y-2 rotate--3deg text-2xl font-script sm:text-3xl"
+        <span class="m-be--2 rotate--3deg text-2xl font-script sm:text-3xl"
           >Hi, I'm</span
         >
         <span
@@ -55,56 +51,48 @@ const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
       </p>
 
       <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
-        <DefineSocialLinkTemplate v-slot="{ link, name, icon }">
-          <a
-            :href="link"
-            rel="noopener noreferrer"
-            class="transition-200 hover:text-primary"
-          >
-            <i :class="icon" />
-            <span class="sr-only">{{ name }}</span>
-          </a>
-        </DefineSocialLinkTemplate>
-
-        <ReuseSocialLinkTemplate
-          link="https://twitter.com/danielbwaltz"
-          name="Twitter"
+        <AppIconLink
+          href="https://twitter.com/danielbwaltz"
+          title="Twitter"
           icon="i-mdi-twitter"
+          class="hover:text-primary"
         />
 
-        <ReuseSocialLinkTemplate
-          link="https://www.linkedin.com/in/danielbwaltz"
-          name="LinkedIn"
+        <AppIconLink
+          href="https://www.linkedin.com/in/danielbwaltz"
+          title="LinkedIn"
           icon="i-mdi-linkedin"
+          class="hover:text-primary"
         />
 
-        <ReuseSocialLinkTemplate
-          link="https://github.com/danielwaltz"
-          name="GitHub"
+        <AppIconLink
+          href="https://github.com/danielwaltz"
+          title="GitHub"
           icon="i-mdi-github"
+          class="hover:text-primary"
         />
 
-        <ReuseSocialLinkTemplate
-          link="https://gitlab.com/danielwaltz"
-          name="GitLab"
+        <AppIconLink
+          href="https://gitlab.com/danielwaltz"
+          title="GitLab"
           icon="i-mdi-gitlab"
+          class="hover:text-primary"
         />
 
-        <ReuseSocialLinkTemplate
-          link="https://bitbucket.org/danielwaltz"
-          name="BitBucket"
+        <AppIconLink
+          href="https://bitbucket.org/danielwaltz"
+          title="BitBucket"
           icon="i-mdi-bitbucket"
+          class="hover:text-primary"
         />
       </nav>
     </main>
   </div>
 
-  <a
+  <AppIconLink
     href="https://github.com/danielwaltz/daniel-waltz"
-    rel="noopener noreferrer"
-    class="fixed right-3 top-3 text-xl text-foreground/60 transition-200 hover:text-foreground"
     title="View Source Code"
-  >
-    <i class="i-mdi-github" />
-  </a>
+    icon="i-mdi-code-tags"
+    class="fixed right-3 top-3 text-xl text-foreground/60 hover:text-foreground"
+  />
 </template>
