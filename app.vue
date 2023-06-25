@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const [DefineSocialLinkTemplate, ReuseSocialLinkTemplate] =
+  createReusableTemplate<{ link: string; name: string; icon: string }>();
+</script>
+
 <template>
   <Html lang="en">
     <Head>
@@ -33,45 +38,42 @@
         </p>
 
         <nav class="flex flex-wrap items-center self-start gap-6 text-4xl">
-          <NuxtLink
-            href="https://twitter.com/danielbwaltz"
-            class="transition-200 hover:text-primary"
-          >
-            <i class="i-mdi-twitter" />
-            <span class="sr-only">Twitter</span>
-          </NuxtLink>
+          <DefineSocialLinkTemplate v-slot="{ link, name, icon }">
+            <NuxtLink :href="link" class="transition-200 hover:text-primary">
+              <i :class="icon" />
+              <span class="sr-only">{{ name }}</span>
+            </NuxtLink>
+          </DefineSocialLinkTemplate>
 
-          <NuxtLink
-            href="https://www.linkedin.com/in/danielbwaltz"
-            class="transition-200 hover:text-primary"
-          >
-            <i class="i-mdi-linkedin" />
-            <span class="sr-only">LinkedIn</span>
-          </NuxtLink>
+          <ReuseSocialLinkTemplate
+            link="https://twitter.com/danielbwaltz"
+            name="Twitter"
+            icon="i-mdi-twitter"
+          />
 
-          <NuxtLink
-            href="https://github.com/danielwaltz"
-            class="transition-200 hover:text-primary"
-          >
-            <i class="i-mdi-github" />
-            <span class="sr-only">GitHub</span>
-          </NuxtLink>
+          <ReuseSocialLinkTemplate
+            link="https://www.linkedin.com/in/danielbwaltz"
+            name="LinkedIn"
+            icon="i-mdi-linkedin"
+          />
 
-          <NuxtLink
-            href="https://gitlab.com/danielwaltz"
-            class="transition-200 hover:text-primary"
-          >
-            <i class="i-mdi-gitlab" />
-            <span class="sr-only">GitLab</span>
-          </NuxtLink>
+          <ReuseSocialLinkTemplate
+            link="https://github.com/danielwaltz"
+            name="GitHub"
+            icon="i-mdi-github"
+          />
 
-          <NuxtLink
-            href="https://bitbucket.org/danielwaltz"
-            class="transition-200 hover:text-primary"
-          >
-            <i class="i-mdi-bitbucket" />
-            <span class="sr-only">BitBucket</span>
-          </NuxtLink>
+          <ReuseSocialLinkTemplate
+            link="https://gitlab.com/danielwaltz"
+            name="GitLab"
+            icon="i-mdi-gitlab"
+          />
+
+          <ReuseSocialLinkTemplate
+            link="https://bitbucket.org/danielwaltz"
+            name="BitBucket"
+            icon="i-mdi-bitbucket"
+          />
         </nav>
       </main>
     </Body>
