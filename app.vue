@@ -43,7 +43,7 @@ useServerSeoMeta({
           alt=""
           width="96"
           height="96"
-          class="relative"
+          class="relative w-18 sm:w-24"
         />
       </div>
 
