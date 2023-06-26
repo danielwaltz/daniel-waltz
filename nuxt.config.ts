@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  css: ['@/assets/css/main.css'],
+  css: ['@unocss/reset/tailwind.css'],
   postcss: {
     plugins: {
       '@csstools/postcss-oklab-function': { preserve: true },

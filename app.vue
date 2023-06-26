@@ -34,14 +34,18 @@ useServerSeoMeta({
 
 <template>
   <div class="grid h-viewport place-items-center">
-    <main class="max-w-2xl w-full flex flex-col gap-8 p-8">
-      <img
-        src="@/assets/images/logo.svg"
-        alt=""
-        class="animate-shadow"
-        width="96"
-        height="96"
-      />
+    <main class="max-w-2xl w-full flex flex-col items-start gap-8 p-8">
+      <div class="relative m-be-2 flex">
+        <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
+        <div class="shadow-box animate-alternate shadow-secondary/75" />
+        <img
+          src="@/assets/images/logo.svg"
+          alt=""
+          width="96"
+          height="96"
+          class="relative"
+        />
+      </div>
 
       <h1 class="flex flex-col items-start">
         <span class="m-be--2 rotate--3deg text-2xl font-script sm:text-3xl"

@@ -1,5 +1,4 @@
 import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
-import transformerDirectives from '@unocss/transformer-directives';
 import { theme } from 'unocss/preset-mini';
 
 const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
@@ -23,7 +22,6 @@ export default defineConfig({
       },
     }),
   ],
-  transformers: [transformerDirectives()],
   content: {
     filesystem: ['nuxt.config.*'],
   },
@@ -50,7 +48,9 @@ export default defineConfig({
         'bg-primary bg-gradient-to-r from-primary to-secondary',
       'text-gradient-primary':
         'bg-gradient-primary bg-clip-text text-transparent',
-      'animate-shadow': 'animate-[shadow-breathe_60s_ease-in-out_infinite]',
+      'animate-fade':
+        'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
+      'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',
     },
   ],
 });
