@@ -29,6 +29,9 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.53.3
     version: 0.53.3(postcss@8.4.24)(vite@4.3.9)(webpack@5.88.0)
+  '@unocss/transformer-directives':
+    specifier: ^0.53.3
+    version: 0.53.3
   '@vue/eslint-config-prettier':
     specifier: ^7.1.0
     version: 7.1.0(eslint@8.43.0)(prettier@2.8.8)

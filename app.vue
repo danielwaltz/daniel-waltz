@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import iconUrl from '@/assets/images/logo.svg?url';
+
 const meta = {
   title: 'Daniel Waltz - UI Engineer',
   url: 'https://danielwaltz.me',
-  icon: '/favicon.svg',
+  icon: iconUrl,
   description:
     'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
@@ -33,6 +35,14 @@ useServerSeoMeta({
 <template>
   <div class="grid h-viewport place-items-center">
     <main class="max-w-2xl w-full flex flex-col gap-8 p-8">
+      <img
+        src="@/assets/images/logo.svg"
+        alt=""
+        class="animate-shadow"
+        width="96"
+        height="96"
+      />
+
       <h1 class="flex flex-col items-start">
         <span class="m-be--2 rotate--3deg text-2xl font-script sm:text-3xl"
           >Hi, I'm</span
