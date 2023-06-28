@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import iconUrl from '@/assets/images/logo.svg?url';
-
 const meta = {
   title: 'Daniel Waltz - UI Engineer',
   url: 'https://danielwaltz.me',
-  icon: iconUrl,
+  icon: '/logo.svg',
   description:
     'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
 
 useServerHead({
   title: meta.title,
-  link: [{ rel: 'icon', type: 'image/svg+xml', href: meta.icon }],
+  link: [
+    { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+    { rel: 'icon', href: meta.icon, type: 'image/svg+xml' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon-180x180.png' },
+    { rel: 'manifest', href: '/manifest.json' },
+  ],
   meta: [
     { name: 'description', content: meta.description },
-    { name: 'theme-color', content: '#121212' },
+    { name: 'theme-color', content: '#0e0e0e' },
   ],
   htmlAttrs: { lang: 'en' },
   bodyAttrs: { class: 'h-viewport bg-viewport font-sans text-foreground' },
@@ -39,7 +42,7 @@ useServerSeoMeta({
         <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
         <div class="shadow-box animate-alternate shadow-secondary/75" />
         <img
-          src="@/assets/images/logo.svg"
+          :src="meta.icon"
           alt=""
           width="96"
           height="96"

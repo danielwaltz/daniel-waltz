@@ -29,8 +29,8 @@ export default defineConfig({
     colors: {
       primary: 'oklch(70% .4 222)', // #00afd8
       secondary: 'oklch(70% .4 185)', // #00b7a8
-      background: '#121212', // oklch(18.22% 0 0)
-      foreground: '#f1f1f1', // oklch(95.81% 0 0)
+      background: '#0e0e0e', // oklch(16.5% 0 0)
+      foreground: '#f0f0f0', // oklch(95.5% 0 0)
     },
     fontFamily: {
       sans: ['Open Sans', 'Arial', defaultSans].join(','),
@@ -42,7 +42,7 @@ export default defineConfig({
     {
       'h-viewport': 'min-h-full min-h-100vh min-h-100dvh',
       'bg-gradient-background-radial':
-        'bg-background bg-gradient-radial bg-gradient-[circle_at_bottom_right,#181818_0%,#121212,#121212_100%]',
+        'bg-background bg-gradient-radial bg-gradient-[circle_at_bottom_right,#131313_0%,#0e0e0e,#0e0e0e_100%]',
       'bg-viewport': 'bg-gradient-background-radial',
       'bg-gradient-primary':
         'bg-primary bg-gradient-to-r from-primary to-secondary',

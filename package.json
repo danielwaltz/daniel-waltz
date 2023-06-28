@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --no-fix --ignore-path .gitignore --max-warnings=0",
     "type-check": "vue-tsc --noEmit",
     "test": "run-p lint type-check",
-    "deploy": "run-s test build"
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^2.2.3",
@@ -21,6 +21,7 @@
     "@types/node": "^18.16.18",
     "@unocss/eslint-config": "^0.53.3",
     "@unocss/nuxt": "^0.53.3",
+    "@vite-pwa/assets-generator": "^0.0.3",
     "@vue/eslint-config-prettier": "^7.1.0",
     "eslint": "^8.43.0",
     "npm-run-all": "^4.1.5",
