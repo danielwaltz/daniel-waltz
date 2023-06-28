@@ -2,7 +2,7 @@
 const meta = {
   title: 'Daniel Waltz - UI Engineer',
   url: 'https://danielwaltz.me',
-  icon: '/logo.svg',
+  icon: '/favicon.svg',
   description:
     'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
@@ -11,9 +11,7 @@ useServerHead({
   title: meta.title,
   link: [
     { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-    { rel: 'icon', href: meta.icon, type: 'image/svg+xml' },
-    { rel: 'apple-touch-icon', href: '/apple-touch-icon-180x180.png' },
-    { rel: 'manifest', href: '/manifest.json' },
+    { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
   ],
   meta: [
     { name: 'description', content: meta.description },
