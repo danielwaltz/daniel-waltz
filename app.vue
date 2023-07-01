@@ -36,7 +36,7 @@ useServerSeoMeta({
 <template>
   <div class="grid h-viewport place-items-center">
     <main class="max-w-2xl w-full flex flex-col items-start gap-8 p-8">
-      <div class="relative m-be-2 flex">
+      <div class="relative mbe-2 flex">
         <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
         <div class="shadow-box animate-alternate shadow-secondary/75" />
         <img
