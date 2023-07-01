@@ -16,9 +16,9 @@ export default defineConfig({
     presetWebFonts({
       extendTheme: false,
       fonts: {
-        sans: 'Open Sans:300,700',
+        sans: 'Noto Sans:300,700',
         display: 'Big Shoulders Display:700',
-        script: 'Caveat',
+        script: 'Shadows Into Light',
       },
     }),
   ],
@@ -33,9 +33,9 @@ export default defineConfig({
       foreground: '#f0f0f0', // oklch(95.5% 0 0)
     },
     fontFamily: {
-      sans: ['Open Sans', 'Arial', defaultSans].join(','),
+      sans: ['Noto Sans', 'Arial', defaultSans].join(','),
       display: ['Big Shoulders Display', 'Impact', defaultSans].join(','),
-      script: ['Caveat', 'Bradley Hand', defaultSerif].join(','),
+      script: ['Shadows Into Light', 'Bradley Hand', defaultSerif].join(','),
     },
   },
   shortcuts: [

@@ -52,7 +52,7 @@ useServerSeoMeta({
 
       <h1 class="flex flex-col items-start">
         <span
-          class="mbe--2 rotate--3deg text-2xl font-script 2xl:text-4xl sm:text-3xl"
+          class="mbe--2 mis-1 rotate--3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
         <span
