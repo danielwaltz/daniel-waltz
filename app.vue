@@ -35,7 +35,9 @@ useServerSeoMeta({
 
 <template>
   <div class="grid h-viewport place-items-center">
-    <main class="max-w-2xl w-full flex flex-col items-start gap-8 p-8">
+    <main
+      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 2xl:max-w-4xl sm:max-w-3xl"
+    >
       <div class="relative mbe-2 flex">
         <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
         <div class="shadow-box animate-alternate shadow-secondary/75" />
@@ -44,21 +46,22 @@ useServerSeoMeta({
           alt=""
           width="96"
           height="96"
-          class="relative w-18 sm:w-24"
+          class="relative w-18 2xl:w-32 sm:w-24"
         />
       </div>
 
       <h1 class="flex flex-col items-start">
-        <span class="m-be--2 rotate--3deg text-2xl font-script sm:text-3xl"
+        <span
+          class="mbe--2 rotate--3deg text-2xl font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
         <span
-          class="text-gradient-primary text-6xl font-display uppercase sm:text-8xl"
+          class="text-gradient-primary text-6xl font-display uppercase 2xl:text-9xl sm:text-8xl"
           >Daniel Waltz</span
         >
       </h1>
 
-      <p class="text-lg lh-8 sm:text-2xl sm:lh-10">
+      <p class="text-lg 2xl:text-3xl sm:text-2xl leading-relaxed!">
         I'm a
         <span class="text-gradient-primary font-700 uppercase"
           >UI Engineer</span
@@ -69,7 +72,7 @@ useServerSeoMeta({
       </p>
 
       <nav
-        class="flex flex-wrap items-center self-start gap-6 text-3xl sm:text-4xl"
+        class="flex flex-wrap items-center self-start gap-6 text-3xl 2xl:text-5xl sm:text-4xl"
       >
         <AppIconLink
           href="https://twitter.com/danielbwaltz"
