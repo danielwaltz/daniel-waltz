@@ -32,7 +32,7 @@ useServerSeoMeta({
   twitterCard: 'summary',
 });
 
-const { activity } = await useActivity();
+const { data: activity } = await useFetch('/api/activity');
 </script>
 
 <template>
@@ -118,7 +118,7 @@ const { activity } = await useActivity();
       >
         Thanks for your attention! Oh, and while I have you, here's a friendly
         reminder to be kind to yourself. Why not
-        {{ activity }}? ☺️
+        {{ activity.name.toLocaleLowerCase() }}? {{ activity.emoji }}
       </div>
     </main>
   </div>
