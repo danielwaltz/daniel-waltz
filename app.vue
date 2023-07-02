@@ -31,6 +31,8 @@ useServerSeoMeta({
   twitterImage: meta.icon,
   twitterCard: 'summary',
 });
+
+const { activity } = await useActivity();
 </script>
 
 <template>
@@ -109,6 +111,15 @@ useServerSeoMeta({
           class="hover:text-primary"
         />
       </nav>
+
+      <div
+        v-if="activity"
+        class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-foreground/50 2xl:text-lg sm:text-base"
+      >
+        Thanks for your attention! Oh, and while I have you, here's a friendly
+        reminder to be kind to yourself. Why not
+        {{ activity }}? ☺️
+      </div>
     </main>
   </div>
 
@@ -116,6 +127,6 @@ useServerSeoMeta({
     href="https://github.com/danielwaltz/daniel-waltz"
     title="View Source Code"
     icon="i-mdi-code-tags"
-    class="fixed right-3 top-3 text-xl text-foreground/60 hover:text-foreground"
+    class="absolute right-3 top-3 text-xl text-foreground/60 hover:text-foreground"
   />
 </template>
