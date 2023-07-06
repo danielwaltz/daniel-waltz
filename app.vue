@@ -65,12 +65,11 @@ const { data: activity } = await useFetch('/api/activity');
 
       <p class="text-lg 2xl:text-3xl sm:text-2xl leading-relaxed!">
         I'm a
-        <span class="text-gradient-primary font-700 uppercase"
-          >UI Engineer</span
-        >
-        with a <strong>passion</strong> for delivering the most usable,
-        accessible, and beautiful interfaces <em>imaginable</em>. Together we
-        can make the web a better place for <strong>everyone</strong>!
+        <strong class="uppercase">UI Engineer</strong>
+        with a passion for delivering the most <strong>usable</strong>,
+        <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
+        <em>imaginable</em>. Together we can make the web a better place for
+        <span class="text-gradient-primary font-700">everyone!</span>
       </p>
 
       <nav
