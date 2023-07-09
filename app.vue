@@ -38,9 +38,9 @@ const { data: activity } = await useFetch('/api/activity');
 <template>
   <div class="grid h-viewport place-items-center">
     <main
-      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 2xl:max-w-4xl sm:max-w-3xl"
+      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl"
     >
-      <div class="relative mbe-2 flex">
+      <div class="relative mbe-2 flex items-center justify-center">
         <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
         <div class="shadow-box animate-alternate shadow-secondary/75" />
         <img
