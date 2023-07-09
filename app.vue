@@ -115,8 +115,8 @@ const { data: activity } = await useFetch('/api/activity');
         v-if="activity"
         class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-foreground/50 2xl:text-lg sm:text-base"
       >
-        Thanks for your attention! Oh, and while I have you, here's a friendly
-        reminder to be kind to yourself. Why not
+        Oh, and while I have you, here's a friendly reminder to be kind to
+        yourself! Why not
         {{ activity.name.toLocaleLowerCase() }}? {{ activity.emoji }}
       </div>
     </main>
