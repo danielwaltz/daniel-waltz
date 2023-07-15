@@ -52,6 +52,8 @@ export default defineConfig({
         'bg-primary bg-gradient-to-r from-primary to-secondary',
       'text-primary-gradient':
         'bg-primary-gradient bg-clip-text text-transparent',
+      interactive:
+        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 focus:outline-dashed',
       'animate-fade':
         'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
       'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',

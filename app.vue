@@ -67,41 +67,49 @@ useServerSeoMeta({
       </p>
 
       <nav
-        class="flex flex-wrap items-center self-start gap-6 text-3xl 2xl:text-5xl sm:text-4xl"
+        aria-label="Social Media Links"
+        class="flex flex-wrap items-center self-start gap-0.5em text-3xl 2xl:text-5xl sm:text-4xl"
       >
         <AppIconLink
           href="https://twitter.com/danielbwaltz"
           title="Twitter"
           icon="i-mdi-twitter"
-          class="hover:text-primary"
+          class="focus:text-primary hover:text-primary"
+        />
+
+        <AppIconLink
+          href="https://mastodon.world/@danielwaltz"
+          title="Mastodon"
+          icon="i-mdi-mastodon"
+          class="focus:text-primary hover:text-primary"
         />
 
         <AppIconLink
           href="https://www.linkedin.com/in/danielbwaltz"
           title="LinkedIn"
           icon="i-mdi-linkedin"
-          class="hover:text-primary"
+          class="focus:text-primary hover:text-primary"
         />
 
         <AppIconLink
           href="https://github.com/danielwaltz"
           title="GitHub"
           icon="i-mdi-github"
-          class="hover:text-primary"
+          class="focus:text-primary hover:text-primary"
         />
 
         <AppIconLink
           href="https://gitlab.com/danielwaltz"
           title="GitLab"
           icon="i-mdi-gitlab"
-          class="hover:text-primary"
+          class="focus:text-primary hover:text-primary"
         />
 
         <AppIconLink
           href="https://bitbucket.org/danielwaltz"
           title="BitBucket"
           icon="i-mdi-bitbucket"
-          class="hover:text-primary"
+          class="focus:text-primary hover:text-primary"
         />
       </nav>
 
@@ -118,6 +126,6 @@ useServerSeoMeta({
     href="https://github.com/danielwaltz/daniel-waltz"
     title="View Source Code"
     icon="i-mdi-code-tags"
-    class="absolute right-3 top-3 text-xl text-foreground/60 hover:text-foreground"
+    class="absolute right-3 top-3 text-xl text-foreground/60 focus:text-foreground hover:text-foreground"
   />
 </template>

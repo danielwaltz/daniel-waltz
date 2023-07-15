@@ -11,7 +11,7 @@ defineProps<{
     :href="href"
     :title="title"
     rel="noopener noreferrer"
-    class="inline-flex transition-200"
+    class="inline-flex interactive rounded"
   >
     <i :class="icon" />
   </a>
