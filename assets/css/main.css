@@ -1,1 +1,11 @@
 @import '@unocss/reset/tailwind.css';
+
+::selection {
+  background-color: theme('colors.primary');
+  background-color: color-mix(
+    in oklab,
+    theme('colors.primary'),
+    theme('colors.secondary')
+  );
+  color: theme('colors.background');
+}

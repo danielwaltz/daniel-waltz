@@ -1,4 +1,10 @@
-import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
+import {
+  defineConfig,
+  presetWind,
+  presetIcons,
+  presetWebFonts,
+  transformerDirectives,
+} from 'unocss';
 import { theme } from 'unocss/preset-mini';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
@@ -26,6 +32,7 @@ export default defineConfig({
       },
     }),
   ],
+  transformers: [transformerDirectives()],
   content: {
     filesystem: ['nuxt.config.*'],
   },
