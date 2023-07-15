@@ -33,8 +33,8 @@ export default defineConfig({
     colors: {
       primary: 'oklch(70% .4 222)', // #00afd8
       secondary: 'oklch(70% .4 185)', // #00b7a8
-      background: '#0e0e0e', // oklch(16.5% 0 0)
-      foreground: '#f0f0f0', // oklch(95.5% 0 0)
+      background: 'oklch(16.5% 0 0)', // #0e0e0e
+      foreground: 'oklch(95.5% 0 0)', // #f0f0f0
     },
     fontFamily: {
       sans: ['Noto Sans', 'Arial', defaultSans].join(','),
