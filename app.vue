@@ -19,7 +19,8 @@ useServerHead({
   ],
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
-    class: 'h-viewport bg-viewport accent-primary font-sans text-foreground',
+    class:
+      'h-viewport bg-viewport font-sans text-foreground accent-primary scheme-dark',
   },
 });
 

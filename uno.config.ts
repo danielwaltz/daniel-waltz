@@ -42,6 +42,14 @@ export default defineConfig({
       script: ['Shadows Into Light', 'Bradley Hand', defaultSerif].join(','),
     },
   },
+  rules: [
+    [
+      /^scheme-(normal|light|dark|both)$/,
+      ([, scheme]) => ({
+        ['color-scheme']: scheme === 'both' ? 'light dark' : scheme,
+      }),
+    ],
+  ],
   shortcuts: [
     {
       'h-viewport': 'min-h-full min-h-screen min-h-100dvh',
@@ -53,7 +61,7 @@ export default defineConfig({
       'text-primary-gradient':
         'bg-primary-gradient bg-clip-text text-transparent',
       interactive:
-        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 focus:outline-dashed',
+        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-all focus:outline-dashed',
       'animate-fade':
         'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
       'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',
