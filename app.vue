@@ -31,8 +31,6 @@ useServerSeoMeta({
   twitterImage: meta.icon,
   twitterCard: 'summary',
 });
-
-const { data: activity } = await useFetch('/api/activity');
 </script>
 
 <template>
@@ -46,8 +44,8 @@ const { data: activity } = await useFetch('/api/activity');
         <img
           :src="meta.icon"
           alt=""
-          width="96"
-          height="96"
+          width="128"
+          height="128"
           class="relative w-18 2xl:w-32 sm:w-24"
         />
       </div>
@@ -112,12 +110,10 @@ const { data: activity } = await useFetch('/api/activity');
       </nav>
 
       <div
-        v-if="activity"
         class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-foreground/50 2xl:text-lg sm:text-base"
       >
         Oh, and while I have you, here's a friendly reminder to be kind to
-        yourself! Why not
-        {{ activity.name.toLocaleLowerCase() }}? {{ activity.emoji }}
+        yourself!
       </div>
     </main>
   </div>
