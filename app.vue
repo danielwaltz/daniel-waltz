@@ -68,51 +68,64 @@ useServerSeoMeta({
         <span class="text-primary-gradient font-700">everyone!</span>
       </p>
 
-      <nav
-        aria-label="Social Media Links"
-        class="flex flex-wrap items-center self-start gap-0.5em text-3xl 2xl:text-5xl sm:text-4xl"
-      >
-        <AppIconLink
-          href="https://twitter.com/danielbwaltz"
-          title="Twitter"
-          icon="i-mdi-twitter"
-          class="focus:text-primary hover:text-primary"
-        />
+      <nav aria-label="Account Links" class="self-start">
+        <ul
+          class="flex flex-wrap items-center gap-0.5em text-3xl 2xl:text-5xl sm:text-4xl"
+        >
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://twitter.com/danielbwaltz"
+              title="Twitter"
+              icon="i-mdi-twitter"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
 
-        <AppIconLink
-          href="https://mastodon.world/@danielwaltz"
-          title="Mastodon"
-          icon="i-mdi-mastodon"
-          class="focus:text-primary hover:text-primary"
-        />
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://mastodon.world/@danielwaltz"
+              title="Mastodon"
+              icon="i-mdi-mastodon"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
 
-        <AppIconLink
-          href="https://www.linkedin.com/in/danielbwaltz"
-          title="LinkedIn"
-          icon="i-mdi-linkedin"
-          class="focus:text-primary hover:text-primary"
-        />
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://www.linkedin.com/in/danielbwaltz"
+              title="LinkedIn"
+              icon="i-mdi-linkedin"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
 
-        <AppIconLink
-          href="https://github.com/danielwaltz"
-          title="GitHub"
-          icon="i-mdi-github"
-          class="focus:text-primary hover:text-primary"
-        />
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://github.com/danielwaltz"
+              title="GitHub"
+              icon="i-mdi-github"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
 
-        <AppIconLink
-          href="https://gitlab.com/danielwaltz"
-          title="GitLab"
-          icon="i-mdi-gitlab"
-          class="focus:text-primary hover:text-primary"
-        />
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://gitlab.com/danielwaltz"
+              title="GitLab"
+              icon="i-mdi-gitlab"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
 
-        <AppIconLink
-          href="https://bitbucket.org/danielwaltz"
-          title="BitBucket"
-          icon="i-mdi-bitbucket"
-          class="focus:text-primary hover:text-primary"
-        />
+          <li class="inline-flex">
+            <AppIconLink
+              href="https://bitbucket.org/danielwaltz"
+              title="BitBucket"
+              icon="i-mdi-bitbucket"
+              class="focus:text-primary hover:text-primary"
+            />
+          </li>
+        </ul>
       </nav>
 
       <div
