@@ -1,5 +1,6 @@
 import { defineConfig, presetWind, presetIcons, presetWebFonts } from 'unocss';
 import { theme } from 'unocss/preset-mini';
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
 const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
 
@@ -8,6 +9,9 @@ export default defineConfig({
   presets: [
     presetWind(),
     presetIcons({
+      collections: {
+        app: FileSystemIconLoader('assets/icons'),
+      },
       extraProperties: {
         display: 'inline-block',
         ['vertical-align']: 'middle',
@@ -44,10 +48,10 @@ export default defineConfig({
       'bg-gradient-background-radial':
         'bg-background bg-gradient-radial bg-gradient-[circle_at_bottom_right,#131313_0%,#0e0e0e,#0e0e0e_100%]',
       'bg-viewport': 'bg-gradient-background-radial',
-      'bg-gradient-primary':
+      'bg-primary-gradient':
         'bg-primary bg-gradient-to-r from-primary to-secondary',
-      'text-gradient-primary':
-        'bg-gradient-primary bg-clip-text text-transparent',
+      'text-primary-gradient':
+        'bg-primary-gradient bg-clip-text text-transparent',
       'animate-fade':
         'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
       'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',

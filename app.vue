@@ -58,7 +58,7 @@ const { data: activity } = await useFetch('/api/activity');
           >Hi, I'm</span
         >
         <span
-          class="text-gradient-primary text-6xl font-display uppercase 2xl:text-9xl sm:text-8xl"
+          class="text-primary-gradient text-6xl font-display uppercase 2xl:text-9xl sm:text-8xl"
           >Daniel Waltz</span
         >
       </h1>
@@ -69,7 +69,7 @@ const { data: activity } = await useFetch('/api/activity');
         with a passion for delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
         <em>imaginable</em>. Together we can make the web a better place for
-        <span class="text-gradient-primary font-700">everyone!</span>
+        <span class="text-primary-gradient font-700">everyone!</span>
       </p>
 
       <nav
