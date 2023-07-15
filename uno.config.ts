@@ -56,6 +56,13 @@ export default defineConfig({
         ['color-scheme']: scheme === 'both' ? 'light dark' : scheme,
       }),
     ],
+    [
+      'clip-hexagon',
+      {
+        'clip-path':
+          'polygon(50% 0, 92% 25%, 92% 75%, 50% 100%, 8% 75%, 8% 25%)',
+      },
+    ],
   ],
   shortcuts: [
     {

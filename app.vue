@@ -42,11 +42,23 @@ useServerSeoMeta({
       class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl"
     >
       <div
-        class="relative mbe-2 flex items-center justify-center text-7xl 2xl:text-9xl sm:text-8xl"
+        class="relative flex items-center justify-center text-7xl 2xl:text-9xl sm:text-8xl"
       >
-        <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
-        <div class="shadow-box animate-alternate shadow-secondary/75" />
-        <i class="i-app-logo scale-90" />
+        <div
+          class="rotate-45 scale-60 shadow-box animate-alternate-reverse shadow-primary"
+        />
+        <div
+          class="rotate-45 scale-60 shadow-box animate-alternate shadow-secondary"
+        />
+        <div
+          class="rotate--45 scale-60 shadow-box animate-alternate-reverse shadow-secondary"
+        />
+        <div
+          class="rotate--45 scale-60 shadow-box animate-alternate shadow-primary"
+        />
+        <div class="bg-background clip-hexagon">
+          <i class="i-app-logo block scale-90" />
+        </div>
       </div>
 
       <h1 class="flex flex-col items-start">
