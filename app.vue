@@ -18,7 +18,9 @@ useServerHead({
     { name: 'theme-color', content: '#0e0e0e' },
   ],
   htmlAttrs: { lang: 'en' },
-  bodyAttrs: { class: 'h-viewport bg-viewport font-sans text-foreground' },
+  bodyAttrs: {
+    class: 'h-viewport bg-viewport accent-primary font-sans text-foreground',
+  },
 });
 
 useServerSeoMeta({
