@@ -38,16 +38,12 @@ useServerSeoMeta({
     <main
       class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl"
     >
-      <div class="relative mbe-2 flex items-center justify-center">
+      <div
+        class="relative mbe-2 flex items-center justify-center text-7xl 2xl:text-9xl sm:text-8xl"
+      >
         <div class="shadow-box animate-alternate-reverse shadow-primary/75" />
         <div class="shadow-box animate-alternate shadow-secondary/75" />
-        <img
-          :src="meta.icon"
-          alt=""
-          width="128"
-          height="128"
-          class="relative w-18 2xl:w-32 sm:w-24"
-        />
+        <i class="i-app-logo scale-90" />
       </div>
 
       <h1 class="flex flex-col items-start">
