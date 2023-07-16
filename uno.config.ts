@@ -77,8 +77,9 @@ export default defineConfig({
       interactive:
         'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed',
       'animate-fade':
-        'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
-      'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',
+        'animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite',
+      'shadow-box':
+        'absolute inset-0 animate-fade animate-backwards shadow-2xl',
     },
   ],
 });
