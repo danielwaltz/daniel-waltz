@@ -75,7 +75,7 @@ export default defineConfig({
       'text-primary-gradient':
         'bg-primary-gradient bg-clip-text text-transparent',
       interactive:
-        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-all focus:outline-dashed',
+        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed',
       'animate-fade':
         'animate-fade-in animate-duration-10s animate-ease-in-out animate-iteration-count-infinite',
       'shadow-box': 'absolute inset-0 animate-fade shadow-2xl',
