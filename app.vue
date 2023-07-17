@@ -38,8 +38,10 @@ useServerSeoMeta({
 
 <template>
   <div class="grid h-viewport place-items-center">
+    <AppBackdrop />
+
     <main
-      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl"
+      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl sm:p-10"
     >
       <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
 
