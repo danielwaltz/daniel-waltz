@@ -1,7 +1,7 @@
 import {
   defineConfig,
-  presetWind,
   presetIcons,
+  presetUno,
   presetWebFonts,
   transformerDirectives,
 } from 'unocss';
@@ -13,7 +13,7 @@ const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
 // https://unocss.dev/config/
 export default defineConfig({
   presets: [
-    presetWind(),
+    presetUno({ dark: 'media' }),
     presetIcons({
       collections: {
         app: FileSystemIconLoader('assets/icons'),
