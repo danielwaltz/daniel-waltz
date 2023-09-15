@@ -9,31 +9,31 @@
       :style="{ scale: `${num * 0.25}` }"
     >
       <div
-        class="rotate--1 shadow-box animate-alternate-reverse rounded-3xl"
+        class="shadow-box animate-alternate-reverse rounded-3xl"
         :class="{
-          ['shadow-primary']: num % 2 === 0,
-          ['shadow-secondary']: num % 2 !== 0,
+          ['shadow-primary rotate--1']: num % 2 === 0,
+          ['shadow-secondary rotate-1']: num % 2 !== 0,
         }"
       />
       <div
-        class="rotate-1 shadow-box animate-alternate rounded-3xl"
+        class="shadow-box animate-alternate rounded-3xl"
         :class="{
-          ['shadow-secondary']: num % 2 === 0,
-          ['shadow-primary']: num % 2 !== 0,
+          ['shadow-secondary rotate-1']: num % 2 === 0,
+          ['shadow-primary rotate--1']: num % 2 !== 0,
         }"
       />
       <div
-        class="rotate--1 shadow-box animate-alternate-reverse rounded-3xl"
+        class="shadow-box animate-alternate-reverse rounded-3xl"
         :class="{
-          ['shadow-secondary']: num % 2 === 0,
-          ['shadow-primary']: num % 2 !== 0,
+          ['shadow-secondary rotate--1']: num % 2 === 0,
+          ['shadow-primary rotate-1']: num % 2 !== 0,
         }"
       />
       <div
-        class="rotate-1 shadow-box animate-alternate rounded-3xl"
+        class="shadow-box animate-alternate rounded-3xl"
         :class="{
-          ['shadow-primary']: num % 2 === 0,
-          ['shadow-secondary']: num % 2 !== 0,
+          ['shadow-primary rotate-1']: num % 2 === 0,
+          ['shadow-secondary rotate--1']: num % 2 !== 0,
         }"
       />
     </div>
