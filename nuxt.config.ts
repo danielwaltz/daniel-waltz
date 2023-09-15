@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   modules: ['@unocss/nuxt'],
   experimental: {
     noScripts: true,
+    headNext: true,
+    asyncContext: true,
   },
   devtools: {
     enabled: true,
