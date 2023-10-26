@@ -2,12 +2,10 @@
 export default defineNuxtConfig({
   modules: ['@unocss/nuxt'],
   experimental: {
-    noScripts: true,
-    headNext: true,
+    appManifest: false, // https://github.com/unjs/nitro/issues/1844
     asyncContext: true,
-  },
-  devtools: {
-    enabled: true,
+    headNext: true,
+    noScripts: true,
   },
   typescript: {
     shim: false,
