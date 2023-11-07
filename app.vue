@@ -67,13 +67,13 @@ useServerSeoMeta({
 
       <nav aria-label="Account Links" class="self-start">
         <ul
-          class="flex flex-wrap items-center gap-0.5em text-3xl 2xl:text-5xl sm:text-4xl"
+          class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
         >
           <li class="inline-flex">
             <AppIconLink
-              href="https://twitter.com/danielbwaltz"
-              title="Twitter"
-              icon="i-mdi-twitter"
+              href="https://x.com/danielbwaltz"
+              title="X / Twitter"
+              icon="i-fa6-brands-x-twitter"
               class="focus:text-primary hover:text-primary"
             />
           </li>
@@ -82,7 +82,7 @@ useServerSeoMeta({
             <AppIconLink
               href="https://mastodon.world/@danielwaltz"
               title="Mastodon"
-              icon="i-mdi-mastodon"
+              icon="i-fa6-brands-mastodon"
               class="focus:text-primary hover:text-primary"
             />
           </li>
@@ -91,7 +91,7 @@ useServerSeoMeta({
             <AppIconLink
               href="https://www.linkedin.com/in/danielbwaltz"
               title="LinkedIn"
-              icon="i-mdi-linkedin"
+              icon="i-fa6-brands-linkedin"
               class="focus:text-primary hover:text-primary"
             />
           </li>
@@ -100,7 +100,7 @@ useServerSeoMeta({
             <AppIconLink
               href="https://github.com/danielwaltz"
               title="GitHub"
-              icon="i-mdi-github"
+              icon="i-fa6-brands-github"
               class="focus:text-primary hover:text-primary"
             />
           </li>
@@ -109,7 +109,7 @@ useServerSeoMeta({
             <AppIconLink
               href="https://gitlab.com/danielwaltz"
               title="GitLab"
-              icon="i-mdi-gitlab"
+              icon="i-fa6-brands-gitlab"
               class="focus:text-primary hover:text-primary"
             />
           </li>
@@ -118,7 +118,7 @@ useServerSeoMeta({
             <AppIconLink
               href="https://bitbucket.org/danielwaltz"
               title="BitBucket"
-              icon="i-mdi-bitbucket"
+              icon="i-fa6-brands-bitbucket"
               class="focus:text-primary hover:text-primary"
             />
           </li>
