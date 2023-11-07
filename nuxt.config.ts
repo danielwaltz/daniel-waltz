@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   modules: ['@unocss/nuxt'],
   experimental: {
-    appManifest: false, // https://github.com/unjs/nitro/issues/1844
     asyncContext: true,
     headNext: true,
     noScripts: true,
