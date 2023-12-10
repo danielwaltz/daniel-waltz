@@ -13,7 +13,7 @@ const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
 // https://unocss.dev/config/
 export default defineConfig({
   presets: [
-    presetUno({ dark: 'media' }),
+    presetUno(),
     presetIcons({
       collections: {
         app: FileSystemIconLoader('assets/icons'),
@@ -51,12 +51,6 @@ export default defineConfig({
   },
   rules: [
     [
-      /^scheme-(normal|light|dark|both)$/,
-      ([, scheme]) => ({
-        ['color-scheme']: scheme === 'both' ? 'light dark' : scheme,
-      }),
-    ],
-    [
       'clip-hexagon',
       {
         'clip-path':
@@ -66,7 +60,7 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      'h-viewport': 'min-h-full min-h-screen min-h-100dvh',
+      'min-h-viewport': 'min-h-full min-h-screen min-h-100dvh',
       'bg-gradient-background-radial':
         'bg-background bg-gradient-radial bg-gradient-[circle_at_bottom_right,#131313_0%,#0e0e0e,#0e0e0e_100%]',
       'bg-viewport': 'bg-gradient-background-radial',

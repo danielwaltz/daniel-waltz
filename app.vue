@@ -7,7 +7,7 @@ const meta = {
     'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
 
-useServerHead({
+useHead({
   title: meta.title,
   link: [
     { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
@@ -20,11 +20,11 @@ useServerHead({
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
     class:
-      'h-viewport bg-viewport font-sans text-foreground accent-primary scheme-dark',
+      'min-h-viewport bg-viewport font-sans text-foreground accent-primary [color-scheme:dark]',
   },
 });
 
-useServerSeoMeta({
+useSeoMeta({
   ogTitle: meta.title,
   ogDescription: meta.description,
   ogImage: meta.icon,
@@ -37,7 +37,7 @@ useServerSeoMeta({
 </script>
 
 <template>
-  <div class="grid h-viewport place-items-center">
+  <div class="grid min-h-viewport place-items-center">
     <AppBackdrop />
 
     <main
