@@ -1,6 +1,7 @@
 {
   "name": "daniel-waltz",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
