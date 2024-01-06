@@ -5,8 +5,8 @@ import {
   presetWebFonts,
   transformerDirectives,
 } from 'unocss';
-import { theme } from 'unocss/preset-mini';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
+import { theme } from 'unocss/preset-mini';
 
 const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
 
