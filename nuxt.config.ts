@@ -2,8 +2,6 @@
 export default defineNuxtConfig({
   modules: ['@unocss/nuxt'],
   features: {
-    // Remove when fixed https://github.com/unocss/unocss/issues/3468
-    inlineStyles: false,
     noScripts: true,
   },
   experimental: {
