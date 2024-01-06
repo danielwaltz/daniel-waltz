@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "nuxt prepare && eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --no-fix --ignore-path .gitignore --max-warnings=0",
+    "lint": "eslint . --ignore-path .gitignore --max-warnings 0",
     "type-check": "nuxt typecheck",
     "test": "run-p lint type-check",
     "generate-ico": "npx -y icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32"
