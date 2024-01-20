@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const meta = {
-  title: 'Daniel Waltz - UI Engineer',
+  title: 'Daniel Waltz - Web Developer',
   url: 'https://danielwaltz.me',
   icon: '/favicon.svg',
   description:
-    'UI Engineer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
+    'Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
 } as const;
 
 useHead({
@@ -58,7 +58,7 @@ useSeoMeta({
 
       <p class="text-lg 2xl:text-3xl sm:text-2xl leading-relaxed!">
         I'm a
-        <strong class="uppercase">UI Engineer</strong>
+        <strong class="uppercase">web developer</strong>
         with a passion for delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
         <em>imaginable</em>. Together we can make the web a better place for
