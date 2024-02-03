@@ -4,9 +4,6 @@ export default defineNuxtConfig({
   features: {
     noScripts: true,
   },
-  future: {
-    typescriptBundlerResolution: true,
-  },
   experimental: {
     asyncContext: true,
     headNext: true,
