@@ -20,7 +20,7 @@ export default defineConfig({
       },
       extraProperties: {
         display: 'inline-block',
-        ['vertical-align']: 'middle',
+        'vertical-align': 'middle',
       },
     }),
     presetWebFonts({
