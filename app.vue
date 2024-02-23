@@ -47,6 +47,7 @@ useSeoMeta({
 
       <h1 class="flex flex-col items-start">
         <span
+          aria-hidden="true"
           class="mbe--2 mis-1 rotate--3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
@@ -65,7 +66,7 @@ useSeoMeta({
         <span class="text-primary-gradient font-700">everyone!</span>
       </p>
 
-      <nav aria-label="Account Links" class="self-start">
+      <nav aria-label="Accounts" class="self-start">
         <ul
           class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
         >
