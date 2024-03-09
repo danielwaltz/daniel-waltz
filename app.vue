@@ -20,7 +20,7 @@ useHead({
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
     class:
-      '[color-scheme:dark] min-h-viewport bg-background text-foreground font-sans accent-primary',
+      '[color-scheme:dark] min-h-viewport bg-surface text-surface-100 font-sans accent-primary',
   },
 });
 
@@ -127,7 +127,7 @@ useSeoMeta({
       </nav>
 
       <div
-        class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-foreground/50 2xl:text-lg sm:text-base"
+        class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-surface-100/50 2xl:text-lg sm:text-base"
       >
         Oh, and while I have you, here's a friendly reminder to be kind to
         yourself!
@@ -139,6 +139,6 @@ useSeoMeta({
     href="https://github.com/danielwaltz/daniel-waltz"
     title="View Source Code"
     icon="i-mdi-code-tags"
-    class="absolute right-3 top-3 text-xl text-foreground/60 focus:text-foreground hover:text-foreground"
+    class="absolute right-3 top-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"
   />
 </template>

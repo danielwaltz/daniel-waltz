@@ -38,10 +38,48 @@ export default defineConfig({
   },
   theme: {
     colors: {
-      primary: 'oklch(70% .4 222)', // #00afd8
-      secondary: 'oklch(70% .4 185)', // #00b7a8
-      background: 'oklch(16.5% 0 0)', // #0e0e0e
-      foreground: 'oklch(95.5% 0 0)', // #f0f0f0
+      primary: {
+        50: 'oklch(0.95 0.4 222)',
+        100: 'oklch(0.9 0.4 222)',
+        200: 'oklch(0.8 0.4 222)',
+        300: 'oklch(0.7 0.4 222)',
+        400: 'oklch(0.6 0.4 222)',
+        500: 'oklch(0.5 0.4 222)',
+        600: 'oklch(0.4 0.4 222)',
+        700: 'oklch(0.3 0.4 222)',
+        800: 'oklch(0.2 0.4 222)',
+        900: 'oklch(0.1 0.4 222)',
+        950: 'oklch(0.05 0.4 222)',
+        DEFAULT: 'oklch(0.7 0.4 222)',
+      },
+      secondary: {
+        50: 'oklch(0.95 0.4 185)',
+        100: 'oklch(0.9 0.4 185)',
+        200: 'oklch(0.8 0.4 185)',
+        300: 'oklch(0.7 0.4 185)',
+        400: 'oklch(0.6 0.4 185)',
+        500: 'oklch(0.5 0.4 185)',
+        600: 'oklch(0.4 0.4 185)',
+        700: 'oklch(0.3 0.4 185)',
+        800: 'oklch(0.2 0.4 185)',
+        900: 'oklch(0.1 0.4 185)',
+        950: 'oklch(0.05 0.4 185)',
+        DEFAULT: 'oklch(0.7 0.4 185)',
+      },
+      surface: {
+        50: 'oklch(0.95 0 0)',
+        100: 'oklch(0.9 0 0)',
+        200: 'oklch(0.8 0 0)',
+        300: 'oklch(0.7 0 0)',
+        400: 'oklch(0.6 0 0)',
+        500: 'oklch(0.5 0 0)',
+        600: 'oklch(0.4 0 0)',
+        700: 'oklch(0.3 0 0)',
+        800: 'oklch(0.2 0 0)',
+        900: 'oklch(0.1 0 0)',
+        950: 'oklch(0.05 0 0)',
+        DEFAULT: 'oklch(0.15 0 0)',
+      },
     },
     fontFamily: {
       sans: ['Noto Sans', 'Arial', defaultSans].join(','),
