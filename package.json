@@ -2,7 +2,7 @@
   "name": "daniel-waltz",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@8.15.6",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,7 +22,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
     "@rushstack/eslint-patch": "^1.7.2",
-    "@types/node": "~20.10.8",
+    "@types/node": "~20.12.4",
     "@unocss/eslint-config": "^0.58.5",
     "@unocss/nuxt": "^0.58.5",
     "@unocss/reset": "^0.58.6",
