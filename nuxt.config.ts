@@ -13,9 +13,6 @@ export default defineNuxtConfig({
     asyncContext: true,
     headNext: true,
   },
-  typescript: {
-    shim: false,
-  },
   css: ['@/assets/css/main.css'],
   postcss: {
     plugins: {
