@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
-  modules: ['@unocss/nuxt', 'nuxt-build-cache', 'nuxt-security'],
+  modules: [
+    '@nuxt/eslint',
+    '@unocss/nuxt',
+    'nuxt-build-cache',
+    'nuxt-security',
+  ],
   features: {
     noScripts: true,
   },
