@@ -8,7 +8,7 @@ import {
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 import { theme } from 'unocss/preset-mini';
 
-const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily!;
+const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily;
 
 // https://unocss.dev/config/
 export default defineConfig({
@@ -33,9 +33,6 @@ export default defineConfig({
     }),
   ],
   transformers: [transformerDirectives()],
-  content: {
-    filesystem: ['nuxt.config.*'],
-  },
   theme: {
     colors: {
       primary: {
