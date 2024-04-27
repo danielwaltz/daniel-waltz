@@ -1,45 +1,5 @@
-<script setup lang="ts">
-const meta = {
-  title: 'Daniel Waltz - Web Developer',
-  url: 'https://danielwaltz.me',
-  icon: '/favicon.svg',
-  description:
-    'Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
-} as const;
-
-useHead({
-  title: meta.title,
-  link: [
-    { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-    { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
-  ],
-  meta: [
-    { name: 'description', content: meta.description },
-    { name: 'theme-color', content: '#0e0e0e' },
-  ],
-  htmlAttrs: { lang: 'en' },
-  bodyAttrs: {
-    class:
-      '[color-scheme:dark] min-h-viewport bg-surface text-surface-100 font-sans accent-primary',
-  },
-});
-
-useSeoMeta({
-  ogTitle: meta.title,
-  ogDescription: meta.description,
-  ogImage: meta.icon,
-  ogUrl: meta.url,
-  twitterTitle: meta.title,
-  twitterDescription: meta.description,
-  twitterImage: meta.icon,
-  twitterCard: 'summary',
-});
-</script>
-
 <template>
-  <div class="grid min-h-viewport place-items-center">
-    <AppBackdrop />
-
+  <AppLayout class="grid place-items-center">
     <main
       class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl sm:p-10"
     >
@@ -57,7 +17,7 @@ useSeoMeta({
         >
       </h1>
 
-      <p class="text-lg 2xl:text-3xl sm:text-2xl leading-relaxed!">
+      <p class="text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed">
         I'm a
         <strong class="uppercase">web developer</strong>
         with a passion for delivering the most <strong>usable</strong>,
@@ -66,7 +26,7 @@ useSeoMeta({
         <span class="text-primary-gradient font-700">everyone!</span>
       </p>
 
-      <nav aria-label="Accounts" class="self-start">
+      <nav aria-label="Accounts">
         <ul
           class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
         >
@@ -133,12 +93,5 @@ useSeoMeta({
         yourself!
       </div>
     </main>
-  </div>
-
-  <AppIconLink
-    href="https://github.com/danielwaltz/daniel-waltz"
-    title="View Source Code"
-    icon="i-mdi-code-tags"
-    class="absolute right-3 top-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"
-  />
+  </AppLayout>
 </template>
