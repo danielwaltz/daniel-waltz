@@ -21,7 +21,7 @@
     "@iconify/utils": "^2.1.23",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.10",
-    "@types/node": "~20.12.7",
+    "@types/node": "~20.12.8",
     "@unocss/eslint-config": "^0.59.4",
     "@unocss/nuxt": "^0.59.4",
     "@unocss/reset": "^0.59.4",
@@ -31,12 +31,12 @@
     "npm-run-all2": "^6.1.2",
     "nuxt": "^3.11.2",
     "nuxt-build-cache": "^0.1.1",
-    "nuxt-security": "^1.4.2",
+    "nuxt-security": "^1.4.3",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "unocss": "^0.59.4",
-    "vue": "^3.4.25",
+    "vue": "^3.4.26",
     "vue-router": "^4.3.2",
-    "vue-tsc": "^2.0.14"
+    "vue-tsc": "^2.0.16"
   }
 }
