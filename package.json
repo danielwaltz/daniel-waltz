@@ -12,7 +12,7 @@
     "lint": "eslint . --max-warnings 0",
     "type-check": "nuxt typecheck",
     "test": "run-p lint type-check",
-    "generate-ico": "npx -y icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32"
+    "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32"
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^3.0.14",
