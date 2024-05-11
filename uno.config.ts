@@ -1,3 +1,4 @@
+import { resolve } from 'pathe';
 import {
   defineConfig,
   presetIcons,
@@ -16,7 +17,7 @@ export default defineConfig({
     presetUno(),
     presetIcons({
       collections: {
-        app: FileSystemIconLoader('assets/icons'),
+        app: FileSystemIconLoader(resolve(__dirname, './app/assets/icons')),
       },
       extraProperties: {
         display: 'inline-block',

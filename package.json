@@ -32,6 +32,7 @@
     "nuxt": "npm:nuxt-nightly@3.12.0-28588152.416d76ab",
     "nuxt-build-cache": "^0.1.1",
     "nuxt-security": "^2.0.0-beta.0",
+    "pathe": "^1.1.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "unocss": "^0.60.0",
