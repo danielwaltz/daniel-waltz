@@ -9,9 +9,11 @@ export default defineNuxtConfig({
   features: {
     noScripts: true,
   },
+  future: {
+    compatibilityVersion: 4,
+  },
   experimental: {
     asyncContext: true,
-    headNext: true,
   },
   css: ['@/assets/css/main.css'],
   postcss: {
