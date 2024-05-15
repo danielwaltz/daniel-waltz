@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     'nuxt-build-cache',
     'nuxt-security',
   ],
+  routeRules: {
+    '/': {
+      prerender: true,
+    },
+  },
   features: {
     noScripts: true,
   },
