@@ -6,11 +6,6 @@ export default defineNuxtConfig({
     'nuxt-build-cache',
     'nuxt-security',
   ],
-  routeRules: {
-    '/': {
-      prerender: true,
-    },
-  },
   features: {
     noScripts: true,
   },
@@ -19,6 +14,11 @@ export default defineNuxtConfig({
   },
   experimental: {
     asyncContext: true,
+  },
+  routeRules: {
+    '/': {
+      prerender: true,
+    },
   },
   css: ['@/assets/css/main.css'],
   postcss: {
