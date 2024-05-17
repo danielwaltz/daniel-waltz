@@ -3,13 +3,9 @@ import {
   defineConfig,
   presetIcons,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
 } from 'unocss';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
-import { theme } from 'unocss/preset-mini';
-
-const { sans: defaultSans, serif: defaultSerif } = theme.fontFamily;
 
 // https://unocss.dev/config/
 export default defineConfig({
@@ -22,14 +18,6 @@ export default defineConfig({
       extraProperties: {
         display: 'inline-block',
         'vertical-align': 'middle',
-      },
-    }),
-    presetWebFonts({
-      extendTheme: false,
-      fonts: {
-        sans: 'Noto Sans:300,700',
-        display: 'Big Shoulders Display:700',
-        script: 'Shadows Into Light',
       },
     }),
   ],
@@ -80,9 +68,9 @@ export default defineConfig({
       },
     },
     fontFamily: {
-      sans: ['Noto Sans', 'Arial', defaultSans].join(','),
-      display: ['Big Shoulders Display', 'Impact', defaultSans].join(','),
-      script: ['Shadows Into Light', 'Bradley Hand', defaultSerif].join(','),
+      sans: 'Noto Sans, sans-serif',
+      display: 'Big Shoulders Display, sans-serif',
+      script: 'Shadows Into Light, serif',
     },
   },
   rules: [

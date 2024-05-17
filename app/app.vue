@@ -12,7 +12,7 @@
           >Hi, I'm</span
         >
         <span
-          class="text-primary-gradient text-6xl font-display uppercase 2xl:text-9xl sm:text-8xl"
+          class="text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
           >Daniel Waltz</span
         >
       </h1>

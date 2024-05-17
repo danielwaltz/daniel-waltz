@@ -21,6 +21,7 @@
     "@iconify/utils": "^2.1.23",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.7.0",
     "@types/node": "~20.12.12",
     "@unocss/eslint-config": "^0.60.2",
     "@unocss/nuxt": "^0.60.2",

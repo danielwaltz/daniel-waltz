@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
+    '@nuxt/fonts',
     '@unocss/nuxt',
     'nuxt-build-cache',
     'nuxt-security',
