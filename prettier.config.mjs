@@ -1,4 +1,5 @@
-/** @type {import("prettier").Config} */
+// @ts-check
+/** @type {import('prettier').Config} */
 export default {
   singleQuote: true,
   trailingComma: 'all',
