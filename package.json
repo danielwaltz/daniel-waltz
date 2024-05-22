@@ -2,7 +2,7 @@
   "name": "daniel-waltz",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@9.1.1",
+  "packageManager": "pnpm@9.1.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -23,9 +23,9 @@
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/fonts": "^0.7.0",
     "@types/node": "~20.12.12",
-    "@unocss/eslint-config": "^0.60.2",
-    "@unocss/nuxt": "^0.60.2",
-    "@unocss/reset": "^0.60.2",
+    "@unocss/eslint-config": "^0.60.3",
+    "@unocss/nuxt": "^0.60.3",
+    "@unocss/reset": "^0.60.3",
     "eslint": "^9.3.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
@@ -36,13 +36,9 @@
     "pathe": "^1.1.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
-    "unocss": "^0.60.2",
+    "unocss": "^0.60.3",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "vue-tsc": "^2.0.19"
-  },
-  "resolutions": {
-    "nitropack": "npm:nitropack-nightly@2.10.0-28585081.346a4950",
-    "nuxt": "npm:nuxt-nightly@3.12.0-28598578.dad89c2b"
   }
 }
