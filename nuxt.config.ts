@@ -1,12 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@unocss/nuxt',
-    'nuxt-build-cache',
-    'nuxt-security',
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/fonts', '@unocss/nuxt'],
   features: {
     noScripts: true,
   },
@@ -25,13 +19,6 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       '@csstools/postcss-oklab-function': { preserve: true },
-    },
-  },
-  security: {
-    hidePoweredBy: false,
-    headers: {
-      crossOriginEmbedderPolicy:
-        process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
     },
   },
 });
