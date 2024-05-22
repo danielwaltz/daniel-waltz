@@ -1,10 +1,6 @@
 <template>
-  <AppLayout class="grid place-items-center">
-    <main
-      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl sm:p-10"
-    >
-      <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
-
+  <AppLayout>
+    <article class="flex flex-col gap-6">
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
@@ -25,73 +21,73 @@
         <em>imaginable</em>. Together we can make the web a better place for
         <span class="text-primary-gradient font-700">everyone!</span>
       </p>
+    </article>
 
-      <nav aria-label="Accounts">
-        <ul
-          class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
-        >
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://x.com/danielbwaltz"
-              title="X / Twitter"
-              icon="i-fa6-brands-x-twitter"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://mastodon.world/@danielwaltz"
-              title="Mastodon"
-              icon="i-fa6-brands-mastodon"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://www.linkedin.com/in/danielbwaltz"
-              title="LinkedIn"
-              icon="i-fa6-brands-linkedin"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://github.com/danielwaltz"
-              title="GitHub"
-              icon="i-fa6-brands-github"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://gitlab.com/danielwaltz"
-              title="GitLab"
-              icon="i-fa6-brands-gitlab"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-
-          <li class="inline-flex">
-            <AppIconLink
-              href="https://bitbucket.org/danielwaltz"
-              title="BitBucket"
-              icon="i-fa6-brands-bitbucket"
-              class="focus:text-primary hover:text-primary"
-            />
-          </li>
-        </ul>
-      </nav>
-
-      <div
-        class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-surface-100/50 2xl:text-lg sm:text-base"
+    <nav aria-label="Accounts">
+      <ul
+        class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
       >
-        Oh, and while I have you, here's a friendly reminder to be kind to
-        yourself!
-      </div>
-    </main>
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://x.com/danielbwaltz"
+            title="X / Twitter"
+            icon="i-fa6-brands-x-twitter"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://mastodon.world/@danielwaltz"
+            title="Mastodon"
+            icon="i-fa6-brands-mastodon"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://www.linkedin.com/in/danielbwaltz"
+            title="LinkedIn"
+            icon="i-fa6-brands-linkedin"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://github.com/danielwaltz"
+            title="GitHub"
+            icon="i-fa6-brands-github"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://gitlab.com/danielwaltz"
+            title="GitLab"
+            icon="i-fa6-brands-gitlab"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            href="https://bitbucket.org/danielwaltz"
+            title="BitBucket"
+            icon="i-fa6-brands-bitbucket"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-surface-100/50 2xl:text-lg sm:text-base"
+    >
+      Oh, and while I have you, here's a friendly reminder to be kind to
+      yourself!
+    </div>
   </AppLayout>
 </template>

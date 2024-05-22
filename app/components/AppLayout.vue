@@ -37,10 +37,16 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="min-h-viewport">
+  <div class="grid min-h-viewport place-items-center">
     <AppBackdrop />
 
-    <slot />
+    <main
+      class="max-w-2xl w-full flex flex-col items-start gap-8 p-8 text-balance 2xl:max-w-4xl sm:max-w-3xl sm:p-10"
+    >
+      <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
+
+      <slot />
+    </main>
 
     <AppIconLink
       href="https://github.com/danielwaltz/daniel-waltz"
