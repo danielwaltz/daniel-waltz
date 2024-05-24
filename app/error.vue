@@ -10,8 +10,8 @@ useHead({ title });
 </script>
 
 <template>
-  <AppLayout>
-    <article class="flex flex-col gap-3">
+  <NuxtLayout>
+    <article class="flex flex-col gap-3 text-balance">
       <h1
         class="text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
       >
@@ -32,5 +32,5 @@ useHead({ title });
     >
       Try Again
     </NuxtLink>
-  </AppLayout>
+  </NuxtLayout>
 </template>
