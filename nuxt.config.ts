@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     '/articles': { swr: true },
     '/articles/**': { swr: true },
   },
-  css: ['@/assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
       '@csstools/postcss-oklab-function': { preserve: true },
