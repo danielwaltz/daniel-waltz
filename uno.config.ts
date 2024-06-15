@@ -2,6 +2,7 @@ import { resolve } from 'pathe';
 import {
   defineConfig,
   presetIcons,
+  presetTypography,
   presetUno,
   transformerDirectives,
 } from 'unocss';
@@ -11,6 +12,7 @@ import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 export default defineConfig({
   presets: [
     presetUno(),
+    presetTypography(),
     presetIcons({
       collections: {
         app: FileSystemIconLoader(resolve(__dirname, './app/assets/icons')),
@@ -84,17 +86,21 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      'min-h-viewport': 'min-h-full min-h-screen min-h-100dvh',
-      'bg-primary-gradient':
-        'bg-primary bg-gradient-to-r from-primary to-secondary',
-      'text-primary-gradient':
-        'bg-primary-gradient bg-clip-text text-transparent',
-      interactive:
-        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed',
       'animate-fade':
         'animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite',
+      'bg-primary-gradient':
+        'bg-primary bg-gradient-to-r from-primary to-secondary',
+      h1: 'text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl',
+      h2: 'text-4xl font-bold font-display uppercase 2xl:text-6xl sm:text-5xl',
+      h3: 'text-3xl font-bold font-display uppercase 2xl:text-5xl sm:text-4xl',
+      p: 'text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed',
+      interactive:
+        'cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed',
+      'min-h-viewport': 'min-h-full min-h-screen min-h-100dvh',
       'shadow-box':
         'absolute inset-0 animate-fade animate-backwards shadow-2xl',
+      'text-primary-gradient':
+        'bg-primary-gradient bg-clip-text text-transparent',
     },
   ],
 });

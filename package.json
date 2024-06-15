@@ -19,6 +19,7 @@
     "@iconify-json/fa6-brands": "^1.1.19",
     "@iconify-json/mdi": "^1.1.66",
     "@iconify/utils": "^2.1.24",
+    "@nuxt/content": "^2.12.1",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/fonts": "^0.7.0",

@@ -11,9 +11,9 @@ useHead({ title });
 
 <template>
   <NuxtLayout>
-    <article class="flex flex-col gap-3 text-balance">
+    <article class="flex flex-col gap-3 text-pretty">
       <h1
-        class="text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
+        class="max-w-fit text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
       >
         {{ title }}
       </h1>

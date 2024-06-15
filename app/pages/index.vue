@@ -1,16 +1,13 @@
 <template>
   <div class="flex flex-col gap-8">
-    <article class="flex flex-col gap-6 text-balance">
+    <article class="flex flex-col gap-6 text-pretty">
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
           class="mbe--2 mis-1 rotate--3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
-        <span
-          class="text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
-          >Daniel Waltz</span
-        >
+        <span class="max-w-fit h1">Daniel Waltz</span>
       </h1>
 
       <p class="text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed">
