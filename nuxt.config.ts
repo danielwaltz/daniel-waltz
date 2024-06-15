@@ -13,9 +13,9 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   routeRules: {
-    '/': {
-      prerender: true,
-    },
+    '/': { prerender: true },
+    '/articles': { swr: true },
+    '/articles/**': { swr: true },
   },
   css: ['@/assets/css/main.css'],
   postcss: {
