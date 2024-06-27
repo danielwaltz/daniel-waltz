@@ -1,4 +1,4 @@
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+import type { QueryBuilderParams } from '@nuxt/content';
 
 export const allPublishedArticlesQuery = {
   path: '/articles',
