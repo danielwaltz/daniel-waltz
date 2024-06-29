@@ -1,9 +1,14 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.codeActionsOnSave.mode": "problems",
   "eslint.rules.customizations": [
     {
       "rule": "prettier/prettier",
       "severity": "warn"
     }
   ],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
