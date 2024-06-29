@@ -1,3 +1,7 @@
+<script setup lang="ts">
+useHead({ title: 'Articles' });
+</script>
+
 <template>
   <div class="flex flex-col gap-8">
     <h1 class="max-w-fit h1">Articles</h1>
