@@ -16,7 +16,7 @@
         with a passion for delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
         <em>imaginable</em>. Together we can make the web a better place for
-        <span class="text-primary-gradient font-700">everyone!</span>
+        <span class="text-primary-gradient font-bold">everyone!</span>
       </p>
     </article>
 
