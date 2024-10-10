@@ -13,9 +13,10 @@
       <p class="text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed">
         I'm a
         <strong class="uppercase">web developer</strong>
-        with a passion for delivering the most <strong>usable</strong>,
+        with <strong>15+ years</strong> of experience and a deep passion for
+        delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
-        <em>imaginable</em>. Together we can make the web a better place for
+        imaginable. Together we can make the web a better place for
         <span class="text-primary-gradient font-bold">everyone!</span>
       </p>
     </article>
