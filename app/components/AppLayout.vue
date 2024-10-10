@@ -20,7 +20,7 @@ useHead({
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
     class:
-      '[color-scheme:dark] min-h-viewport bg-surface text-surface-100 font-sans accent-primary',
+      '[color-scheme:dark] min-h-viewport bg-surface text-surface-100 font-sans antialiased accent-primary',
   },
 });
 
