@@ -8,7 +8,7 @@
       <div class="flex grow items-center gap-6">
         <NuxtLink
           href="/"
-          class="inline-flex interactive rounded-xl transition-transform active:scale-95"
+          class="inline-flex interactive rounded-xl transition-all active:scale-95"
         >
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
           <span class="sr-only">Home</span>
@@ -19,8 +19,8 @@
             <li>
               <NuxtLink
                 :href="{ name: 'index' }"
-                class="interactive"
-                active-class="text-primary-gradient"
+                class="interactive rounded"
+                active-class="text-primary-gradient outline-primary"
               >
                 Home
               </NuxtLink>
@@ -28,8 +28,8 @@
             <li>
               <NuxtLink
                 :href="{ name: 'articles' }"
-                class="interactive"
-                active-class="text-primary-gradient"
+                class="interactive rounded"
+                active-class="text-primary-gradient outline-primary"
               >
                 Articles
               </NuxtLink>
