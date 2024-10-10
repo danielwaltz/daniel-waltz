@@ -9,3 +9,8 @@
   );
   color: theme('colors.surface.DEFAULT');
 }
+
+a,
+button {
+  @apply interactive rounded;
+}

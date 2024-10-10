@@ -16,10 +16,7 @@
       </template>
     </ContentDoc>
 
-    <NuxtLink
-      href="/articles"
-      class="max-w-fit interactive text-primary-gradient"
-    >
+    <NuxtLink href="/articles" class="max-w-fit text-primary-gradient">
       &larr; Back to articles
     </NuxtLink>
   </div>

@@ -100,7 +100,7 @@ export default defineConfig({
       'shadow-box':
         'absolute inset-0 animate-fade animate-backwards shadow-2xl',
       'text-primary-gradient':
-        'bg-primary-gradient bg-clip-text text-transparent',
+        'bg-primary-gradient bg-clip-text text-transparent outline-primary',
     },
   ],
 });

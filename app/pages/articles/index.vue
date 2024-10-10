@@ -16,8 +16,8 @@ useHead({ title: 'Articles' });
               </time>
             </p>
 
-            <h2 class="m-0 max-w-fit text-primary-gradient h2">
-              <NuxtLink :href="article._path" class="interactive">
+            <h2 class="m-0 max-w-fit h2">
+              <NuxtLink :href="article._path" class="text-primary-gradient">
                 {{ article.title }}
               </NuxtLink>
             </h2>
@@ -26,7 +26,7 @@ useHead({ title: 'Articles' });
 
             <NuxtLink
               :href="article._path"
-              class="max-w-fit interactive text-primary-gradient"
+              class="max-w-fit text-primary-gradient"
             >
               Read more &rarr;
             </NuxtLink>

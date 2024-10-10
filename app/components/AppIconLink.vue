@@ -7,11 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink
-    :href="href"
-    rel="noopener noreferrer"
-    class="inline-flex interactive rounded"
-  >
+  <NuxtLink :href="href" rel="noopener noreferrer" class="inline-flex">
     <i :class="icon" />
     <span class="sr-only">{{ title }}</span>
   </NuxtLink>
