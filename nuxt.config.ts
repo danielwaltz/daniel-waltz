@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
-  compatibilityDate: '2024-09-06',
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -8,28 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@unocss/nuxt',
   ],
-  features: {
-    noScripts: true,
-  },
-  future: {
-    compatibilityVersion: 4,
-  },
-  experimental: {
-    asyncContext: true,
-    typedPages: true,
-    viewTransition: true,
-  },
-  routeRules: {
-    '/': { prerender: true },
-    '/articles': { swr: true },
-    '/articles/**': { swr: true },
-  },
   css: ['~/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      '@csstools/postcss-oklab-function': { preserve: true },
-    },
-  },
   content: {
     sources: {
       content: {
@@ -39,6 +17,35 @@ export default defineNuxtConfig({
     },
     highlight: {
       theme: 'nord',
+    },
+  },
+  routeRules: {
+    '/': { prerender: true },
+    '/articles': { swr: true },
+    '/articles/**': { swr: true },
+  },
+  future: {
+    compatibilityVersion: 4,
+  },
+  features: {
+    noScripts: true,
+  },
+  experimental: {
+    asyncContext: true,
+    typedPages: true,
+    viewTransition: true,
+  },
+  compatibilityDate: '2024-09-06',
+  postcss: {
+    plugins: {
+      '@csstools/postcss-oklab-function': { preserve: true },
+    },
+  },
+  eslint: {
+    config: {
+      nuxt: {
+        sortConfigKeys: true,
+      },
     },
   },
 });
