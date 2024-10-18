@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const meta = {
   title: 'Daniel Waltz - Web Developer',
-  url: 'https://danielwaltz.me',
-  icon: '/favicon.svg',
   description:
     'Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!',
+  url: 'https://danielwaltz.me',
+  icon: '/favicon.svg',
 } as const;
 
 useHead({
@@ -12,10 +12,6 @@ useHead({
   link: [
     { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
     { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
-  ],
-  meta: [
-    { name: 'description', content: meta.description },
-    { name: 'theme-color', content: '#0e0e0e' },
   ],
   htmlAttrs: { lang: 'en' },
   bodyAttrs: {
@@ -25,6 +21,8 @@ useHead({
 });
 
 useSeoMeta({
+  themeColor: '#0e0e0e',
+  description: meta.description,
   ogTitle: meta.title,
   ogDescription: meta.description,
   ogImage: meta.icon,
