@@ -12,7 +12,6 @@ import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 export default defineConfig({
   presets: [
     presetUno(),
-    presetTypography(),
     presetIcons({
       collections: {
         app: FileSystemIconLoader(resolve(__dirname, './app/assets/icons')),
@@ -22,6 +21,7 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
+    presetTypography(),
   ],
   transformers: [transformerDirectives()],
   theme: {
@@ -90,6 +90,8 @@ export default defineConfig({
         'animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite',
       'bg-primary-gradient':
         'bg-primary bg-gradient-to-r from-primary to-secondary',
+      'bg-secondary-gradient':
+        'bg-secondary bg-gradient-to-r from-secondary to-primary',
       h1: 'text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl',
       h2: 'text-4xl font-bold font-display uppercase 2xl:text-6xl sm:text-5xl',
       h3: 'text-3xl font-bold font-display uppercase 2xl:text-5xl sm:text-4xl',
@@ -101,6 +103,8 @@ export default defineConfig({
         'absolute inset-0 animate-fade animate-backwards shadow-2xl',
       'text-primary-gradient':
         'bg-primary-gradient bg-clip-text text-transparent outline-primary',
+      'text-secondary-gradient':
+        'bg-secondary-gradient bg-clip-text text-transparent outline-secondary',
     },
   ],
 });

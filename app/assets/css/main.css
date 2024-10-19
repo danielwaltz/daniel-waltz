@@ -1,4 +1,4 @@
-@import '@unocss/reset/tailwind.css';
+@import '@unocss/reset/tailwind-compat.css';
 
 ::selection {
   background-color: theme('colors.primary.DEFAULT');
