@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
-    '/articles': { swr: true },
-    '/articles/**': { swr: true },
+    '/articles': { swr: 3600 },
+    '/articles/**': { swr: 3600 },
   },
   future: {
     compatibilityVersion: 4,
