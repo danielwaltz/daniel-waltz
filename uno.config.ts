@@ -71,8 +71,9 @@ export default defineConfig({
     },
     fontFamily: {
       sans: 'Noto Sans, sans-serif',
+      serif: 'Noto Serif, serif',
       display: 'Big Shoulders Display, sans-serif',
-      script: 'Shadows Into Light, serif',
+      script: 'Caveat, serif',
     },
   },
   rules: [
