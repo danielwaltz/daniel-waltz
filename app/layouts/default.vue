@@ -16,12 +16,12 @@
 
         <nav aria-label="Main" class="mis-auto">
           <ul
-            class="flex text-base font-bold tracking-wide uppercase sm:text-lg"
+            class="flex gap-2 text-base font-bold tracking-wide uppercase sm:text-lg"
           >
             <li>
               <NuxtLink
                 :href="{ name: 'index' }"
-                class="px-3 py-2"
+                class="px-2 py-1"
                 active-class="text-primary-gradient"
               >
                 Home
@@ -30,7 +30,7 @@
             <li>
               <NuxtLink
                 :href="{ name: 'articles' }"
-                class="px-3 py-2"
+                class="px-2 py-1"
                 active-class="text-primary-gradient"
               >
                 Articles
