@@ -28,7 +28,7 @@ useHead({ title });
 
     <NuxtLink
       href="/"
-      class="rounded-lg bg-primary px-4 py-2 text-xl text-surface font-semibold active:bg-primary-500 focus:bg-primary-400 hover:bg-primary-400"
+      class="interactive self-start rounded-lg bg-primary px-4 py-2 text-xl text-surface font-semibold outline-primary active:bg-primary-500 focus:bg-primary-400 hover:bg-primary-400"
     >
       Try Again
     </NuxtLink>
