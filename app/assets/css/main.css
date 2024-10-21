@@ -1,13 +1,13 @@
-@import '@unocss/reset/tailwind-compat.css';
+@import "@unocss/reset/tailwind-compat.css";
 
 ::selection {
-  background-color: theme('colors.primary.DEFAULT');
+  background-color: theme("colors.primary.DEFAULT");
   background-color: color-mix(
     in oklab,
-    theme('colors.primary.DEFAULT'),
-    theme('colors.secondary.DEFAULT')
+    theme("colors.primary.DEFAULT"),
+    theme("colors.secondary.DEFAULT")
   );
-  color: theme('colors.surface.DEFAULT');
+  color: theme("colors.surface.DEFAULT");
 }
 
 a,
