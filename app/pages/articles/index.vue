@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Articles' });
+useHead({ title: "Articles" });
 </script>
 
 <template>

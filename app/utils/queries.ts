@@ -1,7 +1,7 @@
-import type { QueryBuilderParams } from '@nuxt/content';
+import type { QueryBuilderParams } from "@nuxt/content";
 
 export const allPublishedArticlesQuery = {
-  path: '/articles',
+  path: "/articles",
   sort: [{ date: -1 }],
-  where: [{ status: 'published' }],
+  where: [{ status: "published" }],
 } satisfies QueryBuilderParams;

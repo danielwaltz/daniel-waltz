@@ -2,14 +2,14 @@
 defineProps({
   href: {
     type: String,
-    default: '',
+    default: "",
   },
   target: {
     type: String as PropType<
-      | '_blank'
-      | '_parent'
-      | '_self'
-      | '_top'
+      | "_blank"
+      | "_parent"
+      | "_self"
+      | "_top"
       | (string & object)
       | null
       | undefined
