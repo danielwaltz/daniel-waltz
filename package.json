@@ -7,12 +7,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32",
     "lint": "eslint . --max-warnings 0",
-    "type-check": "nuxt typecheck",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
     "test": "run-p lint type-check",
-    "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32"
+    "type-check": "nuxt typecheck"
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.5",
