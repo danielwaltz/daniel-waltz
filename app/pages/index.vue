@@ -48,6 +48,16 @@
         <li class="inline-flex">
           <AppIconLink
             rel="me"
+            href="https://bsky.app/profile/danielwaltz.me"
+            title="Bluesky"
+            icon="i-fa6-brands-bluesky"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            rel="me"
             href="https://www.linkedin.com/in/danielbwaltz"
             title="LinkedIn"
             icon="i-fa6-brands-linkedin"
