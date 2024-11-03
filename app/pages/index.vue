@@ -58,6 +58,16 @@
         <li class="inline-flex">
           <AppIconLink
             rel="me"
+            href="https://www.threads.net/@danielbwaltz"
+            title="Threads"
+            icon="i-fa6-brands-threads"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            rel="me"
             href="https://www.linkedin.com/in/danielbwaltz"
             title="LinkedIn"
             icon="i-fa6-brands-linkedin"
