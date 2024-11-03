@@ -27,6 +27,7 @@
       >
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://x.com/danielbwaltz"
             title="X / Twitter"
             icon="i-fa6-brands-x-twitter"
@@ -36,6 +37,7 @@
 
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://mastodon.world/@danielwaltz"
             title="Mastodon"
             icon="i-fa6-brands-mastodon"
@@ -45,6 +47,7 @@
 
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://www.linkedin.com/in/danielbwaltz"
             title="LinkedIn"
             icon="i-fa6-brands-linkedin"
@@ -54,6 +57,7 @@
 
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://github.com/danielwaltz"
             title="GitHub"
             icon="i-fa6-brands-github"
@@ -63,6 +67,7 @@
 
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://gitlab.com/danielwaltz"
             title="GitLab"
             icon="i-fa6-brands-gitlab"
@@ -72,6 +77,7 @@
 
         <li class="inline-flex">
           <AppIconLink
+            rel="me"
             href="https://bitbucket.org/danielwaltz"
             title="BitBucket"
             icon="i-fa6-brands-bitbucket"
