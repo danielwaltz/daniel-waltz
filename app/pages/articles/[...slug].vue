@@ -1,13 +1,15 @@
 <template>
-  <div class="text-lg prose sm:text-xl">
+  <div>
     <ContentDoc>
       <template #default="{ doc }">
         <article>
-          <p class="m-0 text-surface-400">
+          <p class="m-0 text-surface-400 p !leading-none">
             <time :datetime="doc.date">{{ formatDate(doc.date) }}</time>
           </p>
 
-          <ContentRenderer :value="doc" />
+          <div class="app-prose">
+            <ContentRenderer :value="doc" />
+          </div>
         </article>
       </template>
 
@@ -16,7 +18,7 @@
       </template>
     </ContentDoc>
 
-    <NuxtLink href="/articles" class="max-w-fit text-primary-gradient">
+    <NuxtLink href="/articles" class="max-w-fit text-primary-gradient p">
       &larr; Back to articles
     </NuxtLink>
   </div>

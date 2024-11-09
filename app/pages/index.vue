@@ -10,7 +10,7 @@
         <span class="max-w-fit h1">Daniel Waltz</span>
       </h1>
 
-      <p class="text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed">
+      <p class="p">
         I'm a
         <strong class="uppercase">web developer</strong>
         with <strong>15+ years</strong> of experience and a deep passion for

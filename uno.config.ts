@@ -96,7 +96,8 @@ export default defineConfig({
       h1: "text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl",
       h2: "text-4xl font-bold font-display uppercase 2xl:text-6xl sm:text-5xl",
       h3: "text-3xl font-bold font-display uppercase 2xl:text-5xl sm:text-4xl",
-      p: "text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed",
+      p: "text-lg 2xl:text-3xl md:text-2xl sm:text-xl !leading-relaxed",
+      "app-prose": "font-serif prose p",
       interactive:
         "cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
