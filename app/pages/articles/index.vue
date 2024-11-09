@@ -18,7 +18,7 @@ useHead({ title: "Articles" });
               </p>
 
               <div class="app-prose">
-                <h2 class="m-0 max-w-fit text-h2">
+                <h2 class="m-0 max-w-fit text-h3">
                   <NuxtLink :href="article._path" class="text-primary-gradient">
                     {{ article.title }}
                   </NuxtLink>
