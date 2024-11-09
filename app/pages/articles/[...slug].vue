@@ -23,9 +23,9 @@
 
     <NuxtLink
       href="/articles"
-      class="max-w-fit flex items-center gap-1 text-primary-gradient text-p"
+      class="max-w-fit flex items-center text-primary-gradient font-semibold tracking-wide uppercase text-p"
     >
-      <i class="i-mdi-chevron-left text-1.25em text-primary" /> Back to articles
+      <i class="i-mdi-chevron-left text-1.5em text-primary" /> Back to articles
     </NuxtLink>
   </div>
 </template>

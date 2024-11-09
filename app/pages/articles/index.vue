@@ -30,10 +30,10 @@ useHead({ title: "Articles" });
 
             <NuxtLink
               :href="article._path"
-              class="max-w-fit flex items-center gap-1 text-primary-gradient text-p"
+              class="max-w-fit flex items-center text-primary-gradient font-semibold tracking-wide uppercase text-p"
             >
               Read more
-              <i class="i-mdi-chevron-right text-1.25em text-secondary" />
+              <i class="i-mdi-chevron-right text-1.5em text-secondary" />
             </NuxtLink>
           </div>
         </template>
