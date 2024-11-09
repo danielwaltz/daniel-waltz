@@ -7,10 +7,10 @@
           class="mbe--2 mis-1 rotate-3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
-        <span class="max-w-fit h1">Daniel Waltz</span>
+        <span class="max-w-fit text-h1">Daniel Waltz</span>
       </h1>
 
-      <p class="p">
+      <p class="text-p">
         I'm a
         <strong class="uppercase">web developer</strong>
         with <strong>15+ years</strong> of experience and a deep passion for
