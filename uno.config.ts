@@ -100,11 +100,11 @@ export default defineConfig({
       "shadow-box-animate":
         "animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite",
       "text-h1":
-        "text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl",
+        "text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl",
       "text-h2":
-        "text-4xl font-bold font-display uppercase 2xl:text-6xl sm:text-5xl",
+        "text-5xl font-bold font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl",
       "text-h3":
-        "text-3xl font-bold font-display uppercase 2xl:text-5xl sm:text-4xl",
+        "text-4xl font-bold font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl",
       "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl !leading-relaxed",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",
