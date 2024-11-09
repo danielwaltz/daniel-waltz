@@ -27,9 +27,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  features: {
-    noScripts: true,
-  },
   experimental: {
     asyncContext: true,
     typedPages: true,
