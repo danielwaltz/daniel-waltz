@@ -7,7 +7,7 @@
     >
       <div class="flex grow items-center gap-8">
         <NuxtLink
-          href="/"
+          :to="{ name: 'index' }"
           class="inline-flex rounded-xl transition-all active:scale-95"
         >
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
@@ -20,7 +20,7 @@
           >
             <li>
               <NuxtLink
-                :href="{ name: 'index' }"
+                :to="{ name: 'index' }"
                 class="px-2 py-1"
                 active-class="text-primary-gradient"
               >
@@ -29,7 +29,7 @@
             </li>
             <li>
               <NuxtLink
-                :href="{ name: 'articles' }"
+                :to="{ name: 'articles' }"
                 class="px-2 py-1"
                 active-class="text-primary-gradient"
               >
@@ -44,7 +44,7 @@
     </main>
 
     <AppIconLink
-      href="https://github.com/danielwaltz/daniel-waltz"
+      to="https://github.com/danielwaltz/daniel-waltz"
       title="View Source Code"
       icon="i-mdi-code-tags"
       class="absolute right-3 top-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"

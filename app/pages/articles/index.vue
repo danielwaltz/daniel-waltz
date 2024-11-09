@@ -19,7 +19,7 @@ useHead({ title: "Articles" });
 
               <div class="app-prose">
                 <h2 class="m-0 max-w-fit text-h3">
-                  <NuxtLink :href="article._path" class="text-primary-gradient">
+                  <NuxtLink :to="article._path" class="text-primary-gradient">
                     {{ article.title }}
                   </NuxtLink>
                 </h2>
@@ -29,7 +29,7 @@ useHead({ title: "Articles" });
             </article>
 
             <NuxtLink
-              :href="article._path"
+              :to="article._path"
               class="max-w-fit flex items-center text-primary-gradient font-semibold tracking-wide uppercase text-p"
             >
               Read more

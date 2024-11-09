@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import type { NuxtLinkProps } from "#app";
+
 defineProps<{
-  href: string;
+  to: NuxtLinkProps["to"];
   title: string;
   icon: string;
 }>();
 </script>
 
 <template>
-  <NuxtLink :href="href" rel="noopener noreferrer" class="inline-flex">
+  <NuxtLink :to="to" rel="noopener noreferrer" class="inline-flex">
     <i :class="icon" />
     <span class="sr-only">{{ title }}</span>
   </NuxtLink>

@@ -22,7 +22,7 @@
     </ContentDoc>
 
     <NuxtLink
-      href="/articles"
+      :to="{ name: 'articles' }"
       class="max-w-fit flex items-center text-primary-gradient font-semibold tracking-wide uppercase text-p"
     >
       <i class="i-mdi-chevron-left text-1.5em text-primary" /> Back to articles
