@@ -12,16 +12,11 @@ useHead({ title });
 <template>
   <NuxtLayout>
     <article class="flex flex-col gap-3 text-pretty">
-      <h1
-        class="max-w-fit text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl sm:text-8xl"
-      >
+      <h1 class="max-w-fit text-h1">
         {{ title }}
       </h1>
 
-      <p
-        v-if="message"
-        class="text-lg 2xl:text-3xl sm:text-2xl !leading-relaxed"
-      >
+      <p v-if="message" class="text-p">
         {{ message }}
       </p>
     </article>

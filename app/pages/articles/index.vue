@@ -11,7 +11,7 @@ useHead({ title: "Articles" });
         <template #default="{ list }">
           <div v-for="article in list" :key="article._path">
             <article>
-              <p class="m-0 text-surface-400 text-p">
+              <p class="text-surface-400 text-p">
                 <time :datetime="article.date">
                   {{ formatDate(article.date) }}
                 </time>
@@ -38,7 +38,7 @@ useHead({ title: "Articles" });
         </template>
 
         <template #not-found>
-          <p>No articles found</p>
+          <p class="text-p">Sorry, no articles were found.</p>
         </template>
       </ContentList>
     </div>

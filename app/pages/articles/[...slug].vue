@@ -3,7 +3,7 @@
     <ContentDoc>
       <template #default="{ doc }">
         <article>
-          <p class="m-0 text-surface-400 text-p !leading-none">
+          <p class="text-surface-400 text-p">
             <time :datetime="doc.date">{{ formatDate(doc.date) }}</time>
           </p>
 
@@ -14,7 +14,10 @@
       </template>
 
       <template #not-found>
-        <h1>Document Not Found</h1>
+        <div class="app-prose">
+          <h1 class="max-w-fit text-h1">Not Found</h1>
+          <p>Sorry, the article you are looking for does not exist.</p>
+        </div>
       </template>
     </ContentDoc>
 
