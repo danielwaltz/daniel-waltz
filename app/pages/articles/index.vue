@@ -11,7 +11,7 @@ useHead({ title: "Articles" });
         <template #default="{ list }">
           <div v-for="article in list" :key="article._path">
             <article>
-              <p class="text-surface-400 text-p">
+              <p class="mbe--2 mis-1 text-surface-400 font-script text-p">
                 <time :datetime="article.date">
                   {{ formatDate(article.date) }}
                 </time>
