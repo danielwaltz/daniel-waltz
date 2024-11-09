@@ -21,8 +21,11 @@
       </template>
     </ContentDoc>
 
-    <NuxtLink href="/articles" class="max-w-fit text-primary-gradient text-p">
-      &larr; Back to articles
+    <NuxtLink
+      href="/articles"
+      class="max-w-fit flex items-center gap-1 text-primary-gradient text-p"
+    >
+      <i class="i-mdi-chevron-left text-1.25em text-primary" /> Back to articles
     </NuxtLink>
   </div>
 </template>
