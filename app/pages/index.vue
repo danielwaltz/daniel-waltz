@@ -51,7 +51,7 @@
             href="https://bsky.app/profile/danielwaltz.dev"
             title="Bluesky"
             icon="i-fa6-brands-bluesky"
-            class="focus:text-primary hover:text-primary"
+            class="scale-88 focus:text-primary hover:text-primary"
           />
         </li>
 
