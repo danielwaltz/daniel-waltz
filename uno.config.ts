@@ -87,7 +87,7 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      "app-prose": "font-serif prose text-p",
+      "app-prose": "text-pretty font-serif prose text-p",
       "bg-primary-gradient":
         "bg-primary bg-gradient-to-r from-primary to-secondary",
       "bg-secondary-gradient":

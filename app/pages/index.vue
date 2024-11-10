@@ -108,7 +108,7 @@
     </nav>
 
     <div
-      class="animate-flip-in-x animate-delay-10s animate-backwards text-sm text-surface-100/50 2xl:text-lg sm:text-base"
+      class="animate-flip-in-x animate-delay-10s animate-backwards text-pretty text-sm text-surface-100/50 2xl:text-lg sm:text-base"
     >
       Oh, and while I have you, here's a friendly reminder to be kind to
       yourself!
