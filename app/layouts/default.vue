@@ -47,7 +47,7 @@
       to="https://github.com/danielwaltz/daniel-waltz"
       title="View Source Code"
       icon="i-mdi-code-tags"
-      class="absolute inset-bs-3 inset-ie-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"
+      class="absolute inset-bs-3 inset-ie-3 text-xl text-surface-400 focus:text-surface-100 hover:text-surface-100"
     />
   </AppLayout>
 </template>

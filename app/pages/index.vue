@@ -4,7 +4,7 @@
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
-          class="m-be--2 m-is-1 rotate-3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
+          class="m-be--2 m-is-1 rotate-3deg text-2xl text-surface-400 tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
         <span class="max-w-fit text-h1">Daniel Waltz</span>
@@ -108,7 +108,7 @@
     </nav>
 
     <div
-      class="animate-flip-in-x animate-delay-10s animate-backwards text-pretty text-sm text-surface-100/50 2xl:text-lg sm:text-base"
+      class="animate-flip-in-x animate-delay-10s animate-backwards text-pretty text-sm text-surface-400 2xl:text-lg sm:text-base"
     >
       Oh, and while I have you, here's a friendly reminder to be kind to
       yourself!
