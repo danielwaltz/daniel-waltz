@@ -3,7 +3,7 @@
     <ContentDoc>
       <template #default="{ doc }">
         <article>
-          <p class="mbe--6 mis-1 text-surface-400 font-script text-p">
+          <p class="m-be--6 m-is-1 text-surface-400 font-script text-p">
             <time :datetime="doc.date">{{ formatDate(doc.date) }}</time>
           </p>
 

@@ -21,7 +21,12 @@ export default defineConfig({
         "vertical-align": "middle",
       },
     }),
-    presetTypography(),
+    presetTypography({
+      cssExtend: (theme) => ({
+        "ul, ol": { "padding-inline-start": theme.spacing?.["2xl"] },
+        li: { "padding-block": "0.25rem" },
+      }),
+    }),
   ],
   transformers: [transformerDirectives()],
   theme: {

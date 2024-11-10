@@ -4,7 +4,7 @@
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
-          class="mbe--2 mis-1 rotate-3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
+          class="m-be--2 m-is-1 rotate-3deg text-2xl tracking-wide font-script 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
         <span class="max-w-fit text-h1">Daniel Waltz</span>

@@ -14,14 +14,14 @@
           <span class="sr-only">Home</span>
         </NuxtLink>
 
-        <nav aria-label="Main" class="mis-auto">
+        <nav aria-label="Main" class="m-is-auto">
           <ul
             class="flex gap-2 text-base font-bold tracking-wide uppercase sm:text-lg"
           >
             <li>
               <NuxtLink
                 :to="{ name: 'index' }"
-                class="px-2 py-1"
+                class="p-block-1 p-inline-2"
                 active-class="text-primary-gradient"
               >
                 Home
@@ -30,7 +30,7 @@
             <li>
               <NuxtLink
                 :to="{ name: 'articles' }"
-                class="px-2 py-1"
+                class="p-block-1 p-inline-2"
                 active-class="text-primary-gradient"
               >
                 Articles
@@ -47,7 +47,7 @@
       to="https://github.com/danielwaltz/daniel-waltz"
       title="View Source Code"
       icon="i-mdi-code-tags"
-      class="absolute right-3 top-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"
+      class="absolute inset-bs-3 inset-ie-3 text-xl text-surface-100/60 focus:text-surface-100 hover:text-surface-100"
     />
   </AppLayout>
 </template>
