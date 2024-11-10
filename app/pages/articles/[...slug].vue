@@ -14,10 +14,10 @@
       </template>
 
       <template #not-found>
-        <div class="app-prose">
+        <article class="app-prose">
           <h1 class="max-w-fit text-h1">Not Found</h1>
           <p>Sorry, the article you are looking for does not exist.</p>
-        </div>
+        </article>
       </template>
     </ContentDoc>
 
