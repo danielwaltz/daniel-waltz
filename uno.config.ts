@@ -79,6 +79,7 @@ export default defineConfig({
       serif: "Noto Serif, serif",
       display: "Big Shoulders Display, sans-serif",
       script: "Caveat, serif",
+      mono: "JetBrains Mono, monospace",
     },
   },
   rules: [
