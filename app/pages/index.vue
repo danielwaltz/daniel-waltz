@@ -104,6 +104,16 @@
             class="focus:text-primary hover:text-primary"
           />
         </li>
+
+        <li class="inline-flex">
+          <AppIconLink
+            rel="me"
+            to="https://codeberg.org/danielwaltz"
+            title="Codeberg"
+            icon="i-simple-icons-codeberg"
+            class="focus:text-primary hover:text-primary"
+          />
+        </li>
       </ul>
     </nav>
 
