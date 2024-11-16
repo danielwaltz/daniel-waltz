@@ -1,16 +1,16 @@
 <template>
   <div class="relative flex items-center justify-center">
     <div
-      class="rotate-45 scale-60 shadow-box animate-alternate-reverse shadow-primary"
+      class="rotate-45 scale-59 shadow-box animate-alternate-reverse shadow-primary"
     />
     <div
-      class="rotate-45 scale-60 shadow-box animate-alternate shadow-secondary"
+      class="rotate-45 scale-59 shadow-box animate-alternate shadow-secondary"
     />
     <div
-      class="rotate--45 scale-60 shadow-box animate-alternate-reverse shadow-secondary"
+      class="rotate--45 scale-59 shadow-box animate-alternate-reverse shadow-secondary"
     />
     <div
-      class="rotate--45 scale-60 shadow-box animate-alternate shadow-primary"
+      class="rotate--45 scale-59 shadow-box animate-alternate shadow-primary"
     />
     <div class="bg-neutral clip-hexagon">
       <i class="i-app-logo block scale-90" />
