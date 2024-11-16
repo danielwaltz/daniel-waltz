@@ -7,7 +7,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32",
+    "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32,48",
     "lint": "eslint . --max-warnings 0",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
