@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.5",
-    "@iconify-json/fa6-brands": "^1.2.1",
     "@iconify-json/mdi": "^1.2.1",
     "@iconify-json/simple-icons": "^1.2.11",
     "@iconify/utils": "^2.1.33",

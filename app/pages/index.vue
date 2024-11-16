@@ -30,7 +30,7 @@
             rel="me"
             to="https://x.com/danielbwaltz"
             title="X / Twitter"
-            icon="i-fa6-brands-x-twitter"
+            icon="i-simple-icons-x"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -40,7 +40,7 @@
             rel="me"
             to="https://mastodon.world/@danielwaltz"
             title="Mastodon"
-            icon="i-fa6-brands-mastodon"
+            icon="i-simple-icons-mastodon"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -50,8 +50,8 @@
             rel="me"
             to="https://bsky.app/profile/danielwaltz.dev"
             title="Bluesky"
-            icon="i-fa6-brands-bluesky"
-            class="scale-88 focus:text-primary hover:text-primary"
+            icon="i-simple-icons-bluesky"
+            class="focus:text-primary hover:text-primary"
           />
         </li>
 
@@ -60,7 +60,7 @@
             rel="me"
             to="https://www.threads.net/@danielbwaltz"
             title="Threads"
-            icon="i-fa6-brands-threads"
+            icon="i-simple-icons-threads"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -70,7 +70,7 @@
             rel="me"
             to="https://www.linkedin.com/in/danielbwaltz"
             title="LinkedIn"
-            icon="i-fa6-brands-linkedin"
+            icon="i-simple-icons-linkedin"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -80,7 +80,7 @@
             rel="me"
             to="https://github.com/danielwaltz"
             title="GitHub"
-            icon="i-fa6-brands-github"
+            icon="i-simple-icons-github"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -90,7 +90,7 @@
             rel="me"
             to="https://gitlab.com/danielwaltz"
             title="GitLab"
-            icon="i-fa6-brands-gitlab"
+            icon="i-simple-icons-gitlab"
             class="focus:text-primary hover:text-primary"
           />
         </li>
@@ -100,7 +100,7 @@
             rel="me"
             to="https://bitbucket.org/danielwaltz"
             title="BitBucket"
-            icon="i-fa6-brands-bitbucket"
+            icon="i-simple-icons-bitbucket"
             class="focus:text-primary hover:text-primary"
           />
         </li>
