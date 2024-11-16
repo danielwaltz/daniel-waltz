@@ -3,13 +3,13 @@
     <ContentDoc>
       <template #default="{ doc }">
         <article>
-          <p class="m-be--6 m-is-1 text-neutral-400 font-script text-p">
-            <time :datetime="doc.date">{{ formatDate(doc.date) }}</time>
+          <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
+            <time :datetime="doc.date">
+              {{ formatDate(doc.date) }}
+            </time>
           </p>
 
-          <div class="app-prose">
-            <ContentRenderer :value="doc" />
-          </div>
+          <ContentRenderer :value="doc" class="app-prose" />
         </article>
       </template>
 
