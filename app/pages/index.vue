@@ -48,7 +48,7 @@
         <li class="inline-flex">
           <AppIconLink
             rel="me"
-            to="https://bsky.app/profile/danielwaltz.dev"
+            to="https://bsky.app/profile/danielwaltz.me"
             title="Bluesky"
             icon="i-simple-icons-bluesky"
             class="focus:text-primary hover:text-primary"
