@@ -7,7 +7,7 @@
     theme("colors.primary.DEFAULT"),
     theme("colors.secondary.DEFAULT")
   );
-  color: theme("colors.surface.DEFAULT");
+  color: theme("colors.neutral.DEFAULT");
 }
 
 a,

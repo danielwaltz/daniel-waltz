@@ -59,7 +59,7 @@ export default defineConfig({
         950: "oklch(0.05 0.4 185)",
         DEFAULT: "oklch(0.7 0.4 185)",
       },
-      surface: {
+      neutral: {
         50: "oklch(0.95 0 0)",
         100: "oklch(0.9 0 0)",
         200: "oklch(0.8 0 0)",

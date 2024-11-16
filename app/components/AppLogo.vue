@@ -12,7 +12,7 @@
     <div
       class="rotate--45 scale-60 shadow-box animate-alternate shadow-primary"
     />
-    <div class="bg-surface clip-hexagon">
+    <div class="bg-neutral clip-hexagon">
       <i class="i-app-logo block scale-90" />
     </div>
   </div>
