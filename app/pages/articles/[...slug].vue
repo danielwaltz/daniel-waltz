@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data: article } = useAsyncData(
+const { data: article } = await useAsyncData(
   "article",
   () => queryContent(route.path).where({ status: "published" }).findOne(),
   {

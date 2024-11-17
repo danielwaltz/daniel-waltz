@@ -3,7 +3,7 @@ useHead({ title: "Articles" });
 
 const route = useRoute();
 
-const { data: articles } = useAsyncData(
+const { data: articles } = await useAsyncData(
   "articles",
   () =>
     queryContent(route.path)
