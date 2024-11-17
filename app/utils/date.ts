@@ -1,5 +1,7 @@
-import type { DateLike } from "@vueuse/core";
-
-export const formatDate = (date: MaybeRefOrGetter<DateLike>): string => {
-  return toValue(useDateFormat(date, "MMMM D, YYYY"));
+export const formatDate = (date: number | Date): string => {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 };
