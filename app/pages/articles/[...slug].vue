@@ -19,7 +19,7 @@ useContentHead(toRef(() => article.value!));
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-6">
     <article v-if="article">
       <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
         <time :datetime="article.date">

@@ -23,9 +23,22 @@ export default defineConfig({
     }),
     presetTypography({
       cssExtend: (theme) => ({
-        "h1:first-of-type": { "margin-block-start": "0" },
-        "ul, ol": { "padding-inline-start": theme.spacing?.["2xl"] },
-        li: { "padding-block": "0.25rem" },
+        ["* > *:only-child"]: {
+          "margin-block-start": 0,
+          "margin-block-end": 0,
+        },
+        ["* > *:first-child"]: {
+          "margin-block-start": 0,
+        },
+        ["* > *:last-child"]: {
+          "margin-block-end": 0,
+        },
+        "ul, ol": {
+          "padding-inline-start": theme.spacing?.["2xl"],
+        },
+        li: {
+          "padding-block": "0.25rem",
+        },
       }),
     }),
   ],

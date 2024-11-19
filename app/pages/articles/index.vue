@@ -29,7 +29,11 @@ const { data: articles } = await useAsyncData(
 
     <div class="flex flex-col gap-8">
       <template v-if="articles">
-        <div v-for="article in articles" :key="article._path">
+        <div
+          v-for="article in articles"
+          :key="article._path"
+          class="flex flex-col gap-6"
+        >
           <article>
             <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
               <time :datetime="article.date">
@@ -39,7 +43,10 @@ const { data: articles } = await useAsyncData(
 
             <div class="app-prose">
               <h2 class="m-0 max-w-fit text-h3">
-                <NuxtLink :to="article._path" class="text-primary-gradient">
+                <NuxtLink
+                  :to="article._path"
+                  class="text-primary-gradient no-underline"
+                >
                   {{ article.title }}
                 </NuxtLink>
               </h2>
