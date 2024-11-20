@@ -5,7 +5,7 @@
     <main
       class="max-w-2xl w-full flex flex-col gap-8 p-6 2xl:max-w-4xl sm:max-w-3xl sm:p-8"
     >
-      <div class="flex grow items-center gap-8">
+      <div class="flex grow flex-wrap items-center justify-between gap-8">
         <NuxtLink
           :to="{ name: 'index' }"
           class="inline-flex rounded-xl transition-all active:scale-95"
@@ -14,9 +14,9 @@
           <span class="sr-only">Home</span>
         </NuxtLink>
 
-        <nav aria-label="Main" class="m-is-auto">
+        <nav aria-label="Main">
           <ul
-            class="flex gap-2 text-base font-bold tracking-wide uppercase sm:text-lg"
+            class="flex flex-wrap gap-2 text-base font-bold tracking-wide uppercase sm:text-lg"
           >
             <li>
               <NuxtLink
