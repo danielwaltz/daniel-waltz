@@ -57,10 +57,10 @@ const { data: articles } = await useAsyncData(
 
           <NuxtLink
             :to="article._path"
-            class="max-w-fit flex items-center text-primary-gradient font-semibold tracking-wide uppercase text-p"
+            class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
           >
-            Read more
-            <i class="i-mdi-chevron-right text-1.5em text-secondary" />
+            <span>Read more</span>
+            <i class="i-lucide-chevron-right text-1.25em text-secondary" />
           </NuxtLink>
         </div>
       </template>

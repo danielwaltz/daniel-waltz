@@ -11,9 +11,9 @@ importers:
       '@csstools/postcss-oklab-function':
         specifier: ^4.0.6
         version: 4.0.6(postcss@8.4.49)
-      '@iconify-json/mdi':
-        specifier: ^1.2.1
-        version: 1.2.1
+      '@iconify-json/lucide':
+        specifier: ^1.2.15
+        version: 1.2.15
       '@iconify-json/simple-icons':
         specifier: ^1.2.12
         version: 1.2.12
@@ -823,8 +823,8 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/mdi@1.2.1':
-    resolution: {integrity: sha512-dSkQU78gsZV6Yxnq78+LuX7jzeFC/5NAmz7O3rh558GimGFcwMVY/OtqRowIzjqJBmMmWZft7wkFV4TrwRXjlg==}
+  '@iconify-json/lucide@1.2.15':
+    resolution: {integrity: sha512-mbHlTJRqOrqRk8E8xnpPzqZwCqsKNB9ZyITqDEYEtePEGxki9VJWJMU8JcNqRKDfPS9vlFsjwepUuOGgusmZUA==}
 
   '@iconify-json/simple-icons@1.2.12':
     resolution: {integrity: sha512-lRNORrIdeLStShxAjN6FgXE1iMkaAgiAHZdP0P0GZecX91FVYW58uZnRSlXLlSx5cxMoELulkAAixybPA2g52g==}
@@ -5708,7 +5708,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@iconify-json/mdi@1.2.1':
+  '@iconify-json/lucide@1.2.15':
     dependencies:
       '@iconify/types': 2.0.0
 
