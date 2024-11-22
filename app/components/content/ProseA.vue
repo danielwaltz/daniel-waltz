@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// eslint-disable-next-line vue/define-props-declaration
 defineProps({
   href: {
     type: String,
@@ -21,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-  <NuxtLink :href="href" :target="target" class="text-primary">
+  <NuxtLink :href :target class="text-primary">
     <slot />
   </NuxtLink>
 </template>
