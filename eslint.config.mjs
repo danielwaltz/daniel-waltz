@@ -68,6 +68,7 @@ export default withNuxt([
       "vue/require-direct-export": "error",
       "vue/require-macro-variable-name": "error",
       "vue/require-typed-ref": "error",
+      "vue/slot-name-casing": "error",
       "vue/v-bind-style": [
         "error",
         "shorthand",
