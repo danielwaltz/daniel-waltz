@@ -1,4 +1,5 @@
 export default defineEventHandler(() => ({
-  status: "success",
+  status: "ok",
   uptime: Math.floor(process.uptime()),
+  timestamp: new Date(),
 }));
