@@ -27,5 +27,5 @@ USER app
 COPY --chown=app:app --from=build /app/.output ./.output
 ENV NODE_ENV=production
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 CMD curl --silent --fail http://localhost:3000/health || exit 1
+HEALTHCHECK CMD curl -fs http://localhost:3000/health || exit 1
 CMD ["node", ".output/server/index.mjs"]
