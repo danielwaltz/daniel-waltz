@@ -23,7 +23,7 @@ logs
 .env.*
 !.env.example
 
-# Docker
+# Docker specific
 .dockerignore
 .git
 .gitignore
