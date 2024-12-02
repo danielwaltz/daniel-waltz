@@ -7,7 +7,7 @@ WORKDIR /app
 # Dependencies
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable && pnpm install --frozen-lockfile
+RUN corepack enable && pnpm i --frozen-lockfile
 
 # Development
 FROM dependencies AS development
@@ -22,7 +22,7 @@ RUN pnpm build
 
 # Production
 FROM base AS production
-RUN addgroup --system app && adduser --system --ingroup app app
+RUN groupadd -r -g 1001 app && useradd -r -u 1001 -g app app
 USER app
 COPY --chown=app:app --from=build /app/.output ./.output
 ENV NODE_ENV=production
