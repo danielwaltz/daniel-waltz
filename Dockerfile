@@ -15,8 +15,8 @@ COPY . .
 EXPOSE 3000
 CMD ["pnpm", "dev"]
 
-# Build
-FROM dependencies AS build
+# Builder
+FROM dependencies AS builder
 COPY . .
 RUN pnpm build
 
@@ -25,7 +25,7 @@ FROM base AS production
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 RUN groupadd -r -g 1001 app && useradd -r -u 1001 -g app app
 USER app
-COPY --chown=app:app --from=build /app/.output ./.output
+COPY --chown=app:app --from=builder /app/.output ./.output
 ENV NODE_ENV=production
 EXPOSE 3000
 HEALTHCHECK CMD ["curl", "-f", "http://localhost:3000/health"]
