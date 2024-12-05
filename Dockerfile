@@ -7,7 +7,7 @@ WORKDIR /app
 # Dependencies
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable && pnpm i --frozen-lockfile
+RUN corepack enable pnpm && pnpm i --frozen-lockfile
 
 # Development
 FROM dependencies AS development
