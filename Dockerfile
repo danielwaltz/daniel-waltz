@@ -13,12 +13,13 @@ RUN corepack enable pnpm && pnpm i --frozen-lockfile
 FROM dependencies AS development
 COPY . .
 EXPOSE 3000
-CMD ["pnpm", "dev"]
+STOPSIGNAL SIGKILL
+CMD ["sh", "-c", "pnpm i && pnpm dev"]
 
 # Builder
 FROM dependencies AS builder
 COPY . .
-RUN pnpm build
+RUN pnpm build --preset node
 
 # Production
 FROM base AS production

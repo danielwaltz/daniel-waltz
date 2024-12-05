@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: "."
+      target: "development"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/app"
+      - "app-deps:/app/node_modules"
+volumes:
+  app-deps:
