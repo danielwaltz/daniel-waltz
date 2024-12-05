@@ -7,14 +7,15 @@ WORKDIR /app
 # Dependencies
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable pnpm && pnpm i --frozen-lockfile
+RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
+RUN pnpm i --frozen-lockfile
 
 # Development
 FROM dependencies AS development
 COPY . .
 EXPOSE 3000
 STOPSIGNAL SIGKILL
-CMD ["sh", "-c", "pnpm i && pnpm dev"]
+CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
 
 # Builder
 FROM dependencies AS builder
