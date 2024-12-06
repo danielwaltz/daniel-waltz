@@ -3,10 +3,14 @@ services:
     build:
       context: "."
       target: "development"
+    tty: true
+    stdin_open: true
     ports:
       - "3000:3000"
     volumes:
       - ".:/app"
       - "app-deps:/app/node_modules"
+    tmpfs:
+      - "/tmp"
 volumes:
   app-deps:
