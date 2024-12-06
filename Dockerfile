@@ -8,7 +8,6 @@ RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
 
 # Development
 FROM base AS development
-EXPOSE 3000
 STOPSIGNAL SIGKILL
 CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
 
