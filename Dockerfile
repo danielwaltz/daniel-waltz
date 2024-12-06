@@ -20,7 +20,7 @@ CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
 # Builder
 FROM dependencies AS builder
 COPY . .
-RUN pnpm build --preset node
+RUN pnpm build
 
 # Production
 FROM base AS production
