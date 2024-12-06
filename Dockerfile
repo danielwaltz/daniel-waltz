@@ -3,19 +3,19 @@ ARG NODE_VERSION=22.11.0
 # Base
 FROM node:${NODE_VERSION}-slim AS base
 WORKDIR /app
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
+
+# Development
+FROM base AS development
+EXPOSE 3000
+STOPSIGNAL SIGKILL
+CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
 
 # Dependencies
 FROM base AS dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
 RUN pnpm i --frozen-lockfile
-
-# Development
-FROM dependencies AS development
-COPY . .
-EXPOSE 3000
-STOPSIGNAL SIGKILL
-CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
 
 # Builder
 FROM dependencies AS builder
