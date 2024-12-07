@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.6
         version: 4.0.6(postcss@8.4.49)
       '@danielwaltz/eslint-config':
-        specifier: ^0.0.4
-        version: 0.0.4(@types/eslint@9.6.1)(eslint@9.16.0(jiti@2.4.1))(prettier@3.4.2)(typescript@5.6.3)
+        specifier: ^0.0.5
+        version: 0.0.5(@types/eslint@9.6.1)(eslint@9.16.0(jiti@2.4.1))(prettier@3.4.2)(typescript@5.6.3)
       '@iconify-json/lucide':
         specifier: ^1.2.18
         version: 1.2.18
@@ -311,8 +311,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@danielwaltz/eslint-config@0.0.4':
-    resolution: {integrity: sha512-OXwyrZHiqavyE3PvNWCYaRrRF5ZGnRaInilpxx3DAkb/fZbhhCByppaTBZz6+DYnbPcY868dAIFVcbKcX8ZQsQ==}
+  '@danielwaltz/eslint-config@0.0.5':
+    resolution: {integrity: sha512-DOl0kdkbtUv6nQpbCRFN4FO33FfBagdt5pTBVy5pprLtAQu/zJIvVGvpazrY65H+ZgzLNV9sE8sZdB5EZewJog==}
     peerDependencies:
       eslint: '>=9'
       prettier: '>=3'
@@ -5507,7 +5507,7 @@ snapshots:
     dependencies:
       postcss: 8.4.49
 
-  '@danielwaltz/eslint-config@0.0.4(@types/eslint@9.6.1)(eslint@9.16.0(jiti@2.4.1))(prettier@3.4.2)(typescript@5.6.3)':
+  '@danielwaltz/eslint-config@0.0.5(@types/eslint@9.6.1)(eslint@9.16.0(jiti@2.4.1))(prettier@3.4.2)(typescript@5.6.3)':
     dependencies:
       '@eslint/js': 9.16.0
       eslint: 9.16.0(jiti@2.4.1)

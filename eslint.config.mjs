@@ -1,4 +1,8 @@
-import { danielwaltz, defineFlatConfigs } from "@danielwaltz/eslint-config";
+import {
+  danielwaltz,
+  defineFlatConfigs,
+  formattingConfigs,
+} from "@danielwaltz/eslint-config";
 import unocss from "@unocss/eslint-config/flat";
 import { withNuxt } from "./.nuxt/eslint.config.mjs";
 
@@ -81,4 +85,6 @@ const appConfigs = defineFlatConfigs([
   },
 ]).toConfigs();
 
-export default danielwaltz(appConfigs).append(withNuxt());
+export default danielwaltz(appConfigs)
+  .append(withNuxt())
+  .append(formattingConfigs());
