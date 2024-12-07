@@ -9,7 +9,9 @@ const { data: article } = await useAsyncData(
     transform: (doc) => ({
       ...doc,
       title: doc.title,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       description: doc.description,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       date: formatDate(doc.date),
     }),
   },

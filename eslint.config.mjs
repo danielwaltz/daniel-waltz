@@ -1,10 +1,9 @@
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import { danielwaltz, defineFlatConfigs } from "@danielwaltz/eslint-config";
 import unocss from "@unocss/eslint-config/flat";
-import prettier from "eslint-plugin-prettier/recommended";
+import { withNuxt } from "./.nuxt/eslint.config.mjs";
 
-export default withNuxt([
+const appConfigs = defineFlatConfigs([
   unocss,
-  prettier,
   {
     files: ["**/*.vue"],
     rules: {
@@ -80,4 +79,6 @@ export default withNuxt([
       "vue/valid-define-options": "error",
     },
   },
-]);
+]).toConfigs();
+
+export default danielwaltz(appConfigs).append(withNuxt());

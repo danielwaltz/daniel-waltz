@@ -1,3 +1,4 @@
+import { FileSystemIconLoader } from "@iconify/utils/lib/loader/node-loaders";
 import { resolve } from "pathe";
 import {
   defineConfig,
@@ -6,7 +7,6 @@ import {
   presetUno,
   transformerDirectives,
 } from "unocss";
-import { FileSystemIconLoader } from "@iconify/utils/lib/loader/node-loaders";
 
 // https://unocss.dev/config/
 export default defineConfig({

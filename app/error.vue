@@ -3,8 +3,8 @@ import type { NuxtError } from "nuxt/app";
 
 const props = defineProps<{ error: NuxtError }>();
 
-const title = computed(() => `Error ${props.error.statusCode}`);
-const message = toRef(() => props.error?.message ?? "");
+const title = computed(() => `Error ${props.error.statusCode.toString()}`);
+const message = toRef(() => props.error.message);
 
 useHead({ title });
 </script>
