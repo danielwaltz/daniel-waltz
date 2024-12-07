@@ -1,8 +1,8 @@
 services:
   app:
     build:
-      context: "."
-      target: "development"
+      context: .
+      target: development
     tty: true
     stdin_open: true
     ports:
@@ -11,6 +11,6 @@ services:
       - ".:/app"
       - "app-deps:/app/node_modules"
     tmpfs:
-      - "/tmp"
+      - /tmp
 volumes:
   app-deps:

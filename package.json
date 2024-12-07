@@ -1,8 +1,8 @@
 {
   "name": "daniel-waltz",
   "private": true,
-  "type": "module",
   "packageManager": "pnpm@9.15.0",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.6",
-    "@danielwaltz/eslint-config": "^0.0.5",
+    "@danielwaltz/eslint-config": "^0.0.6",
     "@iconify-json/lucide": "^1.2.18",
     "@iconify-json/simple-icons": "^1.2.14",
     "@iconify/utils": "^2.2.0",
@@ -27,7 +27,6 @@
     "@nuxt/image": "^1.8.1",
     "@types/node": "~22.10.1",
     "@unhead/vue": "^1.11.13",
-    "@unocss/eslint-config": "^0.65.1",
     "@unocss/nuxt": "^0.65.1",
     "@unocss/reset": "^0.65.1",
     "@vueuse/core": "^12.0.0",

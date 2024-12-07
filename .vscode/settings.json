@@ -3,6 +3,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.validate": ["dockercompose"],
   "eslint.rules.customizations": [
     {
       "rule": "prettier/prettier",

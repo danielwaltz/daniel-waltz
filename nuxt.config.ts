@@ -40,6 +40,7 @@ export default defineNuxtConfig({
   },
   eslint: {
     config: {
+      standalone: false,
       nuxt: {
         sortConfigKeys: true,
       },

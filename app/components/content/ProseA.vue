@@ -11,7 +11,6 @@ defineProps({
       | "_parent"
       | "_self"
       | "_top"
-      // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
       | (string & object)
       | null
       | undefined
