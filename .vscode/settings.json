@@ -4,12 +4,6 @@
   },
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.validate": ["dockercompose"],
-  "eslint.rules.customizations": [
-    {
-      "rule": "prettier/prettier",
-      "severity": "warn"
-    }
-  ],
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
