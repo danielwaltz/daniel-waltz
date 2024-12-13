@@ -3,7 +3,10 @@
     "source.fixAll.eslint": "explicit"
   },
   "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "flags": ["unstable_ts_config"]
+  },
   "eslint.validate": ["dockercompose"],
-  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
