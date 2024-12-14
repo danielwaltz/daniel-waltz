@@ -28,5 +28,6 @@ logs
 .git
 .gitignore
 .vscode
+compose.yaml
 Dockerfile
 README.md
