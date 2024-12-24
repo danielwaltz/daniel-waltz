@@ -18,7 +18,7 @@
     "@csstools/postcss-oklab-function": "^4.0.6",
     "@danielwaltz/eslint-config": "^0.0.9",
     "@iconify-json/lucide": "^1.2.20",
-    "@iconify-json/simple-icons": "^1.2.16",
+    "@iconify-json/simple-icons": "^1.2.17",
     "@iconify/utils": "^2.2.1",
     "@nuxt/content": "^2.13.4",
     "@nuxt/devtools": "^1.6.4",
@@ -29,8 +29,8 @@
     "@unhead/vue": "^1.11.14",
     "@unocss/nuxt": "^0.65.2",
     "@unocss/reset": "^0.65.2",
-    "@vueuse/core": "^12.1.0",
-    "@vueuse/nuxt": "^12.1.0",
+    "@vueuse/core": "^12.2.0",
+    "@vueuse/nuxt": "^12.2.0",
     "eslint": "^9.17.0",
     "npm-run-all2": "^7.0.2",
     "nuxt": "^3.14.1592",
@@ -41,6 +41,6 @@
     "vite": "^6.0.5",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.0"
   }
 }
