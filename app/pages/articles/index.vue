@@ -42,11 +42,8 @@ const { data: articles } = await useAsyncData(
             </p>
 
             <div class="app-prose">
-              <h2 class="m-0 max-w-fit text-h3">
-                <NuxtLink
-                  :to="article._path"
-                  class="text-primary-gradient no-underline"
-                >
+              <h2 class="m-0 max-w-fit text-primary-gradient text-h3">
+                <NuxtLink :to="article._path" class="no-underline">
                   {{ article.title }}
                 </NuxtLink>
               </h2>

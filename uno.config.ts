@@ -107,7 +107,8 @@ export default defineConfig({
   ],
   shortcuts: [
     {
-      "app-prose": "text-pretty font-serif prose text-p",
+      "app-prose":
+        "prose prose-a:text-primary prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
       "bg-primary-gradient":
         "bg-primary bg-gradient-to-r from-primary to-secondary",
       "bg-secondary-gradient":
@@ -119,6 +120,8 @@ export default defineConfig({
         "absolute inset-0 shadow-box-animate animate-backwards shadow-2xl",
       "shadow-box-animate":
         "animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite",
+      "text-code":
+        "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono",
       "text-h1":
         "text-primary-gradient text-6xl font-bold font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl",
       "text-h2":
@@ -132,6 +135,7 @@ export default defineConfig({
       "text-h6":
         "text-xl font-bold font-display uppercase 2xl:text-4xl md:text-3xl sm:text-42xl",
       "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl !leading-relaxed",
+      "text-pre": "font-mono",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",
       "text-secondary-gradient":
