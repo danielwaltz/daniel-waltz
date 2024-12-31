@@ -17,7 +17,7 @@ useHead({ title });
     <div class="flex flex-col gap-6">
       <article class="app-prose">
         <h1 class="max-w-fit text-h1">{{ title }}</h1>
-        <p v-if="message">{{ message }}</p>
+        <p>{{ message }}</p>
       </article>
 
       <NuxtLink
