@@ -1,3 +1,53 @@
+<script setup lang="ts">
+const accounts = [
+  {
+    url: "https://x.com/danielbwaltz",
+    title: "X / Twitter",
+    icon: "i-simple-icons-x",
+  },
+  {
+    url: "https://mastodon.world/@danielwaltz",
+    title: "Mastodon",
+    icon: "i-simple-icons-mastodon",
+  },
+  {
+    url: "https://bsky.app/profile/danielwaltz.me",
+    title: "Bluesky",
+    icon: "i-simple-icons-bluesky",
+  },
+  {
+    url: "https://www.threads.net/@danielbwaltz",
+    title: "Threads",
+    icon: "i-simple-icons-threads",
+  },
+  {
+    url: "https://www.linkedin.com/in/danielbwaltz",
+    title: "LinkedIn",
+    icon: "i-simple-icons-linkedin",
+  },
+  {
+    url: "https://github.com/danielwaltz",
+    title: "GitHub",
+    icon: "i-simple-icons-github",
+  },
+  {
+    url: "https://gitlab.com/danielwaltz",
+    title: "GitLab",
+    icon: "i-simple-icons-gitlab",
+  },
+  {
+    url: "https://bitbucket.org/danielwaltz",
+    title: "BitBucket",
+    icon: "i-simple-icons-bitbucket",
+  },
+  {
+    url: "https://codeberg.org/danielwaltz",
+    title: "Codeberg",
+    icon: "i-simple-icons-codeberg",
+  },
+] as const;
+</script>
+
 <template>
   <div class="flex flex-col gap-8">
     <article class="flex flex-col gap-6 text-pretty">
@@ -25,92 +75,12 @@
       <ul
         class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
       >
-        <li class="inline-flex">
+        <li v-for="account in accounts" :key="account.url">
           <AppIconLink
             rel="me"
-            to="https://x.com/danielbwaltz"
-            title="X / Twitter"
-            icon="i-simple-icons-x"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://mastodon.world/@danielwaltz"
-            title="Mastodon"
-            icon="i-simple-icons-mastodon"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://bsky.app/profile/danielwaltz.me"
-            title="Bluesky"
-            icon="i-simple-icons-bluesky"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://www.threads.net/@danielbwaltz"
-            title="Threads"
-            icon="i-simple-icons-threads"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://www.linkedin.com/in/danielbwaltz"
-            title="LinkedIn"
-            icon="i-simple-icons-linkedin"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://github.com/danielwaltz"
-            title="GitHub"
-            icon="i-simple-icons-github"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://gitlab.com/danielwaltz"
-            title="GitLab"
-            icon="i-simple-icons-gitlab"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://bitbucket.org/danielwaltz"
-            title="BitBucket"
-            icon="i-simple-icons-bitbucket"
-            class="focus:text-primary hover:text-primary"
-          />
-        </li>
-
-        <li class="inline-flex">
-          <AppIconLink
-            rel="me"
-            to="https://codeberg.org/danielwaltz"
-            title="Codeberg"
-            icon="i-simple-icons-codeberg"
+            :to="account.url"
+            :title="account.title"
+            :icon="account.icon"
             class="focus:text-primary hover:text-primary"
           />
         </li>
