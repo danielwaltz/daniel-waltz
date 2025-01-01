@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const accounts = [
   {
+    url: "https://bsky.app/profile/danielwaltz.me",
+    title: "Bluesky",
+    icon: "i-simple-icons-bluesky",
+  },
+  {
     url: "https://x.com/danielbwaltz",
     title: "X / Twitter",
     icon: "i-simple-icons-x",
@@ -9,11 +14,6 @@ const accounts = [
     url: "https://mastodon.world/@danielwaltz",
     title: "Mastodon",
     icon: "i-simple-icons-mastodon",
-  },
-  {
-    url: "https://bsky.app/profile/danielwaltz.me",
-    title: "Bluesky",
-    icon: "i-simple-icons-bluesky",
   },
   {
     url: "https://www.threads.net/@danielbwaltz",
