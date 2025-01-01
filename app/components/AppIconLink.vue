@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to :title rel="noopener noreferrer" class="flex">
+  <NuxtLink :to :aria-label="title" rel="noopener noreferrer" class="flex">
     <i :class="icon" />
     <span class="sr-only">{{ title }}</span>
   </NuxtLink>

@@ -81,6 +81,7 @@ const accounts = [
             :to="account.url"
             :title="account.title"
             :icon="account.icon"
+            data-tooltip="down"
             class="focus:text-primary hover:text-primary"
           />
         </li>
