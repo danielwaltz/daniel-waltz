@@ -56,7 +56,8 @@
               data-tooltip="down"
               class="text-sm focus:text-neutral-100 hover:text-neutral-100"
               :class="{
-                'text-primary': instance.key === $config.public.hostingProvider,
+                'text-primary focus:text-primary-200 hover:text-primary-200':
+                  instance.key === $config.public.hostingProvider,
               }"
             />
           </li>
