@@ -55,7 +55,9 @@
               :icon="instance.icon"
               data-tooltip="down"
               class="text-sm focus:text-neutral-100 hover:text-neutral-100"
-              :class="{ 'text-primary': instance.active }"
+              :class="{
+                'text-primary': instance.key === $config.public.hostingProvider,
+              }"
             />
           </li>
         </ul>

@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      hostingProvider: "unknown",
+      hostingProvider: import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER,
     },
   },
   routeRules: {
