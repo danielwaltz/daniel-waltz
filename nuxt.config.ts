@@ -20,6 +20,11 @@ export default defineNuxtConfig({
       theme: "nord",
     },
   },
+  runtimeConfig: {
+    public: {
+      hostingProvider: "unknown",
+    },
+  },
   routeRules: {
     "/articles": { swr: 3600 },
     "/articles/**": { swr: 3600 },

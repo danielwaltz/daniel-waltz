@@ -48,41 +48,43 @@ export const ACCOUNTS = [
   },
 ] as const;
 
+const runtimeConfig = useRuntimeConfig();
+
 export const INSTANCES = [
   {
     url: "https://amplify.danielwaltz.me",
     title: "Amplify",
     icon: "i-simple-icons-awsamplify",
-    active: import.meta.url.includes("//amplify."),
+    active: runtimeConfig.public.hostingProvider === "amplify",
   },
   {
     url: "https://cloudflare.danielwaltz.me",
     title: "Cloudflare",
     icon: "i-simple-icons-cloudflare",
-    active: import.meta.url.includes("//cloudflare."),
+    active: runtimeConfig.public.hostingProvider === "cloudflare",
   },
   {
     url: "https://kinsta.danielwaltz.me",
     title: "Kinsta",
     icon: "i-simple-icons-kinsta",
-    active: import.meta.url.includes("//kinsta."),
+    active: runtimeConfig.public.hostingProvider === "kinsta",
   },
   {
     url: "https://netlify.danielwaltz.me",
     title: "Netlify",
     icon: "i-simple-icons-netlify",
-    active: import.meta.url.includes("//netlify."),
+    active: runtimeConfig.public.hostingProvider === "netlify",
   },
   {
     url: "https://render.danielwaltz.me",
     title: "Render",
     icon: "i-simple-icons-render",
-    active: import.meta.url.includes("//render."),
+    active: runtimeConfig.public.hostingProvider === "render",
   },
   {
     url: "https://vercel.danielwaltz.me",
     title: "Vercel",
     icon: "i-simple-icons-vercel",
-    active: import.meta.url.includes("//vercel."),
+    active: runtimeConfig.public.hostingProvider === "vercel",
   },
 ] as const;
