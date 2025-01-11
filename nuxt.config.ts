@@ -33,6 +33,9 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   compatibilityDate: "2025-01-01",
+  nitro: {
+    compressPublicAssets: true,
+  },
   postcss: {
     plugins: {
       "@csstools/postcss-oklab-function": { preserve: true },
