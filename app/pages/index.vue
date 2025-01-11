@@ -1,53 +1,3 @@
-<script setup lang="ts">
-const accounts = [
-  {
-    url: "https://bsky.app/profile/danielwaltz.me",
-    title: "Bluesky",
-    icon: "i-simple-icons-bluesky",
-  },
-  {
-    url: "https://x.com/danielbwaltz",
-    title: "X / Twitter",
-    icon: "i-simple-icons-x",
-  },
-  {
-    url: "https://mastodon.world/@danielwaltz",
-    title: "Mastodon",
-    icon: "i-simple-icons-mastodon",
-  },
-  {
-    url: "https://www.threads.net/@danielbwaltz",
-    title: "Threads",
-    icon: "i-simple-icons-threads",
-  },
-  {
-    url: "https://www.linkedin.com/in/danielbwaltz",
-    title: "LinkedIn",
-    icon: "i-simple-icons-linkedin",
-  },
-  {
-    url: "https://github.com/danielwaltz",
-    title: "GitHub",
-    icon: "i-simple-icons-github",
-  },
-  {
-    url: "https://gitlab.com/danielwaltz",
-    title: "GitLab",
-    icon: "i-simple-icons-gitlab",
-  },
-  {
-    url: "https://bitbucket.org/danielwaltz",
-    title: "BitBucket",
-    icon: "i-simple-icons-bitbucket",
-  },
-  {
-    url: "https://codeberg.org/danielwaltz",
-    title: "Codeberg",
-    icon: "i-simple-icons-codeberg",
-  },
-] as const;
-</script>
-
 <template>
   <div class="flex flex-col gap-8">
     <article class="flex flex-col gap-6 text-pretty">
@@ -75,7 +25,7 @@ const accounts = [
       <ul
         class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
       >
-        <li v-for="account in accounts" :key="account.url">
+        <li v-for="account in ACCOUNTS" :key="account.url">
           <AppIconLink
             rel="me"
             :to="account.url"

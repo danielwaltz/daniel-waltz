@@ -43,12 +43,31 @@
       <slot />
     </main>
 
-    <AppIconLink
-      to="https://github.com/danielwaltz/daniel-waltz"
-      title="View Source Code"
-      icon="i-lucide-code"
-      data-tooltip="left"
-      class="absolute inset-bs-3 inset-ie-3 text-xl text-neutral-400 focus:text-neutral-100 hover:text-neutral-100"
-    />
+    <footer
+      class="absolute inset-inline-0 inset-bs-0 flex justify-between gap-3 p-2 text-neutral-400"
+    >
+      <nav aria-label="Instances">
+        <ul class="flex flex-wrap items-center gap-3">
+          <li v-for="instance in INSTANCES" :key="instance.url">
+            <AppIconLink
+              :to="instance.url"
+              :title="instance.title"
+              :icon="instance.icon"
+              data-tooltip="down"
+              class="text-sm focus:text-neutral-100 hover:text-neutral-100"
+              :class="{ 'text-primary': instance.active }"
+            />
+          </li>
+        </ul>
+      </nav>
+
+      <AppIconLink
+        to="https://github.com/danielwaltz/daniel-waltz"
+        title="View Source Code"
+        icon="i-lucide-code"
+        data-tooltip="left"
+        class="text-xl focus:text-neutral-100 hover:text-neutral-100"
+      />
+    </footer>
   </AppLayout>
 </template>
