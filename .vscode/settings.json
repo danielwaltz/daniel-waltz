@@ -4,9 +4,6 @@
   },
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.format.enable": true,
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  },
   "eslint.validate": ["dockercompose"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

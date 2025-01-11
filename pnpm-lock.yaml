@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.7
         version: 4.0.7(postcss@8.4.49)
       '@danielwaltz/eslint-config':
-        specifier: ^0.0.10
-        version: 0.0.10(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)
+        specifier: ^0.0.11
+        version: 0.0.11(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)
       '@iconify-json/lucide':
         specifier: ^1.2.22
         version: 1.2.22
@@ -311,8 +311,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@danielwaltz/eslint-config@0.0.10':
-    resolution: {integrity: sha512-iSlaR5MKJCLXW2IarH3XNF/waqDWekMzlvfPiXeava73uCQSNjXewFHaVE4jhP4hUbbSOfg24jRg4Uw+hYY6dQ==}
+  '@danielwaltz/eslint-config@0.0.11':
+    resolution: {integrity: sha512-UPNT3VNB4hJVa9FSTe4fcRgatFOimR7VIwIWlJ8nY6H4aXFZhYpqEEpmCanc6oXBGbSgDFAGtpHbUzGg7S8WSA==}
     peerDependencies:
       eslint: '>=9'
       prettier: '>=3'
@@ -5601,7 +5601,7 @@ snapshots:
     dependencies:
       postcss: 8.4.49
 
-  '@danielwaltz/eslint-config@0.0.10(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)':
+  '@danielwaltz/eslint-config@0.0.11(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)':
     dependencies:
       '@sxzz/eslint-config': 4.6.0(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.19.1(@typescript-eslint/parser@8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       eslint: 9.18.0(jiti@2.4.2)

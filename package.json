@@ -8,7 +8,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "generate-ico": "pnpx icon-gen@latest -i ./public/favicon.svg -o ./public --ico --ico-name favicon --ico-sizes 16,32,48",
-    "lint": "eslint . --flag unstable_ts_config --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --max-warnings 0",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
     "test": "run-p lint type-check",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.7",
-    "@danielwaltz/eslint-config": "^0.0.10",
+    "@danielwaltz/eslint-config": "^0.0.11",
     "@iconify-json/lucide": "^1.2.22",
     "@iconify-json/simple-icons": "^1.2.19",
     "@iconify/utils": "^2.2.1",
