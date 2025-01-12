@@ -41,6 +41,13 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
+  vite: {
+    vue: {
+      features: {
+        optionsAPI: false,
+      },
+    },
+  },
   postcss: {
     plugins: {
       "@csstools/postcss-oklab-function": { preserve: true },
