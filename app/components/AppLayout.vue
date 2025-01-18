@@ -4,7 +4,7 @@ const meta = {
   description:
     "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
   url: "https://danielwaltz.me",
-  icon: "/favicon.svg",
+  image: "https://danielwaltz.me/favicon.png",
 } as const;
 
 useHead({
@@ -25,11 +25,11 @@ useSeoMeta({
   description: meta.description,
   ogTitle: meta.title,
   ogDescription: meta.description,
-  ogImage: meta.icon,
+  ogImage: meta.image,
   ogUrl: meta.url,
   twitterTitle: meta.title,
   twitterDescription: meta.description,
-  twitterImage: meta.icon,
+  twitterImage: meta.image,
   twitterCard: "summary",
 });
 </script>
