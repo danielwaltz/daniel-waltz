@@ -108,7 +108,7 @@ export default defineConfig({
   shortcuts: [
     {
       "app-prose":
-        "prose prose-a:text-primary prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
+        "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
       "bg-primary-gradient":
         "bg-primary bg-gradient-to-r from-primary to-secondary",
       "bg-secondary-gradient":
