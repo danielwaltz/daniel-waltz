@@ -1,5 +1,17 @@
 <script setup lang="ts">
-useHead({ title: "Articles" });
+const meta = {
+  title: "Articles",
+  description: "A collection of articles written by me.",
+} as const;
+
+useSeoMeta({
+  title: meta.title,
+  description: meta.description,
+  ogTitle: meta.title,
+  ogDescription: meta.description,
+  twitterTitle: meta.title,
+  twitterDescription: meta.description,
+});
 
 const route = useRoute();
 

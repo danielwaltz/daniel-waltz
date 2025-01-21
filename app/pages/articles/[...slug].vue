@@ -16,6 +16,18 @@ const { data: article } = await useAsyncData(
 );
 
 useContentHead(toRef(() => article.value!));
+
+const title = toRef(() => article.value!.title!);
+const description = toRef(() => article.value!.description);
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+});
 </script>
 
 <template>
