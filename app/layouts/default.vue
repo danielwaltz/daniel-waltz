@@ -3,7 +3,7 @@
     <AppBackdrop />
 
     <main
-      class="max-w-2xl w-full flex flex-col gap-8 p-6 2xl:max-w-4xl sm:max-w-3xl sm:p-8"
+      class="max-w-2xl w-full flex flex-col gap-8 p-block-12 p-inline-6 2xl:max-w-4xl sm:max-w-3xl sm:p-block-14 sm:p-inline-8"
     >
       <div class="flex grow flex-wrap items-center justify-between gap-8">
         <NuxtLink
