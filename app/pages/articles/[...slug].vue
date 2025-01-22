@@ -11,6 +11,7 @@ const { data: article } = await useAsyncData(
       title: doc.title,
       description: doc.description,
       date: formatDate(doc.date),
+      dateISO: doc.date,
     }),
   },
 );
@@ -19,12 +20,15 @@ useContentHead(toRef(() => article.value!));
 
 const title = toRef(() => article.value!.title!);
 const description = toRef(() => article.value!.description);
+const dateISO = toRef(() => article.value!.dateISO);
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
+  ogType: "article",
+  articlePublishedTime: dateISO,
   twitterTitle: title,
   twitterDescription: description,
 });
