@@ -1,14 +1,7 @@
 <script setup lang="ts">
-const meta = {
-  title: "Daniel Waltz - Web Developer",
-  description:
-    "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
-  url: "https://danielwaltz.me",
-  image: "https://danielwaltz.me/favicon.png",
-} as const;
-
 useHead({
-  titleTemplate: (title) => (title ? `${title} - Daniel Waltz` : meta.title),
+  titleTemplate: (title) =>
+    title ? `${title} - Daniel Waltz` : SITE_META.title,
   link: [
     { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
     { rel: "icon", href: "/favicon.svg", sizes: "any", type: "image/svg+xml" },
@@ -20,16 +13,20 @@ useHead({
   },
 });
 
+const route = useRoute();
+
+const url = toRef(() => `${SITE_META.url}${route.path}`);
+
 useSeoMeta({
   themeColor: "#0e0e0e",
-  description: meta.description,
-  ogTitle: meta.title,
-  ogDescription: meta.description,
-  ogImage: meta.image,
-  ogUrl: meta.url,
-  twitterTitle: meta.title,
-  twitterDescription: meta.description,
-  twitterImage: meta.image,
+  description: SITE_META.description,
+  ogTitle: SITE_META.title,
+  ogDescription: SITE_META.description,
+  ogImage: SITE_META.image,
+  ogUrl: url,
+  twitterTitle: SITE_META.title,
+  twitterDescription: SITE_META.description,
+  twitterImage: SITE_META.image,
   twitterCard: "summary",
 });
 </script>

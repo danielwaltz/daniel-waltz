@@ -1,4 +1,11 @@
 // @unocss-include
+export const SITE_META = {
+  title: "Daniel Waltz - Web Developer",
+  description:
+    "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
+  url: "https://danielwaltz.me",
+  image: "https://danielwaltz.me/favicon.png",
+} as const;
 
 export const ACCOUNTS = [
   {
