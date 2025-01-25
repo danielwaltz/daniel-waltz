@@ -41,19 +41,38 @@ useSeoMeta({
       </p>
 
       <ContentRenderer :value="article" class="app-prose" />
+
+      <footer class="mbs-6 flex flex-wrap items-center justify-between gap-4">
+        <NuxtLink
+          :to="{ name: 'articles' }"
+          class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
+        >
+          <i class="i-lucide-chevron-left text-1.25em text-primary" />
+          <span>Back to articles</span>
+        </NuxtLink>
+
+        <NuxtLink
+          v-if="article.discussion"
+          :to="article.discussion"
+          target="_blank"
+          class="max-w-fit flex items-center gap-2 text-primary-gradient font-semibold tracking-wide uppercase text-p"
+        >
+          <span>Discussion</span>
+          <i class="i-lucide-external-link text-secondary" />
+        </NuxtLink>
+      </footer>
     </article>
 
     <div v-else class="app-prose">
       <h1 class="max-w-fit text-h1">Not Found</h1>
       <p>Sorry, the article you are looking for does not exist.</p>
+      <NuxtLink
+        :to="{ name: 'articles' }"
+        class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
+      >
+        <i class="i-lucide-chevron-left text-1.25em text-primary" />
+        <span>Back to articles</span>
+      </NuxtLink>
     </div>
-
-    <NuxtLink
-      :to="{ name: 'articles' }"
-      class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
-    >
-      <i class="i-lucide-chevron-left text-1.25em text-primary" />
-      <span>Back to articles</span>
-    </NuxtLink>
   </div>
 </template>

@@ -3,5 +3,5 @@ export const ArticleMetaSchema = v.object({
   description: v.string(),
   date: v.string(),
   status: v.picklist(["draft", "published"]),
-  discussion: v.pipe(v.string(), v.url()),
+  discussion: v.optional(v.pipe(v.string(), v.url())),
 });
