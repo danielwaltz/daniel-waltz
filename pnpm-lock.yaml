@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.7
         version: 4.0.7(postcss@8.5.1)
       '@danielwaltz/eslint-config':
-        specifier: ^0.0.13
-        version: 0.0.13(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)
+        specifier: ^0.0.14
+        version: 0.0.14(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)
       '@iconify-json/lucide':
         specifier: ^1.2.24
         version: 1.2.24
@@ -317,8 +317,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@danielwaltz/eslint-config@0.0.13':
-    resolution: {integrity: sha512-5IipQSSumhdLaoDFuJPZ/SLeQZHFbe5XdQ13YXC6zk4Y1VjDRcFxLdLjAgayDSfKDgqVMI8+6BaK7CjMTPHgbA==}
+  '@danielwaltz/eslint-config@0.0.14':
+    resolution: {integrity: sha512-eunZYDZCJnSlnvgm2nITtONY+3+WYSsa32cvpaGe6JzLTEUXW4WsKUrxnStyTP7BnIQ9SGfdJUC4z3aHI9evmA==}
     peerDependencies:
       eslint: '>=9'
       prettier: '>=3'
@@ -3686,8 +3686,8 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
-  openapi-typescript@7.5.2:
-    resolution: {integrity: sha512-W/QXuQz0Fa3bGY6LKoqTCgrSX+xI/ST+E5RXo2WBmp3WwgXCWKDJPHv5GZmElF4yLCccnqYsakBDOJikHZYGRw==}
+  openapi-typescript@7.6.0:
+    resolution: {integrity: sha512-p/xxKcWFR7aZDOAdnqYBQ1NdNyWdine+gHKHKvjxGXmlq8JT1G9+SkY8I5csKaktLHMbDDH6ZDeWQpydwBHa+Q==}
     hasBin: true
     peerDependencies:
       typescript: ^5.x
@@ -5468,7 +5468,7 @@ snapshots:
     dependencies:
       postcss: 8.5.1
 
-  '@danielwaltz/eslint-config@0.0.13(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)':
+  '@danielwaltz/eslint-config@0.0.14(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(prettier@3.4.2)(typescript@5.7.3)':
     dependencies:
       '@sxzz/eslint-config': 4.6.0(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       eslint: 9.19.0(jiti@2.4.2)
@@ -9643,7 +9643,7 @@ snapshots:
       node-fetch-native: 1.6.6
       ofetch: 1.4.1
       ohash: 1.1.4
-      openapi-typescript: 7.5.2(typescript@5.7.3)
+      openapi-typescript: 7.6.0(typescript@5.7.3)
       pathe: 1.1.2
       perfect-debounce: 1.0.0
       pkg-types: 1.3.1
@@ -9947,7 +9947,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openapi-typescript@7.5.2(typescript@5.7.3):
+  openapi-typescript@7.6.0(typescript@5.7.3):
     dependencies:
       '@redocly/openapi-core': 1.27.2(supports-color@9.4.0)
       ansi-colors: 4.1.3

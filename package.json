@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.7",
-    "@danielwaltz/eslint-config": "^0.0.13",
+    "@danielwaltz/eslint-config": "^0.0.14",
     "@iconify-json/lucide": "^1.2.24",
     "@iconify-json/simple-icons": "^1.2.21",
     "@iconify/utils": "^2.2.1",
