@@ -27,9 +27,7 @@ const { data: articles } = await useAsyncData(
     transform: (docs) =>
       docs.map((doc) => ({
         ...doc,
-        title: doc.title,
-        description: doc.description,
-        date: formatDate(doc.date),
+        ...v.parse(ArticleMetaSchema, doc),
       })),
   },
 );
@@ -40,7 +38,7 @@ const { data: articles } = await useAsyncData(
     <h1 class="max-w-fit text-h1">Articles</h1>
 
     <div class="flex flex-col gap-8">
-      <template v-if="articles">
+      <template v-if="articles?.length">
         <div
           v-for="article in articles"
           :key="article._path"
@@ -49,7 +47,7 @@ const { data: articles } = await useAsyncData(
           <article>
             <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
               <time :datetime="article.date">
-                {{ article.date }}
+                {{ formatDate(article.date) }}
               </time>
             </p>
 
@@ -74,9 +72,9 @@ const { data: articles } = await useAsyncData(
         </div>
       </template>
 
-      <template v-else>
-        <p class="text-p">Sorry, no articles were found.</p>
-      </template>
+      <div v-else class="app-prose">
+        <p>Sorry, no articles were found.</p>
+      </div>
     </div>
   </div>
 </template>

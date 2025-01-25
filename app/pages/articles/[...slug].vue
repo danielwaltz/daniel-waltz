@@ -8,19 +8,16 @@ const { data: article } = await useAsyncData(
     watch: [() => route.path],
     transform: (doc) => ({
       ...doc,
-      title: doc.title,
-      description: doc.description,
-      date: formatDate(doc.date),
-      dateISO: doc.date,
+      ...v.parse(ArticleMetaSchema, doc),
     }),
   },
 );
 
 useContentHead(toRef(() => article.value!));
 
-const title = toRef(() => article.value!.title!);
-const description = toRef(() => article.value!.description);
-const dateISO = toRef(() => article.value!.dateISO);
+const title = toRef(() => article.value?.title ?? "Not Found");
+const description = toRef(() => article.value?.description);
+const date = toRef(() => article.value?.date);
 
 useSeoMeta({
   title,
@@ -28,7 +25,7 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
   ogType: "article",
-  articlePublishedTime: dateISO,
+  articlePublishedTime: date,
   twitterTitle: title,
   twitterDescription: description,
 });
@@ -39,19 +36,17 @@ useSeoMeta({
     <article v-if="article">
       <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
         <time :datetime="article.date">
-          {{ article.date }}
+          {{ formatDate(article.date) }}
         </time>
       </p>
 
       <ContentRenderer :value="article" class="app-prose" />
     </article>
 
-    <template v-else>
-      <article class="app-prose">
-        <h1 class="max-w-fit text-h1">Not Found</h1>
-        <p>Sorry, the article you are looking for does not exist.</p>
-      </article>
-    </template>
+    <div v-else class="app-prose">
+      <h1 class="max-w-fit text-h1">Not Found</h1>
+      <p>Sorry, the article you are looking for does not exist.</p>
+    </div>
 
     <NuxtLink
       :to="{ name: 'articles' }"
