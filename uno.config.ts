@@ -4,14 +4,14 @@ import {
   defineConfig,
   presetIcons,
   presetTypography,
-  presetUno,
+  presetWind3,
   transformerDirectives,
 } from "unocss";
 
 // https://unocss.dev/config/
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind3(),
     presetIcons({
       collections: {
         app: FileSystemIconLoader(resolve(__dirname, "./app/assets/icons")),
