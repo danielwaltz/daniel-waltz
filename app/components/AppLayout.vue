@@ -17,12 +17,13 @@ const url = toRef(() => `${SITE_META.url}${route.path}`);
 
 useSeoMeta({
   titleTemplate: (title) =>
-    title ? `${title} - Daniel Waltz` : SITE_META.title,
+    title ? `${title} - ${SITE_META.name}` : SITE_META.title,
   themeColor: "#0e0e0e",
   description: SITE_META.description,
   ogTitle: SITE_META.title,
   ogDescription: SITE_META.description,
   ogImage: SITE_META.image,
+  ogSiteName: SITE_META.name,
   ogUrl: url,
   twitterTitle: SITE_META.title,
   twitterDescription: SITE_META.description,
