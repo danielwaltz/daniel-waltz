@@ -9,7 +9,7 @@ const errorMessage = toRef(() => props.error.message);
 const fallbackMessage = "An unknown error occurred";
 const message = toRef(() => errorMessage.value || fallbackMessage);
 
-useHead({ title });
+useSeoMeta({ title });
 </script>
 
 <template>
