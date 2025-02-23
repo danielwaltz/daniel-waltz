@@ -26,14 +26,15 @@
         class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
       >
         <li v-for="account in ACCOUNTS" :key="account.url">
-          <AppIconLink
-            rel="me"
-            :to="account.url"
-            :title="account.title"
-            :icon="account.icon"
-            data-tooltip="down"
-            class="focus:text-primary hover:text-primary"
-          />
+          <AppTooltip :content="account.title" side="bottom">
+            <AppIconLink
+              rel="me"
+              :to="account.url"
+              :title="account.title"
+              :icon="account.icon"
+              class="focus:text-primary hover:text-primary"
+            />
+          </AppTooltip>
         </li>
       </ul>
     </nav>

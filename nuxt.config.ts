@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@unocss/nuxt",
     "@vueuse/nuxt",
+    "reka-ui/nuxt",
   ],
   css: ["~/assets/css/main.css"],
   content: {

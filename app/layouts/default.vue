@@ -49,28 +49,30 @@
       <nav aria-label="Instances">
         <ul class="flex flex-wrap items-center gap-3">
           <li v-for="instance in INSTANCES" :key="instance.url">
-            <AppIconLink
-              :to="instance.url"
-              :title="instance.title"
-              :icon="instance.icon"
-              data-tooltip="down"
-              class="text-sm focus:text-neutral-100 hover:text-neutral-100"
-              :class="{
-                'text-primary focus:text-primary-200 hover:text-primary-200':
-                  instance.key === $config.public.hostingProvider,
-              }"
-            />
+            <AppTooltip :content="instance.title">
+              <AppIconLink
+                :to="instance.url"
+                :title="instance.title"
+                :icon="instance.icon"
+                class="text-sm focus:text-neutral-100 hover:text-neutral-100"
+                :class="{
+                  'text-primary focus:text-primary-200 hover:text-primary-200':
+                    instance.key === $config.public.hostingProvider,
+                }"
+              />
+            </AppTooltip>
           </li>
         </ul>
       </nav>
 
-      <AppIconLink
-        to="https://github.com/danielwaltz/daniel-waltz"
-        title="View Source Code"
-        icon="i-lucide-code"
-        data-tooltip="left"
-        class="text-xl focus:text-neutral-100 hover:text-neutral-100"
-      />
+      <AppTooltip content="View Source Code" side="left">
+        <AppIconLink
+          to="https://github.com/danielwaltz/daniel-waltz"
+          title="View Source Code"
+          icon="i-lucide-code"
+          class="text-xl focus:text-neutral-100 hover:text-neutral-100"
+        />
+      </AppTooltip>
     </footer>
   </AppLayout>
 </template>
