@@ -1,4 +1,3 @@
-<!-- your-tooltip.vue  -->
 <script setup lang="ts">
 import {
   useForwardPropsEmits,
