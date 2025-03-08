@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.8
         version: 4.0.8(postcss@8.5.3)
       '@danielwaltz/eslint-config':
-        specifier: ^0.1.1
-        version: 0.1.1(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@unocss/eslint-plugin@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.2)
+        specifier: ^0.1.2
+        version: 0.1.2(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@unocss/eslint-plugin@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.2)
       '@iconify-json/lucide':
         specifier: ^1.2.28
         version: 1.2.28
@@ -290,8 +290,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  '@danielwaltz/eslint-config@0.1.1':
-    resolution: {integrity: sha512-pcAaOO5x6uoTj1S0OSwj1nwRDU/qSE31DTv9MSKtTxOd+fxWmKj0LwF1PgdyBRae8YND5JgtVCvoruEscK5nZA==}
+  '@danielwaltz/eslint-config@0.1.2':
+    resolution: {integrity: sha512-CRsP4AEDD55CywyOx3GRN4OSLHPZJYGnlJXJkgfNFAU7mRld/tLydlhp/8xfF86nhZl2/8ijM8Z2RpUrwT/Pjw==}
     peerDependencies:
       eslint: '>=9'
       prettier: '>=3'
@@ -5545,7 +5545,7 @@ snapshots:
     dependencies:
       postcss: 8.5.3
 
-  '@danielwaltz/eslint-config@0.1.1(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@unocss/eslint-plugin@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.2)':
+  '@danielwaltz/eslint-config@0.1.2(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@unocss/eslint-plugin@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.2)':
     dependencies:
       '@sxzz/eslint-config': 5.3.0(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.26.0(@typescript-eslint/parser@8.26.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@unocss/eslint-plugin@66.0.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.22.0(jiti@2.4.2)
