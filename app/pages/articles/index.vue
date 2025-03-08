@@ -40,7 +40,7 @@ const { data: articles } = await useAsyncData(
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article._path">
-          <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
+          <p class="m-is-1 text-neutral-400 font-script text-p !leading-none">
             <time :datetime="article.date">
               {{ formatDate(article.date) }}
             </time>

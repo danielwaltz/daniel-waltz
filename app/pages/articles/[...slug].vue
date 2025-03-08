@@ -34,7 +34,9 @@ useSeoMeta({
 <template>
   <div class="flex flex-col gap-6">
     <article v-if="article">
-      <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
+      <p
+        class="m-be--1 m-is-1 text-neutral-400 font-script text-p !leading-none"
+      >
         <time :datetime="article.date">
           {{ formatDate(article.date) }}
         </time>
