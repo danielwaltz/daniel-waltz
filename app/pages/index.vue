@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-8">
-    <article class="flex flex-col gap-6 text-pretty">
+    <div class="flex flex-col gap-6 text-pretty">
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
@@ -19,7 +19,7 @@
         imaginable. Together we can make the web a better place for
         <span class="text-primary-gradient font-bold">everyone!</span>
       </p>
-    </article>
+    </div>
 
     <nav aria-label="Accounts">
       <ul

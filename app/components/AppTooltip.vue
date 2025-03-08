@@ -27,6 +27,7 @@ const forward = useForwardPropsEmits(props, emit);
       :side
       :side-offset="4"
       :collision-padding="4"
+      aria-hidden="true"
       class="animate-fade-in animate-duration-100 select-none rounded-md bg-neutral-800 p-2 text-sm text-neutral-100 leading-none shadow-sm"
     >
       {{ content }}

@@ -39,37 +39,31 @@ const { data: articles } = await useAsyncData(
 
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
-        <div
-          v-for="article in articles"
-          :key="article._path"
-          class="flex flex-col gap-6"
-        >
-          <article>
-            <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
-              <time :datetime="article.date">
-                {{ formatDate(article.date) }}
-              </time>
-            </p>
+        <article v-for="article in articles" :key="article._path">
+          <p class="m-be--2 m-is-1 text-neutral-400 font-script text-p">
+            <time :datetime="article.date">
+              {{ formatDate(article.date) }}
+            </time>
+          </p>
 
-            <div class="app-prose">
-              <h2 class="m-0 max-w-fit text-primary-gradient text-h3">
-                <NuxtLink :to="article._path" class="no-underline">
-                  {{ article.title }}
-                </NuxtLink>
-              </h2>
+          <div class="app-prose">
+            <h2 class="m-0 max-w-fit text-primary-gradient text-h3">
+              <NuxtLink :to="article._path" class="no-underline">
+                {{ article.title }}
+              </NuxtLink>
+            </h2>
 
-              <p>{{ article.description }}</p>
-            </div>
-          </article>
+            <p>{{ article.description }}</p>
+          </div>
 
           <NuxtLink
             :to="article._path"
-            class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
+            class="mbs-4 max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
           >
             <span>Read more</span>
             <i class="i-lucide-chevron-right text-1.25em text-secondary" />
           </NuxtLink>
-        </div>
+        </article>
       </template>
 
       <div v-else class="app-prose">
