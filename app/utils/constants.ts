@@ -16,7 +16,7 @@ export const ACCOUNTS = [
   },
   {
     url: "https://x.com/danielbwaltz",
-    title: "X / Twitter",
+    title: "X",
     icon: "i-simple-icons-x",
   },
   {
