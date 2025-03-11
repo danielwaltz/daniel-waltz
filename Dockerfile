@@ -9,7 +9,7 @@ RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
 # Development
 FROM base AS development
 STOPSIGNAL SIGKILL
-CMD ["sh", "-c", "pnpm i --config.unsafePerm=true && pnpm dev"]
+CMD ["sh", "-c", "pnpm i && pnpm dev"]
 
 # Dependencies
 FROM base AS dependencies
