@@ -3,17 +3,14 @@ const route = useRoute();
 
 const { data: article } = await useAsyncData(
   "article",
-  () => queryContent(route.path).where({ status: "published" }).findOne(),
-  {
-    watch: [() => route.path],
-    transform: (doc) => ({
-      ...doc,
-      ...v.parse(ArticleMetaSchema, doc),
-    }),
-  },
+  () =>
+    queryCollection("articles")
+      .select("title", "description", "date", "discussion", "body")
+      .where("status", "=", "published")
+      .andWhere((query) => query.where("path", "=", route.path))
+      .first(),
+  { watch: [() => route.path] },
 );
-
-useContentHead(toRef(() => article.value!));
 
 const title = toRef(() => article.value?.title ?? "Not Found");
 const description = toRef(() => article.value?.description);

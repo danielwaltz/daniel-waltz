@@ -18,18 +18,12 @@ const route = useRoute();
 const { data: articles } = await useAsyncData(
   "articles",
   () =>
-    queryContent(route.path)
-      .where({ status: "published" })
-      .sort({ date: -1 })
-      .find(),
-  {
-    watch: [() => route.path],
-    transform: (docs) =>
-      docs.map((doc) => ({
-        ...doc,
-        ...v.parse(ArticleMetaSchema, doc),
-      })),
-  },
+    queryCollection("articles")
+      .select("title", "description", "date", "path")
+      .where("status", "=", "published")
+      .order("date", "DESC")
+      .all(),
+  { watch: [() => route.path] },
 );
 </script>
 
@@ -39,7 +33,7 @@ const { data: articles } = await useAsyncData(
 
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
-        <article v-for="article in articles" :key="article._path">
+        <article v-for="article in articles" :key="article.path">
           <p class="m-is-1 text-neutral-400 font-script text-p !leading-none">
             <time :datetime="article.date">
               {{ formatDate(article.date) }}
@@ -48,7 +42,7 @@ const { data: articles } = await useAsyncData(
 
           <div class="app-prose">
             <h2 class="m-0 max-w-fit text-primary-gradient text-h3">
-              <NuxtLink :to="article._path" class="no-underline">
+              <NuxtLink :to="article.path" class="no-underline">
                 {{ article.title }}
               </NuxtLink>
             </h2>
@@ -57,7 +51,7 @@ const { data: articles } = await useAsyncData(
           </div>
 
           <NuxtLink
-            :to="article._path"
+            :to="article.path"
             class="mbs-4 max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
           >
             <span>Read more</span>
