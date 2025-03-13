@@ -1,7 +1,7 @@
 {
   "name": "daniel-waltz",
   "private": true,
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.6.3",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -22,12 +22,12 @@
     "@iconify-json/simple-icons": "^1.2.28",
     "@iconify/utils": "^2.3.0",
     "@nuxt/content": "^3.3.0",
-    "@nuxt/devtools": "^2.2.1",
+    "@nuxt/devtools": "^2.3.0",
     "@nuxt/eslint": "^1.2.0",
     "@nuxt/fonts": "^0.11.0",
     "@nuxt/image": "^1.9.0",
     "@types/node": "~22.13.10",
-    "@unhead/vue": "^2.0.0-rc.9",
+    "@unhead/vue": "^2.0.0-rc.13",
     "@unocss/eslint-plugin": "^66.0.0",
     "@unocss/nuxt": "^66.0.0",
     "@unocss/reset": "^66.0.0",
