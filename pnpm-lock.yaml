@@ -41,9 +41,6 @@ importers:
       '@types/node':
         specifier: ~22.13.11
         version: 22.13.11
-      '@unhead/vue':
-        specifier: ^2.0.0-rc.13
-        version: 2.0.0-rc.13(vue@3.5.13(typescript@5.8.2))
       '@unocss/eslint-plugin':
         specifier: ^66.0.0
         version: 66.0.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
