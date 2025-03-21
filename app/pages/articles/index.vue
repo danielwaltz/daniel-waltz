@@ -13,7 +13,7 @@ useSeoMeta({
   twitterDescription: meta.description,
 });
 
-const route = useRoute();
+const route = useRoute("articles");
 
 const { data: articles } = await useAsyncData(
   "articles",
