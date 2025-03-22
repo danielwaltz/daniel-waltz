@@ -62,9 +62,12 @@ useSeoMeta({
       </footer>
     </article>
 
-    <div v-else class="app-prose">
-      <h1 class="max-w-fit text-h1">Not Found</h1>
-      <p>Sorry, the article you are looking for does not exist.</p>
+    <div v-else class="flex flex-col gap-4">
+      <div class="app-prose">
+        <h1 class="max-w-fit text-h1">Not Found</h1>
+        <p>The article you are looking for does not exist. 🥺</p>
+      </div>
+
       <NuxtLink
         :to="{ name: 'articles' }"
         class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"

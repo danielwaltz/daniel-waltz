@@ -56,7 +56,7 @@ useSeoMeta({
       </template>
 
       <div v-else class="app-prose">
-        <p>Sorry, no articles were found.</p>
+        <p>No articles were found. 🥺</p>
       </div>
     </div>
   </div>

@@ -14,11 +14,11 @@ useSeoMeta({ title });
 
 <template>
   <NuxtLayout>
-    <div class="flex flex-col gap-6">
-      <article class="app-prose">
+    <div class="flex flex-col gap-4">
+      <div class="app-prose">
         <h1 class="max-w-fit text-h1">{{ title }}</h1>
         <p>{{ message }}</p>
-      </article>
+      </div>
 
       <NuxtLink
         :to="{ name: 'index' }"
