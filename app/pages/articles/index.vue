@@ -15,15 +15,12 @@ useSeoMeta({
 
 const route = useRoute("articles");
 
-const { data: articles } = await useAsyncData(
-  "articles",
-  () =>
-    queryCollection("articles")
-      .select("title", "description", "date", "path")
-      .where("status", "=", "published")
-      .order("date", "DESC")
-      .all(),
-  { watch: [() => route.path] },
+const { data: articles } = await useAsyncData(route.path, () =>
+  queryCollection("articles")
+    .select("title", "description", "date", "path")
+    .where("status", "=", "published")
+    .order("date", "DESC")
+    .all(),
 );
 </script>
 

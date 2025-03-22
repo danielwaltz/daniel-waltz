@@ -2,7 +2,7 @@
 const route = useRoute("articles-slug");
 
 const { data: article } = await useAsyncData(
-  "article",
+  route.path,
   () =>
     queryCollection("articles")
       .select("title", "description", "date", "discussion", "body")
