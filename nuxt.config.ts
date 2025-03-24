@@ -12,7 +12,8 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   content: {
     experimental: {
-      nativeSqlite: true,
+      nativeSqlite:
+        import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER !== "cloudflare",
     },
     database:
       import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER === "cloudflare"
