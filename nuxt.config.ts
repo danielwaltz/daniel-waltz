@@ -40,8 +40,8 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/articles": { swr: 3600 },
-    "/articles/**": { swr: 3600 },
+    "/articles": { isr: 3600 },
+    "/articles/**": { isr: 3600 },
   },
   future: {
     compatibilityVersion: 4,
