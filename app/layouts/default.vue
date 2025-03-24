@@ -16,24 +16,26 @@
 
         <nav aria-label="Main">
           <ul
-            class="flex flex-wrap gap-2 text-base font-bold tracking-wide uppercase sm:text-lg"
+            class="flex flex-wrap gap-3 text-base font-bold tracking-wide uppercase sm:text-lg"
           >
             <li>
               <NuxtLink
                 :to="{ name: 'index' }"
-                class="p-block-1 p-inline-2"
-                active-class="text-primary-gradient"
+                class="flex items-center gap-2 p-block-1 p-inline-2"
+                active-class="text-primary-gradient [&>i]:text-primary"
               >
-                Home
+                <i class="i-lucide-house" />
+                <span>Home</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 :to="{ name: 'articles' }"
-                class="p-block-1 p-inline-2"
-                active-class="text-primary-gradient"
+                class="flex items-center gap-2 p-block-1 p-inline-2"
+                active-class="text-primary-gradient [&>i]:text-primary"
               >
-                Articles
+                <i class="i-lucide-file-text" />
+                <span>Articles</span>
               </NuxtLink>
             </li>
           </ul>
