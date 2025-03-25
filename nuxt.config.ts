@@ -12,21 +12,8 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   content: {
     experimental: {
-      nativeSqlite:
-        import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER !== "cloudflare",
+      nativeSqlite: true,
     },
-    database:
-      import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER === "cloudflare"
-        ? {
-            type: "d1",
-            bindingName: "DB",
-          }
-        : import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER === "amplify"
-          ? {
-              type: "sqlite",
-              filename: "/tmp/contents.sqlite",
-            }
-          : undefined,
     build: {
       markdown: {
         highlight: {
