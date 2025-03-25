@@ -7,7 +7,9 @@ WORKDIR /app
 # Tooling
 FROM base AS tooling
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
-RUN corepack enable pnpm && pnpm config -g set store-dir /.pnpm-store
+RUN npm i -g corepack@latest && \
+    corepack enable && \
+    pnpm config -g set store-dir /.pnpm-store
 
 # Development
 FROM tooling AS development
