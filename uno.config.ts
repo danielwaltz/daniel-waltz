@@ -15,7 +15,7 @@ export default defineConfig({
     presetWind3(),
     presetIcons({
       collections: {
-        app: FileSystemIconLoader(resolve(__dirname, "./app/assets/icons")),
+        app: FileSystemIconLoader(resolve("./app/assets/icons")),
       },
       extraProperties: {
         display: "inline-block",
