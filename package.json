@@ -52,7 +52,8 @@
       "@parcel/watcher",
       "better-sqlite3",
       "esbuild",
-      "sharp"
+      "sharp",
+      "vue-demi"
     ]
   }
 }
