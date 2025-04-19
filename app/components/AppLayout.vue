@@ -18,7 +18,7 @@ const url = toRef(() => `${SITE_META.url}${route.path}`);
 useSeoMeta({
   titleTemplate: (title) =>
     title ? `${title} - ${SITE_META.name}` : SITE_META.title,
-  themeColor: "#0e0e0e",
+  themeColor: "#0b0b0b",
   description: SITE_META.description,
   ogTitle: SITE_META.title,
   ogDescription: SITE_META.description,
