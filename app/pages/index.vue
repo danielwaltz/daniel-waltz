@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const site = useSiteConfig();
+</script>
+
 <template>
   <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-6 text-pretty">
@@ -12,7 +16,7 @@
 
       <p class="text-p">
         I'm a
-        <strong class="uppercase">web developer</strong>
+        <strong class="uppercase">{{ site.jobTitle }}</strong>
         with <strong>15+ years</strong> of experience and a deep passion for
         delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces

@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
   modules: [
+    "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/fonts",
@@ -10,6 +11,12 @@ export default defineNuxtConfig({
     "reka-ui/nuxt",
   ],
   css: ["~/assets/css/main.css"],
+  site: {
+    name: "Daniel Waltz",
+    jobTitle: "Web Developer",
+    description:
+      "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
+  },
   content: {
     experimental: {
       nativeSqlite: true,
@@ -39,7 +46,7 @@ export default defineNuxtConfig({
     typedPages: true,
     viewTransition: true,
   },
-  compatibilityDate: "2025-01-01",
+  compatibilityDate: "2025-04-18",
   nitro: {
     compressPublicAssets: true,
   },

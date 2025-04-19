@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { cleanDoubleSlashes } from "ufo";
+
 useHead({
   link: [
     { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
@@ -13,21 +15,26 @@ useHead({
 
 const route = useRoute();
 
-const url = toRef(() => `${SITE_META.url}${route.path}`);
+const site = useSiteConfig();
+
+const name = toRef(() => site.name);
+const title = toRef(() => `${name.value} - ${site.jobTitle}`);
+const description = toRef(() => site.description);
+const image = toRef(() => cleanDoubleSlashes(`${site.url}/favicon.png`));
+const url = toRef(() => cleanDoubleSlashes(`${site.url}${route.path}`));
 
 useSeoMeta({
-  titleTemplate: (title) =>
-    title ? `${title} - ${SITE_META.name}` : SITE_META.title,
+  titleTemplate: (t) => (t ? `${t} - ${name.value}` : title.value),
   themeColor: "#0b0b0b",
-  description: SITE_META.description,
-  ogTitle: SITE_META.title,
-  ogDescription: SITE_META.description,
-  ogImage: SITE_META.image,
-  ogSiteName: SITE_META.name,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: image,
+  ogSiteName: name,
   ogUrl: url,
-  twitterTitle: SITE_META.title,
-  twitterDescription: SITE_META.description,
-  twitterImage: SITE_META.image,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: image,
   twitterCard: "summary",
 });
 </script>
