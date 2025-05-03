@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const site = useSiteConfig();
+</script>
+
 <template>
   <AppLayout class="grid place-items-center">
     <AppBackdrop />
@@ -11,7 +15,7 @@
           class="inline-flex rounded-xl transition-all active:scale-95"
         >
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
-          <span class="sr-only">Home</span>
+          <span class="sr-only">{{ site.name }}</span>
         </NuxtLink>
 
         <nav aria-label="Main">
