@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     typedPages: true,
     viewTransition: true,
   },
-  compatibilityDate: "2025-04-18",
+  compatibilityDate: "latest",
   nitro: {
     compressPublicAssets: true,
   },
