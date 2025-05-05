@@ -18,7 +18,7 @@
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.9",
     "@danielwaltz/eslint-config": "^2.3.1",
-    "@iconify-json/lucide": "^1.2.39",
+    "@iconify-json/lucide": "^1.2.40",
     "@iconify-json/simple-icons": "^1.2.33",
     "@iconify/utils": "^2.3.0",
     "@nuxt/content": "^3.5.1",
@@ -35,7 +35,7 @@
     "better-sqlite3": "^11.9.1",
     "eslint": "^9.26.0",
     "npm-run-all2": "^8.0.1",
-    "nuxt": "^3.17.1",
+    "nuxt": "^3.17.2",
     "pathe": "^2.0.3",
     "prettier": "^3.5.3",
     "reka-ui": "^2.2.0",
@@ -43,7 +43,7 @@
     "ufo": "^1.6.1",
     "unocss": "^66.1.0",
     "unplugin-vue-router": "^0.12.0",
-    "vite": "^6.3.4",
+    "vite": "^6.3.5",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1",
     "vue-tsc": "^2.2.10"
