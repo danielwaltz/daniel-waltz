@@ -1,36 +1,36 @@
 <template>
   <div
-    class="pointer-events-none fixed inset-0 left-50% top-50% z-0 max-w-3xl translate--50% opacity-5"
+    class="opacity-5 max-w-3xl pointer-events-none translate--50% inset-0 left-50% top-50% fixed z-0"
   >
     <div
       v-for="num in 6"
       :key="num"
-      class="absolute inset-0"
+      class="inset-0 absolute"
       :style="{ scale: `${num * 0.25}` }"
     >
       <div
-        class="shadow-box animate-alternate-reverse rounded-3xl"
+        class="rounded-3xl shadow-box animate-alternate-reverse"
         :class="{
           'shadow-primary rotate--1': num % 2 === 0,
           'shadow-secondary rotate-1': num % 2 !== 0,
         }"
       />
       <div
-        class="shadow-box animate-alternate rounded-3xl"
+        class="rounded-3xl shadow-box animate-alternate"
         :class="{
           'shadow-secondary rotate-1': num % 2 === 0,
           'shadow-primary rotate--1': num % 2 !== 0,
         }"
       />
       <div
-        class="shadow-box animate-alternate-reverse rounded-3xl"
+        class="rounded-3xl shadow-box animate-alternate-reverse"
         :class="{
           'shadow-secondary rotate--1': num % 2 === 0,
           'shadow-primary rotate-1': num % 2 !== 0,
         }"
       />
       <div
-        class="shadow-box animate-alternate rounded-3xl"
+        class="rounded-3xl shadow-box animate-alternate"
         :class="{
           'shadow-primary rotate-1': num % 2 === 0,
           'shadow-secondary rotate--1': num % 2 !== 0,

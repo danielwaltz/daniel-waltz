@@ -30,7 +30,6 @@
     "@types/node": "~22.15.3",
     "@unocss/eslint-plugin": "^66.1.0",
     "@unocss/nuxt": "^66.1.0",
-    "@unocss/reset": "^66.1.0",
     "@vueuse/nuxt": "^13.1.0",
     "better-sqlite3": "^11.9.1",
     "eslint": "^9.26.0",

@@ -8,7 +8,7 @@ const site = useSiteConfig();
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
-          class="m-be--2 m-is-1 rotate-3deg text-2xl text-neutral-400 tracking-wide font-script 2xl:text-4xl sm:text-3xl !leading-none"
+          class="text-2xl text-neutral-400 tracking-wide font-script m-be--2 m-is-1 rotate-3deg 2xl:text-4xl sm:text-3xl !leading-none"
           >Hi, I'm</span
         >
         <span class="max-w-fit text-h1">Daniel Waltz</span>
@@ -27,7 +27,7 @@ const site = useSiteConfig();
 
     <nav aria-label="Accounts">
       <ul
-        class="flex flex-wrap items-center gap-0.75em text-2xl 2xl:text-4xl sm:text-3xl"
+        class="text-2xl flex flex-wrap gap-0.75em items-center 2xl:text-4xl sm:text-3xl"
       >
         <li v-for="account in ACCOUNTS" :key="account.url">
           <AppTooltip :content="account.title" side="bottom">
@@ -44,7 +44,7 @@ const site = useSiteConfig();
     </nav>
 
     <div
-      class="animate-flip-in-x animate-delay-10s animate-backwards text-pretty text-sm text-neutral-400 2xl:text-lg sm:text-base"
+      class="text-sm text-neutral-400 text-pretty animate-flip-in-x animate-delay-10s animate-backwards 2xl:text-lg sm:text-base"
     >
       Oh, and while I have you, here's a friendly reminder to be kind to
       yourself!

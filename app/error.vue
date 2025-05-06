@@ -22,7 +22,7 @@ useSeoMeta({ title });
 
       <NuxtLink
         :to="{ name: 'index' }"
-        class="max-w-fit flex items-center gap-1 text-primary-gradient font-semibold tracking-wide uppercase text-p"
+        class="text-primary-gradient font-semibold tracking-wide flex gap-1 max-w-fit uppercase items-center text-p"
       >
         <i class="i-lucide-chevron-left text-1.25em text-primary" />
         <span>Back to home</span>

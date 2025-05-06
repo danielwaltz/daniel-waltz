@@ -4,15 +4,15 @@ import {
   defineConfig,
   presetIcons,
   presetTypography,
-  presetWind3,
+  presetWind4,
   transformerDirectives,
 } from "unocss";
-import type { Theme } from "unocss/preset-wind3";
+import type { Theme } from "unocss/preset-wind4";
 
 // https://unocss.dev/config/
 export default defineConfig({
   presets: [
-    presetWind3(),
+    presetWind4(),
     presetIcons({
       collections: {
         app: FileSystemIconLoader(resolve("./app/assets/icons")),
@@ -89,14 +89,15 @@ export default defineConfig({
         DEFAULT: "oklch(0.15 0 0)",
       },
     },
-    fontFamily: {
+    font: {
       sans: "Noto Sans, sans-serif",
       serif: "Noto Serif, serif",
       display: "Antonio, sans-serif",
       script: "Caveat, serif",
       mono: "JetBrains Mono, monospace",
     },
-    lineHeight: {
+    leading: {
+      none: "1", // TODO: remove when officially added: https://github.com/unocss/unocss/pull/4640
       heading: "1.03",
     },
   } satisfies Theme,
@@ -114,11 +115,11 @@ export default defineConfig({
       "app-prose":
         "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
       "bg-primary-gradient":
-        "bg-primary bg-gradient-to-r from-primary to-secondary",
+        "bg-primary bg-linear-to-r from-primary to-secondary",
       "bg-secondary-gradient":
-        "bg-secondary bg-gradient-to-r from-secondary to-primary",
+        "bg-secondary bg-linear-to-r from-secondary to-primary",
       interactive:
-        "cursor-pointer outline-2 outline-current outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed",
+        "cursor-pointer outline-2 outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
       "shadow-box":
         "absolute inset-0 shadow-box-animate animate-backwards shadow-2xl",

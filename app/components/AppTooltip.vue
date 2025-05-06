@@ -28,7 +28,7 @@ const forward = useForwardPropsEmits(props, emit);
       :side-offset="4"
       :collision-padding="4"
       aria-hidden="true"
-      class="animate-fade-in animate-duration-100 select-none rounded-md bg-neutral-800 p-2 text-sm text-neutral-100 leading-none shadow-sm"
+      class="text-sm text-neutral-100 leading-none p-2 rounded-md bg-neutral-800 select-none shadow-sm animate-fade-in animate-duration-100"
     >
       {{ content }}
       <TooltipArrow :width="12" :height="6" class="fill-neutral-800" />

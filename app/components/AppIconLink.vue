@@ -13,9 +13,9 @@ defineProps<{
     :to
     :aria-label="title"
     rel="noopener noreferrer"
-    class="relative flex"
+    class="flex relative"
   >
-    <span class="absolute inset--1" />
+    <span class="inset--1 absolute" />
     <i :class="icon" />
     <span class="sr-only">{{ title }}</span>
   </NuxtLink>

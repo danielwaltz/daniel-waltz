@@ -1,5 +1,3 @@
-@import "@unocss/reset/tailwind-compat.css";
-
 ::selection {
   background-color: theme("colors.primary.DEFAULT");
   background-color: color-mix(
@@ -12,5 +10,5 @@
 
 a,
 button {
-  @apply interactive rounded;
+  @apply interactive rounded-md;
 }
