@@ -97,7 +97,6 @@ export default defineConfig({
       mono: "JetBrains Mono, monospace",
     },
     leading: {
-      none: "1", // TODO: remove when officially added: https://github.com/unocss/unocss/pull/4640
       heading: "1.03",
     },
   } satisfies Theme,
