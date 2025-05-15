@@ -13,8 +13,7 @@ RUN npm i -g corepack@latest && \
 
 # Development
 FROM tooling AS development
-STOPSIGNAL SIGKILL
-CMD ["sh", "-c", "pnpm i && pnpm dev"]
+CMD ["bash", "-c", "pnpm i && pnpm dev"]
 
 # Dependencies
 FROM tooling AS dependencies
