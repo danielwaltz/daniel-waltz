@@ -68,6 +68,9 @@ export default defineNuxtConfig({
       nuxt: {
         sortConfigKeys: true,
       },
+      typescript: {
+        tsconfigPath: "./tsconfig.json",
+      },
     },
   },
 });
