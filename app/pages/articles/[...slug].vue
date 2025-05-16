@@ -9,7 +9,6 @@ const { data: article } = await useAsyncData(
       .where("status", "=", "published")
       .andWhere((query) => query.where("path", "=", route.path))
       .first(),
-  { watch: [() => route.path] },
 );
 
 const title = toRef(() => article.value?.title ?? "Not Found");
@@ -34,9 +33,12 @@ useSeoMeta({
       <p
         class="text-neutral-400 font-script m-be--1 m-is-1 text-p !leading-none"
       >
-        <time :datetime="article.date">
-          {{ formatDate(article.date) }}
-        </time>
+        <NuxtTime
+          :datetime="article.date"
+          month="long"
+          day="2-digit"
+          year="numeric"
+        />
       </p>
 
       <ContentRenderer :value="article" class="app-prose" />

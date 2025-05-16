@@ -32,9 +32,12 @@ useSeoMeta({
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article.path">
           <p class="text-neutral-400 font-script m-is-1 text-p !leading-none">
-            <time :datetime="article.date">
-              {{ formatDate(article.date) }}
-            </time>
+            <NuxtTime
+              :datetime="article.date"
+              month="long"
+              day="2-digit"
+              year="numeric"
+            />
           </p>
 
           <div class="app-prose">
