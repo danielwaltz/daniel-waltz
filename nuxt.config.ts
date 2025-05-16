@@ -73,4 +73,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  unocss: {
+    disableNuxtInlineStyle: false,
+  },
 });
