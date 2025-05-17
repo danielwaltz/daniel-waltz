@@ -73,6 +73,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  fonts: {
+    defaults: {
+      weights: [400, 600, 700],
+      subsets: ["latin"],
+    },
+  },
   unocss: {
     disableNuxtInlineStyle: false,
   },
