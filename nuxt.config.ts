@@ -19,7 +19,8 @@ export default defineNuxtConfig({
   },
   content: {
     experimental: {
-      nativeSqlite: true,
+      nativeSqlite:
+        import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER !== "cloudflare",
     },
     build: {
       markdown: {
