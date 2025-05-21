@@ -19,8 +19,7 @@ export default defineNuxtConfig({
   },
   content: {
     experimental: {
-      nativeSqlite:
-        import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER !== "cloudflare",
+      sqliteConnector: "native",
     },
     build: {
       markdown: {
@@ -63,6 +62,7 @@ export default defineNuxtConfig({
       "@csstools/postcss-oklab-function": { preserve: true },
     },
   },
+  debug: true,
   eslint: {
     config: {
       standalone: false,
