@@ -62,7 +62,6 @@ export default defineNuxtConfig({
       "@csstools/postcss-oklab-function": { preserve: true },
     },
   },
-  debug: true,
   eslint: {
     config: {
       standalone: false,
