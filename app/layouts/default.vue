@@ -20,7 +20,7 @@ const site = useSiteConfig();
 
         <nav aria-label="Main">
           <ul
-            class="text-base font-bold tracking-wide flex flex-wrap gap-3 uppercase sm:text-lg"
+            class="text-base tracking-wide font-bold flex flex-wrap gap-3 uppercase sm:text-lg"
           >
             <li>
               <NuxtLink

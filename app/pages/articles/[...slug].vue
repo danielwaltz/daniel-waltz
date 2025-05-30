@@ -46,7 +46,7 @@ useSeoMeta({
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
           :to="{ name: 'articles' }"
-          class="text-primary-gradient font-semibold tracking-wide flex gap-1 max-w-fit uppercase items-center text-p"
+          class="text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center text-p"
         >
           <i class="i-lucide-chevron-left text-1.25em text-primary" />
           <span>Back to articles</span>
@@ -56,7 +56,7 @@ useSeoMeta({
           v-if="article.discussion"
           :to="article.discussion"
           target="_blank"
-          class="text-primary-gradient font-semibold tracking-wide flex gap-2 max-w-fit uppercase items-center text-p"
+          class="text-primary-gradient tracking-wide font-semibold flex gap-2 max-w-fit uppercase items-center text-p"
         >
           <span>Discussion</span>
           <i class="i-lucide-external-link text-secondary" />
@@ -72,7 +72,7 @@ useSeoMeta({
 
       <NuxtLink
         :to="{ name: 'articles' }"
-        class="text-primary-gradient font-semibold tracking-wide flex gap-1 max-w-fit uppercase items-center text-p"
+        class="text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center text-p"
       >
         <i class="i-lucide-chevron-left text-1.25em text-primary" />
         <span>Back to articles</span>

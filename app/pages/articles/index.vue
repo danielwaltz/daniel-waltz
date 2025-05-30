@@ -52,7 +52,7 @@ useSeoMeta({
 
           <NuxtLink
             :to="article.path"
-            class="text-primary-gradient font-semibold tracking-wide mbs-4 flex gap-1 max-w-fit uppercase items-center text-p"
+            class="text-primary-gradient tracking-wide font-semibold mbs-4 flex gap-1 max-w-fit uppercase items-center text-p"
           >
             <span>Read more</span>
             <i class="i-lucide-chevron-right text-1.25em text-secondary" />
