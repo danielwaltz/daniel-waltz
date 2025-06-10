@@ -27,7 +27,7 @@
     "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/seo": "^3.0.3",
-    "@types/node": "~22.15.31",
+    "@types/node": "~24.0.0",
     "@unocss/eslint-plugin": "^66.1.4",
     "@unocss/nuxt": "^66.1.4",
     "@vueuse/nuxt": "^13.3.0",
