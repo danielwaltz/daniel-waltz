@@ -11,7 +11,7 @@ const site = useSiteConfig();
           class="text-2xl text-neutral-400 tracking-wide font-script m-be--2 m-is-1 rotate-3 2xl:text-4xl sm:text-3xl !leading-none"
           >Hi, I'm</span
         >
-        <span class="max-w-fit text-h1">Daniel Waltz</span>
+        <span class="text-h1 max-w-fit">Daniel Waltz</span>
       </h1>
 
       <p class="text-p">

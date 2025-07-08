@@ -31,7 +31,7 @@ useSeoMeta({
   <div class="flex flex-col gap-6">
     <article v-if="article">
       <p
-        class="text-neutral-400 font-script m-be--1 m-is-1 text-p !leading-none"
+        class="text-p text-neutral-400 font-script m-be--1 m-is-1 !leading-none"
       >
         <NuxtTime
           :datetime="article.date"
@@ -46,7 +46,7 @@ useSeoMeta({
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
           :to="{ name: 'articles' }"
-          class="text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center text-p"
+          class="text-p text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center"
         >
           <i class="i-lucide-chevron-left text-1.25em text-primary" />
           <span>Back to articles</span>
@@ -56,7 +56,7 @@ useSeoMeta({
           v-if="article.discussion"
           :to="article.discussion"
           target="_blank"
-          class="text-primary-gradient tracking-wide font-semibold flex gap-2 max-w-fit uppercase items-center text-p"
+          class="text-p text-primary-gradient tracking-wide font-semibold flex gap-2 max-w-fit uppercase items-center"
         >
           <span>Discussion</span>
           <i class="i-lucide-external-link text-secondary" />
@@ -66,13 +66,13 @@ useSeoMeta({
 
     <div v-else class="flex flex-col gap-4">
       <div class="app-prose">
-        <h1 class="max-w-fit text-h1">Not Found</h1>
+        <h1 class="text-h1 max-w-fit">Not Found</h1>
         <p>The article you are looking for does not exist. 🥺</p>
       </div>
 
       <NuxtLink
         :to="{ name: 'articles' }"
-        class="text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center text-p"
+        class="text-p text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center"
       >
         <i class="i-lucide-chevron-left text-1.25em text-primary" />
         <span>Back to articles</span>
