@@ -38,9 +38,6 @@ export default defineNuxtConfig({
     "/articles": { isr: 3600 },
     "/articles/**": { isr: 3600 },
   },
-  future: {
-    compatibilityVersion: 4,
-  },
   experimental: {
     asyncContext: true,
     typedPages: true,

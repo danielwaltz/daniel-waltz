@@ -34,7 +34,7 @@
     "better-sqlite3": "^12.2.0",
     "eslint": "^9.31.0",
     "npm-run-all2": "^8.0.4",
-    "nuxt": "^3.17.7",
+    "nuxt": "4.0.0-rc.0",
     "pathe": "^2.0.3",
     "prettier": "^3.6.2",
     "reka-ui": "^2.3.2",
