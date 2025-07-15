@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-oklab-function": "^4.0.10",
-    "@danielwaltz/eslint-config": "^2.5.0",
+    "@danielwaltz/eslint-config": "^2.5.1",
     "@iconify-json/lucide": "^1.2.57",
     "@iconify-json/simple-icons": "^1.2.43",
     "@iconify/utils": "^2.3.0",
@@ -34,7 +34,7 @@
     "better-sqlite3": "^12.2.0",
     "eslint": "^9.31.0",
     "npm-run-all2": "^8.0.4",
-    "nuxt": "4.0.0-rc.0",
+    "nuxt": "^4.0.0",
     "pathe": "^2.0.3",
     "prettier": "^3.6.2",
     "reka-ui": "^2.3.2",
