@@ -125,7 +125,7 @@ export default defineConfig({
       "shadow-box-animate":
         "animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite",
       "text-code":
-        "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono",
+        "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono before:hidden after:hidden",
       "text-h1":
         "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl !leading-heading",
       "text-h2":
