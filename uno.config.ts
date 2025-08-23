@@ -24,14 +24,14 @@ export default defineConfig({
     }),
     presetTypography({
       cssExtend: (theme) => ({
-        ["* > *:only-child"]: {
+        "* > *:only-child": {
           "margin-block-start": 0,
           "margin-block-end": 0,
         },
-        ["* > *:first-child"]: {
+        "* > *:first-child": {
           "margin-block-start": 0,
         },
-        ["* > *:last-child"]: {
+        "* > *:last-child": {
           "margin-block-end": 0,
         },
         "ul, ol": {
