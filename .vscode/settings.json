@@ -1,9 +1,29 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "dockercompose"
+  ],
+  "[javascript][javascriptreact][typescript][typescriptreact][vue][html][markdown][json][jsonc][yaml][dockercompose]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "never",
+      "source.sortImports": "never"
+    },
+    "editor.formatOnSave": false
   },
-  "eslint.codeActionsOnSave.mode": "problems",
-  "eslint.format.enable": true,
-  "eslint.validate": ["dockercompose", "json", "yaml"],
+  "prettier.enable": true,
+  "prettier.prettierPath": "node_modules/prettier",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
