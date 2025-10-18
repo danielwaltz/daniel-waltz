@@ -22,8 +22,6 @@ useSeoMeta({
   ogDescription: description,
   ogType: "article",
   articlePublishedTime: date,
-  twitterTitle: title,
-  twitterDescription: description,
 });
 </script>
 

@@ -32,9 +32,6 @@ useSeoMeta({
   ogImage: image,
   ogSiteName: name,
   ogUrl: url,
-  twitterTitle: title,
-  twitterDescription: description,
-  twitterImage: image,
   twitterCard: "summary",
 });
 </script>
