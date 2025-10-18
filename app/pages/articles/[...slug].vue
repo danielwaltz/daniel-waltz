@@ -29,7 +29,7 @@ useSeoMeta({
   <div class="flex flex-col gap-6">
     <article v-if="article">
       <p
-        class="text-p text-neutral-400 font-script m-be--1 m-is-1 !leading-none"
+        class="text-p text-neutral-400 font-script m-be--1 m-is-1 leading-none!"
       >
         <NuxtTime
           :datetime="article.date"
@@ -64,7 +64,7 @@ useSeoMeta({
 
     <div v-else class="flex flex-col gap-4">
       <div class="app-prose">
-        <h1 class="text-h1 max-w-fit">Not Found</h1>
+        <h1>Not Found</h1>
         <p>The article you are looking for does not exist. 🥺</p>
       </div>
 

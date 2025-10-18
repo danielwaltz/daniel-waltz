@@ -29,7 +29,7 @@ useSeoMeta({
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article.path">
-          <p class="text-p text-neutral-400 font-script m-is-1 !leading-none">
+          <p class="text-p text-neutral-400 font-script m-is-1 leading-none!">
             <NuxtTime
               :datetime="article.date"
               month="long"
@@ -38,14 +38,14 @@ useSeoMeta({
             />
           </p>
 
-          <div class="app-prose">
-            <h2 class="text-h3 text-primary-gradient m-0 max-w-fit">
+          <div class="flex flex-col gap-4">
+            <h2 class="text-h3 text-primary-gradient max-w-fit">
               <NuxtLink :to="article.path" class="no-underline">
                 {{ article.title }}
               </NuxtLink>
             </h2>
 
-            <p>{{ article.description }}</p>
+            <p class="text-p font-serif">{{ article.description }}</p>
           </div>
 
           <NuxtLink

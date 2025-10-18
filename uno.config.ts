@@ -23,24 +23,26 @@ export default defineConfig({
       },
     }),
     presetTypography({
-      cssExtend: (theme) => ({
-        "* > *:only-child": {
-          "margin-block-start": 0,
-          "margin-block-end": 0,
-        },
-        "* > *:first-child": {
-          "margin-block-start": 0,
-        },
-        "* > *:last-child": {
-          "margin-block-end": 0,
-        },
-        "ul, ol": {
-          "padding-inline-start": theme.spacing?.["2xl"],
-        },
-        li: {
-          "padding-block": "0.25rem",
-        },
-      }),
+      colorScheme: {
+        body: ["inherit", "inherit"],
+        headings: ["inherit", "inherit"],
+        lead: ["inherit", "inherit"],
+        links: ["inherit", "inherit"],
+        bold: ["inherit", "inherit"],
+        counters: ["inherit", "inherit"],
+        bullets: ["inherit", "inherit"],
+        hr: ["inherit", "inherit"],
+        quotes: ["inherit", "inherit"],
+        "quote-borders": ["inherit", "inherit"],
+        captions: ["inherit", "inherit"],
+        kbd: ["inherit", "inherit"],
+        "kbd-shadows": ["inherit", "inherit"],
+        code: ["inherit", "inherit"],
+        "pre-code": ["inherit", "inherit"],
+        "pre-bg": ["inherit", "inherit"],
+        "th-borders": ["inherit", "inherit"],
+        "td-borders": ["inherit", "inherit"],
+      },
     }),
   ],
   transformers: [transformerDirectives()],
@@ -112,7 +114,7 @@ export default defineConfig({
   shortcuts: [
     {
       "app-prose":
-        "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
+        "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1! prose-h1:m-0! prose-h1:pbe-2 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
       "bg-primary-gradient":
         "bg-primary bg-linear-to-r from-primary to-secondary",
       "bg-secondary-gradient":
@@ -127,18 +129,18 @@ export default defineConfig({
       "text-code":
         "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono before:hidden after:hidden",
       "text-h1":
-        "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl !leading-heading",
+        "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl leading-heading!",
       "text-h2":
-        "text-5xl font-normal font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl !leading-heading",
+        "text-5xl font-normal font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl leading-heading!",
       "text-h3":
-        "text-4xl font-normal font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl !leading-heading",
+        "text-4xl font-normal font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl leading-heading!",
       "text-h4":
-        "text-3xl font-normal font-display uppercase 2xl:text-6xl md:text-5xl sm:text-4xl !leading-heading",
+        "text-3xl font-normal font-display uppercase 2xl:text-6xl md:text-5xl sm:text-4xl leading-heading!",
       "text-h5":
-        "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl !leading-heading",
+        "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl leading-heading!",
       "text-h6":
-        "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl !leading-heading",
-      "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl !leading-relaxed",
+        "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl leading-heading!",
+      "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl leading-relaxed!",
       "text-pre": "font-mono",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",

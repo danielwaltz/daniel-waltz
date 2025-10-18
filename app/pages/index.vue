@@ -8,7 +8,7 @@ const site = useSiteConfig();
       <h1 class="flex flex-col items-start">
         <span
           aria-hidden="true"
-          class="text-2xl text-neutral-400 tracking-wide font-script m-be--2 m-is-1 rotate-3 2xl:text-4xl sm:text-3xl !leading-none"
+          class="text-2xl text-neutral-400 tracking-wide font-script m-be--2 m-is-1 rotate-3 2xl:text-4xl sm:text-3xl leading-none!"
           >Hi, I'm</span
         >
         <span class="text-h1 max-w-fit">Daniel Waltz</span>

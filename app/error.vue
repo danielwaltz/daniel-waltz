@@ -16,7 +16,7 @@ useSeoMeta({ title });
   <NuxtLayout>
     <div class="flex flex-col gap-4">
       <div class="app-prose">
-        <h1 class="text-h1 max-w-fit">{{ title }}</h1>
+        <h1>{{ title }}</h1>
         <p>{{ message }}</p>
       </div>
 
