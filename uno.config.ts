@@ -118,7 +118,7 @@ export default defineConfig({
       "bg-secondary-gradient":
         "bg-secondary bg-linear-to-r from-secondary to-primary",
       interactive:
-        "cursor-pointer outline-2 outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-dashed",
+        "cursor-pointer outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-2 focus:outline-dashed",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
       "shadow-box":
         "absolute inset-0 shadow-box-animate animate-backwards shadow-2xl",
