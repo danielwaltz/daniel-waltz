@@ -1,4 +1,5 @@
-import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { defineCollection, defineContentConfig } from "@nuxt/content";
+import * as v from "valibot";
 
 export default defineContentConfig({
   collections: {
@@ -8,12 +9,12 @@ export default defineContentConfig({
         repository: "https://github.com/danielwaltz/content",
       },
       type: "page",
-      schema: z.object({
-        title: z.string().min(1),
-        description: z.string().min(1),
-        date: z.string().min(1),
-        status: z.enum(["draft", "published"]),
-        discussion: z.string().url().optional(),
+      schema: v.object({
+        title: v.pipe(v.string(), v.minLength(1)),
+        description: v.pipe(v.string(), v.minLength(1)),
+        date: v.pipe(v.string(), v.minLength(1)),
+        status: v.picklist(["draft", "published"]),
+        discussion: v.optional(v.pipe(v.string(), v.url())),
       }),
     }),
   },
