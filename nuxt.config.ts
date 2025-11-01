@@ -40,8 +40,11 @@ export default defineNuxtConfig({
   },
   experimental: {
     asyncContext: true,
+    extractAsyncDataHandlers: true,
     typedPages: true,
+    typescriptPlugin: true,
     viewTransition: true,
+    viteEnvironmentApi: true,
   },
   compatibilityDate: "latest",
   nitro: {
