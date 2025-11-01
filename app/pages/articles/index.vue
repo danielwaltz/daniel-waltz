@@ -1,14 +1,12 @@
 <script setup lang="ts">
 const route = useRoute("articles");
 
-const { data: articles } = await useAsyncData(
-  () => route.path,
-  () =>
-    queryCollection("articles")
-      .select("title", "description", "date", "path")
-      .where("status", "=", "published")
-      .order("date", "DESC")
-      .all(),
+const { data: articles } = await useAsyncData(route.path, () =>
+  queryCollection("articles")
+    .select("title", "description", "date", "path")
+    .where("status", "=", "published")
+    .order("date", "DESC")
+    .all(),
 );
 
 const title = toRef(() => "Articles");
