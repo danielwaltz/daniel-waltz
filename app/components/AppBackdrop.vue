@@ -9,28 +9,28 @@
       :style="{ scale: `${num * 0.25}` }"
     >
       <div
-        class="rounded-3xl shadow-box animate-alternate-reverse"
+        class="rounded-3xl shadow-box"
         :class="{
           'shadow-primary rotate--1': num % 2 === 0,
           'shadow-secondary rotate-1': num % 2 !== 0,
         }"
       />
       <div
-        class="rounded-3xl shadow-box animate-alternate"
+        class="rounded-3xl shadow-box"
         :class="{
           'shadow-secondary rotate-1': num % 2 === 0,
           'shadow-primary rotate--1': num % 2 !== 0,
         }"
       />
       <div
-        class="rounded-3xl shadow-box animate-alternate-reverse"
+        class="rounded-3xl shadow-box"
         :class="{
           'shadow-secondary rotate--1': num % 2 === 0,
           'shadow-primary rotate-1': num % 2 !== 0,
         }"
       />
       <div
-        class="rounded-3xl shadow-box animate-alternate"
+        class="rounded-3xl shadow-box"
         :class="{
           'shadow-primary rotate-1': num % 2 === 0,
           'shadow-secondary rotate--1': num % 2 !== 0,
