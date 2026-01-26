@@ -6,14 +6,14 @@ export const ACCOUNTS = [
     icon: "i-simple-icons-bluesky",
   },
   {
-    url: "https://x.com/danielbwaltz",
-    title: "X",
-    icon: "i-simple-icons-x",
-  },
-  {
     url: "https://mastodon.world/@danielwaltz",
     title: "Mastodon",
     icon: "i-simple-icons-mastodon",
+  },
+  {
+    url: "https://x.com/danielbwaltz",
+    title: "X",
+    icon: "i-simple-icons-x",
   },
   {
     url: "https://www.threads.net/@danielbwaltz",
@@ -41,14 +41,14 @@ export const ACCOUNTS = [
     icon: "i-simple-icons-git",
   },
   {
-    url: "https://bitbucket.org/danielwaltz",
-    title: "BitBucket",
-    icon: "i-simple-icons-bitbucket",
-  },
-  {
     url: "https://codeberg.org/danielwaltz",
     title: "Codeberg",
     icon: "i-simple-icons-codeberg",
+  },
+  {
+    url: "https://bitbucket.org/danielwaltz",
+    title: "BitBucket",
+    icon: "i-simple-icons-bitbucket",
   },
 ] as const;
 
