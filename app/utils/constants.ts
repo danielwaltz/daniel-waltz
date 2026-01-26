@@ -36,6 +36,11 @@ export const ACCOUNTS = [
     icon: "i-simple-icons-gitlab",
   },
   {
+    url: "https://tangled.org/danielwaltz.me",
+    title: "Tangled",
+    icon: "i-simple-icons-git",
+  },
+  {
     url: "https://bitbucket.org/danielwaltz",
     title: "BitBucket",
     icon: "i-simple-icons-bitbucket",
