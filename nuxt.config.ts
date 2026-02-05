@@ -34,10 +34,6 @@ export default defineNuxtConfig({
       hostingProvider: import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER,
     },
   },
-  routeRules: {
-    "/articles": { isr: 3600 },
-    "/articles/**": { isr: 3600 },
-  },
   experimental: {
     asyncContext: true,
     extractAsyncDataHandlers: true,
