@@ -54,12 +54,6 @@ export const ACCOUNTS = [
 
 export const INSTANCES = [
   {
-    key: "amplify",
-    url: "https://amplify.danielwaltz.me",
-    title: "Amplify",
-    icon: "i-simple-icons-awsamplify",
-  },
-  {
     key: "cloudflare",
     url: "https://cloudflare.danielwaltz.me",
     title: "Cloudflare",
