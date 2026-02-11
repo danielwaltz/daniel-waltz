@@ -26,6 +26,7 @@
     "@nuxt/eslint": "^1.15.1",
     "@nuxt/fonts": "^0.13.0",
     "@nuxt/image": "^2.0.0",
+    "@nuxtjs/mdc": "^0.20.1",
     "@nuxtjs/seo": "^3.4.0",
     "@types/node": "~24.10.13",
     "@unocss/eslint-plugin": "^66.6.0",
