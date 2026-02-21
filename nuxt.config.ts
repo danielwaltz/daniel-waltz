@@ -44,7 +44,9 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "latest",
   nitro: {
-    compressPublicAssets: true,
+    // Disable until issue with @nuxt/content is resolved:
+    // https://github.com/nuxt/content/pull/3701
+    compressPublicAssets: false,
   },
   vite: {
     vue: {

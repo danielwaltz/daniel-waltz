@@ -1,8 +1,6 @@
 packages:
   - .
 
-patchedDependencies:
-  "@nuxt/content": patches/@nuxt__content.patch
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - better-sqlite3
