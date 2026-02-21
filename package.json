@@ -33,7 +33,6 @@
     "@unocss/nuxt": "^66.6.0",
     "@valibot/to-json-schema": "^1.5.0",
     "@vueuse/nuxt": "^14.2.1",
-    "better-sqlite3": "^12.6.2",
     "eslint": "^10.0.1",
     "npm-run-all2": "^8.0.4",
     "nuxt": "^4.3.1",
