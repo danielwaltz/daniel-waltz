@@ -1,0 +1,14 @@
+diff --git a/dist/runtime/internal/api.js b/dist/runtime/internal/api.js
+index 0a41128168783b69146a578b8f89f5e02d78a923..ea93634a9ff20654b655a6533b44d788d84e8130 100644
+--- a/dist/runtime/internal/api.js
++++ b/dist/runtime/internal/api.js
+@@ -7,7 +7,8 @@ async function fetchContent(event, collection, path, options) {
+     ...options,
+     headers: {
+       ...headers,
+-      ...options.headers
++      ...options.headers,
++      'accept-encoding': undefined
+     },
+     query: { v: checksums[String(collection)], t: import.meta.dev ? Date.now() : void 0 }
+   };
