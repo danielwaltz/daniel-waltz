@@ -78,6 +78,12 @@ export const INSTANCES = [
     icon: "i-simple-icons-render",
   },
   {
+    key: "self",
+    url: "https://self.danielwaltz.me",
+    title: "Self Hosted",
+    icon: "i-lucide-server",
+  },
+  {
     key: "vercel",
     url: "https://vercel.danielwaltz.me",
     title: "Vercel",
