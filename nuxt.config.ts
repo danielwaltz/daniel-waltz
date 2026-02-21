@@ -47,10 +47,6 @@ export default defineNuxtConfig({
     // Disable until issue with @nuxt/content is resolved:
     // https://github.com/nuxt/content/pull/3701
     compressPublicAssets: false,
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true,
-    },
   },
   vite: {
     vue: {
