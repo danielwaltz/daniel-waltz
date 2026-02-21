@@ -27,7 +27,7 @@ useSeoMeta({
   <div class="flex flex-col gap-6">
     <article v-if="article">
       <p
-        class="text-p text-neutral-400 font-script m-be--1 m-is-1 leading-none!"
+        class="text-p text-neutral-400 leading-none font-script m-be--1 m-is-1"
       >
         <NuxtTime
           :datetime="article.date"

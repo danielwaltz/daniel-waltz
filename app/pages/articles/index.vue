@@ -27,7 +27,7 @@ useSeoMeta({
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article.path">
-          <p class="text-p text-neutral-400 font-script m-is-1 leading-none!">
+          <p class="text-p text-neutral-400 leading-none font-script m-is-1">
             <NuxtTime
               :datetime="article.date"
               month="long"

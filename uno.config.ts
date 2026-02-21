@@ -128,18 +128,18 @@ export default defineConfig({
       "text-code":
         "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono before:hidden after:hidden",
       "text-h1":
-        "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl leading-heading!",
+        "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl leading-heading",
       "text-h2":
-        "text-5xl font-normal font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl leading-heading!",
+        "text-5xl font-normal font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl leading-heading",
       "text-h3":
-        "text-4xl font-normal font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl leading-heading!",
+        "text-4xl font-normal font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl leading-heading",
       "text-h4":
-        "text-3xl font-normal font-display uppercase 2xl:text-6xl md:text-5xl sm:text-4xl leading-heading!",
+        "text-3xl font-normal font-display uppercase 2xl:text-6xl md:text-5xl sm:text-4xl leading-heading",
       "text-h5":
-        "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl leading-heading!",
+        "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl leading-heading",
       "text-h6":
-        "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl leading-heading!",
-      "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl leading-relaxed!",
+        "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl leading-heading",
+      "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl leading-relaxed",
       "text-pre": "font-mono",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",
