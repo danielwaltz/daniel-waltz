@@ -17,7 +17,7 @@ CMD ["bash", "-c", "pnpm i && pnpm dev"]
 
 # Dependencies
 FROM tooling AS dependencies
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-*.yaml ./
 RUN pnpm i --frozen-lockfile
 
 # Builder
