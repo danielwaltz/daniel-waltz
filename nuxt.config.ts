@@ -13,9 +13,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   site: {
     name: "Daniel Waltz",
-    jobTitle: "Web Developer",
     description:
       "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
+    jobTitle: "Web Developer",
   },
   content: {
     experimental: {
@@ -74,6 +74,9 @@ export default defineNuxtConfig({
       weights: [400, 600, 700],
       subsets: ["latin"],
     },
+  },
+  ogImage: {
+    zeroRuntime: true,
   },
   unocss: {
     disableNuxtInlineStyle: false,
