@@ -60,9 +60,9 @@ export const INSTANCES = [
     icon: "i-simple-icons-cloudflare",
   },
   {
-    key: "kinsta",
-    url: "https://kinsta.danielwaltz.me",
-    title: "Kinsta",
+    key: "sevalla",
+    url: "https://sevalla.danielwaltz.me",
+    title: "Sevalla",
     icon: "i-simple-icons-kinsta",
   },
   {
