@@ -34,13 +34,15 @@ export default defineNuxtConfig({
       hostingProvider: import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER,
     },
   },
+  future: {
+    compatibilityVersion: 5,
+  },
   experimental: {
     asyncContext: true,
     extractAsyncDataHandlers: true,
     typedPages: true,
     typescriptPlugin: true,
     viewTransition: true,
-    viteEnvironmentApi: true,
   },
   compatibilityDate: "latest",
   nitro: {
