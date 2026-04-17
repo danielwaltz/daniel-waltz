@@ -21,6 +21,8 @@ useSeoMeta({
   ogType: "article",
   articlePublishedTime: date,
 });
+
+defineOgImage("Default", { title, description });
 </script>
 
 <template>

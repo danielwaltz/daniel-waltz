@@ -18,6 +18,8 @@ useSeoMeta({
   ogTitle: title,
   ogDescription: description,
 });
+
+defineOgImage("Default", { title, description });
 </script>
 
 <template>

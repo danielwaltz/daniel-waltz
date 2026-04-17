@@ -72,10 +72,38 @@ export default defineNuxtConfig({
     },
   },
   fonts: {
-    defaults: {
-      weights: [400, 600, 700],
-      subsets: ["latin"],
-    },
+    families: [
+      {
+        name: "Noto Sans",
+        weights: [400, 600, 700],
+        subsets: ["latin"],
+        global: true,
+      },
+      {
+        name: "Noto Serif",
+        weights: [400, 600, 700],
+        subsets: ["latin"],
+        global: true,
+      },
+      {
+        name: "Antonio",
+        weights: [400],
+        subsets: ["latin"],
+        global: true,
+      },
+      {
+        name: "Caveat",
+        weights: [400],
+        subsets: ["latin"],
+        global: true,
+      },
+      {
+        name: "JetBrains Mono",
+        weights: [400],
+        subsets: ["latin"],
+        global: true,
+      },
+    ],
   },
   ogImage: {
     zeroRuntime: true,
