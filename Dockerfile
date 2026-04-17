@@ -23,7 +23,7 @@ RUN pnpm i --frozen-lockfile
 # Builder
 FROM dependencies AS builder
 COPY . .
-RUN pnpm postinstall && pnpm generate
+RUN pnpm postinstall && pnpm build
 
 # Production
 FROM base AS production

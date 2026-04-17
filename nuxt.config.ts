@@ -48,6 +48,10 @@ export default defineNuxtConfig({
   compatibilityDate: "latest",
   nitro: {
     compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
   },
   vite: {
     vue: {
@@ -107,6 +111,9 @@ export default defineNuxtConfig({
     ],
   },
   ogImage: {
+    zeroRuntime: true,
+  },
+  sitemap: {
     zeroRuntime: true,
   },
   unocss: {
