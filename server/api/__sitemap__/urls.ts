@@ -1,3 +1,5 @@
+import { queryCollection } from "@nuxt/content/server";
+
 export default defineSitemapEventHandler(async (event) => {
   const articles = await queryCollection(event, "articles")
     .select("path", "date")

@@ -25,6 +25,7 @@ export default defineNuxtConfig({
       "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
     jobTitle: "Web Developer",
     url: "https://danielwaltz.me",
+    defaultLocale: "en-US",
   },
   content: {
     experimental: {

@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import type { NuxtLinkProps } from "#app";
 
-defineProps<{
-  to: NuxtLinkProps["to"];
-  title: string;
-  icon: string;
-}>();
+defineProps<NuxtLinkProps & { title: string; icon: string }>();
 </script>
 
 <template>

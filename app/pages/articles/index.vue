@@ -29,7 +29,7 @@ defineOgImage("Default", { title, description });
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article.path">
           <p class="text-p text-neutral-400 leading-none font-script m-is-1">
-            <NuxtTime :datetime="article.date" date-style="long" />
+            <AppTime :datetime="article.date" date-style="long" />
           </p>
 
           <div class="flex flex-col gap-4">

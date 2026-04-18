@@ -1,16 +1,23 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title?: string;
   description?: string;
   date?: string;
 }>();
 
 const site = useSiteConfig();
+
+const formattedDate = computed(() => {
+  const _date = props.date;
+  if (!_date) return null;
+  const _locale = site.defaultLocale;
+  return new Date(_date).toLocaleDateString(_locale, { dateStyle: "long" });
+});
 </script>
 
 <template>
   <div
-    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-8 size-full text-pretty antialiased z-10"
+    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-8 size-full text-pretty antialiased"
   >
     <AppBackdrop class="opacity-10 absolute" />
 
@@ -25,10 +32,10 @@ const site = useSiteConfig();
     <div class="flex flex-col gap-12">
       <div class="flex flex-col">
         <span
-          v-if="date"
+          v-if="formattedDate"
           class="text-p text-neutral-400 leading-none font-script mbe--1"
         >
-          {{ new Date(date).toLocaleDateString("en", { dateStyle: "long" }) }}
+          {{ formattedDate }}
         </span>
 
         <h1 v-if="title" class="text-h1 font-display truncate">

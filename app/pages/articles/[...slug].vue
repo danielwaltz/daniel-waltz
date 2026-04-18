@@ -30,7 +30,7 @@ defineOgImage("Default", { title, description, date });
       <p
         class="text-p text-neutral-400 leading-none font-script m-be--1 m-is-1"
       >
-        <NuxtTime :datetime="article.date" date-style="long" />
+        <AppTime :datetime="article.date" />
       </p>
 
       <ContentRenderer :value="article" class="app-prose" />
