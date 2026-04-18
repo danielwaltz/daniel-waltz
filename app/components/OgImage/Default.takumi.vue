@@ -8,21 +8,21 @@ defineProps<{
 
 <template>
   <div
-    class="text-neutral-100 font-sans p-12 bg-neutral flex flex-col gap-4 size-full text-pretty antialiased"
+    class="text-neutral-100 font-sans p-12 bg-neutral flex flex-col gap-2 size-full text-pretty antialiased"
   >
     <div
       v-if="siteName"
-      class="text-xl text-neutral-400 flex gap-2 items-center"
+      class="text-2xl text-neutral-400 flex gap-2 items-center"
     >
       {{ siteName }}
     </div>
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-6">
       <h1 v-if="title" class="text-h1 font-display truncate">
         {{ title }}
       </h1>
 
-      <p v-if="description" class="text-4xl font-serif">
+      <p v-if="description" class="text-4xl leading-relaxed font-serif">
         {{ description }}
       </p>
     </div>
