@@ -10,6 +10,14 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "reka-ui/nuxt",
   ],
+  app: {
+    head: {
+      titleTemplate: "%s %separator %siteName",
+      templateParams: {
+        separator: "-",
+      },
+    },
+  },
   css: ["~/assets/css/main.css"],
   site: {
     name: "Daniel Waltz",

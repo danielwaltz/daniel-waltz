@@ -1,5 +1,15 @@
 <script setup lang="ts">
 const site = useSiteConfig();
+
+useHead({
+  title: site.name,
+  titleTemplate: "%s %separator %jobTitle",
+  templateParams: {
+    jobTitle: site.jobTitle,
+  },
+});
+
+defineOgImage("Default", { title: site.name, description: site.description });
 </script>
 
 <template>
