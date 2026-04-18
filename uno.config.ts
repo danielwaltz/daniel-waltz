@@ -88,7 +88,7 @@ export default defineConfig({
         800: "oklch(0.2 0 0)",
         900: "oklch(0.1 0 0)",
         950: "oklch(0.05 0 0)",
-        DEFAULT: "oklch(0.15 0 0)",
+        DEFAULT: "oklch(0 0 0)",
       },
     },
     font: {
