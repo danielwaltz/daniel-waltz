@@ -10,6 +10,8 @@ const fallbackMessage = "An unknown error occurred";
 const message = toRef(() => errorMessage.value || fallbackMessage);
 
 useSeoMeta({ title });
+
+defineOgImage("Default", { title, description: message });
 </script>
 
 <template>

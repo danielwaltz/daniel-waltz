@@ -113,7 +113,9 @@ export default defineNuxtConfig({
     ],
   },
   ogImage: {
-    zeroRuntime: true,
+    security: {
+      restrictRuntimeImagesToOrigin: true,
+    },
   },
   robots: {
     groups: [
@@ -130,9 +132,6 @@ export default defineNuxtConfig({
         },
       },
     ],
-  },
-  sitemap: {
-    zeroRuntime: true,
   },
   unocss: {
     disableNuxtInlineStyle: false,
