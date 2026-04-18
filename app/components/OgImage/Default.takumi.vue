@@ -10,23 +10,21 @@ const site = useSiteConfig();
 
 <template>
   <div
-    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-6 size-full text-pretty antialiased"
+    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-8 size-full text-pretty antialiased"
   >
     <div class="flex gap-6 items-center">
-      <img src="@/assets/icons/logo.svg" alt="" class="size-14" />
+      <img src="@/assets/icons/logo.svg" alt="" class="size-12" />
 
-      <div
-        class="text-2xl text-neutral-400 font-mono font-semibold flex gap-2 items-center"
-      >
+      <div class="text-xl text-neutral-400 font-mono">
         {{ site.name }} · {{ site.jobTitle }}
       </div>
     </div>
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-12">
       <div class="flex flex-col">
         <span
           v-if="date"
-          class="text-p text-neutral-400 leading-none font-script"
+          class="text-p text-neutral-400 leading-none font-script mbe--1"
         >
           {{ new Date(date).toLocaleDateString("en", { dateStyle: "long" }) }}
         </span>
@@ -42,7 +40,7 @@ const site = useSiteConfig();
     </div>
 
     <div
-      class="h-32 inset-x-0 inset-be-0 absolute from-transparent to-neutral to-50% bg-linear-to-b"
+      class="h-48 inset-x-0 inset-be-0 absolute from-transparent to-neutral to-75% bg-linear-to-b"
     />
   </div>
 </template>
