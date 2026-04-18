@@ -107,6 +107,22 @@ export default defineNuxtConfig({
   ogImage: {
     zeroRuntime: true,
   },
+  robots: {
+    groups: [
+      {
+        userAgent: "*",
+        allow: "/",
+        contentUsage: {
+          bots: "y",
+          "train-ai": "n",
+        },
+        contentSignal: {
+          "ai-train": "no",
+          search: "yes",
+        },
+      },
+    ],
+  },
   sitemap: {
     zeroRuntime: true,
   },
