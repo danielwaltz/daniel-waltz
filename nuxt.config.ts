@@ -56,10 +56,6 @@ export default defineNuxtConfig({
   compatibilityDate: "latest",
   nitro: {
     compressPublicAssets: true,
-    prerender: {
-      crawlLinks: true,
-      routes: ["/"],
-    },
     typescript: {
       strict: true,
       tsConfig: {
@@ -158,6 +154,9 @@ export default defineNuxtConfig({
         },
       },
     ],
+  },
+  sitemap: {
+    sources: ["/api/__sitemap__/urls"],
   },
   unocss: {
     disableNuxtInlineStyle: false,
