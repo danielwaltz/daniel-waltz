@@ -139,7 +139,8 @@ export default defineConfig({
         "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl leading-heading",
       "text-h6":
         "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl leading-heading",
-      "text-p": "text-lg 2xl:text-3xl md:text-2xl sm:text-xl leading-relaxed",
+      "text-p":
+        "text-lg leading-relaxed font-serif 2xl:text-3xl md:text-2xl sm:text-xl",
       "text-pre": "font-mono",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",

@@ -17,12 +17,11 @@ useSeoMeta({
   title,
   description,
   ogTitle: title,
-  ogDescription: description,
   ogType: "article",
   articlePublishedTime: date,
 });
 
-defineOgImage("Default", { title, description });
+defineOgImage("Default", { title, description, date });
 </script>
 
 <template>
@@ -31,12 +30,7 @@ defineOgImage("Default", { title, description });
       <p
         class="text-p text-neutral-400 leading-none font-script m-be--1 m-is-1"
       >
-        <NuxtTime
-          :datetime="article.date"
-          month="long"
-          day="2-digit"
-          year="numeric"
-        />
+        <NuxtTime :datetime="article.date" date-style="long" />
       </p>
 
       <ContentRenderer :value="article" class="app-prose" />

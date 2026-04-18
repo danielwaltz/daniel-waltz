@@ -94,6 +94,14 @@ export default defineNuxtConfig({
         name: "Antonio",
         global: true,
       },
+      {
+        name: "Caveat",
+        global: true,
+      },
+      {
+        name: "JetBrains Mono",
+        global: true,
+      },
     ],
   },
   ogImage: {

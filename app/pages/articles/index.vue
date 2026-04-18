@@ -16,7 +16,6 @@ useSeoMeta({
   title,
   description,
   ogTitle: title,
-  ogDescription: description,
 });
 
 defineOgImage("Default", { title, description });
@@ -30,12 +29,7 @@ defineOgImage("Default", { title, description });
       <template v-if="articles?.length">
         <article v-for="article in articles" :key="article.path">
           <p class="text-p text-neutral-400 leading-none font-script m-is-1">
-            <NuxtTime
-              :datetime="article.date"
-              month="long"
-              day="2-digit"
-              year="numeric"
-            />
+            <NuxtTime :datetime="article.date" date-style="long" />
           </p>
 
           <div class="flex flex-col gap-4">
@@ -45,7 +39,7 @@ defineOgImage("Default", { title, description });
               </NuxtLink>
             </h2>
 
-            <p class="text-p font-serif">{{ article.description }}</p>
+            <p class="text-p">{{ article.description }}</p>
           </div>
 
           <NuxtLink

@@ -19,21 +19,19 @@ const site = useSiteConfig();
 
 const title = toRef(() => site.name);
 const description = toRef(() => site.description);
-const siteName = toRef(() => `${title.value} - ${site.jobTitle}`);
 const url = toRef(() => cleanDoubleSlashes(`${site.url}${route.path}`));
 
 useSeoMeta({
-  titleTemplate: (t) => (t ? `${t} - ${title.value}` : siteName.value),
+  titleTemplate: (t) =>
+    t ? `${t} - ${site.name}` : `${site.name} - ${site.jobTitle}`,
   themeColor: "#0b0b0b",
   description,
-  ogTitle: siteName,
-  ogDescription: description,
   ogSiteName: title,
   ogUrl: url,
   twitterCard: "summary",
 });
 
-defineOgImage("Default", { title, description, siteName });
+defineOgImage("Default", { title, description });
 </script>
 
 <template>
