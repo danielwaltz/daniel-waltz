@@ -122,9 +122,9 @@ export default defineConfig({
       interactive:
         "cursor-pointer outline-offset-2 transition-200 transition-property-[background-color,color,outline-width] focus:outline-2 focus:outline-dashed",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
-      "shadow-box": "absolute inset-0 animate-backwards shadow-2xl",
+      "shadow-box": "absolute inset-0 shadow-2xl",
       "shadow-box-animate":
-        "animate-fade-in animate-duration-5s animate-ease-in-out animate-iteration-count-infinite",
+        "animate-fade-in animate-duration-5s animate-ease-in-out animate-backwards animate-iteration-count-infinite",
       "text-code":
         "inline-block ws-nowrap rounded-lg bg-neutral-100 p-inline-1 text-neutral font-mono before:hidden after:hidden",
       "text-h1":

@@ -10,8 +10,10 @@ const site = useSiteConfig();
 
 <template>
   <div
-    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-8 size-full text-pretty antialiased"
+    class="text-neutral-100 p-16 bg-neutral flex flex-col gap-8 size-full text-pretty antialiased z-10"
   >
+    <AppBackdrop class="opacity-10 absolute" />
+
     <div class="flex gap-6 items-center">
       <img src="@/assets/icons/logo.svg" alt="" class="size-12" />
 
