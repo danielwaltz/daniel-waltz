@@ -60,11 +60,37 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ["/"],
     },
+    typescript: {
+      strict: true,
+      tsConfig: {
+        compilerOptions: {
+          erasableSyntaxOnly: true,
+        },
+      },
+    },
   },
   vite: {
     vue: {
       features: {
         optionsAPI: false,
+      },
+    },
+  },
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        erasableSyntaxOnly: true,
+      },
+    },
+    sharedTsConfig: {
+      compilerOptions: {
+        erasableSyntaxOnly: true,
+      },
+    },
+    nodeTsConfig: {
+      include: ["../*.config.*"],
+      compilerOptions: {
+        erasableSyntaxOnly: true,
       },
     },
   },
