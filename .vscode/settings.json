@@ -1,4 +1,5 @@
 {
+  "chat.agent.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "eslint.validate": [
@@ -22,8 +23,8 @@
     },
     "editor.formatOnSave": false
   },
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
   "prettier.enable": true,
   "prettier.prettierPath": "node_modules/prettier",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.tsdk": "node_modules/typescript/lib"
 }
