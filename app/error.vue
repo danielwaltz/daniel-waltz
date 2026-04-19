@@ -4,14 +4,11 @@ import type { NuxtError } from "#app";
 const props = defineProps<{ error: NuxtError }>();
 
 const title = computed(() => `Error ${props.error.status}`);
+const description = toRef(() => props.error.message);
 
-const errorMessage = toRef(() => props.error.message);
-const fallbackMessage = "An unknown error occurred";
-const message = toRef(() => errorMessage.value || fallbackMessage);
+useSeoMeta({ title, description, ogTitle: title });
 
-useSeoMeta({ title });
-
-defineOgImage("Default", { title, description: message });
+defineOgImage("Default", { title, description });
 </script>
 
 <template>
@@ -19,7 +16,7 @@ defineOgImage("Default", { title, description: message });
     <div class="flex flex-col gap-4">
       <div class="app-prose">
         <h1>{{ title }}</h1>
-        <p>{{ message }}</p>
+        <p>{{ description }}</p>
       </div>
 
       <NuxtLink
