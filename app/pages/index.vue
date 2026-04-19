@@ -24,7 +24,7 @@ defineOgImage("Default", { title: site.name });
 </script>
 
 <template>
-  <div class="flex flex-col gap-8">
+  <AppMain class="flex flex-col gap-8">
     <div class="flex flex-col gap-6 text-pretty">
       <h1 class="flex flex-col items-start">
         <span
@@ -70,5 +70,5 @@ defineOgImage("Default", { title: site.name });
       Oh, and while I have you, here's a friendly reminder to be kind to
       yourself!
     </div>
-  </div>
+  </AppMain>
 </template>

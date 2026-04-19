@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
 const site = useSiteConfig();
 
 const navItems = useRouteNav(["index", "articles"]);
@@ -8,7 +9,9 @@ const navItems = useRouteNav(["index", "articles"]);
   <AppLayout class="grid place-items-center">
     <AppBackdrop />
 
-    <main
+    <AppSkip />
+
+    <div
       class="px-6 py-12 flex flex-col gap-8 max-w-2xl w-full sm:px-8 sm:py-14 2xl:max-w-4xl sm:max-w-3xl"
     >
       <div class="flex grow flex-wrap gap-8 items-center justify-between">
@@ -36,7 +39,7 @@ const navItems = useRouteNav(["index", "articles"]);
       </div>
 
       <slot />
-    </main>
+    </div>
 
     <footer
       class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
@@ -52,7 +55,7 @@ const navItems = useRouteNav(["index", "articles"]);
                 class="text-sm focus:text-neutral-100 hover:text-neutral-100"
                 :class="{
                   'text-primary focus:text-primary-200 hover:text-primary-200':
-                    instance.key === $config.public.hostingProvider,
+                    instance.key === runtimeConfig.public.hostingProvider,
                 }"
               />
             </AppTooltip>

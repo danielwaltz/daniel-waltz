@@ -17,7 +17,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
 </script>
 
 <template>
-  <div class="flex flex-col gap-8">
+  <AppMain class="flex flex-col gap-8">
     <h1 class="text-h1 max-w-fit">{{ route.meta.title }}</h1>
 
     <div class="flex flex-col gap-8">
@@ -51,5 +51,5 @@ const { data: articles } = await useAsyncData(route.path, () =>
         <p>No articles were found. 🥺</p>
       </div>
     </div>
-  </div>
+  </AppMain>
 </template>
