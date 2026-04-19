@@ -5,7 +5,7 @@ definePageMeta({
   icon: "i-lucide-file-text",
 });
 
-const route = useRoute("articles");
+const route = useRoute();
 
 const { data: articles } = await useAsyncData(route.path, () =>
   queryCollection("articles")

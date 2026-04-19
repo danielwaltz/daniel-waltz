@@ -3,7 +3,7 @@ import type { NuxtError } from "#app";
 
 const props = defineProps<{ error: NuxtError }>();
 
-const title = computed(() => `Error ${props.error.status}`);
+const title = toRef(() => `Error ${props.error.status}`);
 const description = toRef(() => props.error.message);
 
 useSeoMeta({ title, description, ogTitle: title });

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { cleanDoubleSlashes } from "ufo";
-
 useHead({
   bodyAttrs: {
     class:
@@ -8,15 +6,7 @@ useHead({
   },
 });
 
-const route = useRoute();
-const site = useSiteConfig();
-
-const url = toRef(() => cleanDoubleSlashes(`${site.url}${route.path}`));
-
-useSeoMeta({
-  ogUrl: url,
-  themeColor: "#000000",
-});
+useSeoMeta({ themeColor: "#000000" });
 </script>
 
 <template>
