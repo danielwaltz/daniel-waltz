@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const site = useSiteConfig();
+
+const navItems = useRouteNav(["index", "articles"]);
 </script>
 
 <template>
@@ -19,24 +21,14 @@ const site = useSiteConfig();
           <ul
             class="text-lg tracking-wider font-mono font-semibold flex flex-wrap gap-3 uppercase sm:text-xl"
           >
-            <li>
+            <li v-for="item in navItems" :key="item.key">
               <NuxtLink
-                :to="{ name: 'index' }"
+                v-bind="item.props"
                 class="px-2 py-1 flex gap-0.5em items-center"
                 active-class="text-primary-gradient [&>i]:text-primary"
               >
-                <i class="i-lucide-house text-0.8em" />
-                <span>Home</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink
-                :to="{ name: 'articles' }"
-                class="px-2 py-1 flex gap-0.5em items-center"
-                active-class="text-primary-gradient [&>i]:text-primary"
-              >
-                <i class="i-lucide-file-text text-0.8em" />
-                <span>Articles</span>
+                <i :class="item.icon" class="text-0.8em" />
+                <span>{{ item.title }}</span>
               </NuxtLink>
             </li>
           </ul>

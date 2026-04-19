@@ -1,15 +1,26 @@
 <script setup lang="ts">
+definePageMeta({
+  title: "Home",
+  description:
+    "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
+  icon: "i-lucide-house",
+});
+
 const site = useSiteConfig();
 
-useHead({
+useSeoMeta({
   title: site.name,
+  ogTitle: site.name,
+});
+
+useHead({
   titleTemplate: "%s %separator %jobTitle",
   templateParams: {
     jobTitle: site.jobTitle,
   },
 });
 
-defineOgImage("Default", { title: site.name, description: site.description });
+defineOgImage("Default", { title: site.name });
 </script>
 
 <template>

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+definePageMeta({
+  title: "Article",
+  description: "An article written by me.",
+  icon: "i-lucide-file-text",
+});
+
 const route = useRoute("articles-slug");
 
 const { data: article } = await useAsyncData(route.path, () =>
@@ -9,7 +15,15 @@ const { data: article } = await useAsyncData(route.path, () =>
     .first(),
 );
 
-const title = toRef(() => article.value?.title ?? "Not Found");
+if (!article.value) {
+  throw createError({
+    status: 404,
+    statusText: "The article you are looking for does not exist. 🥺",
+    fatal: true,
+  });
+}
+
+const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
 const date = toRef(() => article.value?.date);
 
@@ -55,20 +69,5 @@ defineOgImage("Default", { title, description, date });
         </NuxtLink>
       </footer>
     </article>
-
-    <div v-else class="flex flex-col gap-4">
-      <div class="app-prose">
-        <h1>Not Found</h1>
-        <p>The article you are looking for does not exist. 🥺</p>
-      </div>
-
-      <NuxtLink
-        :to="{ name: 'articles' }"
-        class="text-p text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center"
-      >
-        <i class="i-lucide-chevron-left text-1.25em text-primary" />
-        <span>Back to articles</span>
-      </NuxtLink>
-    </div>
   </div>
 </template>

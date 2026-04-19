@@ -10,14 +10,20 @@ useHead({
 
 const route = useRoute();
 const site = useSiteConfig();
+
+const title = toRef(() => route.meta.title);
+const description = toRef(() => route.meta.description);
 const url = toRef(() => cleanDoubleSlashes(`${site.url}${route.path}`));
 
 useSeoMeta({
-  themeColor: "#0b0b0b",
-  description: site.description,
+  title,
+  description,
+  ogTitle: title,
   ogUrl: url,
-  twitterCard: "summary",
+  themeColor: "#000000",
 });
+
+defineOgImage("Default", { title, description });
 </script>
 
 <template>

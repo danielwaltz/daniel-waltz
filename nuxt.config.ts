@@ -21,11 +21,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   site: {
     name: "Daniel Waltz",
-    description:
-      "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
-    jobTitle: "Web Developer",
     url: "https://danielwaltz.me",
     defaultLocale: "en-US",
+    jobTitle: "Web Developer",
   },
   content: {
     experimental: {

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+definePageMeta({
+  title: "Articles",
+  description: "A collection of articles written by me.",
+  icon: "i-lucide-file-text",
+});
+
 const route = useRoute("articles");
 
 const { data: articles } = await useAsyncData(route.path, () =>
@@ -8,22 +14,11 @@ const { data: articles } = await useAsyncData(route.path, () =>
     .order("date", "DESC")
     .all(),
 );
-
-const title = toRef(() => "Articles");
-const description = toRef(() => "A collection of articles written by me.");
-
-useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-});
-
-defineOgImage("Default", { title, description });
 </script>
 
 <template>
   <div class="flex flex-col gap-8">
-    <h1 class="text-h1 max-w-fit">Articles</h1>
+    <h1 class="text-h1 max-w-fit">{{ route.meta.title }}</h1>
 
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
