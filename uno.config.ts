@@ -1,5 +1,5 @@
+import { resolve } from "node:path";
 import { FileSystemIconLoader } from "@iconify/utils/lib/loader/node-loaders";
-import { resolve } from "pathe";
 import {
   defineConfig,
   presetIcons,
