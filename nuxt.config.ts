@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     url: "https://danielwaltz.me",
     defaultLocale: "en-US",
     jobTitle: "Web Developer",
+    repository: "https://github.com/danielwaltz/daniel-waltz",
   },
   content: {
     experimental: {

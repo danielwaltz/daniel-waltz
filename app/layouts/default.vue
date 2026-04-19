@@ -65,7 +65,7 @@ const navItems = useRouteNav(["index", "articles"]);
 
       <AppTooltip content="View Source Code" side="left">
         <AppIconLink
-          to="https://github.com/danielwaltz/daniel-waltz"
+          :to="site.repository"
           title="View Source Code"
           icon="i-lucide-code"
           class="text-xl focus:text-neutral-100 hover:text-neutral-100"
