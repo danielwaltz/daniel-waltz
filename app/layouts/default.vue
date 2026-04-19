@@ -7,7 +7,7 @@ const site = useSiteConfig();
     <AppBackdrop />
 
     <main
-      class="p-block-12 p-inline-6 flex flex-col gap-8 max-w-2xl w-full sm:p-block-14 sm:p-inline-8 2xl:max-w-4xl sm:max-w-3xl"
+      class="px-6 py-12 flex flex-col gap-8 max-w-2xl w-full sm:px-8 sm:py-14 2xl:max-w-4xl sm:max-w-3xl"
     >
       <div class="flex grow flex-wrap gap-8 items-center justify-between">
         <NuxtLink
@@ -20,25 +20,25 @@ const site = useSiteConfig();
 
         <nav aria-label="Main">
           <ul
-            class="text-base tracking-wide font-bold flex flex-wrap gap-3 uppercase sm:text-lg"
+            class="text-lg tracking-wider font-mono font-semibold flex flex-wrap gap-3 uppercase sm:text-xl"
           >
             <li>
               <NuxtLink
                 :to="{ name: 'index' }"
-                class="p-block-1 p-inline-2 flex gap-2 items-center"
+                class="px-2 py-1 flex gap-0.5em items-center"
                 active-class="text-primary-gradient [&>i]:text-primary"
               >
-                <i class="i-lucide-house" />
+                <i class="i-lucide-house text-0.8em" />
                 <span>Home</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink
                 :to="{ name: 'articles' }"
-                class="p-block-1 p-inline-2 flex gap-2 items-center"
+                class="px-2 py-1 flex gap-0.5em items-center"
                 active-class="text-primary-gradient [&>i]:text-primary"
               >
-                <i class="i-lucide-file-text" />
+                <i class="i-lucide-file-text text-0.8em" />
                 <span>Articles</span>
               </NuxtLink>
             </li>
@@ -50,7 +50,7 @@ const site = useSiteConfig();
     </main>
 
     <footer
-      class="text-neutral-400 p-2 flex gap-3 inset-inline-0 inset-bs-0 justify-between absolute"
+      class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
     >
       <nav aria-label="Instances">
         <ul class="flex flex-wrap gap-3 items-center">
