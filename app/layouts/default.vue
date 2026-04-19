@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig();
 const site = useSiteConfig();
 
-const navItems = useRouteNav(["index", "articles"]);
+const routes = useRoutes(["index", "articles"]);
 </script>
 
 <template>
@@ -24,14 +24,14 @@ const navItems = useRouteNav(["index", "articles"]);
           <ul
             class="text-lg tracking-wider font-mono font-semibold flex flex-wrap gap-3 uppercase sm:text-xl"
           >
-            <li v-for="item in navItems" :key="item.key">
+            <li v-for="item in routes" :key="item.name">
               <NuxtLink
-                v-bind="item.props"
+                :to="item.path"
                 class="px-2 py-1 flex gap-0.5em items-center"
                 active-class="text-primary-gradient [&>i]:text-primary"
               >
-                <i :class="item.icon" class="text-0.8em" />
-                <span>{{ item.title }}</span>
+                <i :class="item.meta.icon" class="text-0.8em" />
+                <span>{{ item.meta.title }}</span>
               </NuxtLink>
             </li>
           </ul>
