@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   site: {
     name: "Daniel Waltz",
     url: "https://danielwaltz.me",
-    separator: "-",
+    separator: "·",
     defaultLocale: "en-US",
     jobTitle: "Web Developer",
     repository: "https://github.com/danielwaltz/daniel-waltz",

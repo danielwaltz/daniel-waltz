@@ -25,7 +25,7 @@ const formattedDate = computed(() => {
       <img src="@/assets/icons/logo.svg" alt="" class="size-12" />
 
       <div class="text-xl text-neutral-400 font-mono">
-        {{ site.name }} · {{ site.jobTitle }}
+        {{ site.name }} {{ site.separator }} {{ site.jobTitle }}
       </div>
     </div>
 
