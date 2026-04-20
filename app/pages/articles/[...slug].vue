@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "Article",
-  description: "An article written by me.",
+  description: "An article I've written.",
   icon: "i-lucide-file-text",
 });
 
