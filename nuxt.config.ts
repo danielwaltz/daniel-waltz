@@ -13,15 +13,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: "%s %separator %siteName",
-      templateParams: {
-        separator: "-",
-      },
     },
   },
   css: ["~/assets/css/main.css"],
   site: {
     name: "Daniel Waltz",
     url: "https://danielwaltz.me",
+    separator: "-",
     defaultLocale: "en-US",
     jobTitle: "Web Developer",
     repository: "https://github.com/danielwaltz/daniel-waltz",

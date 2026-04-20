@@ -8,17 +8,9 @@ definePageMeta({
 
 const site = useSiteConfig();
 
-useSeoMeta({
-  title: site.name,
-  ogTitle: site.name,
-});
+const title = toRef(() => `${site.name} ${site.separator} ${site.jobTitle}`);
 
-useHead({
-  titleTemplate: "%s %separator %jobTitle",
-  templateParams: {
-    jobTitle: site.jobTitle,
-  },
-});
+useSeoMeta({ title, ogTitle: title, titleTemplate: "%s" });
 
 defineOgImage("Default", { title: site.name });
 </script>
