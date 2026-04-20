@@ -38,7 +38,7 @@ const formattedDate = computed(() => {
           {{ formattedDate }}
         </span>
 
-        <h1 v-if="title" class="text-h1 font-display truncate">
+        <h1 v-if="title" class="text-h1 font-display truncate self-start">
           {{ title }}
         </h1>
       </div>

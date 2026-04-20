@@ -18,13 +18,13 @@ defineOgImage("Default", { title: site.name });
 <template>
   <AppMain class="flex flex-col gap-8">
     <div class="flex flex-col gap-6 text-pretty">
-      <h1 class="flex flex-col items-start">
+      <h1 class="flex flex-col items-start self-start">
         <span
           aria-hidden="true"
           class="text-2xl text-neutral-400 leading-none tracking-wide font-script m-be--2 m-is-1 rotate-3 2xl:text-4xl sm:text-3xl"
           >Hi, I'm</span
         >
-        <span class="text-h1 max-w-fit">Daniel Waltz</span>
+        <span class="text-h1">Daniel Waltz</span>
       </h1>
 
       <p class="text-p">

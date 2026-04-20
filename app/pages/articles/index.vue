@@ -18,7 +18,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
 
 <template>
   <AppMain class="flex flex-col gap-8">
-    <h1 class="text-h1 max-w-fit">{{ route.meta.title }}</h1>
+    <h1 class="text-h1 self-start">{{ route.meta.title }}</h1>
 
     <div class="flex flex-col gap-8">
       <template v-if="articles?.length">
@@ -28,7 +28,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
           </p>
 
           <div class="flex flex-col gap-4">
-            <h2 class="text-h3 text-primary-gradient max-w-fit">
+            <h2 class="text-h3 text-primary-gradient self-start">
               <NuxtLink :to="article.path" class="no-underline">
                 {{ article.title }}
               </NuxtLink>
