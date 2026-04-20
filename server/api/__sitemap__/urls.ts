@@ -9,7 +9,7 @@ export default defineSitemapEventHandler(async (event) => {
   return articles.map((article) => {
     return asSitemapUrl({
       loc: article.path,
-      lastmod: article.date,
+      lastmod: new Date(article.date).toISOString(),
     });
   });
 });
