@@ -113,11 +113,14 @@ export default defineConfig({
   ],
   shortcuts: [
     {
+      "app-link":
+        "tracking-wider font-mono font-semibold px-2 py-1 inline-flex gap-0.5em uppercase items-center",
+      "app-link-icon": "text-0.8em",
       "app-prose":
         "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1! prose-h1:m-0! prose-h1:pbe-2 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
       "bg-primary-gradient":
         "bg-primary bg-linear-to-r from-primary to-secondary",
-      "bg-secondary-gradient":
+      "bg-primary-gradient-reverse":
         "bg-secondary bg-linear-to-r from-secondary to-primary",
       interactive:
         "cursor-pointer outline-offset-2 transition-200 transition-property-[background-color,color,outline-width,transform] focus:outline-2 focus:outline-dashed active:scale-98",
@@ -144,8 +147,8 @@ export default defineConfig({
       "text-pre": "font-mono",
       "text-primary-gradient":
         "bg-primary-gradient bg-clip-text text-transparent outline-primary",
-      "text-secondary-gradient":
-        "bg-secondary-gradient bg-clip-text text-transparent outline-secondary",
+      "text-primary-gradient-reverse":
+        "bg-primary-gradient-reverse bg-clip-text text-transparent outline-secondary",
     },
   ],
 });

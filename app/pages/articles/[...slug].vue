@@ -52,9 +52,9 @@ defineOgImage("Default", { title, description, date });
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
           :to="{ name: 'articles' }"
-          class="text-p text-primary-gradient tracking-wide font-semibold flex gap-1 max-w-fit uppercase items-center"
+          class="text-p text-primary-gradient app-link"
         >
-          <i class="i-lucide-chevron-left text-1.25em text-primary" />
+          <i class="i-lucide-arrow-big-left app-link-icon text-primary" />
           <span>Back to articles</span>
         </NuxtLink>
 
@@ -62,10 +62,11 @@ defineOgImage("Default", { title, description, date });
           v-if="article.discussion"
           :to="article.discussion"
           target="_blank"
-          class="text-p text-primary-gradient tracking-wide font-semibold flex gap-2 max-w-fit uppercase items-center"
+          rel="noopener noreferrer"
+          class="text-p text-primary-gradient app-link"
         >
           <span>Discussion</span>
-          <i class="i-lucide-external-link text-secondary" />
+          <i class="i-lucide-external-link app-link-icon text-secondary" />
         </NuxtLink>
       </footer>
     </article>

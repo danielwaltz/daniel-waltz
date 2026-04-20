@@ -34,7 +34,7 @@ defineOgImage("Default", { title: site.name });
         delivering the most <strong>usable</strong>,
         <strong>accessible</strong>, and <strong>beautiful</strong> interfaces
         imaginable. Together we can make the web a better place for
-        <span class="text-primary-gradient font-bold">everyone!</span>
+        <span class="text-primary-gradient font-bold font-mono">everyone</span>!
       </p>
     </div>
 
@@ -47,7 +47,7 @@ defineOgImage("Default", { title: site.name });
             <AppIconLink
               rel="me"
               :to="account.url"
-              :title="account.title"
+              :label="account.title"
               :icon="account.icon"
               class="focus:text-primary hover:text-primary"
             />

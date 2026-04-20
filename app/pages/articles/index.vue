@@ -39,10 +39,10 @@ const { data: articles } = await useAsyncData(route.path, () =>
 
           <NuxtLink
             :to="article.path"
-            class="text-p text-primary-gradient tracking-wide font-semibold mbs-4 flex gap-1 max-w-fit uppercase items-center"
+            class="text-p text-primary-gradient app-link"
           >
             <span>Read more</span>
-            <i class="i-lucide-chevron-right text-1.25em text-secondary" />
+            <i class="i-lucide-arrow-big-right app-link-icon text-secondary" />
           </NuxtLink>
         </article>
       </template>

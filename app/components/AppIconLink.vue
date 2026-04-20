@@ -1,18 +1,13 @@
 <script setup lang="ts">
 import type { NuxtLinkProps } from "#app";
 
-defineProps<NuxtLinkProps & { title: string; icon: string }>();
+defineProps<NuxtLinkProps & { label: string; icon: string }>();
 </script>
 
 <template>
-  <NuxtLink
-    :to
-    :aria-label="title"
-    rel="noopener noreferrer"
-    class="flex relative"
-  >
+  <NuxtLink v-bind="$props" :aria-label="label" class="flex relative">
     <span class="inset--1 absolute" />
     <i :class="icon" />
-    <span class="sr-only">{{ title }}</span>
+    <span class="sr-only">{{ label }}</span>
   </NuxtLink>
 </template>
