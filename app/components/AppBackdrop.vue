@@ -1,6 +1,6 @@
 <template>
   <div
-    class="opacity-7.5 max-w-3xl pointer-events-none translate--50% inset-0 left-50% top-50% fixed z-0"
+    class="opacity-10 max-w-3xl pointer-events-none translate--50% inset-0 left-50% top-50% fixed z-0"
   >
     <div
       v-for="num in 6"
