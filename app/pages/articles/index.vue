@@ -20,36 +20,36 @@ const { data: articles } = await useAsyncData(route.path, () =>
   <AppMain class="flex flex-col gap-8">
     <h1 class="text-h1 self-start">{{ route.meta.title }}</h1>
 
-    <div class="flex flex-col gap-8">
-      <template v-if="articles?.length">
-        <article v-for="article in articles" :key="article.path">
+    <div v-if="articles?.length" class="flex flex-col gap-8">
+      <article
+        v-for="article in articles"
+        :key="article.path"
+        class="flex flex-col gap-4"
+      >
+        <div class="flex flex-col">
           <p class="text-p text-neutral-400 leading-none font-script m-is-1">
             <AppTime :datetime="article.date" date-style="long" />
           </p>
 
-          <div class="flex flex-col gap-4">
-            <h2 class="text-h3 text-primary-gradient self-start">
-              <NuxtLink :to="article.path" class="no-underline">
-                {{ article.title }}
-              </NuxtLink>
-            </h2>
+          <h2 class="text-h3 text-primary-gradient self-start">
+            <NuxtLink :to="article.path" class="text-a">
+              {{ article.title }}
+            </NuxtLink>
+          </h2>
+        </div>
 
-            <p class="text-p">{{ article.description }}</p>
-          </div>
+        <p class="text-p">{{ article.description }}</p>
 
-          <NuxtLink
-            :to="article.path"
-            class="text-p text-primary-gradient app-link"
-          >
-            <span>Read more</span>
-            <i class="i-lucide-arrow-big-right app-link-icon text-secondary" />
-          </NuxtLink>
-        </article>
-      </template>
-
-      <div v-else class="app-prose">
-        <p>No articles were found. 🥺</p>
-      </div>
+        <NuxtLink
+          :to="article.path"
+          class="text-p app-link-gradient leading-none app-link self-start"
+        >
+          <span>Read more</span>
+          <i class="i-lucide-arrow-big-right app-link-icon" />
+        </NuxtLink>
+      </article>
     </div>
+
+    <p v-else class="text-p">No articles were found. 🥺</p>
   </AppMain>
 </template>

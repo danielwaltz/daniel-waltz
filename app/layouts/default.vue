@@ -26,7 +26,7 @@ const routes = useRoutes(["index", "articles"]);
               <NuxtLink
                 :to="item.path"
                 class="app-link"
-                active-class="text-primary-gradient [&>i]:text-primary"
+                active-class="app-link-gradient"
               >
                 <i :class="item.meta.icon" class="app-link-icon" />
                 <span>{{ item.meta.title }}</span>

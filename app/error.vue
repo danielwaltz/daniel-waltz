@@ -19,8 +19,11 @@ defineOgImage("Default", { title, description });
         <p>{{ description }}</p>
       </div>
 
-      <NuxtLink to="/" class="text-p text-primary-gradient app-link self-start">
-        <i class="i-lucide-arrow-big-left app-link-icon text-primary" />
+      <NuxtLink
+        to="/"
+        class="text-p app-link-gradient leading-none app-link self-start"
+      >
+        <i class="i-lucide-arrow-big-left app-link-icon" />
         <span>Back to home</span>
       </NuxtLink>
     </div>

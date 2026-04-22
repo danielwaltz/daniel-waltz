@@ -114,41 +114,45 @@ export default defineConfig({
   shortcuts: [
     {
       "app-link":
-        "tracking-wider font-mono font-semibold px-2 py-1 inline-flex gap-0.5em uppercase items-center",
+        "tracking-wider font-mono font-semibold px-2 py-1 text-a inline-flex gap-0.5em uppercase items-center",
+      "app-link-gradient":
+        "text-primary-gradient [&>i]:text-primary [&>span+i]:text-secondary",
       "app-link-icon": "text-0.8em",
       "app-prose":
-        "prose prose-a:text-primary prose-blockquote:border-solid prose-blockquote:border-current prose-blockquote:border-is-3 prose-code:text-code prose-h1:max-w-fit prose-h1:text-h1! prose-h1:m-0! prose-h1:pbe-2 [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre text-pretty text-p font-serif",
+        "text-p font-serif text-pretty prose prose-a:text-primary prose-code:text-code [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre prose-h1:pbe-2 prose-blockquote:border-is-3 prose-blockquote:border-current prose-blockquote:border-solid prose-h1:max-w-fit prose-h1:text-h1! prose-h1:m-0!",
       "bg-primary-gradient":
-        "bg-primary bg-linear-to-r from-primary to-secondary",
+        "bg-primary from-primary to-secondary bg-linear-to-r",
       "bg-primary-gradient-reverse":
-        "bg-secondary bg-linear-to-r from-secondary to-primary",
+        "bg-secondary from-secondary to-primary bg-linear-to-r",
       interactive:
-        "cursor-pointer outline-offset-2 transition-200 transition-property-[background-color,color,outline-width,transform] focus:outline-2 focus:outline-dashed active:scale-98",
+        "outline-offset-2 cursor-pointer transition-200 transition-property-[background-color,color,outline-width,transform] focus:outline-2 focus:outline-dashed active:scale-98",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
-      "shadow-box": "absolute inset-0 shadow-2xl",
+      "shadow-box": "shadow-2xl inset-0 absolute",
       "shadow-box-animate":
         "animate-fade-in animate-duration-5s animate-ease-in-out animate-backwards animate-iteration-count-infinite",
+      "text-a":
+        "decoration-2 underline-offset-6 decoration-dashed hover:not-focus:underline",
       "text-code":
-        "inline-block whitespace-nowrap rounded-lg bg-neutral-100 px-1 text-neutral font-mono before:hidden after:hidden",
+        "text-neutral font-mono px-1 rounded-lg bg-neutral-100 inline-block whitespace-nowrap after:hidden before:hidden",
       "text-h1":
-        "text-primary-gradient text-6xl font-normal font-display uppercase 2xl:text-9xl md:text-8xl sm:text-7xl leading-heading",
+        "text-6xl text-primary-gradient leading-heading font-display font-normal uppercase 2xl:text-9xl md:text-8xl sm:text-7xl",
       "text-h2":
-        "text-5xl font-normal font-display uppercase 2xl:text-8xl md:text-7xl sm:text-6xl leading-heading",
+        "text-5xl leading-heading font-display font-normal uppercase 2xl:text-8xl md:text-7xl sm:text-6xl",
       "text-h3":
-        "text-4xl font-normal font-display uppercase 2xl:text-7xl md:text-6xl sm:text-5xl leading-heading",
+        "text-4xl leading-heading font-display font-normal uppercase 2xl:text-7xl md:text-6xl sm:text-5xl",
       "text-h4":
-        "text-3xl font-normal font-display uppercase 2xl:text-6xl md:text-5xl sm:text-4xl leading-heading",
+        "text-3xl leading-heading font-display font-normal uppercase 2xl:text-6xl md:text-5xl sm:text-4xl",
       "text-h5":
-        "text-2xl font-normal font-display uppercase 2xl:text-5xl md:text-4xl sm:text-3xl leading-heading",
+        "text-2xl leading-heading font-display font-normal uppercase 2xl:text-5xl md:text-4xl sm:text-3xl",
       "text-h6":
-        "text-xl font-normal font-display uppercase 2xl:text-4xl md:text-3xl sm:text-2xl leading-heading",
+        "text-xl leading-heading font-display font-normal uppercase 2xl:text-4xl md:text-3xl sm:text-2xl",
       "text-p":
         "text-lg leading-relaxed font-serif 2xl:text-3xl md:text-2xl sm:text-xl",
       "text-pre": "font-mono",
       "text-primary-gradient":
-        "bg-primary-gradient bg-clip-text text-transparent outline-primary",
+        "text-transparent outline-primary bg-primary-gradient decoration-primary bg-clip-text",
       "text-primary-gradient-reverse":
-        "bg-primary-gradient-reverse bg-clip-text text-transparent outline-secondary",
+        "text-transparent outline-secondary bg-primary-gradient-reverse decoration-secondary bg-clip-text",
     },
   ],
 });
