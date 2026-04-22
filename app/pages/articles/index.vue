@@ -42,8 +42,11 @@ const { data: articles } = await useAsyncData(route.path, () =>
             <AppTime :datetime="article.date" date-style="long" />
           </p>
 
-          <h2 class="text-h3 text-primary-gradient self-start">
-            <NuxtLink :to="article.path" class="text-a">
+          <h2 class="self-start">
+            <NuxtLink
+              :to="article.path"
+              class="text-h3 text-primary-gradient text-a"
+            >
               {{ article.title }}
             </NuxtLink>
           </h2>

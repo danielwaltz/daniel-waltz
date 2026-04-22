@@ -134,7 +134,8 @@ export default defineNuxtConfig({
   },
   ogImage: {
     security: {
-      restrictRuntimeImagesToOrigin: true,
+      strict: true,
+      secret: "daniel-waltz",
     },
   },
   robots: {
