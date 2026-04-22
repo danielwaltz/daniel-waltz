@@ -41,9 +41,7 @@ defineOgImage("Default", { title, description, date });
 <template>
   <AppMain class="flex flex-col gap-6">
     <article v-if="article">
-      <p
-        class="text-p text-neutral-400 leading-none font-script m-be--1 m-is-1"
-      >
+      <p class="heading-intro mbe--0.25em mis-0.25em">
         <AppTime :datetime="article.date" />
       </p>
 

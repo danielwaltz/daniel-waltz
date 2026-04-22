@@ -21,7 +21,7 @@ defineOgImage("Default", { title: site.name });
       <h1 class="flex flex-col items-start self-start">
         <span
           aria-hidden="true"
-          class="text-2xl text-neutral-400 leading-none tracking-wide font-script m-be--2 m-is-1 rotate-3 2xl:text-4xl sm:text-3xl"
+          class="heading-intro mbe--0.25em mis-0.25em rotate-3"
           >Hi, I'm</span
         >
         <span class="text-h1">Daniel Waltz</span>

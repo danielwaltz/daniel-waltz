@@ -124,6 +124,7 @@ export default defineConfig({
         "bg-primary from-primary to-secondary bg-linear-to-r",
       "bg-primary-gradient-reverse":
         "bg-secondary from-secondary to-primary bg-linear-to-r",
+      "heading-intro": "text-p text-neutral-400 leading-none font-script",
       interactive:
         "outline-offset-2 cursor-pointer transition-200 transition-property-[background-color,color,outline-width,transform] focus:outline-2 focus:outline-dashed active:scale-98",
       "min-h-viewport": "min-h-full min-h-screen min-h-100dvh",
