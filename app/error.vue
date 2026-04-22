@@ -12,7 +12,7 @@ defineOgImage("Default", { title, description });
 </script>
 
 <template>
-  <NuxtLayout>
+  <NuxtLayout name="default">
     <div class="flex flex-col gap-4">
       <div class="app-prose">
         <h1>{{ title }}</h1>
