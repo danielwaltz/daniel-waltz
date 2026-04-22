@@ -49,7 +49,7 @@ const formattedDate = computed(() => {
     </div>
 
     <div
-      class="h-48 inset-x-0 inset-be-0 absolute from-transparent to-neutral to-75% bg-linear-to-b"
+      class="h-48 inset-x-0 inset-be-0 absolute from-neutral from-25% bg-linear-to-t"
     />
   </div>
 </template>

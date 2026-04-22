@@ -55,7 +55,6 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     typescript: {
-      strict: true,
       tsConfig: {
         compilerOptions: {
           erasableSyntaxOnly: true,
