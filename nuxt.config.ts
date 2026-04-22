@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@unocss/nuxt",
     "@vueuse/nuxt",
+    "motion-v/nuxt",
     "reka-ui/nuxt",
   ],
   app: {

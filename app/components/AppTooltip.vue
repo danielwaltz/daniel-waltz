@@ -23,15 +23,22 @@ const forward = useForwardPropsEmits(props, emit);
       <slot />
     </TooltipTrigger>
 
-    <TooltipContent
-      :side
-      :side-offset="4"
-      :collision-padding="4"
-      aria-hidden="true"
-      class="text-sm text-neutral-100 leading-none p-2 rounded-md bg-neutral-800 select-none shadow-sm animate-fade-in animate-duration-100"
-    >
-      {{ content }}
-      <TooltipArrow :width="12" :height="6" class="fill-neutral-800" />
-    </TooltipContent>
+    <TooltipPortal>
+      <AnimatePresence>
+        <TooltipContent
+          as-child
+          :side
+          :side-offset="4"
+          :collision-padding="4"
+          aria-hidden="true"
+          class="text-sm text-neutral-100 leading-none p-2 rounded-md bg-neutral-800 select-none shadow-sm"
+        >
+          <Motion v-bind="tooltipMotion">
+            {{ content }}
+            <TooltipArrow :width="12" :height="6" class="fill-neutral-800" />
+          </Motion>
+        </TooltipContent>
+      </AnimatePresence>
+    </TooltipPortal>
   </TooltipRoot>
 </template>
