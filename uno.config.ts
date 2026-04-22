@@ -133,6 +133,7 @@ export default defineConfig({
         "animate-fade-in animate-duration-5s animate-ease-in-out animate-backwards animate-iteration-count-infinite",
       "text-a":
         "decoration-2 underline-offset-6 decoration-dashed hover:not-focus:underline",
+      "text-abbr": "underline decoration-dotted",
       "text-code":
         "text-neutral font-mono px-1 rounded-lg bg-neutral-100 inline-block whitespace-nowrap after:hidden before:hidden",
       "text-h1":

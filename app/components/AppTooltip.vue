@@ -31,7 +31,7 @@ const forward = useForwardPropsEmits(props, emit);
           :side-offset="4"
           :collision-padding="4"
           aria-hidden="true"
-          class="text-sm text-neutral-100 leading-none p-2 rounded-md bg-neutral-800 select-none shadow-sm"
+          class="text-sm text-neutral-100 leading-none p-2 text-center rounded-md bg-neutral-800 max-w-xs select-none text-balance shadow-sm"
         >
           <Motion v-bind="tooltipMotion">
             {{ content }}

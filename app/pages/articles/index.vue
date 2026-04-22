@@ -17,10 +17,21 @@ const { data: articles } = await useAsyncData(route.path, () =>
 </script>
 
 <template>
-  <AppMain class="flex flex-col gap-8">
-    <h1 class="text-h1 self-start">{{ route.meta.title }}</h1>
+  <AppMain class="flex flex-col gap-10">
+    <h1 class="flex flex-col items-start self-start">
+      <span
+        aria-hidden="true"
+        class="heading-intro mbe--0.25em mis-0.25em relative"
+        >I
+        <AppTooltip content="Rarely... 😅" side="bottom" :delay-duration="300">
+          <abbr class="text-abbr">sometimes</abbr></AppTooltip
+        >
+        write</span
+      >
+      <span class="text-h1">{{ route.meta.title }}</span>
+    </h1>
 
-    <div v-if="articles?.length" class="flex flex-col gap-8">
+    <div v-if="articles?.length" class="flex flex-col gap-10">
       <article
         v-for="article in articles"
         :key="article.path"
