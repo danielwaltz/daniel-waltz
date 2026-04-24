@@ -3,7 +3,7 @@ definePageMeta({
   title: "Home",
   description:
     "Web developer with a passion for delivering the most usable, accessible, and beautiful interfaces imaginable!",
-  icon: "i-lucide-house",
+  icon: "lucide:house",
 });
 
 const site = useSiteConfig();

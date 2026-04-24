@@ -1,8 +1,5 @@
-import { resolve } from "node:path";
-import { FileSystemIconLoader } from "@iconify/utils/lib/loader/node-loaders";
 import {
   defineConfig,
-  presetIcons,
   presetTypography,
   presetWind4,
   transformerDirectives,
@@ -10,18 +7,9 @@ import {
 import type { Theme } from "unocss/preset-wind4";
 
 // https://unocss.dev/config/
-export default defineConfig({
+export default defineConfig<Theme>({
   presets: [
     presetWind4(),
-    presetIcons({
-      collections: {
-        app: FileSystemIconLoader(resolve("./app/assets/icons")),
-      },
-      extraProperties: {
-        display: "inline-block",
-        "vertical-align": "middle",
-      },
-    }),
     presetTypography({
       colorScheme: {
         body: ["inherit", "inherit"],
@@ -101,7 +89,7 @@ export default defineConfig({
     leading: {
       heading: "1.03",
     },
-  } satisfies Theme,
+  },
   rules: [
     [
       "clip-hexagon",
@@ -116,7 +104,7 @@ export default defineConfig({
       "app-link":
         "tracking-wider font-mono font-semibold px-2 py-1 text-a inline-flex gap-0.5em uppercase items-center",
       "app-link-gradient":
-        "text-primary-gradient [&>i]:text-primary [&>span+i]:text-secondary",
+        "text-primary-gradient [&>.icon]:text-primary [&>span+.icon]:text-secondary",
       "app-link-icon": "text-0.8em",
       "app-prose":
         "text-p font-serif text-pretty prose prose-a:text-primary prose-code:text-code [&_h1>a,&_h2>a,&_h3>a,&_h4>a,&_h5>a,&_h6>a]:text-unset prose-pre:text-pre prose-h1:pbe-2 prose-blockquote:border-is-3 prose-blockquote:border-current prose-blockquote:border-solid prose-h1:max-w-fit prose-h1:text-h1! prose-h1:m-0!",

@@ -15,7 +15,7 @@
       class="shadow-box shadow-primary rotate--45 scale-59 shadow-box-animate animate-alternate"
     />
     <div class="bg-neutral clip-hexagon">
-      <i class="i-app-logo block scale-90" />
+      <Icon name="app:logo" class="block scale-90" />
     </div>
   </div>
 </template>

@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/fonts",
+    "@nuxt/icon",
     "@nuxt/image",
     "@unocss/nuxt",
     "@vueuse/nuxt",
@@ -131,6 +132,10 @@ export default defineNuxtConfig({
         global: true,
       },
     ],
+  },
+  icon: {
+    class: "icon",
+    customCollections: [{ prefix: "app", dir: "./app/assets/icons" }],
   },
   ogImage: {
     security: {

@@ -28,7 +28,7 @@ const routes = useRoutes(["index", "articles"]);
                 class="app-link"
                 active-class="app-link-gradient"
               >
-                <i :class="item.meta.icon" class="app-link-icon" />
+                <Icon :name="item.meta.icon" class="app-link-icon" />
                 <span>{{ item.meta.title }}</span>
               </NuxtLink>
             </li>
@@ -65,7 +65,7 @@ const routes = useRoutes(["index", "articles"]);
         <AppIconLink
           :to="site.repository"
           label="View Source Code"
-          icon="i-lucide-code"
+          icon="lucide:code"
           class="text-xl focus:text-neutral-100 hover:text-neutral-100"
         />
       </AppTooltip>

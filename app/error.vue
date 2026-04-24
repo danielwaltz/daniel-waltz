@@ -23,7 +23,7 @@ defineOgImage("Default", { title, description });
         to="/"
         class="text-p app-link-gradient leading-none app-link self-start"
       >
-        <i class="i-lucide-arrow-big-left app-link-icon" />
+        <Icon name="lucide:arrow-big-left" class="app-link-icon" />
         <span>Back to home</span>
       </NuxtLink>
     </div>

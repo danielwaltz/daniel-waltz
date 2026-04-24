@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <NuxtLink :to :rel :aria-label="label" class="flex relative">
     <span class="inset--1 absolute" />
-    <i :class="icon" />
+    <Icon :name="icon" />
     <span class="sr-only">{{ label }}</span>
   </NuxtLink>
 </template>

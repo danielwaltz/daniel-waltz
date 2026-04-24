@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Article",
   description: "An article I've written.",
-  icon: "i-lucide-file-text",
+  icon: "lucide:file-text",
 });
 
 const route = useRoute();
@@ -52,7 +52,7 @@ defineOgImage("Default", { title, description, date });
           :to="{ name: 'articles' }"
           class="text-p app-link-gradient leading-none app-link"
         >
-          <i class="i-lucide-arrow-big-left app-link-icon" />
+          <Icon name="lucide:arrow-big-left" class="app-link-icon" />
           <span>Back to articles</span>
         </NuxtLink>
 
@@ -64,7 +64,7 @@ defineOgImage("Default", { title, description, date });
           class="text-p app-link-gradient leading-none app-link"
         >
           <span>Discussion</span>
-          <i class="i-lucide-external-link app-link-icon" />
+          <Icon name="lucide:external-link" class="app-link-icon" />
         </NuxtLink>
       </footer>
     </article>

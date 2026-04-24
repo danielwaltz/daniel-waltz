@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Articles",
   description: "A collection of articles I've written.",
-  icon: "i-lucide-file-text",
+  icon: "lucide:file-text",
 });
 
 const route = useRoute();
@@ -59,7 +59,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
           class="text-p app-link-gradient leading-none app-link self-start"
         >
           <span>Read more</span>
-          <i class="i-lucide-arrow-big-right app-link-icon" />
+          <Icon name="lucide:arrow-big-right" class="app-link-icon" />
         </NuxtLink>
       </article>
     </div>
