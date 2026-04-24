@@ -22,7 +22,7 @@ const formattedDate = computed(() => {
     <AppBackdrop class="absolute" />
 
     <div class="flex gap-6 items-center">
-      <img src="@/assets/icons/logo.svg" alt="" class="size-12" />
+      <Icon name="app:logo" mode="svg" class="size-12" />
 
       <div class="text-xl text-neutral-400 font-mono">
         {{ site.name }} {{ site.separator }} {{ site.jobTitle }}
