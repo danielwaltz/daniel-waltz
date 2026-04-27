@@ -16,25 +16,30 @@ const route = useRoute();
       <div
         v-for="project in PROJECTS"
         :key="project.url"
-        class="text-sm flex flex-col gap-4 sm:text-lg"
+        class="text-sm flex gap-6 sm:text-lg"
       >
-        <h2 class="flex gap-4 items-center self-start">
-          <Icon name="simple-icons:github" class="text-p min-w-1em" />
+        <Icon
+          name="simple-icons:github"
+          class="text-4xl text-neutral-100 min-w-1em"
+        />
 
-          <NuxtLink
-            :to="project.url"
-            target="_blank"
-            class="text-h5 text-primary-gradient text-a"
-          >
-            {{ project.name }}
-            <Icon
-              name="lucide:external-link"
-              class="text-0.5em text-secondary align-middle"
-            />
-          </NuxtLink>
-        </h2>
+        <div class="flex flex-col gap-3">
+          <h2 class="self-start">
+            <NuxtLink
+              :to="project.url"
+              target="_blank"
+              class="text-3xl text-primary-gradient font-bold font-mono text-a uppercase"
+            >
+              {{ project.name }}
+              <Icon
+                name="lucide:external-link"
+                class="text-0.75em text-secondary"
+              />
+            </NuxtLink>
+          </h2>
 
-        <p class="text-p">{{ project.description }}</p>
+          <p class="text-xl font-serif">{{ project.description }}</p>
+        </div>
       </div>
     </div>
   </AppMain>
