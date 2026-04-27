@@ -18,18 +18,15 @@ const { data: articles } = await useAsyncData(route.path, () =>
 
 <template>
   <AppMain class="flex flex-col gap-10">
-    <h1 class="flex flex-col items-start self-start">
-      <span
-        aria-hidden="true"
-        class="heading-intro mbe--0.25em mis-0.25em relative"
+    <AppMainHeader :title="route.meta.title" intro-class="relative">
+      <template #intro
         >I
         <AppTooltip content="Rarely... 😅" side="bottom" :delay-duration="300">
-          <abbr class="text-abbr">sometimes</abbr></AppTooltip
-        >
-        write</span
-      >
-      <span class="text-h1">{{ route.meta.title }}</span>
-    </h1>
+          <abbr class="text-abbr">sometimes</abbr>
+        </AppTooltip>
+        write
+      </template>
+    </AppMainHeader>
 
     <div v-if="articles?.length" class="flex flex-col gap-10">
       <article

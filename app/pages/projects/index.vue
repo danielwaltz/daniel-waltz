@@ -10,14 +10,7 @@ const route = useRoute();
 
 <template>
   <AppMain class="flex flex-col gap-10">
-    <h1 class="flex flex-col items-start self-start">
-      <span
-        aria-hidden="true"
-        class="heading-intro mbe--0.25em mis-0.25em relative"
-        >I work on</span
-      >
-      <span class="text-h1">{{ route.meta.title }}</span>
-    </h1>
+    <AppMainHeader :title="route.meta.title" intro="I work on" />
 
     <div class="flex flex-col gap-10">
       <div

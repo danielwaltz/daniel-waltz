@@ -18,14 +18,11 @@ defineOgImage("Default", { title: site.name });
 <template>
   <AppMain class="flex flex-col gap-8">
     <div class="flex flex-col gap-6 text-pretty">
-      <h1 class="flex flex-col items-start self-start">
-        <span
-          aria-hidden="true"
-          class="heading-intro mbe--0.25em mis-0.25em rotate-3"
-          >Hi, I'm</span
-        >
-        <span class="text-h1">Daniel Waltz</span>
-      </h1>
+      <AppMainHeader
+        :title="site.name"
+        intro="Hi, I'm"
+        intro-class="rotate-3"
+      />
 
       <p class="text-p">
         I'm a
