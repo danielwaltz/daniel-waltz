@@ -29,16 +29,19 @@ const formattedDate = computed(() => {
       </div>
     </div>
 
-    <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-10">
       <div class="flex flex-col">
         <span
           v-if="formattedDate"
-          class="text-p text-neutral-400 leading-none font-script mbe--1"
+          class="heading-intro font-script mbe--0.75em"
         >
           {{ formattedDate }}
         </span>
 
-        <h1 v-if="title" class="text-h1 font-display truncate self-start">
+        <h1
+          v-if="title"
+          class="text-h1 leading-1.25em font-display truncate self-start"
+        >
           {{ title }}
         </h1>
       </div>
