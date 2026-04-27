@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Article",
   description: "An article I've written.",
-  icon: "lucide:file-text",
+  icon: "lucide:book-text",
 });
 
 const route = useRoute();
