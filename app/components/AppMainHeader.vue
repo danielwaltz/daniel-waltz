@@ -12,7 +12,7 @@ defineProps<{
     <span
       v-if="intro || $slots.intro"
       aria-hidden="true"
-      class="heading-intro mbe--0.25em mis-0.25em"
+      class="heading-intro mbe--0.75em mis-0.25em"
       :class="introClass"
     >
       <slot name="intro">{{ intro }}</slot>

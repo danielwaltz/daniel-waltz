@@ -87,7 +87,7 @@ export default defineConfig<Theme>({
       mono: "JetBrains Mono, monospace",
     },
     leading: {
-      heading: "1.03",
+      heading: "1.45cap",
     },
   },
   rules: [

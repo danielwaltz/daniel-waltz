@@ -19,7 +19,7 @@ const route = useRoute();
         class="text-sm flex flex-col gap-4 sm:text-lg"
       >
         <h2 class="flex gap-4 items-center self-start">
-          <Icon name="simple-icons:github" class="text-p" />
+          <Icon name="simple-icons:github" class="text-p min-w-1em" />
 
           <NuxtLink
             :to="project.url"
@@ -29,7 +29,7 @@ const route = useRoute();
             {{ project.name }}
             <Icon
               name="lucide:external-link"
-              class="text-0.5em text-secondary align-85%"
+              class="text-0.5em text-secondary align-middle"
             />
           </NuxtLink>
         </h2>

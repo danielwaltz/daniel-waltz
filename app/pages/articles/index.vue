@@ -35,7 +35,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
         class="flex flex-col gap-4"
       >
         <div class="flex flex-col">
-          <p class="heading-intro">
+          <p class="heading-intro mbe--0.25em">
             <AppTime :datetime="article.date" date-style="long" />
           </p>
 
