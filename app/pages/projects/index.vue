@@ -1,0 +1,48 @@
+<script setup lang="ts">
+definePageMeta({
+  title: "Projects",
+  description: "A collection of projects I've worked on.",
+  icon: "lucide:briefcase",
+});
+
+const route = useRoute();
+</script>
+
+<template>
+  <AppMain class="flex flex-col gap-10">
+    <h1 class="flex flex-col items-start self-start">
+      <span
+        aria-hidden="true"
+        class="heading-intro mbe--0.25em mis-0.25em relative"
+        >I work on</span
+      >
+      <span class="text-h1">{{ route.meta.title }}</span>
+    </h1>
+
+    <div class="flex flex-col gap-10">
+      <div
+        v-for="project in PROJECTS"
+        :key="project.url"
+        class="text-sm flex flex-col gap-4 sm:text-lg"
+      >
+        <h2 class="flex gap-4 items-center self-start">
+          <Icon name="simple-icons:github" class="text-p" />
+
+          <NuxtLink
+            :to="project.url"
+            target="_blank"
+            class="text-h5 text-primary-gradient text-a"
+          >
+            {{ project.name }}
+            <Icon
+              name="lucide:external-link"
+              class="text-0.5em text-secondary align-85%"
+            />
+          </NuxtLink>
+        </h2>
+
+        <p class="text-p">{{ project.description }}</p>
+      </div>
+    </div>
+  </AppMain>
+</template>

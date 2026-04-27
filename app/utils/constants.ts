@@ -89,3 +89,23 @@ export const INSTANCES = [
     icon: "simple-icons:vercel",
   },
 ] as const;
+
+export const PROJECTS = [
+  {
+    name: "Vite Plugin GraphQL Codegen",
+    description:
+      "Zero-config vite plugin that uses the vite file watcher to run graphql codegen programmatically without needing to start a separate watcher",
+    url: "https://github.com/danielwaltz/vite-plugin-graphql-codegen",
+  },
+  {
+    name: "Adhesive.js",
+    description:
+      "A modern, performant, lightweight, dependency free, cross platform solution for flexible sticky positioned elements",
+    url: "https://github.com/adhesivejs/adhesive",
+  },
+  {
+    name: "UnoCSS Preset Prime",
+    description: "UnoCSS preset for supporting Prime UI theme colors",
+    url: "https://github.com/danielwaltz/unocss-preset-prime",
+  },
+] as const;

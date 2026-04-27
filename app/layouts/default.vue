@@ -2,7 +2,7 @@
 const runtimeConfig = useRuntimeConfig();
 const site = useSiteConfig();
 
-const routes = useRoutes(["index", "articles"]);
+const routes = useRoutes(["index", "projects", "articles"]);
 </script>
 
 <template>

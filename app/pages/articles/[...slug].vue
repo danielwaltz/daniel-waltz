@@ -60,7 +60,6 @@ defineOgImage("Default", { title, description, date });
           v-if="article.discussion"
           :to="article.discussion"
           target="_blank"
-          rel="noopener noreferrer"
           class="text-p app-link-gradient app-link"
         >
           <span>Discussion</span>
