@@ -14,7 +14,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
     <div
       class="px-6 py-12 flex flex-col gap-8 max-w-2xl w-full sm:px-8 sm:py-14 2xl:max-w-4xl sm:max-w-3xl"
     >
-      <div class="flex grow flex-wrap gap-8 items-center justify-between">
+      <header class="flex grow flex-wrap gap-8 items-center justify-between">
         <NuxtLink to="/" class="rounded-xl inline-flex">
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
           <span class="sr-only">{{ site.name }}</span>
@@ -34,7 +34,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
             </li>
           </ul>
         </nav>
-      </div>
+      </header>
 
       <slot />
     </div>
