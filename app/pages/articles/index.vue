@@ -56,7 +56,7 @@ const { data: articles } = await useAsyncData(route.path, () =>
 
         <NuxtLink
           :to="article.path"
-          class="text-p app-link-gradient leading-none app-link self-start"
+          class="text-p app-link-gradient app-link self-start"
         >
           <span>Read more</span>
           <Icon name="lucide:arrow-big-right" class="app-link-icon" />

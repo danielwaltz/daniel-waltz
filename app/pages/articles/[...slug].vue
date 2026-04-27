@@ -50,7 +50,7 @@ defineOgImage("Default", { title, description, date });
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
           :to="{ name: 'articles' }"
-          class="text-p app-link-gradient leading-none app-link"
+          class="text-p app-link-gradient app-link"
         >
           <Icon name="lucide:arrow-big-left" class="app-link-icon" />
           <span>Back to articles</span>
@@ -61,7 +61,7 @@ defineOgImage("Default", { title, description, date });
           :to="article.discussion"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-p app-link-gradient leading-none app-link"
+          class="text-p app-link-gradient app-link"
         >
           <span>Discussion</span>
           <Icon name="lucide:external-link" class="app-link-icon" />

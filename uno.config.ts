@@ -102,7 +102,7 @@ export default defineConfig<Theme>({
   shortcuts: [
     {
       "app-link":
-        "tracking-wider font-mono font-semibold px-2 py-1 text-a inline-flex gap-0.5em uppercase items-center",
+        "leading-none tracking-wider font-mono font-semibold px-2 py-1 text-a inline-flex gap-0.5em uppercase items-center",
       "app-link-gradient":
         "text-primary-gradient [&>.icon]:text-primary [&>span+.icon]:text-secondary",
       "app-link-icon": "text-0.8em",
