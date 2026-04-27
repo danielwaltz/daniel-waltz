@@ -25,15 +25,12 @@ const forward = useForwardPropsEmits(props, emit);
 
     <TooltipPortal>
       <AnimatePresence>
-        <TooltipContent
-          as-child
-          :side
-          :side-offset="4"
-          :collision-padding="4"
-          aria-hidden="true"
-          class="text-sm text-neutral-100 leading-none p-2 text-center rounded-md bg-neutral-800 max-w-xs select-none text-balance shadow-sm"
-        >
-          <Motion v-bind="tooltipMotion">
+        <TooltipContent as-child :side :side-offset="14" :collision-padding="4">
+          <Motion
+            v-bind="tooltipMotion"
+            aria-hidden="true"
+            class="text-sm text-neutral-100 leading-none p-2 text-center rounded-md bg-neutral-800 max-w-xs select-none text-balance shadow-sm"
+          >
             {{ content }}
             <TooltipArrow :width="12" :height="6" class="fill-neutral-800" />
           </Motion>
