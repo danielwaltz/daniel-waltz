@@ -20,6 +20,7 @@
     "@danielwaltz/eslint-config": "^3.4.0",
     "@iconify-json/lucide": "^1.2.104",
     "@iconify-json/simple-icons": "^1.2.80",
+    "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxt/content": "^3.13.0",
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/eslint": "^1.15.2",
