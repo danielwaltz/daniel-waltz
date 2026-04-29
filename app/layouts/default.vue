@@ -14,7 +14,9 @@ const routes = useRoutes(["index", "projects", "articles"]);
     <div
       class="px-6 py-12 flex flex-col gap-8 max-w-2xl w-full sm:px-8 sm:py-14 2xl:max-w-4xl sm:max-w-3xl"
     >
-      <header class="flex grow flex-wrap gap-8 items-center justify-between">
+      <header
+        class="flex grow flex-wrap gap-8 items-center justify-between view-transition-layout-header"
+      >
         <NuxtLink to="/" class="rounded-xl inline-flex">
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
           <span class="sr-only">{{ site.name }}</span>
@@ -42,7 +44,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
     <footer
       class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
     >
-      <nav aria-label="Instances">
+      <nav aria-label="Instances" class="view-transition-layout-nav">
         <ul class="flex flex-wrap gap-3 items-center">
           <li v-for="instance in INSTANCES" :key="instance.url">
             <AppTooltip :content="instance.title">

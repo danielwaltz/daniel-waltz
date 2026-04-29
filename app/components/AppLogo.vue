@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex items-center justify-center relative view-transition-app-logo"
-  >
+  <div class="flex items-center justify-center relative">
     <div
       class="shadow-box shadow-primary rotate-45 scale-59 shadow-box-animate animate-alternate-reverse"
     />
