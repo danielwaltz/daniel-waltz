@@ -13,14 +13,10 @@ const route = useRoute();
     <AppMainHeader :title="route.meta.title" intro="I work on" />
 
     <div class="flex flex-col gap-10">
-      <div
-        v-for="project in PROJECTS"
-        :key="project.url"
-        class="text-sm flex gap-6 sm:text-lg"
-      >
+      <div v-for="project in PROJECTS" :key="project.url" class="flex gap-6">
         <Icon
           name="simple-icons:github"
-          class="text-4xl text-neutral-100 min-w-1em"
+          class="text-3xl text-neutral-100 min-w-1em"
         />
 
         <div class="flex flex-col gap-3">
@@ -28,17 +24,14 @@ const route = useRoute();
             <NuxtLink
               :to="project.url"
               target="_blank"
-              class="text-3xl text-primary-gradient font-bold font-mono text-a uppercase"
+              class="text-2xl app-link-gradient app-link font-bold font-mono p-0 uppercase"
             >
-              {{ project.name }}
-              <Icon
-                name="lucide:external-link"
-                class="text-0.75em text-secondary"
-              />
+              <span>{{ project.name }}</span>
+              <Icon name="lucide:external-link" class="text-0.75em" />
             </NuxtLink>
           </h2>
 
-          <p class="text-xl font-serif">{{ project.description }}</p>
+          <p class="text-lg font-serif">{{ project.description }}</p>
         </div>
       </div>
     </div>
