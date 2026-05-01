@@ -6,3 +6,4 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   vue-demi: true
+minimumReleaseAge: 0
