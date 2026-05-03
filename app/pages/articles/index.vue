@@ -31,11 +31,15 @@ const prefetchArticle = useArticlePrefetch();
         class="flex flex-col gap-4"
       >
         <div class="flex flex-col">
-          <p class="heading-intro mbe--0.25em">
+          <Motion
+            layout
+            :layout-id="article.date"
+            class="heading-intro mbe--0.25em"
+          >
             <AppTime :datetime="article.date" date-style="long" />
-          </p>
+          </Motion>
 
-          <h2 class="self-start">
+          <Motion as="h2" layout :layout-id="article.title" class="self-start">
             <NuxtLink
               :to="article.path"
               class="text-h3 text-primary-gradient text-a"
@@ -44,7 +48,7 @@ const prefetchArticle = useArticlePrefetch();
             >
               {{ article.title }}
             </NuxtLink>
-          </h2>
+          </Motion>
         </div>
 
         <p class="text-p">{{ article.description }}</p>

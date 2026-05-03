@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from "motion-v";
+
 definePageMeta({
   title: "Article",
   description: "An article I've written.",
@@ -15,6 +17,16 @@ const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
 const date = toRef(() => article.value?.date);
 
+const ArticleH1 = defineComponent((props, { slots }) => {
+  return () =>
+    h(
+      // @ts-expect-error type mismatch
+      Motion,
+      { as: "h1", layout: true, layoutId: article.value?.title, ...props },
+      slots.default?.(),
+    );
+});
+
 useSeoMeta({
   title,
   description,
@@ -29,11 +41,19 @@ defineOgImage("Default", { title, description, date });
 <template>
   <AppMain class="flex flex-col gap-6">
     <article v-if="article">
-      <p class="heading-intro mbe--0.75em mis-0.25em">
+      <Motion
+        layout
+        :layout-id="article.date"
+        class="heading-intro mbe--0.75em mis-0.25em"
+      >
         <AppTime :datetime="article.date" />
-      </p>
+      </Motion>
 
-      <ContentRenderer :value="article" class="app-prose" />
+      <ContentRenderer
+        :value="article"
+        :components="{ h1: ArticleH1 }"
+        class="app-prose"
+      />
 
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
