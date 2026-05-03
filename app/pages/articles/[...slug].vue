@@ -9,7 +9,7 @@ const route = useRoute();
 
 const { data: article } = await useAsyncData(route.path, () =>
   queryCollection("articles")
-    .select("title", "description", "date", "discussion", "body")
+    .select("path", "title", "description", "date", "discussion", "body")
     .where("status", "=", "published")
     .andWhere((query) => query.where("path", "=", route.path))
     .first(),
@@ -22,6 +22,15 @@ if (!article.value) {
     fatal: true,
   });
 }
+
+const ArticleH1 = defineComponent((props, { slots }) => {
+  return () =>
+    h(
+      "h1",
+      { ...props, ...getArticleViewTransitionProps(article.value!, "title") },
+      slots.default?.(),
+    );
+});
 
 const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
@@ -41,11 +50,18 @@ defineOgImage("Default", { title, description, date });
 <template>
   <AppMain class="flex flex-col gap-6">
     <article v-if="article">
-      <p class="heading-intro mbe--0.75em mis-0.25em">
+      <p
+        class="heading-intro mbe--0.75em mis-0.25em"
+        v-bind="getArticleViewTransitionProps(article, 'date')"
+      >
         <AppTime :datetime="article.date" />
       </p>
 
-      <ContentRenderer :value="article" class="app-prose" />
+      <ContentRenderer
+        :value="article"
+        :components="{ h1: ArticleH1 }"
+        class="app-prose"
+      />
 
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink

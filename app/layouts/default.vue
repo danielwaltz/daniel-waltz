@@ -44,7 +44,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
     <footer
       class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
     >
-      <nav aria-label="Instances" class="view-transition-layout-nav">
+      <nav aria-label="Instances">
         <ul class="flex flex-wrap gap-3 items-center">
           <li v-for="instance in INSTANCES" :key="instance.url">
             <AppTooltip :content="instance.title">
