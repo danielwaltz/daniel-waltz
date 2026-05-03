@@ -7,13 +7,9 @@ definePageMeta({
 
 const route = useRoute();
 
-const { data: articles } = await useAsyncData(route.path, () =>
-  queryCollection("articles")
-    .select("path", "title", "description", "date")
-    .where("status", "=", "published")
-    .order("date", "DESC")
-    .all(),
-);
+const { data: articles } = useArticlesQuery();
+
+const prefetchArticle = useArticlePrefetch();
 </script>
 
 <template>
@@ -35,20 +31,16 @@ const { data: articles } = await useAsyncData(route.path, () =>
         class="flex flex-col gap-4"
       >
         <div class="flex flex-col">
-          <p
-            class="heading-intro mbe--0.25em"
-            v-bind="getArticleViewTransitionProps(article, 'date')"
-          >
+          <p class="heading-intro mbe--0.25em">
             <AppTime :datetime="article.date" date-style="long" />
           </p>
 
-          <h2
-            class="self-start"
-            v-bind="getArticleViewTransitionProps(article, 'title')"
-          >
+          <h2 class="self-start">
             <NuxtLink
               :to="article.path"
               class="text-h3 text-primary-gradient text-a"
+              @focusin="prefetchArticle(article.path)"
+              @mouseover="prefetchArticle(article.path)"
             >
               {{ article.title }}
             </NuxtLink>
@@ -60,6 +52,8 @@ const { data: articles } = await useAsyncData(route.path, () =>
         <NuxtLink
           :to="article.path"
           class="text-p app-link-gradient app-link self-start"
+          @focusin="prefetchArticle(article.path)"
+          @mouseover="prefetchArticle(article.path)"
         >
           <span>Read more</span>
           <Icon name="lucide:arrow-big-right" class="app-link-icon" />

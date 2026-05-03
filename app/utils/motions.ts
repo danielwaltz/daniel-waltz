@@ -14,3 +14,14 @@ export const tooltipMotion = {
   animate: "visible",
   exit: "hidden",
 } as const satisfies MotionProps;
+
+export const pageMotion = {
+  transition: DEFAULT_TRANSITION,
+  variants: {
+    hidden: { translateY: "-1rem", opacity: 0 },
+    visible: { translateY: 0, opacity: 1 },
+  },
+  initial: "hidden",
+  animate: "visible",
+  exit: "hidden",
+} as const satisfies MotionProps;

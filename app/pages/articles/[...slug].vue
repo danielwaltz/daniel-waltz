@@ -7,30 +7,9 @@ definePageMeta({
 
 const route = useRoute();
 
-const { data: article } = await useAsyncData(route.path, () =>
-  queryCollection("articles")
-    .select("path", "title", "description", "date", "discussion", "body")
-    .where("status", "=", "published")
-    .andWhere((query) => query.where("path", "=", route.path))
-    .first(),
-);
+const { data: article } = useArticleQuery(route.path);
 
-if (!article.value) {
-  throw createError({
-    status: 404,
-    statusText: "The article you are looking for does not exist. 🥺",
-    fatal: true,
-  });
-}
-
-const ArticleH1 = defineComponent((props, { slots }) => {
-  return () =>
-    h(
-      "h1",
-      { ...props, ...getArticleViewTransitionProps(article.value!, "title") },
-      slots.default?.(),
-    );
-});
+const prefetchArticles = useArticlesPrefetch();
 
 const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
@@ -50,23 +29,18 @@ defineOgImage("Default", { title, description, date });
 <template>
   <AppMain class="flex flex-col gap-6">
     <article v-if="article">
-      <p
-        class="heading-intro mbe--0.75em mis-0.25em"
-        v-bind="getArticleViewTransitionProps(article, 'date')"
-      >
+      <p class="heading-intro mbe--0.75em mis-0.25em">
         <AppTime :datetime="article.date" />
       </p>
 
-      <ContentRenderer
-        :value="article"
-        :components="{ h1: ArticleH1 }"
-        class="app-prose"
-      />
+      <ContentRenderer :value="article" class="app-prose" />
 
       <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
         <NuxtLink
           :to="{ name: 'articles' }"
           class="text-p app-link-gradient app-link"
+          @focusin="prefetchArticles"
+          @mouseover="prefetchArticles"
         >
           <Icon name="lucide:arrow-big-left" class="app-link-icon" />
           <span>Back to articles</span>

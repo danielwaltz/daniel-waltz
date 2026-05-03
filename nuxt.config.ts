@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
+    "@pinia/nuxt",
+    "@pinia/colada-nuxt",
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "motion-v/nuxt",
@@ -52,7 +54,6 @@ export default defineNuxtConfig({
     extractAsyncDataHandlers: true,
     typedPages: true,
     typescriptPlugin: true,
-    viewTransition: true,
   },
   compatibilityDate: "latest",
   nitro: {

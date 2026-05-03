@@ -2,7 +2,17 @@
 const runtimeConfig = useRuntimeConfig();
 const site = useSiteConfig();
 
-const routes = useRoutes(["index", "projects", "articles"]);
+const prefetchArticles = useArticlesPrefetch();
+
+const routes = useRouteLinks([
+  { name: "index" },
+  { name: "projects" },
+  {
+    name: "articles",
+    onFocusin: prefetchArticles,
+    onMouseover: prefetchArticles,
+  },
+]);
 </script>
 
 <template>
@@ -14,8 +24,11 @@ const routes = useRoutes(["index", "projects", "articles"]);
     <div
       class="px-6 py-12 flex flex-col gap-8 max-w-2xl w-full sm:px-8 sm:py-14 2xl:max-w-4xl sm:max-w-3xl"
     >
-      <header
-        class="flex grow flex-wrap gap-8 items-center justify-between view-transition-layout-header"
+      <Motion
+        as="header"
+        layout="position"
+        :transition="{ ...DEFAULT_TRANSITION, type: 'spring' }"
+        class="flex grow flex-wrap gap-8 items-center justify-between"
       >
         <NuxtLink to="/" class="rounded-xl inline-flex">
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
@@ -26,7 +39,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
           <ul class="text-lg flex flex-wrap gap-3 sm:text-xl">
             <li v-for="item in routes" :key="item.name">
               <NuxtLink
-                :to="item.path"
+                v-bind="item.props"
                 class="app-link"
                 active-class="app-link-gradient"
               >
@@ -36,7 +49,7 @@ const routes = useRoutes(["index", "projects", "articles"]);
             </li>
           </ul>
         </nav>
-      </header>
+      </Motion>
 
       <slot />
     </div>
