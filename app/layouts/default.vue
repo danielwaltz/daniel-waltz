@@ -27,7 +27,7 @@ const routes = useRouteLinks([
       <Motion
         as="header"
         layout="position"
-        :transition="{ ...DEFAULT_TRANSITION, type: 'spring' }"
+        :transition="DEFAULT_TRANSITION"
         class="flex grow flex-wrap gap-8 items-center justify-between"
       >
         <NuxtLink to="/" class="rounded-xl inline-flex">
