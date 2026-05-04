@@ -2,16 +2,10 @@
 const runtimeConfig = useRuntimeConfig();
 const site = useSiteConfig();
 
-const prefetchArticles = useArticlesPrefetch();
-
 const routes = useRouteLinks([
   { name: "index" },
   { name: "projects" },
-  {
-    name: "articles",
-    onFocusin: prefetchArticles,
-    onMouseover: prefetchArticles,
-  },
+  { name: "articles" },
 ]);
 </script>
 

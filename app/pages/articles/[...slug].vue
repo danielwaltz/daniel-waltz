@@ -9,9 +9,21 @@ definePageMeta({
 
 const route = useRoute();
 
-const { data: article } = useArticleQuery(route.path);
+const { data: article } = await useAsyncData(route.path, () =>
+  queryCollection("articles")
+    .select("path", "title", "description", "date", "discussion", "body")
+    .where("status", "=", "published")
+    .andWhere((query) => query.where("path", "=", route.path))
+    .first(),
+);
 
-const prefetchArticles = useArticlesPrefetch();
+if (!article.value) {
+  throw createError({
+    status: 404,
+    statusText: "The article you are looking for does not exist. 🥺",
+    fatal: true,
+  });
+}
 
 const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
@@ -59,8 +71,6 @@ defineOgImage("Default", { title, description, date });
         <NuxtLink
           :to="{ name: 'articles' }"
           class="text-p app-link-gradient app-link"
-          @focusin="prefetchArticles"
-          @mouseover="prefetchArticles"
         >
           <Icon name="lucide:arrow-big-left" class="app-link-icon" />
           <span>Back to articles</span>

@@ -8,8 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
-    "@pinia/nuxt",
-    "@pinia/colada-nuxt",
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "motion-v/nuxt",
@@ -58,6 +56,10 @@ export default defineNuxtConfig({
   compatibilityDate: "latest",
   nitro: {
     compressPublicAssets: true,
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
+    },
     typescript: {
       tsConfig: {
         compilerOptions: {
@@ -140,10 +142,7 @@ export default defineNuxtConfig({
     customCollections: [{ prefix: "app", dir: "./app/assets/icons" }],
   },
   ogImage: {
-    security: {
-      strict: true,
-      secret: "daniel-waltz",
-    },
+    zeroRuntime: true,
   },
   robots: {
     groups: [
@@ -162,7 +161,7 @@ export default defineNuxtConfig({
     ],
   },
   sitemap: {
-    sources: ["/api/__sitemap__/urls"],
+    zeroRuntime: true,
   },
   unocss: {
     disableNuxtInlineStyle: false,

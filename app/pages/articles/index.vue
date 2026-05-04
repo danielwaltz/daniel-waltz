@@ -7,9 +7,13 @@ definePageMeta({
 
 const route = useRoute();
 
-const { data: articles } = useArticlesQuery();
-
-const prefetchArticle = useArticlePrefetch();
+const { data: articles } = await useAsyncData("articles", () =>
+  queryCollection("articles")
+    .select("path", "title", "description", "date")
+    .where("status", "=", "published")
+    .order("date", "DESC")
+    .all(),
+);
 </script>
 
 <template>
@@ -43,8 +47,6 @@ const prefetchArticle = useArticlePrefetch();
             <NuxtLink
               :to="article.path"
               class="text-h3 text-primary-gradient text-a"
-              @focusin="prefetchArticle(article.path)"
-              @mouseover="prefetchArticle(article.path)"
             >
               {{ article.title }}
             </NuxtLink>
@@ -56,8 +58,6 @@ const prefetchArticle = useArticlePrefetch();
         <NuxtLink
           :to="article.path"
           class="text-p app-link-gradient app-link self-start"
-          @focusin="prefetchArticle(article.path)"
-          @mouseover="prefetchArticle(article.path)"
         >
           <span>Read more</span>
           <Icon name="lucide:arrow-big-right" class="app-link-icon" />
