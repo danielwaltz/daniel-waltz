@@ -2,7 +2,7 @@
   "name": "daniel-waltz",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.0.3",
+  "packageManager": "pnpm@11.0.4",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -51,6 +51,6 @@
     "vite": "^7.3.2",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6",
-    "vue-tsc": "^3.2.7"
+    "vue-tsc": "^3.2.8"
   }
 }
