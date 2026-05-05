@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
+    "@nuxt/scripts",
     "@unocss/nuxt",
     "@vueuse/nuxt",
     "motion-v/nuxt",
@@ -42,6 +43,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       hostingProvider: import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER,
+      scripts: {
+        umamiAnalytics: {
+          websiteId: "",
+          hostUrl: "",
+        },
+      },
     },
   },
   future: {

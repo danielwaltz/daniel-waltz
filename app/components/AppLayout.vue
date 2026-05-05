@@ -1,4 +1,13 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+
+const websiteId = runtimeConfig.public.scripts.umamiAnalytics.websiteId;
+const hostUrl = runtimeConfig.public.scripts.umamiAnalytics.hostUrl;
+
+if (websiteId) {
+  useScriptUmamiAnalytics({ websiteId, hostUrl });
+}
+
 useHead({
   bodyAttrs: {
     class:
