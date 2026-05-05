@@ -4,8 +4,15 @@ const runtimeConfig = useRuntimeConfig();
 const websiteId = runtimeConfig.public.scripts.umamiAnalytics.websiteId;
 const hostUrl = runtimeConfig.public.scripts.umamiAnalytics.hostUrl;
 
-if (websiteId) {
-  useScriptUmamiAnalytics({ websiteId, hostUrl });
+if (websiteId && hostUrl) {
+  useScript(
+    {
+      defer: true,
+      src: `${hostUrl}/script.js`,
+      "data-website-id": websiteId,
+    },
+    { trigger: "onNuxtReady" },
+  );
 }
 
 useHead({
