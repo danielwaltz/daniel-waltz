@@ -24,10 +24,15 @@ const route = useRoute();
             <NuxtLink
               :to="project.url"
               target="_blank"
-              class="text-2xl app-link-gradient app-link font-bold font-mono p-0 uppercase"
+              class="text-2xl app-link-gradient app-link font-bold font-mono p-0 text-balance uppercase"
             >
-              <span>{{ project.name }}</span>
-              <Icon name="lucide:external-link" class="text-0.75em" />
+              <span>
+                {{ project.name }}
+                <Icon
+                  name="lucide:external-link"
+                  class="text-0.75em text-secondary min-w-1em"
+                />
+              </span>
             </NuxtLink>
           </h2>
 

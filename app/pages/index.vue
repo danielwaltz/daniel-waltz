@@ -17,7 +17,7 @@ defineOgImage("Default", { title: site.name });
 
 <template>
   <AppMain class="flex flex-col gap-8">
-    <div class="flex flex-col gap-6 text-pretty">
+    <div class="flex flex-col gap-6">
       <AppMainHeader
         :title="site.name"
         intro="Hi, I'm"
@@ -54,7 +54,7 @@ defineOgImage("Default", { title: site.name });
     </nav>
 
     <div
-      class="text-sm text-neutral-400 text-pretty animate-flip-in-x animate-delay-10s animate-backwards 2xl:text-lg sm:text-base"
+      class="text-sm text-neutral-400 animate-flip-in-x animate-delay-10s animate-backwards 2xl:text-lg sm:text-base"
     >
       Oh, and while I have you, here's a friendly reminder to be kind to
       yourself!
