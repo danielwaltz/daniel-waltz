@@ -15,6 +15,14 @@ export default defineContentConfig({
         date: v.pipe(v.string(), v.minLength(1)),
         status: v.picklist(["draft", "published"]),
         discussion: v.optional(v.pipe(v.string(), v.url())),
+        meta: v.object({
+          readingTime: v.object({
+            text: v.string(),
+            minutes: v.number(),
+            time: v.number(),
+            words: v.number(),
+          }),
+        }),
       }),
     }),
   },

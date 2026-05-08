@@ -7,11 +7,20 @@ definePageMeta({
   icon: "lucide:book-text",
 });
 
+const site = useSiteConfig();
 const route = useRoute();
 
 const { data: article } = await useAsyncData(route.path, () =>
   queryCollection("articles")
-    .select("path", "title", "description", "date", "discussion", "body")
+    .select(
+      "path",
+      "title",
+      "description",
+      "date",
+      "discussion",
+      "body",
+      "meta",
+    )
     .where("status", "=", "published")
     .andWhere((query) => query.where("path", "=", route.path))
     .first(),
@@ -28,6 +37,7 @@ if (!article.value) {
 const title = toRef(() => article.value?.title);
 const description = toRef(() => article.value?.description);
 const date = toRef(() => article.value?.date);
+const readingTime = toRef(() => article.value?.meta.readingTime.text);
 
 const ArticleH1 = defineComponent((props, { slots }) => {
   return () =>
@@ -45,6 +55,11 @@ useSeoMeta({
   ogTitle: title,
   ogType: "article",
   articlePublishedTime: date,
+  articleAuthor: site.name,
+  twitterLabel1: "Author",
+  twitterData1: site.name,
+  twitterLabel2: "Read Time",
+  twitterData2: readingTime,
 });
 
 defineOgImage("Default", { title, description, date });
