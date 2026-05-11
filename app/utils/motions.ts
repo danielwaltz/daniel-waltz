@@ -10,8 +10,16 @@ export const DEFAULT_TRANSITION = {
 export const tooltipMotion = {
   transition: DEFAULT_TRANSITION,
   variants: {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1 },
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+      transformOrigin: "var(--reka-tooltip-content-transform-origin)",
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transformOrigin: "var(--reka-tooltip-content-transform-origin)",
+    },
   },
   initial: "hidden",
   animate: "visible",
