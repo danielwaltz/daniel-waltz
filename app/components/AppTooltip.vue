@@ -1,24 +1,14 @@
 <script setup lang="ts">
-import {
-  useForwardPropsEmits,
-  type TooltipContentProps,
-  type TooltipRootEmits,
-  type TooltipRootProps,
-} from "reka-ui";
+import type { TooltipContentProps } from "reka-ui";
 
-interface AppTooltipProps {
+defineProps<{
   content: string;
   side?: TooltipContentProps["side"];
-}
-
-const props = defineProps<TooltipRootProps & AppTooltipProps>();
-const emit = defineEmits<TooltipRootEmits>();
-
-const forward = useForwardPropsEmits(props, emit);
+}>();
 </script>
 
 <template>
-  <TooltipRoot v-bind="forward">
+  <TooltipRoot>
     <TooltipTrigger as-child>
       <slot />
     </TooltipTrigger>

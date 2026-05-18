@@ -90,6 +90,11 @@ export default defineNuxtConfig({
       compilerOptions: {
         erasableSyntaxOnly: true,
       },
+      vueCompilerOptions: {
+        strictTemplates: true,
+        fallthroughAttributes: true,
+        checkRequiredFallthroughAttributes: true,
+      },
     },
     sharedTsConfig: {
       compilerOptions: {
