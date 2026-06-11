@@ -27,6 +27,9 @@ useSeoMeta({ themeColor: "#000000" });
 
 <template>
   <div class="min-h-viewport">
+    <AppLoadingIndicator />
+    <NuxtRouteAnnouncer />
+
     <TooltipProvider disable-hoverable-content>
       <slot />
     </TooltipProvider>

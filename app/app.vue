@@ -21,7 +21,4 @@ defineOgImage("Default", { title, description });
       </NuxtPage>
     </AnimatePresence>
   </NuxtLayout>
-
-  <AppLoadingIndicator />
-  <NuxtRouteAnnouncer />
 </template>
