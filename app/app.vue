@@ -10,19 +10,17 @@ defineOgImage("Default", { title, description });
 </script>
 
 <template>
-  <TooltipProvider disable-hoverable-content>
-    <NuxtLayout>
-      <AnimatePresence mode="popLayout" :initial="false">
-        <NuxtPage>
-          <template #default="{ Component }">
-            <Motion v-bind="pageMotion">
-              <component :is="Component" />
-            </Motion>
-          </template>
-        </NuxtPage>
-      </AnimatePresence>
-    </NuxtLayout>
-  </TooltipProvider>
+  <NuxtLayout>
+    <AnimatePresence mode="popLayout" :initial="false">
+      <NuxtPage>
+        <template #default="{ Component }">
+          <Motion v-bind="pageMotion">
+            <component :is="Component" />
+          </Motion>
+        </template>
+      </NuxtPage>
+    </AnimatePresence>
+  </NuxtLayout>
 
   <AppLoadingIndicator />
   <NuxtRouteAnnouncer />
