@@ -26,9 +26,9 @@ useSeoMeta({ themeColor: "#000000" });
 </script>
 
 <template>
-  <TooltipProvider disable-hoverable-content>
-    <div class="min-h-viewport">
+  <div class="min-h-viewport">
+    <TooltipProvider disable-hoverable-content>
       <slot />
-    </div>
-  </TooltipProvider>
+    </TooltipProvider>
+  </div>
 </template>
