@@ -127,6 +127,7 @@ export default defineNuxtConfig({
   fonts: {
     defaults: {
       subsets: ["latin"],
+      weights: ["400 700"],
     },
     families: [
       {
