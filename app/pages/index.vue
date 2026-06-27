@@ -10,7 +10,7 @@ const site = useSiteConfig();
 
 const title = toRef(() => `${site.name} ${site.separator} ${site.jobTitle}`);
 
-useSeoMeta({ title, ogTitle: title, titleTemplate: "%s" });
+useSeoMeta({ title, ogTitle: title, titleTemplate: null });
 
 defineOgImage("Default", { title: site.name });
 </script>
