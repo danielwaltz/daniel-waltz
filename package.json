@@ -11,7 +11,7 @@
     "lint:fix": "eslint --fix",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "test": "pnpm run lint && pnpm run type-check",
+    "test": "pnpm lint && pnpm type-check",
     "type-check": "nuxt typecheck"
   },
   "devDependencies": {
