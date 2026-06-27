@@ -3,6 +3,7 @@ services:
     build:
       context: .
       target: development
+      dockerfile: Containerfile
     tty: true
     stdin_open: true
     ports:

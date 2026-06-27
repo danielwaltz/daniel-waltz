@@ -12,6 +12,7 @@ WORKDIR /app
 
 # Tooling
 FROM base AS tooling
+ENV CI="true"
 ENV PNPM_CONFIG_STORE_DIR="/.pnpm-store"
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"

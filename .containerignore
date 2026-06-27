@@ -23,11 +23,11 @@ logs
 .env.*
 !.env.example
 
-# Docker specific
-.dockerignore
+# Container specific
+.containerignore
 .git
 .gitignore
 .vscode
 compose.yaml
-Dockerfile
+Containerfile
 README.md
