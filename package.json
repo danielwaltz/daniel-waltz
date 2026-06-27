@@ -2,7 +2,6 @@
   "name": "daniel-waltz",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -51,5 +50,17 @@
     "vue": "^3.5.39",
     "vue-router": "^5.1.0",
     "vue-tsc": "^3.3.5"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.9.0",
+      "onFail": "warn"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "24.18.0",
+      "onFail": "warn"
+    }
   }
 }
