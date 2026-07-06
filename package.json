@@ -5,13 +5,15 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "fmt": "prettier . --write --experimental-cli",
+    "fmt:check": "prettier . --check --experimental-cli",
     "generate": "nuxt generate",
     "icons": "pnpx nuxt-seo-utils@latest icons --source icon.svg",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "test": "pnpm lint && pnpm type-check",
+    "test": "pnpm fmt:check && pnpm lint && pnpm type-check",
     "type-check": "nuxt typecheck"
   },
   "devDependencies": {
