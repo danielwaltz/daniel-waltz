@@ -2,7 +2,7 @@
 definePageMeta({
   title: "Projects",
   description: "A collection of projects I've worked on.",
-  icon: "lucide:briefcase",
+  icon: "lucide:package",
 });
 
 const route = useRoute();
