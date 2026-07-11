@@ -37,7 +37,7 @@ export const ACCOUNTS = [
   {
     url: "https://tangled.org/danielwaltz.me",
     title: "Tangled",
-    icon: "simple-icons:git",
+    icon: "simple-icons:tangled",
   },
   {
     url: "https://codeberg.org/danielwaltz",
