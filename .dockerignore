@@ -29,5 +29,5 @@ logs
 .gitignore
 .vscode
 compose.yaml
-Containerfile
+Dockerfile
 README.md

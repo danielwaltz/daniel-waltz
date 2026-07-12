@@ -13,12 +13,12 @@ WORKDIR /app
 # Tooling
 FROM base AS tooling
 ENV CI="true"
-ENV PNPM_CONFIG_STORE_DIR="/.pnpm-store"
+ENV PNPM_CONFIG_STORE_DIR="/pnpm/store"
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 ENV NODE_COMPILE_CACHE=/tmp/node-compile-cache
-RUN npm i -g corepack@latest && corepack enable
+RUN corepack enable
 
 # Development
 FROM tooling AS development
@@ -27,12 +27,12 @@ CMD ["bash", "-c", "pnpm i && pnpm dev"]
 # Dependencies
 FROM tooling AS dependencies
 COPY package.json pnpm-*.yaml ./
-RUN pnpm ci
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm ci
 
 # Builder
 FROM dependencies AS builder
 COPY . .
-RUN pnpm postinstall && pnpm build
+RUN pnpm build
 
 # Production
 FROM base AS production
