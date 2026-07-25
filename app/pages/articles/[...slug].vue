@@ -82,7 +82,9 @@ defineOgImage("Default", { title, description, date });
         class="app-prose"
       />
 
-      <footer class="mbs-6 flex flex-wrap gap-4 items-center justify-between">
+      <footer
+        class="mbs-6 flex flex-balance gap-4 items-center justify-between"
+      >
         <NuxtLink
           :to="{ name: 'articles' }"
           class="text-p app-link-gradient app-link"

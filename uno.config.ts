@@ -112,6 +112,7 @@ export default defineConfig<Theme>({
         "bg-primary from-primary to-secondary bg-linear-to-r",
       "bg-primary-gradient-reverse":
         "bg-secondary from-secondary to-primary bg-linear-to-r",
+      "flex-balance": "flex-wrap [flex-wrap:balance]",
       "heading-intro": "text-p text-neutral-400 leading-none font-script",
       interactive:
         "outline-current outline-offset-2 cursor-pointer transition-200 transition-property-[background-color,color,outline-width,transform] focus:outline-2 focus:outline-dashed active:scale-98",

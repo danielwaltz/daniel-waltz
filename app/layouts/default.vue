@@ -22,7 +22,7 @@ const routes = useRouteLinks([
         as="header"
         layout="position"
         :transition="DEFAULT_TRANSITION"
-        class="flex grow flex-wrap gap-8 items-center justify-between"
+        class="flex grow flex-balance gap-8 items-center justify-between"
       >
         <NuxtLink to="/" class="rounded-xl inline-flex">
           <AppLogo class="text-7xl 2xl:text-9xl sm:text-8xl" />
@@ -30,7 +30,7 @@ const routes = useRouteLinks([
         </NuxtLink>
 
         <nav aria-label="Main">
-          <ul class="text-lg flex flex-wrap gap-3 sm:text-xl">
+          <ul class="text-lg flex flex-balance gap-3 sm:text-xl">
             <li v-for="item in routes" :key="item.name">
               <NuxtLink
                 v-bind="item.props"
@@ -52,7 +52,7 @@ const routes = useRouteLinks([
       class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
     >
       <nav aria-label="Instances">
-        <ul class="flex flex-wrap gap-3 items-center">
+        <ul class="flex flex-balance gap-3 items-center">
           <li v-for="instance in INSTANCES" :key="instance.url">
             <AppTooltip :content="instance.title">
               <AppIconLink

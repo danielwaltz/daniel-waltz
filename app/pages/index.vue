@@ -37,7 +37,7 @@ defineOgImage("Default", { title: site.name });
 
     <nav aria-label="Accounts">
       <ul
-        class="text-2xl flex flex-wrap gap-0.75em items-center 2xl:text-4xl sm:text-3xl"
+        class="text-2xl flex flex-balance gap-0.75em items-center 2xl:text-4xl sm:text-3xl"
       >
         <li v-for="account in ACCOUNTS" :key="account.url">
           <AppTooltip :content="account.title" side="bottom">
