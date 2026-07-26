@@ -36,15 +36,11 @@ RUN pnpm build
 
 # Production
 FROM base AS production
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    groupadd -r -g 1001 app && \
-    useradd -r -u 1001 -g app app
+RUN groupadd -r -g 1001 app && \
+    useradd -r -l -u 1001 -g app app
 USER app
 COPY --chown=app:app --from=builder /app/.output ./.output
 ENV NODE_ENV=production
 EXPOSE 3000
-HEALTHCHECK CMD ["curl", "-f", "http://localhost:3000/health"]
+HEALTHCHECK CMD ["node", "-e", "fetch('http://localhost:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
 CMD ["node", ".output/server/index.mjs"]

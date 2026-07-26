@@ -24,7 +24,8 @@ logs
 !.env.example
 
 # Container specific
-.containerignore
+.dockerignore
+.env.example
 .git
 .gitignore
 .vscode
