@@ -10,14 +10,14 @@ export default defineContentConfig({
       },
       type: "page",
       schema: v.object({
-        title: v.pipe(v.string(), v.minLength(1)),
-        description: v.pipe(v.string(), v.minLength(1)),
-        date: v.pipe(v.string(), v.minLength(1)),
+        title: v.pipe(v.string(), v.nonEmpty()),
+        description: v.pipe(v.string(), v.nonEmpty()),
+        date: v.pipe(v.string(), v.nonEmpty(), v.isoDateTime()),
         status: v.picklist(["draft", "published"]),
-        discussion: v.optional(v.pipe(v.string(), v.url())),
+        discussion: v.optional(v.pipe(v.string(), v.nonEmpty(), v.url())),
         meta: v.object({
           readingTime: v.object({
-            text: v.string(),
+            text: v.pipe(v.string(), v.nonEmpty()),
             minutes: v.number(),
             time: v.number(),
             words: v.number(),
