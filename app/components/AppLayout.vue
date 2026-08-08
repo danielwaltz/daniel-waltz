@@ -1,4 +1,6 @@
 <script setup lang="ts">
+defineSlots<{ default: () => unknown }>();
+
 const runtimeConfig = useRuntimeConfig();
 
 const websiteId = runtimeConfig.public.scripts.umamiAnalytics.websiteId;

@@ -1,9 +1,14 @@
 <script setup lang="ts">
 defineProps<{
-  title?: string;
+  title: string;
   titleClass?: string;
   intro?: string;
   introClass?: string;
+}>();
+
+defineSlots<{
+  default?: () => unknown;
+  intro?: () => unknown;
 }>();
 </script>
 

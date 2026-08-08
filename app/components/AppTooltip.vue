@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import type { TooltipContentProps } from "reka-ui";
 
-defineProps<{
-  content: string;
-  side?: TooltipContentProps["side"];
-}>();
+defineProps<{ content: string; side?: TooltipContentProps["side"] }>();
+
+defineSlots<{ default: () => unknown }>();
 </script>
 
 <template>

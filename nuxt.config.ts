@@ -91,9 +91,13 @@ export default defineNuxtConfig({
         erasableSyntaxOnly: true,
       },
       vueCompilerOptions: {
-        strictTemplates: true,
-        fallthroughAttributes: true,
         checkRequiredFallthroughAttributes: true,
+        fallthroughAttributes: true,
+        inferTemplateDollarAttrs: true,
+        inferTemplateDollarEl: true,
+        inferTemplateDollarRefs: true,
+        inferTemplateDollarSlots: true,
+        strictTemplates: true,
       },
     },
     sharedTsConfig: {
