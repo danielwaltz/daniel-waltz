@@ -35,23 +35,27 @@ defineOgImage("Default", { title: site.name });
       </p>
     </div>
 
-    <nav aria-label="Accounts">
-      <ul
-        class="text-2xl flex flex-balance gap-0.75em items-center 2xl:text-4xl sm:text-3xl"
-      >
-        <li v-for="account in ACCOUNTS" :key="account.url">
-          <AppTooltip :content="account.title" side="bottom">
-            <AppIconLink
-              rel="me"
-              :to="account.url"
-              :label="account.title"
-              :icon="account.icon"
-              class="focus:text-primary hover:text-primary"
-            />
-          </AppTooltip>
-        </li>
-      </ul>
-    </nav>
+    <NavigationMenuRoot as-child>
+      <nav aria-label="Accounts">
+        <NavigationMenuList
+          class="text-2xl flex flex-balance gap-0.75em items-center 2xl:text-4xl sm:text-3xl"
+        >
+          <NavigationMenuItem v-for="account in ACCOUNTS" :key="account.url">
+            <AppTooltip :content="account.title" side="bottom">
+              <NavigationMenuLink as-child>
+                <AppIconLink
+                  rel="me"
+                  :to="account.url"
+                  :label="account.title"
+                  :icon="account.icon"
+                  class="focus:text-primary hover:text-primary"
+                />
+              </NavigationMenuLink>
+            </AppTooltip>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </nav>
+    </NavigationMenuRoot>
 
     <div
       class="text-sm text-neutral-400 animate-flip-in-x animate-delay-10s animate-backwards 2xl:text-lg sm:text-base"

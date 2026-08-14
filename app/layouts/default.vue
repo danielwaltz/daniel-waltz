@@ -31,20 +31,26 @@ const routes = useRouteLinks([
           <span class="sr-only">{{ site.name }}</span>
         </NuxtLink>
 
-        <nav aria-label="Main">
-          <ul class="text-lg flex flex-balance gap-3 sm:text-xl">
-            <li v-for="item in routes" :key="item.name">
-              <NuxtLink
-                v-bind="item.props"
-                class="app-link"
-                active-class="app-link-gradient"
-              >
-                <Icon :name="item.meta.icon" class="app-link-icon" />
-                <span>{{ item.meta.title }}</span>
-              </NuxtLink>
-            </li>
-          </ul>
-        </nav>
+        <NavigationMenuRoot as-child>
+          <nav aria-label="Main">
+            <NavigationMenuList
+              class="text-lg flex flex-balance gap-3 sm:text-xl"
+            >
+              <NavigationMenuItem v-for="item in routes" :key="item.name">
+                <NavigationMenuLink as-child>
+                  <NuxtLink
+                    v-bind="item.props"
+                    class="app-link"
+                    active-class="app-link-gradient"
+                  >
+                    <Icon :name="item.meta.icon" class="app-link-icon" />
+                    <span>{{ item.meta.title }}</span>
+                  </NuxtLink>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </nav>
+        </NavigationMenuRoot>
       </Motion>
 
       <slot />
@@ -53,24 +59,31 @@ const routes = useRouteLinks([
     <footer
       class="text-neutral-400 p-2 flex gap-3 inset-x-0 inset-bs-0 justify-between absolute"
     >
-      <nav aria-label="Instances">
-        <ul class="flex flex-balance gap-3 items-center">
-          <li v-for="instance in INSTANCES" :key="instance.url">
-            <AppTooltip :content="instance.title">
-              <AppIconLink
-                :to="instance.url"
-                :label="instance.title"
-                :icon="instance.icon"
-                class="text-sm focus:text-neutral-100 hover:text-neutral-100"
-                :class="{
-                  'text-primary focus:text-primary-200 hover:text-primary-200':
-                    instance.key === runtimeConfig.public.hostingProvider,
-                }"
-              />
-            </AppTooltip>
-          </li>
-        </ul>
-      </nav>
+      <NavigationMenuRoot as-child>
+        <nav aria-label="Instances">
+          <NavigationMenuList class="flex flex-balance gap-3 items-center">
+            <NavigationMenuItem
+              v-for="instance in INSTANCES"
+              :key="instance.url"
+            >
+              <AppTooltip :content="instance.title">
+                <NavigationMenuLink as-child>
+                  <AppIconLink
+                    :to="instance.url"
+                    :label="instance.title"
+                    :icon="instance.icon"
+                    class="text-sm focus:text-neutral-100 hover:text-neutral-100"
+                    :class="{
+                      'text-primary focus:text-primary-200 hover:text-primary-200':
+                        instance.key === runtimeConfig.public.hostingProvider,
+                    }"
+                  />
+                </NavigationMenuLink>
+              </AppTooltip>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </nav>
+      </NavigationMenuRoot>
 
       <AppTooltip content="View Source Code" side="left">
         <AppIconLink
