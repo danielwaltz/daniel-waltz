@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config/
 export default defineNuxtConfig({
   modules: [
+    "@comark/nuxt",
     "@nuxtjs/seo",
     "@nuxt/a11y",
     "@nuxt/content",
@@ -36,9 +37,6 @@ export default defineNuxtConfig({
       markdown: {
         remarkPlugins: {
           "remark-reading-time": {},
-        },
-        highlight: {
-          theme: "nord",
         },
       },
     },

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import rangi from "@comark/nuxt/plugins/rangi";
 import { Motion } from "motion-v";
+import { nord } from "rangi/themes";
 
 definePageMeta({
   title: "Article",
@@ -13,12 +15,12 @@ const route = useRoute();
 const { data: article } = await useAsyncData(route.path, () =>
   queryCollection("articles")
     .select(
+      "rawbody",
       "path",
       "title",
       "description",
       "date",
       "discussion",
-      "body",
       "meta",
     )
     .where("status", "=", "published")
@@ -49,6 +51,10 @@ const ArticleH1 = defineComponent((props, { slots }) => {
     );
 });
 
+const components = { h1: ArticleH1 };
+
+const plugins = [rangi({ theme: nord })];
+
 useSeoMeta({
   title,
   description,
@@ -76,11 +82,9 @@ defineOgImage("Default", { title, description, date });
         <AppTime :datetime="article.date" />
       </Motion>
 
-      <ContentRenderer
-        :value="article"
-        :components="{ h1: ArticleH1 }"
-        class="app-prose"
-      />
+      <Markdown :components :plugins class="app-prose">
+        {{ article.rawbody }}
+      </Markdown>
 
       <footer
         class="mbs-6 flex flex-balance gap-4 items-center justify-between"

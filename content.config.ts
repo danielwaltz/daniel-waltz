@@ -10,6 +10,7 @@ export default defineContentConfig({
       },
       type: "page",
       schema: v.object({
+        rawbody: v.pipe(v.string(), v.nonEmpty()),
         title: v.pipe(v.string(), v.nonEmpty()),
         description: v.pipe(v.string(), v.nonEmpty()),
         date: v.pipe(v.string(), v.nonEmpty(), v.isoDateTime()),
