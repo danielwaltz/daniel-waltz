@@ -2,7 +2,7 @@
   "name": "daniel-waltz",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -36,7 +36,7 @@
     "@nuxtjs/seo": "^5.3.14",
     "@takumi-rs/core": "^2.12.0",
     "@takumi-rs/wasm": "^2.12.0",
-    "@types/node": "~24.13.3",
+    "@types/node": "~26.4.1",
     "@unocss/eslint-plugin": "^66.8.1",
     "@unocss/nuxt": "^66.8.1",
     "@valibot/to-json-schema": "^1.7.1",
@@ -49,7 +49,7 @@
     "rangi": "^2.2.0",
     "reka-ui": "^2.10.4",
     "remark-reading-time": "^2.1.0",
-    "typescript": "npm:typescript-native-bridge@6.0.3-bridge.15.tsgo.7.0.2",
+    "typescript": "npm:typescript-native-bridge@6.0.3-bridge.16.tsgo.7.0.2",
     "unocss": "^66.8.1",
     "valibot": "^1.4.2",
     "vite": "^8.2.2",
@@ -60,11 +60,11 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.9.0"
+      "version": "12.3.4"
     },
     "runtime": {
       "name": "node",
-      "version": "24.18.0"
+      "version": "26.8.1"
     }
   }
 }
