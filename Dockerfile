@@ -21,7 +21,7 @@ CMD ["bash", "-c", "pnpm i && pnpm dev"]
 # Dependencies
 FROM tooling AS dependencies
 COPY package.json pnpm-*.yaml ./
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm ci
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm i --frozen-lockfile
 
 # Builder
 FROM dependencies AS builder
