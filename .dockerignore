@@ -27,7 +27,6 @@ logs
 .dockerignore
 .env.example
 .git
-.gitignore
 .vscode
 compose.yaml
 Dockerfile
