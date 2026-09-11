@@ -1,4 +1,4 @@
-ARG NODE_VERSION=26.8.1
+ARG NODE_VERSION=26.8.2
 
 # Base
 FROM node:${NODE_VERSION}-slim AS base
