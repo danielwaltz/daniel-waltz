@@ -2,7 +2,7 @@
   "name": "daniel-waltz",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@12.4.1",
+  "packageManager": "pnpm@12.4.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -60,11 +60,11 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.4.1"
+      "version": "12.4.2"
     },
     "runtime": {
       "name": "node",
-      "version": "26.8.2"
+      "version": "26.9.0"
     }
   }
 }
