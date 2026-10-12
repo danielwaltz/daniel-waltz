@@ -57,8 +57,9 @@ export default defineNuxtConfig({
   },
   experimental: {
     asyncContext: true,
+    early404: true,
     extractAsyncDataHandlers: true,
-    typedPages: true,
+    strictRouteTypes: true,
     typescriptPlugin: true,
   },
   compatibilityDate: "latest",
