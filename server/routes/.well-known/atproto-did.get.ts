@@ -1,5 +1,7 @@
+import { defineEventHandler } from "nuxt/server";
+
 export default defineEventHandler((event) => {
-  setHeader(event, "Content-Type", "text/plain");
+  event.req.headers.set("Content-Type", "text/plain");
 
   return "did:plc:udqzp4akm6eeqslx55jgjcem";
 });
