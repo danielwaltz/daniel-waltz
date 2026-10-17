@@ -1,22 +1,6 @@
 <script setup lang="ts">
 defineSlots<{ default: () => unknown }>();
 
-const runtimeConfig = useRuntimeConfig();
-
-const websiteId = runtimeConfig.public.scripts.umamiAnalytics.websiteId;
-const hostUrl = runtimeConfig.public.scripts.umamiAnalytics.hostUrl;
-
-if (websiteId && hostUrl) {
-  useScript(
-    {
-      defer: true,
-      src: `${hostUrl}/script.js`,
-      "data-website-id": websiteId,
-    },
-    { trigger: "onNuxtReady" },
-  );
-}
-
 useHead({
   bodyAttrs: {
     class:

@@ -43,17 +43,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      hostingProvider: import.meta.env.NUXT_PUBLIC_HOSTING_PROVIDER,
-      scripts: {
-        umamiAnalytics: {
-          websiteId: "",
-          hostUrl: "",
-        },
-      },
+      hostingProvider: "",
     },
   },
   future: {
-    compatibilityVersion: 5,
+    // compatibilityVersion: 5,
   },
   experimental: {
     asyncContext: true,
@@ -177,6 +171,16 @@ export default defineNuxtConfig({
         },
       },
     ],
+  },
+  scripts: {
+    registry: {
+      umamiAnalytics: {
+        websiteId: "95f0827f-e535-40ee-8d19-363b71d8bf63",
+        hostUrl: "https://umami.danielwaltz.me",
+        domains: ["danielwaltz.me"],
+        trigger: "onNuxtReady",
+      },
+    },
   },
   sitemap: {
     zeroRuntime: true,
