@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NuxtTimeProps } from "#app";
+import type { NuxtTimeProps } from "nuxt/app";
 
 defineProps<NuxtTimeProps>();
 

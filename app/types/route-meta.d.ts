@@ -4,7 +4,7 @@ interface AppRouteMeta {
   icon: string;
 }
 
-declare module "#app" {
+declare module "nuxt/app" {
   interface PageMeta extends AppRouteMeta {}
 }
 
